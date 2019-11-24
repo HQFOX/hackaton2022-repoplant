@@ -10,8 +10,8 @@ module.exports = {
   resolve: {
     extensions: [".json", ".js", ".jsx", ".ts", ".tsx"],
     plugins: [
-      new TsconfigPathsPlugin({ configFile: `${BASE_PATH}/tsconfig.json` }),
-    ],
+      new TsconfigPathsPlugin({ configFile: `${BASE_PATH}/tsconfig.json` })
+    ]
   },
   context: `${BASE_PATH}/src`,
   module: {
@@ -19,47 +19,39 @@ module.exports = {
       {
         test: /\.(js|jsx)$/,
         exclude: /node_modules/,
-        use: ["babel-loader", "source-map-loader"],
+        use: ["babel-loader", "source-map-loader"]
       },
       {
         test: /\.(ts|tsx)$/,
-        use: ["babel-loader", "awesome-typescript-loader"],
+        use: ["babel-loader", "awesome-typescript-loader"]
       },
       {
         test: /\.(jpe?g|png|gif)$/i,
         loaders: [
-          "file-loader?hash=sha512&digest=hex&name=img/[hash].[ext]",
-          "image-webpack-loader?bypassOnDebug&optipng.optimizationLevel=7&gifsicle.interlaced=false",
-        ],
+          "file-loader?name=[name].[ext]",
+          "image-webpack-loader?bypassOnDebug&optipng.optimizationLevel=7&gifsicle.interlaced=false"
+        ]
       },
       {
-        test: /\.(jpe?g|png|gif)$/i,
-        use: [
-          {
-            loader: "file-loader",
-          },
-        ],
+        test: /\.svg$/i,
+        exclude: /assets/,
+        loaders: ["file-loader"]
       },
       {
-        test: /\.svg$/,
-        exclude: /node_modules/,
-        use: ["@svgr/webpack"],
-      },
-      {
-        test: /\.svg$/,
-        exclude: [/src/, /assets/],
-        use: ["file-loader"],
+        test: /\.svg$/i,
+        include: /assets/,
+        use: ["@svgr/webpack"]
       },
       {
         test: /\.css$/i,
-        use: ["style-loader", "css-loader"],
-      },
-    ],
+        use: ["style-loader", "css-loader"]
+      }
+    ]
   },
   plugins: [
     new CheckerPlugin(),
     new HtmlWebpackPlugin({
-      template: "./index.html",
-    }),
-  ],
+      template: "./index.html"
+    })
+  ]
 };
