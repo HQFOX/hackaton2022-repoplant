@@ -14,12 +14,12 @@ import { useTranslation } from "react-i18next";
 import HvHeader from "@hv/uikit-react-core/dist/Header";
 import HvUserIcon from "@hv/uikit-react-icons/dist/Generic/User";
 import HitachiLogo from "assets/hitachi-logo.svg";
-import { ViewsState } from "typings/views";
+import { View } from "typings/views";
 import { HeaderProps } from "./index";
 
-const getSelectedPath = (router: RouterState, views: ViewsState) => {
+const getSelectedPath = (router: RouterState, views: View[]) => {
   const { pathname } = router.location;
-  const navIndex = views.data.findIndex(elem => pathname === elem.path);
+  const navIndex = views.findIndex(elem => pathname === elem.path);
 
   return [navIndex, -1];
 };
@@ -29,12 +29,14 @@ const Header: React.FC<HeaderProps> = ({
   auth,
   views,
   getViews,
+  logout
 }: HeaderProps) => {
   const { t } = useTranslation();
   const { isAuthed } = auth;
-  const hasViews = views.data.length;
-  const selectedPath = getSelectedPath(router, views);
-  
+  const { data } = views;
+  const hasViews = data.length;
+  const selectedPath = getSelectedPath(router, data);
+
   useEffect(() => {
     getViews();
   }, [getViews]);
@@ -46,10 +48,10 @@ const Header: React.FC<HeaderProps> = ({
       actionValues={[
         {
           label: "User",
-          horizontalItemAction: <HvUserIcon />,
-        },
+          horizontalItemAction: <HvUserIcon onClick={() => logout()} />
+        }
       ]}
-      {...(isAuthed && { navigationStructure: views })} // TODO -> navigation should handle undefined values ??
+      {...(isAuthed && { navigationStructure: { data } })} // TODO -> navigation should handle undefined values ??
       useRouter
       selected={selectedPath}
     />

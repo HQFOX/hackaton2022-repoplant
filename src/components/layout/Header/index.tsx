@@ -13,19 +13,21 @@ import { Dispatch, bindActionCreators } from "redux";
 import { connect } from "react-redux";
 import { AppState } from "typings/state";
 import { getViews } from "store/views/thunks";
+import { logout } from "store/auth/thunks";
 import styles from "./styles";
 import Header from "./Header";
 
 const mapStateToProps = ({ router, auth, views }: AppState) => ({
   router,
   auth,
-  views,
+  views
 });
 
 const mapDispatchToProps = (dispatch: Dispatch) =>
   bindActionCreators(
     {
       getViews,
+      logout
     },
     dispatch
   );
