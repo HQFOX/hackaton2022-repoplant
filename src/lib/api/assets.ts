@@ -10,7 +10,7 @@
 
 import { Assets, Asset } from "typings/assets";
 
-const getRandom = (max, min) =>
+const getRandom = (max: number, min: number) =>
   Math.floor(Math.random() * (max - min + 1)) + min;
 
 const riskDownTime = {
@@ -18,9 +18,9 @@ const riskDownTime = {
   event: {
     description: "Risk of downtime on Truck 12",
     timestamp: "2 minutes ago",
-    schedule: "fix now",
+    schedule: "fix now"
   },
-  relatedAssets: "Track A, Zone 15 Brake",
+  relatedAssets: "Track A, Zone 15 Brake"
 };
 
 const severeBreakdown = {
@@ -28,9 +28,9 @@ const severeBreakdown = {
   event: {
     description: "Track severe breakdown",
     timestamp: "2 hours ago",
-    schedule: "fix 3rd shift",
+    schedule: "fix 3rd shift"
   },
-  relatedAssets: "Track B, Load 2 Brake",
+  relatedAssets: "Track B, Load 2 Brake"
 };
 
 const generateData = (id: number) => {
@@ -45,7 +45,7 @@ const generateData = (id: number) => {
     probability: risk,
     timeHorizon,
     relatedAssets: data.relatedAssets,
-    checkboxValue: `id_${id}`,
+    checkboxValue: `id_${id}`
   };
 };
 

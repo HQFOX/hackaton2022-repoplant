@@ -21,7 +21,7 @@ const login = (credentials: AuthCredentials) => async (
     const token: string = await authenticate(credentials);
     setCookie({
       key: "token",
-      value: token,
+      value: token
     });
     dispatch(setAuth(true));
   } catch (error) {

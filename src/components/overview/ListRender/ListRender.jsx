@@ -12,7 +12,7 @@ import React from "react";
 import withStyles from "@material-ui/core/styles/withStyles";
 import {
   HvListViewCell,
-  HvListViewRow,
+  HvListViewRow
 } from "@hv/uikit-react-core/dist/AssetInventory/ListView";
 import HvTypography from "@hv/uikit-react-core/dist/Typography";
 import Level1 from "@hv/uikit-react-icons/dist/Generic/Level1";

@@ -12,8 +12,8 @@ export interface Asset {
   headerTitle: string;
   id: string;
   event: { description: string; timestamp: string; schedule: string };
-  probability: string;
-  timeHorizon: string;
+  probability: number;
+  timeHorizon: number;
   relatedAssets: string;
   checkboxValue: string;
 }

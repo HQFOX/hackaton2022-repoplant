@@ -13,11 +13,11 @@ import { ViewsState, ViewsActions } from "typings/views";
 
 // Type-safe initialState!
 const initialState: ViewsState = {
-  data: [],
+  data: []
 };
 
 const viewsReducer = createReducer(initialState, {
-  [ViewsActions.SET_VIEWS]: (state, action) => action.payload,
+  [ViewsActions.SET_VIEWS]: (state, action) => action.payload
 });
 
 export default viewsReducer;

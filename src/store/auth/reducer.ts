@@ -13,13 +13,13 @@ import { AuthState, AuthActions } from "typings/auth";
 
 // Type-safe initialState!
 const initialState: AuthState = {
-  isAuthed: false,
+  isAuthed: false
 };
 
-const viewsReducer = createReducer(initialState, {
+const authReducer = createReducer(initialState, {
   [AuthActions.SET_AUTH]: (state, action) => ({
-    isAuthed: action.payload,
-  }),
+    isAuthed: action.payload
+  })
 });
 
-export default viewsReducer;
+export default authReducer;

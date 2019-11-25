@@ -23,12 +23,12 @@ import styles from "./styles";
 
 const KpiProbability = score => ({
   title: "Probability",
-  indicator: `${score}%`,
+  indicator: `${score}%`
 });
 
 const KpiTimeHorizon = score => ({
   title: "Time horizon",
-  indicator: `${score}h`,
+  indicator: `${score}h`
 });
 
 /* eslint react/prop-types: 0 */
@@ -60,8 +60,7 @@ const Content = ({ classes, values }) => (
         md={12}
         lg={12}
         xl={12}
-        className={classes.item}
-      >
+        className={classes.item}>
         <HvTypography variant="labelText">Related assets</HvTypography>
         <HvTypography variant="normalText" className={classes.text}>
           {values.relatedAssets}
@@ -72,7 +71,7 @@ const Content = ({ classes, values }) => (
 );
 
 const ContentWithStyles = withStyles(styles, {
-  withTheme: true,
+  withTheme: true
 })(Content);
 
 /**

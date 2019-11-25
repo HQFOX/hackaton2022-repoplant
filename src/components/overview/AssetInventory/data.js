@@ -16,9 +16,9 @@ const riskDownTime = {
   event: {
     description: "Risk of downtime on Truck 12",
     timestamp: "2 minutes ago",
-    schedule: "fix now",
+    schedule: "fix now"
   },
-  relatedAssets: "Track A, Zone 15 Brake",
+  relatedAssets: "Track A, Zone 15 Brake"
 };
 
 const severeBreakdown = {
@@ -26,9 +26,9 @@ const severeBreakdown = {
   event: {
     description: "Track severe breakdown",
     timestamp: "2 hours ago",
-    schedule: "fix 3rd shift",
+    schedule: "fix 3rd shift"
   },
-  relatedAssets: "Track B, Load 2 Brake",
+  relatedAssets: "Track B, Load 2 Brake"
 };
 
 const dataGenerator = id => {
@@ -43,7 +43,7 @@ const dataGenerator = id => {
     probability: risk,
     timeHorizon,
     relatedAssets: data.relatedAssets,
-    checkboxValue: `id_${id}`,
+    checkboxValue: `id_${id}`
   };
 };
 

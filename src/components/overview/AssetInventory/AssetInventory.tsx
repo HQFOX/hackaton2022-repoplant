@@ -21,7 +21,7 @@ import { AssetInventoryStyles } from "./index";
 
 const actions = [
   { id: "details", label: "Details", disabled: false },
-  { id: "dismiss", label: "Dismiss", disabled: false },
+  { id: "dismiss", label: "Dismiss", disabled: false }
 ];
 
 const AssetInventory: React.FC<AssetInventoryStyles> = () => (
@@ -29,8 +29,7 @@ const AssetInventory: React.FC<AssetInventoryStyles> = () => (
     values={getData()}
     configuration={assetInventoryConfiguration}
     actions={actions}
-    maxVisibleActions={3}
-  >
+    maxVisibleActions={3}>
     <HvCardView id="card" icon={<Cards />} renderer={CardRender} />
     <HvListView id="list" icon={<List />} renderer={ListRender} />
   </HvAssetInventory>

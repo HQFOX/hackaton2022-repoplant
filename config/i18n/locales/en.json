@@ -2,11 +2,7 @@
   "components": {
     "layout": {
       "header": {
-        "appName": "UIKit React setup",
-        "navigationViews": {
-          "overview": "Overview",
-          "events": "Events"
-        }
+        "appName": "UIKit React setup"
       }
     }
   },

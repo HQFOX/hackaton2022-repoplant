@@ -13,17 +13,17 @@
 // We use the `@@context/ACTION_TYPE` convention,
 // to follow the convention of Redux's `@@INIT` action.
 export enum ViewsActions {
-  GET_VIEWS = "@@views/GET_VIEWS",
-  SET_VIEWS = "@@views/SET_VIEWS",
-}
-
-export interface View {
-  label: string;
-  path: string;
+  GET_VIEWS = "@@layout/GET_VIEWS",
+  SET_VIEWS = "@@layout/SET_VIEWS"
 }
 
 // Declare state types with `readonly` modifier to get compile time immutability.
 // https://github.com/piotrwitek/react-redux-typescript-guide#state-with-type-level-immutability
 export interface ViewsState {
   readonly data: View[];
+}
+
+export interface View {
+  label: string;
+  path: string;
 }

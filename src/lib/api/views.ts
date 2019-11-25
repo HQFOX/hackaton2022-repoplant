@@ -14,13 +14,13 @@ const views = {
   data: [
     {
       label: "Overview",
-      path: "/",
+      path: "/"
     },
     {
       label: "Events",
-      path: "/events",
-    },
-  ],
+      path: "/events"
+    }
+  ]
 };
 
 const fetchViews = async (): Promise<ViewsState> => {

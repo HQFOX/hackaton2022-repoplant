@@ -15,13 +15,13 @@ import { checkAuth } from "store/auth/thunks";
 import AuthRoute from "./AuthRoute";
 
 const mapStateToProps = ({ auth }: AppState) => ({
-  auth,
+  auth
 });
 
 const mapDispatchToProps = (dispatch: Dispatch) =>
   bindActionCreators(
     {
-      checkAuth,
+      checkAuth
     },
     dispatch
   );

@@ -19,7 +19,7 @@ const createRootReducer = (history: History) =>
   combineReducers({
     auth: authReducer,
     views: viewsReducer,
-    router: connectRouter(history),
+    router: connectRouter(history)
   });
 
 export default createRootReducer;

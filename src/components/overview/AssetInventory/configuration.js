@@ -20,7 +20,7 @@ const configuration = {
       searchable: true,
       sortable: true,
       sortableLabelAsc: "Title ascending",
-      sortableLabelDesc: "Title descending",
+      sortableLabelDesc: "Title descending"
     },
     {
       id: "id3",
@@ -29,7 +29,7 @@ const configuration = {
       searchable: true,
       sortable: true,
       sortableLabelAsc: "Probability ascending",
-      sortableLabelDesc: "Probability descending",
+      sortableLabelDesc: "Probability descending"
     },
     {
       id: "id4",
@@ -37,14 +37,14 @@ const configuration = {
       cellType: "numeric",
       sortable: true,
       sortableLabelAsc: "TimeHorizon ascending",
-      sortableLabelDesc: "TimeHorizon descending",
+      sortableLabelDesc: "TimeHorizon descending"
     },
     {
       id: "id4",
       accessor: "event.schedule",
       cellType: "alpha-numeric",
-      searchable: true,
-    },
+      searchable: true
+    }
   ],
   /**
    * Configuration of the views.
@@ -58,7 +58,7 @@ const configuration = {
       sm: "false",
       md: 4,
       lg: 3,
-      xl: 3,
+      xl: 3
     },
     /**
      * List.
@@ -68,41 +68,41 @@ const configuration = {
         title: "Status",
         style: {
           paddingLeft: "8px",
-          minWidth: "52px",
+          minWidth: "52px"
         },
-        align: "left",
+        align: "left"
       },
       {
         title: "Event",
         style: {
-          minWidth: "570px",
+          minWidth: "570px"
         },
-        align: "left",
+        align: "left"
       },
       {
         title: "Probability",
         style: {
-          minWidth: "93px",
+          minWidth: "93px"
         },
-        align: "right",
+        align: "right"
       },
       {
         title: "Time horizon",
         style: {
-          minWidth: "108px",
+          minWidth: "108px"
         },
-        align: "right",
+        align: "right"
       },
       {
         title: "Related Assets",
         style: {
           minWidth: "195px",
-          paddingLeft: "30px",
+          paddingLeft: "30px"
         },
-        align: "left",
-      },
-    ],
-  },
+        align: "left"
+      }
+    ]
+  }
 };
 
 export default configuration;

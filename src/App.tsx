@@ -22,7 +22,7 @@ const App: React.FC = () => {
     push: route => {
       history.push(route);
     },
-    prefetch: () => {},
+    prefetch: () => {}
   };
 
   return (

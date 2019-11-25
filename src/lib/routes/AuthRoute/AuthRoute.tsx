@@ -23,7 +23,7 @@ const AuthRoute: React.FC<AuthProps> = ({
   auth,
   path,
   exact,
-  component,
+  component
 }: AuthProps) => {
   const { isAuthed } = auth;
   const isLogin = path === "/login";
