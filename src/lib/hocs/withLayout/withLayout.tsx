@@ -9,33 +9,29 @@
  */
 
 import React from "react";
-import { Header, Footer } from "components/common";
+import { Header, Footer } from "components/layout";
 
 const getStyles = (hasFooter: boolean) => ({
-  root: {
-    paddingTop: "50px",
-    zIndex: -1,
-  },
   content: {
-    minHeight: `calc(100vh - ${hasFooter ? 90 : 50}px)`,
-    padding: "30px 15px",
-  },
+    marginTop: 50, // header height
+    padding: `${hasFooter ? 0 : "30px 15px"}` // grid padding
+  }
 });
 
 const withLayout = <P extends {}>(
   Component: React.ComponentType<P>,
   hasFooter = false
 ): React.FC<P> => props => {
-  const { root, content } = getStyles(hasFooter);
+  const { content } = getStyles(hasFooter);
 
   return (
-    <div style={{ ...root }}>
+    <>
       <Header />
-      <div style={{ ...content }}>
+      <section id="content" style={{ ...content }}>
         <Component {...(props as P)} />
-      </div>
+      </section>
       {hasFooter && <Footer />}
-    </div>
+    </>
   );
 };
 
