@@ -14,8 +14,10 @@ const styles = () =>
   createStyles({
     root: {
       height: "calc(100vh - 90px)",
-      display: "flex",
-    },
+      "& > div": {
+        margin: 0
+      }
+    }
   });
 
 export default styles;

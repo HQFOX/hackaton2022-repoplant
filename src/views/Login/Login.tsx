@@ -13,10 +13,10 @@ import withLayout from "lib/hocs/withLayout";
 import { LoginForm } from "components/login";
 import { LoginProps } from "./index";
 
-const Login: React.FC<LoginProps> = ({ classes }: LoginProps) => {
+const Login: React.FC<LoginProps> = ({ classes, login }: LoginProps) => {
   return (
     <div className={classes.root}>
-      <LoginForm />
+      <LoginForm login={login} />
     </div>
   );
 };

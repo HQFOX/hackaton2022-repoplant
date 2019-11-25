@@ -9,9 +9,29 @@
  */
 
 import withStyles, { WithStyles } from "@material-ui/core/styles/withStyles";
+import { Dispatch, bindActionCreators } from "redux";
+import { connect } from "react-redux";
+import { AppState } from "typings/state";
+import { login } from "store/auth/thunks";
 import styles from "./styles";
 import Login from "./Login";
 
-export type LoginProps = WithStyles<typeof styles>;
+const mapStateToProps = ({ auth }: AppState) => ({
+  auth
+});
 
-export default withStyles(styles, { name: "Login", withTheme: true })(Login);
+const mapDispatchToProps = (dispatch: Dispatch) =>
+  bindActionCreators(
+    {
+      login
+    },
+    dispatch
+  );
+
+export type LoginProps = WithStyles<typeof styles> &
+  ReturnType<typeof mapStateToProps> &
+  ReturnType<typeof mapDispatchToProps>;
+
+export default withStyles(styles, { name: "Login", withTheme: true })(
+  connect(mapStateToProps, mapDispatchToProps)(Login)
+);
