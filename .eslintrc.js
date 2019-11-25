@@ -38,6 +38,7 @@ module.exports = {
     "import/prefer-default-export": "off",
     "import/no-unresolved": "off", // Don't play nicely with tsconfig paths re-maps.
     "import/no-cycle": "off",
+    "react/prop-types": "off",
     "react/jsx-props-no-spreading": [
       {
         explicitSpread: "ignore"
