@@ -1,7 +1,8 @@
 // shared config (dev and prod)
 const { resolve } = require("path");
-const { CheckerPlugin } = require("awesome-typescript-loader");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
+const CopyWebpackPlugin = require("copy-webpack-plugin");
+const { CheckerPlugin } = require("awesome-typescript-loader");
 const TsconfigPathsPlugin = require("tsconfig-paths-webpack-plugin");
 
 const BASE_PATH = resolve(__dirname, "../..");
@@ -51,7 +52,14 @@ module.exports = {
   plugins: [
     new CheckerPlugin(),
     new HtmlWebpackPlugin({
-      template: "./index.html"
-    })
+      template: `${BASE_PATH}/public/index.html`
+    }),
+    new CopyWebpackPlugin([
+      {
+        from: "../public/locales/**/*",
+        to: "./locales",
+        flatten: true
+      }
+    ])
   ]
 };

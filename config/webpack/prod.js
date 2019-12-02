@@ -1,6 +1,6 @@
 // production config
-const merge = require("webpack-merge");
 const { resolve } = require("path");
+const merge = require("webpack-merge");
 
 const commonConfig = require("./common");
 
@@ -9,9 +9,9 @@ module.exports = merge(commonConfig, {
   entry: "./index.tsx",
   output: {
     filename: "js/bundle.[hash].min.js",
-    path: resolve(__dirname, "../../dist"),
-    publicPath: "/",
+    path: resolve(__dirname, "../../build"),
+    publicPath: "./"
   },
   devtool: "source-map",
-  plugins: [],
+  plugins: []
 });

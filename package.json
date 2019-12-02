@@ -19,7 +19,7 @@
     "test:watch": "jest --watch --config=config/tests/jest-config.json",
     "prettier:fix": "prettier --write \"src/**/*.{json,js,jsx,ts,tsx}\"",
     "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
-    "clean": "rimraf dist/*"
+    "clean": "rimraf build/*"
   },
   "dependencies": {
     "@hv/uikit-react-core": "^1.8.0",
@@ -69,6 +69,7 @@
     "@typescript-eslint/parser": "^2.5.0",
     "awesome-typescript-loader": "^5.2.1",
     "babel-loader": "^8.0.6",
+    "copy-webpack-plugin": "^5.0.5",
     "css-loader": "^3.2.0",
     "enzyme-adapter-react-16": "^1.15.1",
     "enzyme-to-json": "^3.4.3",

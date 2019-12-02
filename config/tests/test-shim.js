@@ -8,6 +8,6 @@ global.matchMedia =
     return {
       matches: false,
       addListener: function() {},
-      removeListener: function() {},
+      removeListener: function() {}
     };
   };
