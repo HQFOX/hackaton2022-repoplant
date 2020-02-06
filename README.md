@@ -1,18 +1,17 @@
 ## Setup for React and TypeScript with Hitachi Vantara UI Kit
 
 - [Goal](#goal)
-  - [Why not Create React App?](#why-not-create-react-app)
 - [What’s Included?](#whats-included)
 - [Getting Started](#getting-started)
 - [Structure](#structure)
     - [Folders](#folders)
-- [Typescript](#typescript)
 - [State Management - Redux](#state-management---redux)
   - [Data Flow](#data-flow)
   - [Actions](#actions)
   - [Thunks](#thunks)
   - [Store](#store)
   - [Reducers](#reducers)
+- [Typescript](#typescript)
 - [Linter & Prettify Hooks With Husky](#linter--prettify-hooks-with-husky)
 - [What’s missing?](#whats-missing)
 - [References](#references)
@@ -23,11 +22,11 @@ To provide a modern build setup, and make sure that all the underlying pieces wo
 
 In addition to the build setup, we also provide an example application that implements some [UI Kit](https://github.com/pentaho/hv-uikit-react) patterns and code strategies in order to guide and speed up your development.
 
-## Why not [Create React App](https://create-react-app.dev/)?
+- **Why not [Create React App](https://create-react-app.dev/)?**
 
 Create React App really speeds up the setup process, but it hides all the setup files. To have a finer control over the setup you need to "Eject" the project. That moves all the “hidden” configuration into your project folder and you end up with a bloated file structure.
 
-We think that, by exposing all the setup files, it becomes clearer and easier to change when needed.
+We think that, by exposing all the setup files it gives us more control, becomes clearer and easier to change when needed.
 
 # What’s Included?
 
@@ -111,18 +110,6 @@ views/
   - `views` - components that are tightly couple with routes. Each view should map the corresponding route. It also should be simple and free from logic that transforms data, focused on implementing the layout using the [UIKit grid system](https://pentaho.github.io/hv-uikit-react/?path=/story/layout--grid).
     - `route/login -> views/Login/`
 - `typings` - feature/ domain custom type definitions, as also global definitions for untyped NPM modules.
-
-# Typescript
-Typescript makes React apps more stable, readable and manageable. It brings multiple advantages to React applications:
-
-- `Interfaces`: it allows to define complex type definitions in the form of interfaces. This results in strict checks which in turn reduces the amount of possible bugs you might have produced without it.
-- `IDEs`: is very helpful while using IDEs as they provide better autocomplete and snippet generation, which makes development faster.
-- `Readable, easily understandable code`: being statically typed code is type-checked, which helps make the code more readable.
-
-To know more about typescript:
-- https://www.typescriptlang.org/
-- https://github.com/piotrwitek/react-redux-typescript-guide
-- https://github.com/typescript-cheatsheets/react-typescript-cheatsheet
   
 # State Management - Redux
 
@@ -199,11 +186,23 @@ To know more about redux:
 - https://redux.js.org/
 - https://redux-toolkit.js.org/
 
+# Typescript
+Typescript makes React apps more stable, readable and manageable. It brings multiple advantages to React applications:
+
+- `Interfaces`: it allows to define complex type definitions in the form of interfaces. This results in strict checks which in turn reduces the amount of possible bugs you might have produced without it.
+- `IDEs`: is very helpful while using IDEs as they provide better autocomplete and snippet generation, which makes development faster.
+- `Readable, easily understandable code`: being statically typed code is type-checked, which helps make the code more readable.
+
+To know more about typescript:
+- https://www.typescriptlang.org/
+- https://github.com/piotrwitek/react-redux-typescript-guide
+- https://github.com/typescript-cheatsheets/react-typescript-cheatsheet
+
 # Linter & Prettify Hooks With Husky
 
 Keeping code syntax and format consistent between multiple developers is something always hard to accomplish.
 
-Husky allows you to tie into git hooks and perform functionality before or after the hooks are executed. We attached onto the commit git hook and run thelinter and prettier libraries before the code is committed.
+Husky allows you to tie into git hooks and perform functionality before or after the hooks are executed. We attached onto the commit git hook and run the linter and prettier libraries before the code is committed.
 
 This way we can enforce proper linting and formatting before anything can be pushed into the repository. It will throw up errors when found that users should fix themselves.
 

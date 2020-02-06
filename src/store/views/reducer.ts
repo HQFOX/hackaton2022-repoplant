@@ -7,7 +7,7 @@
  *  with the terms and conditions stipulated in the agreement/contract
  *  under which the software has been supplied.
  */
-
+ 
 import { createReducer } from "typesafe-actions";
 import { ViewsState, ViewsActions } from "typings/views";
 

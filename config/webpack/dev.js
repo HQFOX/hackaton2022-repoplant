@@ -1,5 +1,6 @@
 // development config
 const merge = require("webpack-merge");
+const path = require("path");
 const webpack = require("webpack");
 const commonConfig = require("./common");
 
@@ -12,7 +13,8 @@ module.exports = merge(commonConfig, {
   ],
   devServer: {
     hot: true, // enable HMR on the server,
-    historyApiFallback: true
+    historyApiFallback: true,
+    port: 8081
   },
   devtool: "cheap-module-eval-source-map",
   plugins: [
@@ -22,5 +24,10 @@ module.exports = merge(commonConfig, {
   watchOptions: {
     aggregateTimeout: 300,
     poll: 1000
+  },
+  resolve: {
+    alias: {
+      react: path.resolve("./node_modules/react")
+    }
   }
 });

@@ -27,7 +27,7 @@ const Row = ({ classes, status, value, id }) => {
 
   return (
     <HvListViewRow checkboxValue={value.id}>
-      <HvListViewCell semantic={status.sema} id={"icon" + id} key={"icon" + id}>
+      <HvListViewCell semantic={status.sema} key={id}>
         <Icon
           semantic={status.sema}
           className={classes.icon}
@@ -35,7 +35,7 @@ const Row = ({ classes, status, value, id }) => {
         />
       </HvListViewCell>
 
-      <HvListViewCell id={"description" + id} key={"description" + id}>
+      <HvListViewCell key={id}>
         <div className={classes.cellInline}>
           <HvTypography variant="highlightText">
             {value.event.description}
@@ -49,15 +49,15 @@ const Row = ({ classes, status, value, id }) => {
         </div>
       </HvListViewCell>
 
-      <HvListViewCell id={"probability" + id} key={"probability" + id}>
+      <HvListViewCell key={id}>
         <HvTypography variant="normalText">{value.probability}%</HvTypography>
       </HvListViewCell>
 
-      <HvListViewCell id={"timeHorizon" + id} key={"timeHorizon" + id}>
+      <HvListViewCell key={id}>
         <HvTypography variant="normalText">{value.timeHorizon}h</HvTypography>
       </HvListViewCell>
 
-      <HvListViewCell id={"relatedAssets" + id} key={"relatedAssets" + id}>
+      <HvListViewCell key={id}>
         <HvTypography variant="normalText">{value.relatedAssets}</HvTypography>
       </HvListViewCell>
     </HvListViewRow>
@@ -75,7 +75,7 @@ const StyledRow = withStyles(styles, { withTheme: true })(Row);
  * @param metadata
  * @returns {*}
  */
-const ListRender = (value, index, viewConfiguration, metadata) => {
+const ListRender = (value, index) => {
   const status = {};
   const { probability } = value;
 
