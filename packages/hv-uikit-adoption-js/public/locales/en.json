@@ -1,0 +1,18 @@
+{
+  "components": {
+    "layout": {
+      "header": {
+        "appName": "UIKit React setup"
+      }
+    }
+  },
+  "pages": {
+    "overview": {
+      "title": "Overview"
+    },
+    "login": {},
+    "notFound": {
+      "title": "Not Found"
+    }
+  }
+}

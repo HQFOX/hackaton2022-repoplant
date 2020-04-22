@@ -1,0 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Footer /> it matches the snapshot 1`] = `
+<div
+  className="HvFooter-root"
+>
+  <p
+    className="HvFooter-labelLeft HvTypography-root HvTypography-normalText"
+  >
+    Hitachi Vantara
+  </p>
+  <p
+    className="HvFooter-labelRight HvTypography-root HvTypography-normalText"
+  >
+    © Hitachi Vantara Corporation 2020. All Rights Reserved.
+  </p>
+</div>
+`;
