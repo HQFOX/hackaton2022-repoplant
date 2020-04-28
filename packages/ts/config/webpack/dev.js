@@ -28,7 +28,8 @@ module.exports = merge(commonConfig, {
   },
   resolve: {
     alias: {
-      react: resolve("./node_modules/react")
+      react: resolve("./node_modules/react"),
+      "@material-ui/styles": resolve("./node_modules/@material-ui/styles")
     }
   }
 });

@@ -7,8 +7,8 @@ import HvHeader, {
   HvHeaderNavigation
 } from "@hv/uikit-react-core/dist/Header";
 import HvButton from "@hv/uikit-react-core/dist/Button";
-import { User } from "@hv/uikit-react-icons/dist";
-import HitachiLogo from "assets/hitachi-logo.svg";
+import { LogOut, User } from "@hv/uikit-react-icons/dist";
+import HitachiLogo from "assets/HitachiLogo";
 import { getSelection } from "lib/utils/path";
 
 const Header = ({ router, auth, pages, getPages, logout }) => {
@@ -30,7 +30,7 @@ const Header = ({ router, auth, pages, getPages, logout }) => {
   return pages.data ? (
     <HvHeader position="relative">
       <HvHeaderBrand
-        logo={<HitachiLogo width="70px" height="25px" />}
+        logo={<HitachiLogo />}
         name={t("components.layout.header.appName")}
       />
       {isAuthed && (
@@ -42,16 +42,14 @@ const Header = ({ router, auth, pages, getPages, logout }) => {
       )}
       {isAuthed && (
         <HvHeaderActions>
+          <HvButton category="icon" aria-label="Open User panel">
+            <User />
+          </HvButton>
           <HvButton
             category="icon"
-            onClick={() => logout()}
-            aria-label="Open User panel">
-            <User
-              boxStyles={{
-                width: 32,
-                height: 32
-              }}
-            />
+            aria-label="Logout"
+            onClick={() => logout()}>
+            <LogOut />
           </HvButton>
         </HvHeaderActions>
       )}

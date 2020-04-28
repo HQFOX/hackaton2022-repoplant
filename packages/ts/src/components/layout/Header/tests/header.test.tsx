@@ -11,6 +11,7 @@ describe("<Header />", () => {
   });
 
   const WithStoreProvider = withStoreProvider(Header, {
+    // @ts-ignore
     router: { location: { pathname: "/" } },
     auth: { isAuthed: false },
     logout: jest.fn()
