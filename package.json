@@ -12,7 +12,25 @@
     "type": "git",
     "url": "https://github.com/pentaho/hv-uikit-adoption.git"
   },
+  "scripts": {
+    "bootstrap": "npx lerna bootstrap",
+    "build": "npx lerna run build",
+    "clean": "npm-run-all clean:*",
+    "clean:package_clean": "npx lerna run clean --parallel",
+    "clean:lerna": "npx lerna clean --yes ",
+    "lint": "npx lerna run lint --parallel",
+    "publish-": "npx lerna publish --yes",
+    "publish-prerelease": "npx lerna publish prerelease --yes",
+    "publish-prepatch": "npx lerna publish prepatch --yes",
+    "publish-patch": "npx lerna publish patch --yes",
+    "publish-preminor": "npx lerna publish preminor --yes",
+    "publish-minor": "npx lerna publish minor --yes",
+    "publish-premajor": "npx lerna publish premajor --yes",
+    "publish-major": "npx lerna publish major --yes",
+    "test": "npx lerna run test --parallel"
+  },
   "devDependencies": {
-    "lerna": "^3.20.2"
+    "lerna": "^3.20.2",
+    "npm-run-all": "^4.1.5"
   }
 }
