@@ -1,4 +1,4 @@
-import withStyles from "@material-ui/core/styles/withStyles";
+import { withStyles } from "@material-ui/core";
 import { bindActionCreators } from "redux";
 import { connect } from "react-redux";
 import { login } from "store/auth/thunks";
@@ -17,6 +17,6 @@ const mapDispatchToProps = dispatch =>
     dispatch
   );
 
-export default withStyles(styles, { name: "Login", withTheme: true })(
+export default withStyles(styles, { name: "Login" })(
   connect(mapStateToProps, mapDispatchToProps)(Login)
 );

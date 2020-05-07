@@ -1,52 +1,42 @@
-const getRandom = (max, min) =>
-  Math.floor(Math.random() * (max - min + 1)) + min;
+import { getRandom } from "lib/utils";
 
-const riskDownTime = {
-  headerTitle: "Downtime track ",
+const compressorData = id => ({
+  headerTitle: `Risk of downtime ${id + 1}`,
+  id: `id_${id}`,
+  status: 5,
   event: {
-    description: "Risk of downtime on Truck 12",
+    description: `Risk of downtime on Truck ${id}`,
     timestamp: "2 minutes ago",
     schedule: "fix now"
   },
-  relatedAssets: "Track A, Zone 15 Brake"
-};
+  probability: getRandom(100),
+  timeHorizon: getRandom(8),
+  relatedAssets: "Track A, Zone 15 Brake",
+  checkboxValue: `id_${id}`
+});
 
-const severeBreakdown = {
-  headerTitle: "Track severe ",
+const machineData = id => ({
+  headerTitle: `Track severe ${id + 1}`,
+  id: `id_${id}`,
+  status: 2,
   event: {
-    description: "Track severe breakdown",
+    description: `Track ${id} severe breakdown`,
     timestamp: "2 hours ago",
     schedule: "fix 3rd shift"
   },
-  relatedAssets: "Track B, Load 2 Brake"
-};
+  probability: getRandom(100),
+  timeHorizon: getRandom(8),
+  relatedAssets: "Track B, Load 2 Brake",
+  checkboxValue: `id_${id}`
+});
 
 const generateData = id => {
-  const risk = getRandom(100, 1);
-  const timeHorizon = getRandom(8, 1);
-  const data = getRandom(10, 1) % 2 === 0 ? riskDownTime : severeBreakdown;
-
-  return {
-    headerTitle: data.headerTitle + (id + 1),
-    id: `id_${id}`,
-    event: data.event,
-    probability: risk,
-    timeHorizon,
-    relatedAssets: data.relatedAssets,
-    checkboxValue: `id_${id}`
-  };
+  return id % 2 === 0 ? compressorData(id) : machineData(id);
 };
 
-const generateAssets = () => {
-  const assets = { data: [] };
-
-  for (let i = 0; i < 20; i += 1) {
-    const data = generateData(i);
-    assets.data.push(data);
-  }
-
-  return assets;
-};
+const generateAssets = (num = 20) => ({
+  data: Array.from(Array(num).keys()).map(i => generateData(i))
+});
 
 const fetchAssets = async () => {
   return new Promise(resolve => {

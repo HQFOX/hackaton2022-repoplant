@@ -1,7 +1,7 @@
 import React from "react";
 import { mount } from "enzyme";
 import { withStoreProvider } from "lib/utils/tests";
-import Header from "../index";
+import Header from "..";
 
 describe("<Header />", () => {
   let component;
@@ -9,6 +9,7 @@ describe("<Header />", () => {
   const WithStoreProvider = withStoreProvider(Header, {
     router: { location: { pathname: "/" } },
     auth: { isAuthed: false },
+    pages: { data: [] },
     logout: jest.fn()
   });
 

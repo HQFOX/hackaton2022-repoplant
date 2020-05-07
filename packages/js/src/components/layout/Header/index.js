@@ -1,4 +1,4 @@
-import withStyles from "@material-ui/core/styles/withStyles";
+import { withStyles } from "@material-ui/core";
 import { bindActionCreators } from "redux";
 import { connect } from "react-redux";
 import { getPages } from "store/pages/thunks";
@@ -21,6 +21,6 @@ const mapDispatchToProps = dispatch =>
     dispatch
   );
 
-export default withStyles(styles, { name: "Header", withTheme: true })(
+export default withStyles(styles, { name: "Header" })(
   connect(mapStateToProps, mapDispatchToProps)(Header)
 );
