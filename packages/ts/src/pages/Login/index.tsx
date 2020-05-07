@@ -22,6 +22,6 @@ export type LoginProps = WithStyles<typeof styles> &
   ReturnType<typeof mapStateToProps> &
   ReturnType<typeof mapDispatchToProps>;
 
-export default withStyles(styles, { name: "Login", withTheme: true })(
+export default withStyles(styles, { name: "Login" })(
   connect(mapStateToProps, mapDispatchToProps)(Login)
 );

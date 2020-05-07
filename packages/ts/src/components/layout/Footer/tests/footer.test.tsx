@@ -1,17 +1,17 @@
 import React from "react";
-import { create, ReactTestRenderer } from "react-test-renderer";
+import { mount } from "enzyme";
 import { withHvProvider } from "lib/utils/tests";
 import Footer from "../index";
 
 describe("<Footer />", () => {
-  let snapshot: ReactTestRenderer;
+  let snapshot;
 
   beforeEach(() => {
     const WithHvProvider = withHvProvider(Footer);
-    snapshot = create(<WithHvProvider />);
+    snapshot = mount(<WithHvProvider />);
   });
 
   test("it matches the snapshot", () => {
-    expect(snapshot.toJSON()).toMatchSnapshot();
+    expect(snapshot).toMatchSnapshot();
   });
 });

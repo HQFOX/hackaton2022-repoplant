@@ -4,4 +4,4 @@ import Footer from "./Footer";
 
 export type FooterStyles = WithStyles<typeof styles>;
 
-export default withStyles(styles, { name: "Footer", withTheme: true })(Footer);
+export default withStyles(styles, { name: "Footer" })(Footer);

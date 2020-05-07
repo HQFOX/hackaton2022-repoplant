@@ -12,7 +12,7 @@ const Overview: React.FC<OverviewProps> = () => {
     <HvGrid container alignItems="center">
       <HvGrid item xs={4} md={8}>
         <HvTypography variant="xlTitle">
-          {t("views.overview.title")}
+          {t("pages.overview.title")}
         </HvTypography>
       </HvGrid>
     </HvGrid>

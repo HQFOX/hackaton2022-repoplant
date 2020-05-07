@@ -26,6 +26,6 @@ export type HeaderProps = WithStyles<typeof styles> &
   ReturnType<typeof mapStateToProps> &
   ReturnType<typeof mapDispatchToProps>;
 
-export default withStyles(styles, { name: "Header", withTheme: true })(
+export default withStyles(styles, { name: "Header" })(
   connect(mapStateToProps, mapDispatchToProps)(Header)
 );

@@ -4,15 +4,45 @@
       "header": {
         "appName": "UIKit React setup"
       }
+    },
+    "home": {
+      "cardView": {
+        "probability": "Probability",
+        "timeHorizon": "Time horizon",
+        "relatedAssets": "Related Assets"
+      }
+    },
+    "details": {
+      "chart": {
+        "title": "Try to resize me from left to right.",
+        "subtitle": "You'll see that I'm learning hot to responsively behave. I can also transform into a another chart type.",
+        "xAxisTitle": "2018",
+        "yAxisTitle": "Thousands of Dollars ($)"
+      },
+      "kpis": {
+        "title": "Avg. service time",
+        "indicator": "12 414",
+        "comparisonIndicatorInfo": "vs last 24h.",
+        "comparisonIndicator": "10%"
+      },
+      "table": {
+        "title": "Insights"
+      }
     }
   },
-  "views": {
+  "pages": {
     "overview": {
       "title": "Overview"
     },
     "login": {},
     "notFound": {
       "title": "Not Found"
+    },
+    "home": {
+      "title": "Home"
+    },
+    "details": {
+      "title": "Details"
     }
   }
 }

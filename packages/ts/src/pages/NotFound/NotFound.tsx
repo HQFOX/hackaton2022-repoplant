@@ -12,7 +12,7 @@ const NotFound: React.FC<NotFoundProps> = ({ classes }: NotFoundProps) => {
     <HvGrid container>
       <HvGrid item xl={12}>
         <HvTypography variant="3xlTitle" className={classes.title}>
-          {t("views.notFound.title")}
+          {t("pages.notFound.title")}
         </HvTypography>
       </HvGrid>
     </HvGrid>

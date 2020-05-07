@@ -1,15 +1,18 @@
-import React, { useEffect, SyntheticEvent } from "react";
+import React, { useContext, useEffect, SyntheticEvent } from "react";
 import { useTranslation } from "react-i18next";
 import { useHistory } from "react-router-dom";
+import { useMediaQuery, useTheme } from "@material-ui/core";
 import HvHeader, {
   HvHeaderBrand,
   HvHeaderActions,
   HvHeaderNavigation
 } from "@hv/uikit-react-core/dist/Header";
 import HvButton from "@hv/uikit-react-core/dist/Button";
-import { LogOut, User } from "@hv/uikit-react-icons/dist";
+import { LogOut, Menu, ThemeSwitcher, User } from "@hv/uikit-react-icons/dist";
 import HitachiLogo from "assets/HitachiLogo";
 import { getSelection } from "lib/utils/path";
+import ThemeContext from "lib/ThemeContext";
+import NavigationContext from "lib/NavigationContext";
 import { Page } from "typings/pages";
 import { HeaderProps } from "./index";
 
@@ -22,8 +25,15 @@ const Header: React.FC<HeaderProps> = ({
 }: HeaderProps) => {
   const { t } = useTranslation();
   const history = useHistory();
+  const theme = useTheme();
   const { isAuthed } = auth;
   const { pathname } = router.location;
+
+  const { toggleTheme } = useContext(ThemeContext);
+  const { toggleOpen } = useContext(NavigationContext);
+
+  const isMdUp = useMediaQuery(theme.breakpoints.up("md"));
+  const isXs = useMediaQuery(theme.breakpoints.only("xs"));
 
   const selection = getSelection(pages.data, pathname);
 
@@ -35,32 +45,45 @@ const Header: React.FC<HeaderProps> = ({
     if (selectedPage.path) history.push(selectedPage.path);
   };
 
-  return pages.data ? (
-    <HvHeader position="relative">
+  return pages?.data ? (
+    <HvHeader>
+      {!isMdUp && (
+        <HvButton category="icon" onClick={toggleOpen}>
+          <Menu />
+        </HvButton>
+      )}
+
       <HvHeaderBrand
         logo={<HitachiLogo />}
-        name={t("components.layout.header.appName")}
+        name={!isXs ? t("components.layout.header.appName") : undefined}
       />
-      {isAuthed && (
+
+      {isAuthed && isMdUp && (
         <HvHeaderNavigation
           data={pages.data}
-          selected={selection && selection.id}
+          selected={selection?.id}
           onClick={handleChange}
         />
       )}
-      {isAuthed && (
-        <HvHeaderActions>
+
+      <HvHeaderActions>
+        <HvButton category="icon" aria-label="Change theme">
+          <ThemeSwitcher onClick={() => toggleTheme()} />
+        </HvButton>
+        {isAuthed && (
           <HvButton category="icon" aria-label="Open User panel">
             <User />
           </HvButton>
+        )}
+        {isAuthed && isMdUp && (
           <HvButton
             category="icon"
             onClick={() => logout()}
             aria-label="Logout">
             <LogOut />
           </HvButton>
-        </HvHeaderActions>
-      )}
+        )}
+      </HvHeaderActions>
     </HvHeader>
   ) : (
     <></>

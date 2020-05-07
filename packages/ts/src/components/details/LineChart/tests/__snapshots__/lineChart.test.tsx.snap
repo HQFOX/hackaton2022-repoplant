@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<LineChart /> matches the snapshot 1`] = `
+<WithStyles(LineChart)>
+  <LineChart
+    classes={Object {}}
+  />
+</WithStyles(LineChart)>
+`;
