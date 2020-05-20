@@ -1,7 +1,7 @@
 import React from "react";
 import { useTranslation } from "react-i18next";
-import { Level0Good as Good } from "@hv/uikit-react-icons/dist";
-import { HvGrid, HvKpi, HvTypography } from "@hv/uikit-react-core/dist";
+import { Level0Good as Good } from "@hv/uikit-react-icons";
+import { HvGrid, HvKpi, HvTypography } from "@hv/uikit-react-core";
 
 const Kpis = () => {
   const { t } = useTranslation();

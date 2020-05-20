@@ -4,7 +4,7 @@ import thunk from "redux-thunk";
 import { MemoryRouter } from "react-router-dom";
 import configureMockStore from "redux-mock-store";
 import { createMemoryHistory } from "history";
-import HvProvider from "@hv/uikit-react-core/dist/Provider";
+import { HvProvider } from "@hv/uikit-react-core";
 
 const mockStore = configureMockStore([thunk]);
 const memoryHistory = createMemoryHistory();

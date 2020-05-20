@@ -22,9 +22,8 @@
     "clean": "rimraf build/*"
   },
   "dependencies": {
-    "@hv/uikit-react-core": "^2.0.3",
-    "@hv/uikit-react-icons": "^2.0.3",
-    "@hv/uikit-react-lab": "^2.0.3",
+    "@hv/uikit-react-core": "latest",
+    "@hv/uikit-react-icons": "latest",
     "@material-ui/core": "^4.9.11",
     "axios": "^0.19.2",
     "connected-react-router": "^6.8.0",

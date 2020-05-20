@@ -1,6 +1,6 @@
 import React, { useState, Suspense } from "react";
 import { Provider } from "react-redux";
-import { HvProvider, HvUiKitThemeNames } from "@hv/uikit-react-core/dist";
+import { HvProvider, HvUiKitThemeNames } from "@hv/uikit-react-core";
 
 import { ConnectedRouter } from "connected-react-router";
 import { store, history } from "store";

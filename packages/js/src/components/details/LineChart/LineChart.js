@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
-import { HvLinechart } from "@hv/uikit-react-core/dist";
+import { HvLinechart } from "@hv/uikit-react-core";
 import { fetchTimeSeriesData } from "lib/api/data";
 
 const LineChart = () => {

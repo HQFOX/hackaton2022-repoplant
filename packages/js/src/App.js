@@ -1,6 +1,6 @@
 import React, { Suspense, useState } from "react";
 import { Provider } from "react-redux";
-import { HvProvider } from "@hv/uikit-react-core/dist";
+import { HvProvider } from "@hv/uikit-react-core";
 import { ConnectedRouter } from "connected-react-router";
 import { store, history } from "store";
 import { setCookie, getCookie } from "lib/utils/cookie";
@@ -16,8 +16,6 @@ const App = () => {
     setTheme(newTheme);
     setCookie({ key: "theme", value: newTheme });
   };
-
-  console.log("theme", theme);
 
   return (
     <Provider store={store}>

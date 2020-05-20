@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
-import { HvBarchart } from "@hv/uikit-react-core/dist";
+import { HvBarchart } from "@hv/uikit-react-core";
 import { fetchSalesData } from "lib/api/data";
 
 const BarChart: React.FC = () => {

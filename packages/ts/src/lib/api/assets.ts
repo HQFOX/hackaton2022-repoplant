@@ -15,8 +15,8 @@ const compressorData = id => ({
     timestamp: "2 minutes ago",
     schedule: "fix now"
   },
-  probability: getRandom(100),
-  timeHorizon: getRandom(8),
+  probability: getRandom(id, 100),
+  timeHorizon: getRandom(id, 8),
   relatedAssets: "Track A, Zone 15 Brake",
   checkboxValue: `id_${id}`
 });
@@ -30,14 +30,21 @@ const machineData = id => ({
     timestamp: "2 hours ago",
     schedule: "fix 3rd shift"
   },
-  probability: getRandom(100),
-  timeHorizon: getRandom(8),
+  probability: getRandom(id, 100),
+  timeHorizon: getRandom(id, 8),
   relatedAssets: "Track B, Load 2 Brake",
   checkboxValue: `id_${id}`
 });
 
-const generateData = (i: number): AssetData => {
-  return i % 2 === 0 ? compressorData(i) : machineData(i);
+const generateData = (id: number): AssetData => {
+  const data = id % 2 === 0 ? compressorData(id) : machineData(id);
+  return {
+    ...data,
+    id: `id_${id}`,
+    probability: `${getRandom(id, 100)}%`,
+    timeHorizon: `${getRandom(id, 8)}h`,
+    checkboxValue: `id_${id}`
+  };
 };
 
 const generateAsset = (id: number): AssetsResult => ({

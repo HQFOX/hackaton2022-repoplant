@@ -7,8 +7,8 @@ import HvHeader, {
   HvHeaderActions,
   HvHeaderNavigation
 } from "@hv/uikit-react-core/dist/Header";
-import { HvButton } from "@hv/uikit-react-core/dist";
-import { LogOut, Menu, ThemeSwitcher, User } from "@hv/uikit-react-icons/dist";
+import { HvButton } from "@hv/uikit-react-core";
+import { LogOut, Menu, ThemeSwitcher, User } from "@hv/uikit-react-icons";
 import HitachiLogo from "assets/HitachiLogo";
 import ThemeContext from "lib/ThemeContext";
 import NavigationContext from "lib/NavigationContext";
@@ -59,8 +59,11 @@ const Header = ({ router, auth, pages, getPages, logout }) => {
       )}
 
       <HvHeaderActions>
-        <HvButton category="icon" aria-label="Change theme">
-          <ThemeSwitcher onClick={() => toggleTheme()} />
+        <HvButton
+          category="icon"
+          aria-label="Change theme"
+          onClick={() => toggleTheme()}>
+          <ThemeSwitcher />
         </HvButton>
         {isAuthed && (
           <HvButton category="icon" aria-label="Open User panel">

@@ -1,11 +1,11 @@
-import { getRandom } from "lib/utils";
+import { getRandoms } from "lib/utils";
 
 type DataResults = {
   data: any[];
 };
 
 const generateData = (n = 4, min = 1000, max = 8000) =>
-  Array.from(Array(n)).map(() => getRandom(max, min));
+  getRandoms(0, max, min, n);
 
 const generateTimeSeries = (): DataResults => {
   const months = [

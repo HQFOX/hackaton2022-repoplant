@@ -7,6 +7,12 @@ const styles = theme =>
       marginRight: theme.spacing("xs"),
       borderRight: `1px solid ${theme.hv.palette.accent.acce1}`
     },
+    descriptionContainer: {
+      display: "inline-flex"
+    },
+    schedule: {
+      paddingTop: 2
+    },
     icon: {
       margin: theme.spacing(0, "xs")
     }

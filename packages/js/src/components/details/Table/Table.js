@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
-import { HvTable } from "@hv/uikit-react-core/dist";
+import { HvTable } from "@hv/uikit-react-core";
 import { fetchTableData } from "lib/api/data";
 import { columns } from "./configuration";
 

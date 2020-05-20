@@ -1,5 +1,5 @@
 import React from "react";
-import { HvCard } from "@hv/uikit-react-core/dist";
+import { HvCard } from "@hv/uikit-react-core";
 import ListViewRow from "./ListViewRow";
 import CardContent from "./CardContent";
 import { getStatus } from "../utils";

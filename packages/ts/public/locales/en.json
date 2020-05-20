@@ -6,6 +6,12 @@
       }
     },
     "home": {
+      "assetInventory": {
+        "searchLabel": "Search assets",
+        "sortLabel": "Sort assets...",
+        "cardViewLabel": "Card view",
+        "listViewLabel": "List view"
+      },
       "cardView": {
         "probability": "Probability",
         "timeHorizon": "Time horizon",
@@ -39,10 +45,13 @@
       "title": "Not Found"
     },
     "home": {
-      "title": "Home"
+      "title": "Home",
+      "assets": "Assets"
     },
     "details": {
-      "title": "Details"
+      "title": "Details",
+      "insight": "Insight",
+      "story": "Story"
     }
   }
 }

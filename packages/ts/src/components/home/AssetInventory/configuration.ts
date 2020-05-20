@@ -1,7 +1,7 @@
 import {
   AssetInventoryMetadata,
   AssetInventoryConfiguration
-} from "@hv/uikit-react-core/dist";
+} from "@hv/uikit-react-core";
 
 const metadata: AssetInventoryMetadata[] = [
   {

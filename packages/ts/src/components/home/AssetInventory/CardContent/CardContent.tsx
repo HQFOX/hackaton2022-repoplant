@@ -1,13 +1,13 @@
 import React from "react";
 import { useTranslation } from "react-i18next";
-import { HvGrid, HvKpi, HvTypography } from "@hv/uikit-react-core/dist";
+import { HvGrid, HvKpi, HvTypography } from "@hv/uikit-react-core";
 
 const CardContent = ({ classes, values }) => {
   const { t } = useTranslation();
 
   return (
     <HvGrid container>
-      <HvGrid item xs={12} sm={12} md={12} lg={12} xl={12}>
+      <HvGrid item xs={12}>
         <div className={classes.kpis}>
           <HvTypography className={classes.timestamp} variant="sText">
             {values.event.timestamp}
@@ -16,31 +16,24 @@ const CardContent = ({ classes, values }) => {
         </div>
       </HvGrid>
 
-      <HvGrid item xs={12} sm={12} md={12} lg={12} xl={12}>
+      <HvGrid item xs={12}>
         <div className={classes.kpis}>
           <HvKpi
             labels={{
               title: t("components.home.cardView.probability"),
-              indicator: `${values.probability}%`
+              indicator: values.probability
             }}
           />
           <HvKpi
             labels={{
               title: t("components.home.cardView.timeHorizon"),
-              indicator: `${values.timeHorizon}h`
+              indicator: values.timeHorizon
             }}
           />
         </div>
       </HvGrid>
 
-      <HvGrid
-        item
-        xs={12}
-        sm={12}
-        md={12}
-        lg={12}
-        xl={12}
-        className={classes.item}>
+      <HvGrid item xs={12} className={classes.item}>
         <HvTypography variant="labelText">
           {t("components.home.cardView.relatedAssets")}
         </HvTypography>

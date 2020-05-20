@@ -2,36 +2,35 @@ import { getRandom } from "lib/utils";
 
 const compressorData = id => ({
   headerTitle: `Risk of downtime ${id + 1}`,
-  id: `id_${id}`,
   status: 5,
   event: {
     description: `Risk of downtime on Truck ${id}`,
     timestamp: "2 minutes ago",
     schedule: "fix now"
   },
-  probability: getRandom(100),
-  timeHorizon: getRandom(8),
-  relatedAssets: "Track A, Zone 15 Brake",
-  checkboxValue: `id_${id}`
+  relatedAssets: "Track A, Zone 15 Brake"
 });
 
 const machineData = id => ({
   headerTitle: `Track severe ${id + 1}`,
-  id: `id_${id}`,
   status: 2,
   event: {
     description: `Track ${id} severe breakdown`,
     timestamp: "2 hours ago",
     schedule: "fix 3rd shift"
   },
-  probability: getRandom(100),
-  timeHorizon: getRandom(8),
-  relatedAssets: "Track B, Load 2 Brake",
-  checkboxValue: `id_${id}`
+  relatedAssets: "Track B, Load 2 Brake"
 });
 
 const generateData = id => {
-  return id % 2 === 0 ? compressorData(id) : machineData(id);
+  const data = id % 2 === 0 ? compressorData(id) : machineData(id);
+  return {
+    ...data,
+    id: `id_${id}`,
+    probability: `${getRandom(id, 100)}%`,
+    timeHorizon: `${getRandom(id, 8)}h`,
+    checkboxValue: `id_${id}`
+  };
 };
 
 const generateAssets = (num = 20) => ({

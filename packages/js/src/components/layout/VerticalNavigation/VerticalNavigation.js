@@ -1,7 +1,7 @@
 import React, { useContext, useEffect } from "react";
 import { useHistory } from "react-router-dom";
 import { useMediaQuery, useTheme } from "@material-ui/core";
-import { LogOut, User } from "@hv/uikit-react-icons/dist";
+import { LogOut, User } from "@hv/uikit-react-icons";
 import HvVerticalNavigation, {
   Action,
   Actions,

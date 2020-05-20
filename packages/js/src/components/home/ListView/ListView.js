@@ -1,5 +1,5 @@
 import React from "react";
-import { HvListView } from "@hv/uikit-react-core/dist";
+import { HvListView } from "@hv/uikit-react-core";
 import ListViewRow from "./ListViewRow";
 import { getStatus } from "../utils";
 

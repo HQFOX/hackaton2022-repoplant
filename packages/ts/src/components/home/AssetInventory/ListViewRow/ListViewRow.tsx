@@ -3,7 +3,7 @@ import {
   HvListViewCell,
   HvListViewRow,
   HvTypography
-} from "@hv/uikit-react-core/dist";
+} from "@hv/uikit-react-core";
 
 const ListViewRow = ({ classes, status, value, id }) => {
   const { Icon } = status;
@@ -16,14 +16,14 @@ const ListViewRow = ({ classes, status, value, id }) => {
       </HvListViewCell>
 
       <HvListViewCell id={`${id}-description`} key={`${id}-description`}>
-        <div style={{ display: "inline-flex" }}>
+        <div className={classes.descriptionContainer}>
           <HvTypography variant="highlightText">
             {value.event.description}
           </HvTypography>
           <HvTypography className={classes.timestamp} variant="sText">
             {value.event.timestamp}
           </HvTypography>
-          <HvTypography style={{ paddingTop: "2px" }} variant="sText">
+          <HvTypography className={classes.schedule} variant="sText">
             {value.event.schedule}
           </HvTypography>
         </div>

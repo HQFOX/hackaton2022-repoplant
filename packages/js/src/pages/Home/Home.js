@@ -1,17 +1,25 @@
 import React from "react";
-import { HvTypography } from "@hv/uikit-react-core/dist";
+import PropTypes from "prop-types";
+import { useTranslation } from "react-i18next";
+import { HvTypography } from "@hv/uikit-react-core";
 import withLayout from "lib/hocs/withLayout";
 import AssetInventory from "components/home/AssetInventory";
 
-const Home = () => (
-  <div>
-    <HvTypography variant="3xlTitle" style={{ marginLeft: 15 }}>
-      Assets
-    </HvTypography>
-    <AssetInventory />
-  </div>
-);
+const Home = ({ classes }) => {
+  const { t } = useTranslation();
 
-Home.propTypes = {};
+  return (
+    <div>
+      <HvTypography variant="3xlTitle" className={classes.title}>
+        {t("pages.home.assets")}
+      </HvTypography>
+      <AssetInventory />
+    </div>
+  );
+};
+
+Home.propTypes = {
+  classes: PropTypes.instanceOf(Object).isRequired
+};
 
 export default withLayout(Home);
