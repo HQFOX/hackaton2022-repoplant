@@ -1,20 +1,13 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import { useTranslation } from "react-i18next";
 import { HvBarchart } from "@hv/uikit-react-core";
-import { fetchSalesData } from "lib/api/data";
 
-const BarChart: React.FC = () => {
-  const [data, setData] = useState([]);
+const BarChart = ({ data, getBarData }) => {
   const { t } = useTranslation();
 
   useEffect(() => {
-    const fetchData = async () => {
-      const result = await fetchSalesData();
-      // @ts-ignore
-      setData(result.data);
-    };
-    fetchData();
-  }, []);
+    getBarData();
+  }, [getBarData]);
 
   if (!data || !data.length) return null;
 

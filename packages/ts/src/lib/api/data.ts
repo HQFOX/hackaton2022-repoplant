@@ -1,7 +1,7 @@
 import { getRandoms } from "lib/utils";
 
 type DataResults = {
-  data: any[];
+  data: Record<string, any>[];
 };
 
 const generateData = (n = 4, min = 1000, max = 8000) =>

@@ -1,9 +1,13 @@
 import { getRandom } from "lib/utils";
 
-type AssetData = object;
+export type AssetData = Record<string, any>;
 
-type AssetsResult = {
-  data: AssetData | AssetData[];
+export type AssetResult = {
+  data: AssetData;
+};
+
+export type AssetsResult = {
+  data: AssetData[];
 };
 
 const compressorData = id => ({
@@ -47,7 +51,7 @@ const generateData = (id: number): AssetData => {
   };
 };
 
-const generateAsset = (id: number): AssetsResult => ({
+const generateAsset = (id: number): AssetResult => ({
   data: generateData(id)
 });
 
@@ -61,8 +65,8 @@ const fetchAssets = async (num = 20): Promise<AssetsResult> => {
   });
 };
 
-const fetchAsset = async (id: string): Promise<AssetsResult> => {
-  return new Promise<AssetsResult>(resolve => {
+const fetchAsset = async (id: string): Promise<AssetResult> => {
+  return new Promise<AssetResult>(resolve => {
     setTimeout(() => resolve(generateAsset(Number(id.split("_")[1]))), 500);
   });
 };

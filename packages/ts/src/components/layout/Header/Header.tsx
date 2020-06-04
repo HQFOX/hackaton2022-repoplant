@@ -1,6 +1,5 @@
 import React, { useContext, useEffect, SyntheticEvent } from "react";
 import { useTranslation } from "react-i18next";
-import { useHistory } from "react-router-dom";
 import { useMediaQuery, useTheme } from "@material-ui/core";
 import HvHeader, {
   HvHeaderBrand,
@@ -21,10 +20,10 @@ const Header: React.FC<HeaderProps> = ({
   auth,
   pages,
   getPages,
+  redirect,
   logout
 }: HeaderProps) => {
   const { t } = useTranslation();
-  const history = useHistory();
   const theme = useTheme();
   const { isAuthed } = auth;
   const { pathname } = router.location;
@@ -42,7 +41,7 @@ const Header: React.FC<HeaderProps> = ({
   }, [getPages]);
 
   const handleChange = (event: SyntheticEvent, selectedPage: Page): void => {
-    if (selectedPage.path) history.push(selectedPage.path);
+    if (selectedPage.path) redirect(selectedPage.path);
   };
 
   return pages?.data ? (

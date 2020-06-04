@@ -1,3 +1,4 @@
+import { push } from "connected-react-router";
 import { fetchPages } from "lib/api/pages";
 import { setPages } from "./actions";
 
@@ -6,4 +7,8 @@ const getPages = () => async dispatch => {
   dispatch(setPages(pages));
 };
 
-export { getPages };
+const redirect = path => dispatch => {
+  dispatch(push(path));
+};
+
+export { getPages, redirect };

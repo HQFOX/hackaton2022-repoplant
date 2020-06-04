@@ -1,6 +1,5 @@
 import React, { useContext, useEffect } from "react";
 import { useTranslation } from "react-i18next";
-import { useHistory } from "react-router-dom";
 import { useMediaQuery, useTheme } from "@material-ui/core";
 import HvHeader, {
   HvHeaderBrand,
@@ -14,9 +13,8 @@ import ThemeContext from "lib/ThemeContext";
 import NavigationContext from "lib/NavigationContext";
 import { getSelection } from "lib/utils/path";
 
-const Header = ({ router, auth, pages, getPages, logout }) => {
+const Header = ({ router, auth, pages, getPages, redirect, logout }) => {
   const { t } = useTranslation();
-  const history = useHistory();
   const theme = useTheme();
   const { toggleOpen } = useContext(NavigationContext);
   const { toggleTheme } = useContext(ThemeContext);
@@ -34,7 +32,7 @@ const Header = ({ router, auth, pages, getPages, logout }) => {
   }, [getPages]);
 
   const handleChange = (event, selectedPage) => {
-    if (selectedPage.path) history.push(selectedPage.path);
+    if (selectedPage.path) redirect(selectedPage.path);
   };
 
   return pages.data ? (

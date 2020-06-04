@@ -1,6 +1,6 @@
 import moment from "moment";
 
-const columns = [
+const columns: any[] = [
   {
     headerText: "Title",
     accessor: "name",

@@ -9,7 +9,6 @@ const ListViewRow = ({ classes, status, value, id }) => {
   const { Icon } = status;
 
   return (
-    // @ts-ignore
     <HvListViewRow checkboxProps={{ value: value.id }}>
       <HvListViewCell semantic={status.sema} id={`${id}icon`} key={`${id}icon`}>
         <Icon semantic={status.sema} className={classes.icon} />

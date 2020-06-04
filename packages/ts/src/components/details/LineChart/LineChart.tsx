@@ -1,20 +1,13 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import { useTranslation } from "react-i18next";
 import { HvLinechart } from "@hv/uikit-react-core";
-import { fetchTimeSeriesData } from "lib/api/data";
 
-const LineChart: React.FC = () => {
-  const [data, setData] = useState([]);
+const LineChart = ({ data, getLineData }) => {
   const { t } = useTranslation();
 
   useEffect(() => {
-    const fetchData = async () => {
-      const result = await fetchTimeSeriesData();
-      // @ts-ignore
-      setData(result.data);
-    };
-    fetchData();
-  }, []);
+    getLineData();
+  }, [getLineData]);
 
   if (!data || !data.length) return null;
 

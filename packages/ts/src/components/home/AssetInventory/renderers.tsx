@@ -18,12 +18,10 @@ export const cardRenderer = (data, viewConfiguration) => {
 
   return (
     <HvCard
-      // @ts-ignore
-      icon={<Icon semantic={sema} />}
+      icon={Icon && <Icon semantic={sema} />}
       headerTitle={data.headerTitle}
       innerCardContent={<CardContent values={data} />}
       semantic={sema}
-      // @ts-ignore
       checkboxProps={{ value: data.id }}
       onChange={viewConfiguration.onSelection}
       isSelectable={viewConfiguration.isSelectable}

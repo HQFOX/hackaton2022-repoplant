@@ -1,30 +1,23 @@
-import React, { useEffect, useState } from "react";
-import { useHistory } from "react-router-dom";
+import React, { useEffect } from "react";
+import PropTypes from "prop-types";
 import { useTranslation } from "react-i18next";
 import { Cards, List } from "@hv/uikit-react-icons";
 import { HvAssetInventory } from "@hv/uikit-react-core";
-import { fetchAssets } from "lib/api/assets";
 import CardView from "../CardView";
 import ListView from "../ListView";
 import configuration from "./configuration";
 import actions from "./actions";
 
-const AssetInventory = () => {
-  const history = useHistory();
+const AssetInventory = ({ redirect, assets, getAssetsData }) => {
   const { t } = useTranslation();
-  const [data, setData] = useState([]);
 
-  const handleAction = (event, id) => {
-    history.push(`/asset/${id}`);
+  const handleAction = (event, id, action) => {
+    redirect(`/asset/${action.id}`);
   };
 
   useEffect(() => {
-    const fetchData = async () => {
-      const result = await fetchAssets();
-      setData(result.data);
-    };
-    fetchData();
-  }, []);
+    getAssetsData();
+  }, [getAssetsData]);
 
   const labels = {
     sort: t("components.home.assetInventory.sortLabel"),
@@ -35,7 +28,7 @@ const AssetInventory = () => {
 
   return (
     <HvAssetInventory
-      values={data}
+      values={assets}
       configuration={configuration}
       actions={actions}
       actionsCallback={handleAction}
@@ -52,6 +45,10 @@ const AssetInventory = () => {
   );
 };
 
-AssetInventory.propTypes = {};
+AssetInventory.propTypes = {
+  redirect: PropTypes.func,
+  assets: PropTypes.arrayOf(Object),
+  getAssetsData: PropTypes.func
+};
 
 export default AssetInventory;

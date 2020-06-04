@@ -1,21 +1,16 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
+import PropTypes from "prop-types";
 import { useTranslation } from "react-i18next";
 import { HvBarchart } from "@hv/uikit-react-core";
-import { fetchSalesData } from "lib/api/data";
 
-const BarChart = () => {
-  const [data, setData] = useState([]);
+const BarChart = ({ data, getBarData }) => {
   const { t } = useTranslation();
 
   useEffect(() => {
-    const fetchData = async () => {
-      const result = await fetchSalesData();
-      setData(result.data);
-    };
-    fetchData();
-  }, []);
+    getBarData();
+  }, [getBarData]);
 
-  if (!data || !data.length) return null;
+  if (!data?.length) return null;
 
   return (
     <HvBarchart
@@ -28,6 +23,9 @@ const BarChart = () => {
   );
 };
 
-BarChart.propTypes = {};
+BarChart.propTypes = {
+  data: PropTypes.arrayOf(Object),
+  getBarData: PropTypes.func
+};
 
 export default BarChart;

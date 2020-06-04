@@ -9,7 +9,7 @@ import {
 import { HvSemanticColorKeys } from "@hv/uikit-react-core";
 
 type Status = {
-  Icon: React.ReactNode;
+  Icon: React.ComponentType<any> | null;
   sema: HvSemanticColorKeys;
 };
 

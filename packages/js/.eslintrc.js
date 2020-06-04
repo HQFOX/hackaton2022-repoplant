@@ -30,6 +30,7 @@ module.exports = {
     "import/prefer-default-export": "off",
     "import/no-cycle": "off",
     "react/prop-types": 1,
+    "react/require-default-props": "off",
     "react/jsx-filename-extension": [1, { extensions: [".js", ".jsx"] }],
     "react/jsx-props-no-spreading": "off"
   }

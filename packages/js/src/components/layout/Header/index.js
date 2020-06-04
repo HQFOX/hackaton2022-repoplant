@@ -1,7 +1,7 @@
 import { withStyles } from "@material-ui/core";
 import { bindActionCreators } from "redux";
 import { connect } from "react-redux";
-import { getPages } from "store/pages/thunks";
+import { getPages, redirect } from "store/pages/thunks";
 import { logout } from "store/auth/thunks";
 import styles from "./styles";
 import Header from "./Header";
@@ -16,6 +16,7 @@ const mapDispatchToProps = dispatch =>
   bindActionCreators(
     {
       getPages,
+      redirect,
       logout
     },
     dispatch
