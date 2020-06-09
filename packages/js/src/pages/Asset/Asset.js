@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import HvTypography from "@hv/uikit-react-core/dist/Typography";
-import HvGrid from "@hv/uikit-react-core/dist/Grid";
+import { HvGrid, HvTypography } from "@hv/uikit-react-core";
 import withLayout from "lib/hocs/withLayout";
 import { fetchAsset } from "lib/api/assets";
 
@@ -26,6 +25,6 @@ const Asset = () => {
       </HvGrid>
     </HvGrid>
   );
-}
+};
 
 export default withLayout(Asset);

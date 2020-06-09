@@ -1,34 +1,68 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`withLayout is rendered correctly 1`] = `
-<Fragment>
+<ContextProvider
+  value={
+    Object {
+      "isOpen": false,
+      "toggleOpen": [Function],
+    }
+  }
+>
   <WithStyles(Connect(Header)) />
-  <section
-    id="content"
+  <div
     style={
       Object {
-        "padding": "30px 15px",
+        "display": "flex",
+        "paddingTop": "50px",
       }
     }
   >
-    <Component />
-  </section>
-</Fragment>
+    <WithStyles(Connect(VerticalNavigation)) />
+    <main
+      style={
+        Object {
+          "flexGrow": 1,
+          "padding": "30px 15px 0 15px",
+        }
+      }
+    >
+      <Component />
+    </main>
+  </div>
+</ContextProvider>
 `;
 
 exports[`withLayout is rendered correctly 2`] = `
-<Fragment>
+<ContextProvider
+  value={
+    Object {
+      "isOpen": false,
+      "toggleOpen": [Function],
+    }
+  }
+>
   <WithStyles(Connect(Header)) />
-  <section
-    id="content"
+  <div
     style={
       Object {
-        "padding": "0",
+        "display": "flex",
+        "paddingTop": "50px",
       }
     }
   >
-    <Component />
-  </section>
+    <WithStyles(Connect(VerticalNavigation)) />
+    <main
+      style={
+        Object {
+          "flexGrow": 1,
+          "padding": "30px 15px 0 15px",
+        }
+      }
+    >
+      <Component />
+    </main>
+  </div>
   <WithStyles(Footer) />
-</Fragment>
+</ContextProvider>
 `;

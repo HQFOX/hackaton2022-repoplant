@@ -1,7 +1,6 @@
 import React from "react";
 import { useTranslation } from "react-i18next";
-import HvTypography from "@hv/uikit-react-core/dist/Typography";
-import HvGrid from "@hv/uikit-react-core/dist/Grid";
+import { HvGrid, HvTypography } from "@hv/uikit-react-core";
 import withLayout from "lib/hocs/withLayout";
 import { OverviewProps } from "./index";
 
@@ -12,7 +11,7 @@ const Overview: React.FC<OverviewProps> = () => {
     <HvGrid container alignItems="center">
       <HvGrid item xs={4} md={8}>
         <HvTypography variant="xlTitle">
-          {t("views.overview.title")}
+          {t("pages.overview.title")}
         </HvTypography>
       </HvGrid>
     </HvGrid>

@@ -3,11 +3,10 @@ import { Provider } from "react-redux";
 import thunk from "redux-thunk";
 import { MemoryRouter } from "react-router-dom";
 import configureMockStore, { MockStore } from "redux-mock-store";
-import { createMemoryHistory } from "history";
-import HvProvider from "@hv/uikit-react-core/dist/Provider";
-import { AppState } from "typings/state";
+import { HvProvider } from "@hv/uikit-react-core";
+import { TestAppState } from "typings/state";
 
-export const createMockStore = (state: AppState): any => {
+export const createMockStore = (state: TestAppState): any => {
   const middlewares = [thunk];
   const mockStore = configureMockStore(middlewares);
   const store = mockStore(state);
@@ -16,7 +15,7 @@ export const createMockStore = (state: AppState): any => {
 
 export const withStoreProvider = <P extends {}>(
   Component: React.ComponentType<P>,
-  state: AppState
+  state: TestAppState
 ): React.FC<P> => props => (
   <Provider store={createMockStore(state)}>
     <HvProvider>

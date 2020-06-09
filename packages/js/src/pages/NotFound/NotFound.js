@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-import HvTypography from "@hv/uikit-react-core/dist/Typography";
+import { HvTypography } from "@hv/uikit-react-core";
 import withLayout from "lib/hocs/withLayout";
 import { useTranslation } from "react-i18next";
 

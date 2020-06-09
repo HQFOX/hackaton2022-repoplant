@@ -1,3 +1,4 @@
+import { push } from "connected-react-router";
 import { Dispatch } from "redux";
 import { fetchPages } from "lib/api/pages";
 import { PagesState } from "typings/pages";
@@ -8,4 +9,8 @@ const getPages = () => async (dispatch: Dispatch): Promise<void> => {
   dispatch(setPages(pages));
 };
 
-export { getPages };
+const redirect = path => (dispatch: Dispatch): void => {
+  dispatch(push(path));
+};
+
+export { getPages, redirect };

@@ -4,6 +4,4 @@ import NotFound from "./NotFound";
 
 export type NotFoundProps = WithStyles<typeof styles>;
 
-export default withStyles(styles, { name: "NotFound", withTheme: true })(
-  NotFound
-);
+export default withStyles(styles, { name: "NotFound" })(NotFound);

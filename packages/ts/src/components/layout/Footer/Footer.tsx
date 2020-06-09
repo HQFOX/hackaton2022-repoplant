@@ -1,5 +1,5 @@
 import React from "react";
-import HvFooter from "@hv/uikit-react-lab/dist/Footer";
+import { HvFooter } from "@hv/uikit-react-core";
 import { FooterStyles } from "./index";
 
 const Footer: React.FC<FooterStyles> = () => <HvFooter />;

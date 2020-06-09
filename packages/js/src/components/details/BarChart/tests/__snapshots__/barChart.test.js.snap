@@ -1,0 +1,36 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<BarChart /> matches the snapshot 1`] = `
+<WithStyles(BarChart)
+  data={
+    Array [
+      Object {
+        "name": "Sales Target",
+        "x": Array [
+          "Q1",
+        ],
+        "y": Array [
+          100,
+        ],
+      },
+    ]
+  }
+>
+  <BarChart
+    classes={Object {}}
+    data={
+      Array [
+        Object {
+          "name": "Sales Target",
+          "x": Array [
+            "Q1",
+          ],
+          "y": Array [
+            100,
+          ],
+        },
+      ]
+    }
+  />
+</WithStyles(BarChart)>
+`;

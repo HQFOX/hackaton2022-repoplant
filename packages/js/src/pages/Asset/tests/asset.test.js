@@ -1,7 +1,7 @@
 import React from "react";
 import { mount } from "enzyme";
 import { withStoreProvider } from "lib/utils/tests";
-import Asset from "../index";
+import Asset from "..";
 
 describe("<Asset />", () => {
   let component;
@@ -9,6 +9,7 @@ describe("<Asset />", () => {
   const WithStoreProvider = withStoreProvider(Asset, {
     router: { location: { pathname: "/" } },
     auth: { isAuthed: false },
+    pages: { data: [] },
     logout: jest.fn()
   });
 

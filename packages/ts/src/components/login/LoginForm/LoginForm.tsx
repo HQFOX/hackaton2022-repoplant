@@ -1,5 +1,5 @@
 import React from "react";
-import HvLogin from "@hv/uikit-react-core/dist/Login";
+import { HvLogin } from "@hv/uikit-react-core";
 import { AuthCredentials } from "typings/auth";
 import { LoginFormProps } from "./index";
 

@@ -1,22 +1,23 @@
 import React from "react";
-import { create, ReactTestRenderer } from "react-test-renderer";
+import { mount } from "enzyme";
 import { withStoreProvider } from "lib/utils/tests";
-import NotFound from "../index";
+import { TestAppState } from "typings/state";
+import NotFound from "..";
 
 describe("<NotFound />", () => {
-  let snapshot: ReactTestRenderer;
+  let snapshot;
 
   beforeEach(() => {
     const WithStoreProvider = withStoreProvider(NotFound, {
-      // @ts-ignore
       router: { location: { pathname: "/" } },
       auth: { isAuthed: false },
+      pages: { data: [] },
       logout: jest.fn()
-    });
-    snapshot = create(<WithStoreProvider />);
+    } as TestAppState);
+    snapshot = mount(<WithStoreProvider />);
   });
 
   test("it matches the snapshot", () => {
-    expect(snapshot.toJSON()).toMatchSnapshot();
+    expect(snapshot).toMatchSnapshot();
   });
 });

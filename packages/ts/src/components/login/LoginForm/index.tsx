@@ -5,6 +5,4 @@ import LoginForm from "./LoginForm";
 
 export type LoginFormProps = WithStyles<typeof styles> & AuthProps;
 
-export default withStyles(styles, { name: "LoginForm", withTheme: true })(
-  LoginForm
-);
+export default withStyles(styles, { name: "LoginForm" })(LoginForm);

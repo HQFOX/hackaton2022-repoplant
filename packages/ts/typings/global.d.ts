@@ -1,4 +1,4 @@
-import { HvTheme } from "@hv/uikit-react-core/dist";
+import { HvTheme } from "@hv/uikit-react-core";
 
 // extend Material-UI's theme to use `theme.hv` object
 declare module "@material-ui/core/styles/createMuiTheme" {
