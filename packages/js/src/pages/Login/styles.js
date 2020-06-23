@@ -1,13 +1,24 @@
-import { createStyles } from "@material-ui/core";
+import { fade, hexToRgb } from "@material-ui/core";
 
-const styles = () =>
-  createStyles({
-    root: {
-      height: "calc(100vh - 50px - 30px - 40px)", // header + padding, footer
-      "& > div": {
-        margin: 0
-      }
-    }
-  });
+const styles = theme => ({
+  container: {
+    background: `0 / auto`,
+    justifyContent: "flex-end",
+    width: "100%",
+    height: "100%",
+    backgroundRepeat: "no-repeat",
+    backgroundPosition: "bottom"
+  },
+  root: {},
+  rightContainer: {
+    background: fade(hexToRgb(theme.hv.palette.atmosphere.atmo2), 1),
+    position: "relative",
+    maxWidth: 500,
+    marginBottom: "1px"
+  },
+  panelPosition: {
+    position: "absolute"
+  }
+});
 
 export default styles;

@@ -13,6 +13,8 @@
     "url": "https://github.com/pentaho/hv-uikit-adoption.git"
   },
   "scripts": {
+    "ts": "lerna run start --scope=@hv/uikit-adoption-ts --parallel",
+    "js": "lerna run start --scope=@hv/uikit-adoption-js --parallel",
     "bootstrap": "npx lerna bootstrap",
     "build": "npx lerna run build",
     "clean": "npm-run-all clean:*",
