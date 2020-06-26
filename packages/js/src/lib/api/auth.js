@@ -1,9 +1,10 @@
-import jwt from "jsonwebtoken";
+import jwt from "jwt-simple";
+import Promise from 'promise-polyfill';
 
 const authenticate = async credentials => {
   return new Promise(resolve => {
-    const token = jwt.sign(credentials, "someSecret");
-    setTimeout(() => resolve(token), 500);
+    const token = jwt.encode(credentials, "someSecret");
+    setTimeout(() =>  resolve(token), 500);
   });
 };
 
