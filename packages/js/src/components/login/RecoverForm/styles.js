@@ -3,30 +3,24 @@ const styles = theme => ({
     width: 300,
     margin: "auto",
     paddingTop: 150,
-    "& h3": {
+    "& h3, p": {
       textAlign: "center"
     }
   },
-  input: {
-    marginTop: 10
+  title: {
+    marginBottom: `${theme.hv.spacing.sm}px`
   },
-  login: {
+  subtitle: {
+    margin: `${theme.hv.spacing.sm}px 0`
+  },
+  recover: {
     width: 120,
     float: "right",
     marginTop: `${theme.hv.spacing.lg}px`
   },
-  forgot: {
-    display: "flex",
-    margin: `${theme.hv.spacing.sm}px auto 0`
-  },
-  checkBox: {
+  cancel: {
+    width: 120,
     marginTop: `${theme.hv.spacing.lg}px`
-  },
-  sentenceCase: {
-    textTransform: `full-size-kana`
-  },
-  checkBoxTypography: {
-    ...theme.hv.typography.normalText
   }
 });
 

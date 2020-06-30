@@ -1,95 +1,155 @@
 import React, { useState } from "react";
-import clsx from "clsx";
 import PropTypes from "prop-types";
+import { useTranslation } from "react-i18next";
+import clsx from "clsx";
 import {
   HvButton,
   HvTypography,
   HvFormElement,
   HvLabel,
-  HvBaseInput
+  HvBaseInput,
+  HvCheckBox
 } from "@hv/uikit-react-core";
+import Message from "../Message";
 
-const DUMMY_CREDENTIALS = { username: "someUser", passwor: "somePassword" };
+const DUMMY_CREDENTIALS = { username: "admin", password: "password" };
 
-const LoginForm = ({ classes, login }) => {
-  const [inputValue, setInputValue] = useState("");
-  const [status, setstatus] = useState("standBy");
+const LoginForm = ({ classes, onSubmit, onForgot, status }) => {
+  const { t } = useTranslation();
+  const [credentials, setCredentials] = useState(DUMMY_CREDENTIALS);
+  const isPending = status === "pending";
+  const isError = status === "error";
 
-  const handleSubmit = evt => {
-    evt.preventDefault();
-    login(DUMMY_CREDENTIALS);
+  const handleChange = (evt, key) => {
+    const newCredentials = {
+      ...credentials,
+      ...{ [key]: evt.target.value }
+    };
+    setCredentials(newCredentials);
   };
 
-  const Login = () => (
+  return (
     <HvFormElement classes={{ root: classes.root }}>
-      <HvTypography variant="mTitle">Welcome</HvTypography>
-      <HvLabel label="Username" classes={{ root: classes.input }}>
-        <HvBaseInput placeholder="Enter text" />
-      </HvLabel>
-      <HvLabel label="Password" classes={{ root: classes.input }}>
+      <HvTypography variant="mTitle">
+        {t("pages.login.loginForm.title")}
+      </HvTypography>
+
+      {isError && (
+        <Message
+          message={{
+            error: t("pages.login.loginForm.error")
+          }}
+          status={status}
+        />
+      )}
+
+      <HvLabel
+        id="username-label"
+        label={t("pages.login.loginForm.username.label")}
+        classes={{ root: classes.input }}>
         <HvBaseInput
-          placeholder="Enter text"
+          id="username-input"
+          placeholder={t("pages.login.loginForm.username.plaholder")}
+          value={credentials.username}
+          inputProps={{ autoFocus: true }}
+          onChange={evt => handleChange(evt, "username")}
+        />
+      </HvLabel>
+
+      <HvLabel
+        id="password-label"
+        label={t("pages.login.loginForm.password.label")}
+        classes={{ root: classes.input }}>
+        <HvBaseInput
+          id="password-input"
+          placeholder={t("pages.login.loginForm.password.placeholder")}
+          value={credentials.password}
           inputProps={{
             type: "password"
           }}
+          onChange={evt => handleChange(evt, "password")}
         />
       </HvLabel>
+
+      <HvCheckBox
+        classes={{
+          container: classes.checkBox,
+          labelTypography: classes.checkBoxTypography
+        }}
+        label={t("pages.login.loginForm.remember")}
+      />
+
       <HvButton
         type="submit"
         category="primary"
-        className={clsx(classes.button, classes.sentenceCase)}>
-        Login
+        className={clsx(classes.login, classes.sentenceCase)}
+        onClick={() => onSubmit(credentials)}
+        disabled={isPending}>
+        {isPending
+          ? t("pages.login.loginForm.submit.logging")
+          : t("pages.login.loginForm.submit.login")}
+      </HvButton>
+
+      <HvButton
+        category="ghost"
+        classes={{
+          root: classes.forgot
+        }}
+        className={clsx(classes.sentenceCase)}
+        onClick={onForgot}
+        disabled={isPending}>
+        {t("pages.login.loginForm.forgot")}
       </HvButton>
     </HvFormElement>
   );
-
-  return <Login />;
-
-  // return (
-  //   <form className={classes.root} onSubmit={evt => handleSubmit(evt)}>
-  //     <div className={classes.title}>
-  //       <HvTypography variant="mTitle">Title</HvTypography>
-  //     </div>
-
-  //     <div className={classes.inputUser}>
-  //       <HvInput
-  //         labels={{
-  //           inputLabel: "Username",
-  //           placeholder: "",
-  //           infoText: ""
-  //         }}
-  //         name="username"
-  //         password={false}
-  //         autoFocus
-  //       />
-  //     </div>
-
-  //     <div className={classes.inputPassword}>
-  //       <HvInput
-  //         labels={{
-  //           inputLabel: "Password",
-  //           placeholder: "",
-  //           infoText: ""
-  //         }}
-  //         name="password"
-  //         password
-  //       />
-  //     </div>
-
-  //     <div className={classes.buttonsContainer}>
-  //       <HvButton
-  //         type="submit"
-  //         category="primary"
-  //         className={clsx(classes.button, classes.sentenceCase)}>
-  //         Login
-  //       </HvButton>
-  //     </div>
-  //   </form>
-  // );
 };
 
 LoginForm.propTypes = {
-  login: PropTypes.func.isRequired
+  /**
+   * The classes object to be applied into the root object.
+   */
+  classes: PropTypes.shape({
+    /**
+     * Styles applied to root.
+     */
+    root: PropTypes.string.isRequired,
+    /**
+     * Styles applied to input.
+     */
+    input: PropTypes.string.isRequired,
+    /**
+     * Styles applied to checkbox.
+     */
+    checkBox: PropTypes.string.isRequired,
+    /**
+     * Styles applied to checkboxTypography.
+     */
+    checkBoxTypography: PropTypes.string.isRequired,
+    /**
+     * Styles applied to login.
+     */
+    login: PropTypes.string.isRequired,
+    /**
+     * Styles applied to sentenceCase.
+     */
+    sentenceCase: PropTypes.string.isRequired,
+    /**
+     * Styles applied to forgot.
+     */
+    forgot: PropTypes.string.isRequired
+  }).isRequired,
+  /**
+   * Callback to trigger on login action.
+   */
+  onSubmit: PropTypes.func.isRequired,
+  /**
+   * Callback to trigger on forgot action.
+   */
+  onForgot: PropTypes.func.isRequired,
+  /**
+   * Login status.
+   */
+  status: PropTypes.string.isRequired
 };
 
 export default LoginForm;

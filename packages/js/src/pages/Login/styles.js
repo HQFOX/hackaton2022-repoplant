@@ -1,23 +1,26 @@
 import { fade, hexToRgb } from "@material-ui/core";
+import background from "./img/bg.svg";
 
 const styles = theme => ({
   container: {
-    background: `0 / auto`,
-    justifyContent: "flex-end",
+    backgroundRepeat: "no-repeat",
+    backgroundPosition: "bottom",
+    backgroundImage: `url(${background})`,
+    backgroundSize: "100%",
     width: "100%",
     height: "100%",
-    backgroundRepeat: "no-repeat",
-    backgroundPosition: "bottom"
+    padding: 0,
+    margin: 0
   },
-  root: {},
-  rightContainer: {
+  item: {
+    padding: "0px !important",
+    marginBottom: 1
+  },
+  root: {
     background: fade(hexToRgb(theme.hv.palette.atmosphere.atmo2), 1),
-    position: "relative",
+    marginLeft: "auto",
     maxWidth: 500,
-    marginBottom: "1px"
-  },
-  panelPosition: {
-    position: "absolute"
+    height: "100%"
   }
 });
 
