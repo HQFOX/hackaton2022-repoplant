@@ -1,12 +1,16 @@
 import React, { useState } from "react";
+import clsx from "clsx";
 import { Header, Footer, VerticalNavigation } from "components/layout";
 import NavigationContext from "../../NavigationContext";
+import useStyles from "./styles";
 
 const withLayout = <P extends {}>(
   Component: React.ComponentType<P>,
-  hasFooter = false
+  hasFooter = false,
+  hasMargins = true
 ): React.FC<P> => props => {
   const [isOpen, setIsOpen] = useState(false);
+  const classes = useStyles();
 
   const toggleOpen = () => {
     setIsOpen(prevState => !prevState);
@@ -15,10 +19,11 @@ const withLayout = <P extends {}>(
   return (
     <NavigationContext.Provider value={{ isOpen, toggleOpen }}>
       <Header />
-      <div style={{ paddingTop: "50px", display: "flex" }}>
+      <div className={clsx(classes.section, hasFooter && classes.hasFooter)}>
         <VerticalNavigation />
-        <main style={{ flexGrow: 1, padding: "30px 15px 0 15px" }}>
-          <Component {...(props as P)} />
+        <main
+          className={clsx(classes.component, hasMargins && classes.hasMargins)}>
+          <Component {...props} />
         </main>
       </div>
       {hasFooter && <Footer />}

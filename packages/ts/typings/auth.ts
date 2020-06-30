@@ -3,13 +3,19 @@
 // We use the `@@context/ACTION_TYPE` convention,
 // to follow the convention of Redux's `@@INIT` action.
 export enum AuthActions {
-  SET_AUTH = "@@auth/SET_AUTH"
+  SET_ACTIVE_FORM = "@@auth/SET_ACTIVE_FORM",
+  SET_IS_AUTHED = "@@auth/SET_IS_AUTHED",
+  SET_AUTH_STATUS = "@@auth/SET_AUTH_STATUS",
+  SET_RECOVER_STATUS = "@@auth/SET_RECOVER_STATUS"
 }
 
 // Declare state types with `readonly` modifier to get compile time immutability.
 // https://github.com/piotrwitek/react-redux-typescript-guide#state-with-type-level-immutability
 export interface AuthState {
-  readonly isAuthed: boolean | null;
+  readonly activeForm: string;
+  readonly isAuthed: boolean;
+  readonly authStatus: string;
+  readonly recoverStatus: string;
 }
 
 export interface AuthProps {
