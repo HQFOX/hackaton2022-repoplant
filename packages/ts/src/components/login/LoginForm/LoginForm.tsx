@@ -4,7 +4,6 @@ import clsx from "clsx";
 import {
   HvButton,
   HvTypography,
-  HvFormElement,
   HvLabel,
   HvBaseInput,
   HvCheckBox
@@ -37,7 +36,7 @@ const LoginForm: React.FC<LoginFormProps> = ({
   };
 
   return (
-    <HvFormElement classes={{ root: classes.root }}>
+    <div className={classes.root}>
       <HvTypography variant="mTitle">
         {t("pages.login.loginForm.title")}
       </HvTypography>
@@ -120,7 +119,7 @@ const LoginForm: React.FC<LoginFormProps> = ({
         disabled={isPending}>
         {t("pages.login.loginForm.forgot")}
       </HvButton>
-    </HvFormElement>
+    </div>
   );
 };
 

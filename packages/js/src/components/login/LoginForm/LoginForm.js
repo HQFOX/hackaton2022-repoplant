@@ -29,7 +29,7 @@ const LoginForm = ({ classes, onSubmit, onForgot, status }) => {
   };
 
   return (
-    <HvFormElement classes={{ root: classes.root }}>
+    <div className={classes.root}>
       <HvTypography variant="mTitle">
         {t("pages.login.loginForm.title")}
       </HvTypography>
@@ -100,7 +100,7 @@ const LoginForm = ({ classes, onSubmit, onForgot, status }) => {
         disabled={isPending}>
         {t("pages.login.loginForm.forgot")}
       </HvButton>
-    </HvFormElement>
+    </div>
   );
 };
 

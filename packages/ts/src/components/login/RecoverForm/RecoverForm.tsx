@@ -3,7 +3,6 @@ import { useTranslation } from "react-i18next";
 import {
   HvButton,
   HvTypography,
-  HvFormElement,
   HvLabel,
   HvBaseInput
 } from "@hv/uikit-react-core";
@@ -23,7 +22,7 @@ const RecoverForm: React.FC<RecoverFormProps> = ({
   const isError = status === "error";
 
   return (
-    <HvFormElement classes={{ root: classes.root }}>
+    <div className={classes.root}>
       <HvTypography variant="mTitle">
         {t("pages.login.recoverForm.title")}
       </HvTypography>
@@ -78,7 +77,7 @@ const RecoverForm: React.FC<RecoverFormProps> = ({
           ? t("pages.login.recoverForm.submit.recovering")
           : t("pages.login.recoverForm.submit.recover")}
       </HvButton>
-    </HvFormElement>
+    </div>
   );
 };
 
