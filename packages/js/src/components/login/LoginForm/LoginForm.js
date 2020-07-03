@@ -5,7 +5,6 @@ import clsx from "clsx";
 import {
   HvButton,
   HvTypography,
-  HvFormElement,
   HvLabel,
   HvBaseInput,
   HvCheckBox
@@ -49,7 +48,7 @@ const LoginForm = ({ classes, onSubmit, onForgot, status }) => {
         classes={{ root: classes.input }}>
         <HvBaseInput
           id="username-input"
-          placeholder={t("pages.login.loginForm.username.plaholder")}
+          placeholder={t("pages.login.loginForm.username.placeholder")}
           value={credentials.username}
           inputProps={{ autoFocus: true }}
           onChange={evt => handleChange(evt, "username")}
