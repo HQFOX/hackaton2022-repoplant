@@ -1,11 +1,11 @@
-import { AuthActions, setAuth } from "../actions";
+import { AuthActions, setIsAuthed } from "../actions";
 
 describe("auth actions", () => {
   it("set Auth", () => {
-    const action = setAuth(true);
+    const action = setIsAuthed(true);
 
     expect(action).toEqual({
-      type: AuthActions.SET_AUTH,
+      type: AuthActions.SET_IS_AUTHED,
       isAuthed: true
     });
   });

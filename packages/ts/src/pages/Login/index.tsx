@@ -2,7 +2,8 @@ import withStyles, { WithStyles } from "@material-ui/core/styles/withStyles";
 import { Dispatch, bindActionCreators } from "redux";
 import { connect } from "react-redux";
 import { AppState } from "typings/state";
-import { login } from "store/auth/thunks";
+import { login, recover } from "store/auth/thunks";
+import { setActiveForm } from "store/auth/actions";
 import styles from "./styles";
 import Login from "./Login";
 
@@ -13,7 +14,9 @@ const mapStateToProps = ({ auth }: AppState) => ({
 const mapDispatchToProps = (dispatch: Dispatch) =>
   bindActionCreators(
     {
-      login
+      login,
+      recover,
+      setActiveForm
     },
     dispatch
   );

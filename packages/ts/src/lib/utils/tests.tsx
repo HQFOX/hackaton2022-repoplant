@@ -2,7 +2,7 @@ import React from "react";
 import { Provider } from "react-redux";
 import thunk from "redux-thunk";
 import { MemoryRouter } from "react-router-dom";
-import configureMockStore, { MockStore } from "redux-mock-store";
+import configureMockStore from "redux-mock-store";
 import { HvProvider } from "@hv/uikit-react-core";
 import { TestAppState } from "typings/state";
 
