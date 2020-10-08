@@ -9,10 +9,10 @@ const CardContent = ({ classes, values }) => {
     <HvGrid container>
       <HvGrid item xs={12}>
         <div className={classes.kpis}>
-          <HvTypography className={classes.timestamp} variant="sText">
+          <HvTypography className={classes.timestamp} variant="normalText">
             {values.event.timestamp}
           </HvTypography>
-          <HvTypography variant="sText">{values.event.schedule}</HvTypography>
+          <HvTypography variant="normalText">{values.event.schedule}</HvTypography>
         </div>
       </HvGrid>
 
@@ -34,7 +34,7 @@ const CardContent = ({ classes, values }) => {
       </HvGrid>
 
       <HvGrid item xs={12} className={classes.item}>
-        <HvTypography variant="labelText">
+        <HvTypography variant="highlightText">
           {t("components.home.cardView.relatedAssets")}
         </HvTypography>
         <HvTypography variant="normalText" className={classes.text}>

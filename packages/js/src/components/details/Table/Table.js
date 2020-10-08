@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
 import { useTranslation } from "react-i18next";
+import PropTypes from "prop-types";
 import { HvTable } from "@hv/uikit-react-core";
 import { columns } from "./configuration";
 
@@ -9,6 +10,8 @@ const Table = ({ data, getTableData }) => {
   useEffect(() => {
     getTableData();
   }, [getTableData]);
+
+  if (!data || !data.length) { return null; }
 
   return (
     <HvTable
@@ -20,6 +23,9 @@ const Table = ({ data, getTableData }) => {
   );
 };
 
-Table.propTypes = {};
+Table.propTypes = {
+  data: PropTypes.array,
+  getTableData: PropTypes.func
+};
 
 export default Table;

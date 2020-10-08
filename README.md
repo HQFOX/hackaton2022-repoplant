@@ -4,7 +4,7 @@
 - [What’s Included?](#whats-included)
 - [Getting Started](#getting-started)
 - [Structure](#structure)
-    - [Folders](#folders)
+  - [Folders](#folders)
 - [State Management - Redux](#state-management---redux)
   - [Data Flow](#data-flow)
   - [Actions](#actions)
@@ -80,7 +80,7 @@ What follows are some patterns and strategies we try to promote in order to prov
 
 We followed a structure that is scalable and modular enough for an Enterprise application, but still easy to understand.
 
-The code is grouped by feature/ domain, "colocating" all related files (styles, JS and tests) together inside the same feature folder. This way we try to avoid too much nesting as it becomes harder to write relative imports between them, or to update those imports when the files are moved.
+The code is grouped by feature/ domain, "collocating" all related files (styles, JS and tests) together inside the same feature folder. This way we try to avoid too much nesting as it becomes harder to write relative imports between them, or to update those imports when the files are moved.
 
 ```text
 pages/
@@ -208,7 +208,7 @@ This way we can enforce proper linting and formatting before anything can be pus
 
 # What’s missing?
 
-- Lazy loading & [code spliting](https://reactjs.org/docs/code-splitting.html).
+- Lazy loading & [code splitting](https://reactjs.org/docs/code-splitting.html).
 - Redux [selectors](https://github.com/reduxjs/reselect)
 - Redux [sagas](https://github.com/redux-saga/redux-saga)
 - Server Side Rendering.

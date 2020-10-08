@@ -33,14 +33,14 @@ const AssetInventory = ({ redirect, assets, getAssetsData }) => {
       actions={actions}
       actionsCallback={handleAction}
       labels={{ placeholder: labels.search }}
-      searchProps={{ ariaLabel: labels.search }}
+      searchProps={{ "aria-label": labels.search }}
       sortProps={{ labels: { select: labels.sort } }}
       multibuttonProps={[
-        { id: "card", "aria-label": labels.cardView, title: labels.cardView },
-        { id: "list", "aria-label": labels.listView, title: labels.listView }
+        { id: "card", icon: <Cards />, "aria-label": labels.cardView, title: labels.cardView  },
+        { id: "list", icon: <List />, "aria-label": labels.listView, title: labels.listView }
       ]}>
-      <CardView id="card" icon={<Cards />} />
-      <ListView id="list" icon={<List />} />
+      <CardView id="card" />
+      <ListView id="list" />
     </HvAssetInventory>
   );
 };

@@ -16,6 +16,7 @@
     "start": "webpack-dev-server --open --config=config/webpack/dev.js",
     "build": "npm run clean && webpack -p --config=config/webpack/prod.js",
     "test": "jest --coverage --config=config/tests/jest-config.json",
+    "test:update": "jest --u --config=config/tests/jest-config.json",
     "test:watch": "jest --watch --config=config/tests/jest-config.json",
     "prettier:fix": "prettier --write \"src/**/*.{json,js,jsx}\"",
     "lint": "eslint . --ext .js,.jsx",

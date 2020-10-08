@@ -1,5 +1,12 @@
-import React from "react";
-import { HvCard } from "@hv/uikit-react-core";
+import React, { useState } from "react";
+import {
+  HvCard,
+  HvCardHeader,
+  HvCardContent,
+  HvActionContainer,
+  HvActionsGeneric,
+  HvCheckBox
+} from "@hv/uikit-react-core";
 import ListViewRow from "./ListViewRow";
 import CardContent from "./CardContent";
 import { getStatus } from "../utils";
@@ -18,16 +25,26 @@ export const cardRenderer = (data, viewConfiguration) => {
 
   return (
     <HvCard
-      icon={Icon && <Icon semantic={sema} />}
-      headerTitle={data.headerTitle}
-      innerCardContent={<CardContent values={data} />}
       semantic={sema}
-      checkboxProps={{ value: data.id }}
-      onChange={viewConfiguration.onSelection}
-      isSelectable={viewConfiguration.isSelectable}
-      actions={viewConfiguration.actions}
-      maxVisibleActions={viewConfiguration.maxVisibleActions}
-      actionsCallback={viewConfiguration.actionsCallback}
-    />
+      selectable={viewConfiguration.isSelectable}
+    >
+      <HvCardHeader
+        title={data.headerTitle}
+        icon={Icon && <Icon semantic={sema} />} />
+      <HvCardContent>{<CardContent values={data} />}</HvCardContent>
+      <HvActionContainer>
+        {viewConfiguration.isSelectable && (
+          <HvCheckBox
+            onChange={viewConfiguration.onSelection}
+            value={data.id}
+            inputProps={{ "aria-label": `Select ${data.id}` }}
+          />
+        )}
+        <HvActionsGeneric
+          actions={viewConfiguration.actions}
+          actionsCallback={viewConfiguration.actionsCallback}
+          maxVisibleActions={viewConfiguration.maxVisibleActions} />
+      </HvActionContainer>
+    </HvCard>
   );
 };

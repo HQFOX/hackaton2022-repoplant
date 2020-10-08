@@ -19,21 +19,21 @@ const ListViewRow = ({ classes, status, value, id }) => {
           <HvTypography variant="highlightText">
             {value.event.description}
           </HvTypography>
-          <HvTypography className={classes.timestamp} variant="sText">
+          <HvTypography className={classes.timestamp} variant="normalText">
             {value.event.timestamp}
           </HvTypography>
-          <HvTypography className={classes.schedule} variant="sText">
+          <HvTypography className={classes.schedule} variant="normalText">
             {value.event.schedule}
           </HvTypography>
         </div>
       </HvListViewCell>
 
       <HvListViewCell id={`${id}-probability`} key={`${id}-probability`}>
-        <HvTypography variant="normalText">{`${value.probability}%`}</HvTypography>
+        <HvTypography variant="normalText">{`${value.probability}`}</HvTypography>
       </HvListViewCell>
 
       <HvListViewCell id={`${id}-timeHorizon`} key={`${id}-timeHorizon`}>
-        <HvTypography variant="normalText">{`${value.timeHorizon}h`}</HvTypography>
+        <HvTypography variant="normalText">{`${value.timeHorizon}`}</HvTypography>
       </HvListViewCell>
 
       <HvListViewCell id={`${id}-relatedAssets`} key={`${id}-relatedAssets`}>

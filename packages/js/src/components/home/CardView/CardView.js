@@ -1,25 +1,36 @@
 import React from "react";
-import { HvCard, HvCardView } from "@hv/uikit-react-core";
+import {
+  HvCard,
+  HvCardHeader,
+  HvCardContent,
+  HvActionContainer,
+  HvActionsGeneric,
+  HvCardView
+} from "@hv/uikit-react-core";
 import { getStatus } from "../utils";
 import CardContent from "./CardContent";
 
 const cardRenderer = (data, viewConfiguration) => {
   const { Icon, sema } = getStatus(data.status);
-  const StyledIcon = <Icon semantic={sema} />;
+  const StyledIcon = Icon && <Icon semantic={sema} />;
 
   return (
     <HvCard
-      icon={StyledIcon}
-      headerTitle={data.headerTitle}
-      innerCardContent={<CardContent values={data} icon={StyledIcon} />}
       semantic={sema}
-      checkboxProps={{ value: data.id }}
       onChange={viewConfiguration.onSelection}
-      isSelectable={viewConfiguration.isSelectable}
-      actions={viewConfiguration.actions}
-      maxVisibleActions={viewConfiguration.maxVisibleActions}
-      actionsCallback={viewConfiguration.actionsCallback}
-    />
+      selectable={viewConfiguration.isSelectable}
+    >
+      <HvCardHeader
+        title={data.headerTitle}
+        icon={StyledIcon} />
+      <HvCardContent>{<CardContent values={data} />}</HvCardContent>
+      <HvActionContainer>
+        <HvActionsGeneric
+          actions={viewConfiguration.actions}
+          actionsCallback={viewConfiguration.actionsCallback}
+          maxVisibleActions={viewConfiguration.maxVisibleActions} />
+      </HvActionContainer>
+    </HvCard>
   );
 };
 
