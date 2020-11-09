@@ -5,7 +5,7 @@ import withLayout from "../withLayout";
 describe("withLayout", () => {
   let wrapper;
 
-  const checkComponent = (Component) => {
+  const checkComponent = Component => {
     wrapper = shallow(<Component />);
     expect(wrapper).toMatchSnapshot();
   };

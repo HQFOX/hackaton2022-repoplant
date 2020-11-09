@@ -3,23 +3,23 @@ import PropTypes from "prop-types";
 import { useTranslation } from "react-i18next";
 import { HvTypography } from "@hv/uikit-react-core";
 import withLayout from "lib/hocs/withLayout";
-import AssetInventory from "components/home/AssetInventory";
+import AssetInventory from "components/assets/AssetInventory";
 
-const Home = ({ classes }) => {
+const Assets = ({ classes }) => {
   const { t } = useTranslation();
 
   return (
     <div>
       <HvTypography variant="3xlTitle" className={classes.title}>
-        {t("pages.home.assets")}
+        {t("pages.assets.title")}
       </HvTypography>
       <AssetInventory />
     </div>
   );
 };
 
-Home.propTypes = {
+Assets.propTypes = {
   classes: PropTypes.instanceOf(Object).isRequired
 };
 
-export default withLayout(Home);
+export default withLayout(Assets);

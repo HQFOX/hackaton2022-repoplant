@@ -72,8 +72,7 @@ const LoginForm = ({ classes, onSubmit, onForgot, status }) => {
 
       <HvCheckBox
         classes={{
-          container: classes.checkBox,
-          labelTypography: classes.checkBoxTypography
+          container: classes.checkBox
         }}
         label={t("pages.login.loginForm.remember")}
       />
@@ -120,10 +119,6 @@ LoginForm.propTypes = {
      * Styles applied to checkbox.
      */
     checkBox: PropTypes.string.isRequired,
-    /**
-     * Styles applied to checkboxTypography.
-     */
-    checkBoxTypography: PropTypes.string.isRequired,
     /**
      * Styles applied to login.
      */

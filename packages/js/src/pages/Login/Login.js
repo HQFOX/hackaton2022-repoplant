@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { HvLoginContainer } from "@hv/uikit-react-core";
+import { HvLogin } from "@hv/uikit-react-core";
 import withLayout from "lib/hocs/withLayout";
 import { LoginForm, RecoverForm } from "components/login";
 
@@ -9,7 +9,7 @@ const Login = ({ login, recover, setActiveForm, auth }) => {
   const showRecover = activeForm === "recover";
 
   return (
-    <HvLoginContainer>
+    <HvLogin>
       {showRecover ? (
         <RecoverForm
           status={recoverStatus}
@@ -23,7 +23,7 @@ const Login = ({ login, recover, setActiveForm, auth }) => {
           onForgot={() => setActiveForm("recover")}
         />
       )}
-    </HvLoginContainer>
+    </HvLogin>
   );
 };
 

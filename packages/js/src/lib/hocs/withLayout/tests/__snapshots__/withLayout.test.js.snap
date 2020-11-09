@@ -1,23 +1,48 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`withLayout is rendered correctly 1`] = `
-<Component
-  classes={
+<ContextProvider
+  value={
     Object {
-      "component": "withLayout-component-2",
-      "section": "withLayout-section-1",
+      "isOpen": false,
+      "toggleOpen": [Function],
     }
   }
-/>
+>
+  <WithStyles(Connect(Header)) />
+  <div
+    className="makeStyles-section-1"
+  >
+    <WithStyles(Connect(VerticalNavigation)) />
+    <main
+      className="makeStyles-component-3 makeStyles-hasMargins-4"
+    >
+      <Component />
+    </main>
+  </div>
+</ContextProvider>
 `;
 
 exports[`withLayout is rendered correctly 2`] = `
-<Component
-  classes={
+<ContextProvider
+  value={
     Object {
-      "component": "withLayout-component-4",
-      "section": "withLayout-section-3",
+      "isOpen": false,
+      "toggleOpen": [Function],
     }
   }
-/>
+>
+  <WithStyles(Connect(Header)) />
+  <div
+    className="makeStyles-section-1 makeStyles-hasFooter-2"
+  >
+    <WithStyles(Connect(VerticalNavigation)) />
+    <main
+      className="makeStyles-component-3 makeStyles-hasMargins-4"
+    >
+      <Component />
+    </main>
+  </div>
+  <WithStyles(Footer) />
+</ContextProvider>
 `;
