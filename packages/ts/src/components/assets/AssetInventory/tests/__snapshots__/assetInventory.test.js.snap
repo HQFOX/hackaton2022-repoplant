@@ -795,7 +795,7 @@ exports[`<AssetInventory /> matches the snapshot 1`] = `
                   "entries": Array [
                     Object {
                       "hash": "",
-                      "key": "rq3yp8",
+                      "key": "gtvywa",
                       "pathname": "/",
                       "search": "",
                       "state": undefined,
@@ -809,7 +809,7 @@ exports[`<AssetInventory /> matches the snapshot 1`] = `
                   "listen": [Function],
                   "location": Object {
                     "hash": "",
-                    "key": "rq3yp8",
+                    "key": "gtvywa",
                     "pathname": "/",
                     "search": "",
                     "state": undefined,
@@ -3775,12 +3775,12 @@ exports[`<AssetInventory /> matches the snapshot 1`] = `
                                                                                   Array [
                                                                                     Object {
                                                                                       "icon": <WithStyles(Cards) />,
-                                                                                      "id": "card-button",
+                                                                                      "id": "card",
                                                                                       "selected": true,
                                                                                     },
                                                                                     Object {
                                                                                       "icon": <WithStyles(List) />,
-                                                                                      "id": "list-button",
+                                                                                      "id": "list",
                                                                                       "selected": false,
                                                                                     },
                                                                                   ]
@@ -3791,12 +3791,12 @@ exports[`<AssetInventory /> matches the snapshot 1`] = `
                                                                                     Array [
                                                                                       Object {
                                                                                         "icon": <WithStyles(Cards) />,
-                                                                                        "id": "card-button",
+                                                                                        "id": "card",
                                                                                         "selected": true,
                                                                                       },
                                                                                       Object {
                                                                                         "icon": <WithStyles(List) />,
-                                                                                        "id": "list-button",
+                                                                                        "id": "list",
                                                                                         "selected": false,
                                                                                       },
                                                                                     ]
@@ -3810,12 +3810,12 @@ exports[`<AssetInventory /> matches the snapshot 1`] = `
                                                                                       Array [
                                                                                         Object {
                                                                                           "icon": <WithStyles(Cards) />,
-                                                                                          "id": "card-button",
+                                                                                          "id": "card",
                                                                                           "selected": true,
                                                                                         },
                                                                                         Object {
                                                                                           "icon": <WithStyles(List) />,
-                                                                                          "id": "list-button",
+                                                                                          "id": "list",
                                                                                           "selected": false,
                                                                                         },
                                                                                       ]
@@ -3841,7 +3841,7 @@ exports[`<AssetInventory /> matches the snapshot 1`] = `
                                                                                       <WithStyles(HvButton)
                                                                                         category="secondary"
                                                                                         className="HvMultiButton-button HvMultiButton-isSelected"
-                                                                                        id="card-button"
+                                                                                        id="card"
                                                                                         key="btnkey_1"
                                                                                         onClick={[Function]}
                                                                                       >
@@ -3865,7 +3865,7 @@ exports[`<AssetInventory /> matches the snapshot 1`] = `
                                                                                               "startIcon": "HvButton-startIcon",
                                                                                             }
                                                                                           }
-                                                                                          id="card-button"
+                                                                                          id="card"
                                                                                           onClick={[Function]}
                                                                                         >
                                                                                           <WithStyles(ForwardRef(Button))
@@ -3882,7 +3882,7 @@ exports[`<AssetInventory /> matches the snapshot 1`] = `
                                                                                             }
                                                                                             color="primary"
                                                                                             disableRipple={true}
-                                                                                            id="card-button"
+                                                                                            id="card"
                                                                                             onClick={[Function]}
                                                                                             variant="outlined"
                                                                                           >
@@ -3923,7 +3923,7 @@ exports[`<AssetInventory /> matches the snapshot 1`] = `
                                                                                               }
                                                                                               color="primary"
                                                                                               disableRipple={true}
-                                                                                              id="card-button"
+                                                                                              id="card"
                                                                                               onClick={[Function]}
                                                                                               variant="outlined"
                                                                                             >
@@ -3934,7 +3934,7 @@ exports[`<AssetInventory /> matches the snapshot 1`] = `
                                                                                                 disabled={false}
                                                                                                 focusRipple={true}
                                                                                                 focusVisibleClassName="Mui-focusVisible"
-                                                                                                id="card-button"
+                                                                                                id="card"
                                                                                                 onClick={[Function]}
                                                                                                 type="button"
                                                                                               >
@@ -3952,14 +3952,14 @@ exports[`<AssetInventory /> matches the snapshot 1`] = `
                                                                                                   disabled={false}
                                                                                                   focusRipple={true}
                                                                                                   focusVisibleClassName="Mui-focusVisible"
-                                                                                                  id="card-button"
+                                                                                                  id="card"
                                                                                                   onClick={[Function]}
                                                                                                   type="button"
                                                                                                 >
                                                                                                   <button
                                                                                                     className="MuiButtonBase-root MuiButton-root HvButton-root MuiButton-outlined HvMultiButton-button HvMultiButton-isSelected MuiButton-outlinedPrimary HvButton-secondary"
                                                                                                     disabled={false}
-                                                                                                    id="card-button"
+                                                                                                    id="card"
                                                                                                     onBlur={[Function]}
                                                                                                     onClick={[Function]}
                                                                                                     onDragLeave={[Function]}
@@ -4010,7 +4010,6 @@ exports[`<AssetInventory /> matches the snapshot 1`] = `
                                                                                                         </Cards>
                                                                                                       </WithStyles(Cards)>
                                                                                                     </span>
-                                                                                                    <NoSsr />
                                                                                                   </button>
                                                                                                 </ForwardRef(ButtonBase)>
                                                                                               </WithStyles(ForwardRef(ButtonBase))>
@@ -4021,7 +4020,7 @@ exports[`<AssetInventory /> matches the snapshot 1`] = `
                                                                                       <WithStyles(HvButton)
                                                                                         category="ghost"
                                                                                         className="HvMultiButton-button HvMultiButton-isUnselected"
-                                                                                        id="list-button"
+                                                                                        id="list"
                                                                                         key="btnkey_2"
                                                                                         onClick={[Function]}
                                                                                       >
@@ -4045,7 +4044,7 @@ exports[`<AssetInventory /> matches the snapshot 1`] = `
                                                                                               "startIcon": "HvButton-startIcon",
                                                                                             }
                                                                                           }
-                                                                                          id="list-button"
+                                                                                          id="list"
                                                                                           onClick={[Function]}
                                                                                         >
                                                                                           <WithStyles(ForwardRef(Button))
@@ -4062,7 +4061,7 @@ exports[`<AssetInventory /> matches the snapshot 1`] = `
                                                                                             }
                                                                                             color="primary"
                                                                                             disableRipple={true}
-                                                                                            id="list-button"
+                                                                                            id="list"
                                                                                             onClick={[Function]}
                                                                                             variant="text"
                                                                                           >
@@ -4103,7 +4102,7 @@ exports[`<AssetInventory /> matches the snapshot 1`] = `
                                                                                               }
                                                                                               color="primary"
                                                                                               disableRipple={true}
-                                                                                              id="list-button"
+                                                                                              id="list"
                                                                                               onClick={[Function]}
                                                                                               variant="text"
                                                                                             >
@@ -4114,7 +4113,7 @@ exports[`<AssetInventory /> matches the snapshot 1`] = `
                                                                                                 disabled={false}
                                                                                                 focusRipple={true}
                                                                                                 focusVisibleClassName="Mui-focusVisible"
-                                                                                                id="list-button"
+                                                                                                id="list"
                                                                                                 onClick={[Function]}
                                                                                                 type="button"
                                                                                               >
@@ -4132,14 +4131,14 @@ exports[`<AssetInventory /> matches the snapshot 1`] = `
                                                                                                   disabled={false}
                                                                                                   focusRipple={true}
                                                                                                   focusVisibleClassName="Mui-focusVisible"
-                                                                                                  id="list-button"
+                                                                                                  id="list"
                                                                                                   onClick={[Function]}
                                                                                                   type="button"
                                                                                                 >
                                                                                                   <button
                                                                                                     className="MuiButtonBase-root MuiButton-root HvButton-root MuiButton-text HvMultiButton-button HvMultiButton-isUnselected MuiButton-textPrimary HvButton-ghost"
                                                                                                     disabled={false}
-                                                                                                    id="list-button"
+                                                                                                    id="list"
                                                                                                     onBlur={[Function]}
                                                                                                     onClick={[Function]}
                                                                                                     onDragLeave={[Function]}
@@ -4190,7 +4189,6 @@ exports[`<AssetInventory /> matches the snapshot 1`] = `
                                                                                                         </List>
                                                                                                       </WithStyles(List)>
                                                                                                     </span>
-                                                                                                    <NoSsr />
                                                                                                   </button>
                                                                                                 </ForwardRef(ButtonBase)>
                                                                                               </WithStyles(ForwardRef(ButtonBase))>
@@ -4229,7 +4227,6 @@ exports[`<AssetInventory /> matches the snapshot 1`] = `
                                       <WithStyles(CardView)
                                         icon={<WithStyles(Cards) />}
                                         id="card"
-                                        renderer={[Function]}
                                         selectedValues={Array []}
                                         values={Array []}
                                         viewConfiguration={
@@ -4299,15 +4296,9 @@ exports[`<AssetInventory /> matches the snapshot 1`] = `
                                         }
                                       >
                                         <CardView
-                                          classes={
-                                            Object {
-                                              "elements": "HvCardView-elements",
-                                              "root": "HvCardView-root",
-                                            }
-                                          }
+                                          classes={Object {}}
                                           icon={<WithStyles(Cards) />}
                                           id="card"
-                                          renderer={[Function]}
                                           selectedValues={Array []}
                                           values={Array []}
                                           viewConfiguration={
@@ -4376,11 +4367,155 @@ exports[`<AssetInventory /> matches the snapshot 1`] = `
                                             }
                                           }
                                         >
-                                          <div
-                                            className="HvCardView-root"
+                                          <WithStyles(CardView)
+                                            classes={Object {}}
+                                            icon={<WithStyles(Cards) />}
+                                            id="card"
+                                            renderer={[Function]}
+                                            selectedValues={Array []}
+                                            values={Array []}
+                                            viewConfiguration={
+                                              Object {
+                                                "actions": Array [
+                                                  Object {
+                                                    "id": "details",
+                                                    "label": "Details",
+                                                  },
+                                                  Object {
+                                                    "disabled": true,
+                                                    "id": "dismiss",
+                                                    "label": "Dismiss",
+                                                  },
+                                                ],
+                                                "actionsCallback": [Function],
+                                                "breakpoints": Object {
+                                                  "lg": 3,
+                                                  "md": 4,
+                                                  "sm": 6,
+                                                  "xl": 3,
+                                                  "xs": 12,
+                                                },
+                                                "columnConfiguration": Array [
+                                                  Object {
+                                                    "align": "left",
+                                                    "style": Object {
+                                                      "minWidth": "52px",
+                                                      "paddingLeft": "8px",
+                                                    },
+                                                    "title": "Status",
+                                                  },
+                                                  Object {
+                                                    "align": "left",
+                                                    "style": Object {
+                                                      "minWidth": "400px",
+                                                    },
+                                                    "title": "Event",
+                                                  },
+                                                  Object {
+                                                    "align": "right",
+                                                    "style": Object {
+                                                      "minWidth": "93px",
+                                                    },
+                                                    "title": "Probability",
+                                                  },
+                                                  Object {
+                                                    "align": "right",
+                                                    "style": Object {
+                                                      "minWidth": "108px",
+                                                    },
+                                                    "title": "Time horizon",
+                                                  },
+                                                  Object {
+                                                    "align": "left",
+                                                    "style": Object {
+                                                      "minWidth": "195px",
+                                                      "paddingLeft": "30px",
+                                                    },
+                                                    "title": "Related Assets",
+                                                  },
+                                                ],
+                                                "isSelectable": false,
+                                                "maxVisibleActions": 1,
+                                                "onSelection": [Function],
+                                              }
+                                            }
                                           >
-                                            <div
-                                              className="HvCardView-elements"
+                                            <CardView
+                                              classes={
+                                                Object {
+                                                  "root": "HvCardView-root",
+                                                }
+                                              }
+                                              icon={<WithStyles(Cards) />}
+                                              id="card"
+                                              renderer={[Function]}
+                                              selectedValues={Array []}
+                                              values={Array []}
+                                              viewConfiguration={
+                                                Object {
+                                                  "actions": Array [
+                                                    Object {
+                                                      "id": "details",
+                                                      "label": "Details",
+                                                    },
+                                                    Object {
+                                                      "disabled": true,
+                                                      "id": "dismiss",
+                                                      "label": "Dismiss",
+                                                    },
+                                                  ],
+                                                  "actionsCallback": [Function],
+                                                  "breakpoints": Object {
+                                                    "lg": 3,
+                                                    "md": 4,
+                                                    "sm": 6,
+                                                    "xl": 3,
+                                                    "xs": 12,
+                                                  },
+                                                  "columnConfiguration": Array [
+                                                    Object {
+                                                      "align": "left",
+                                                      "style": Object {
+                                                        "minWidth": "52px",
+                                                        "paddingLeft": "8px",
+                                                      },
+                                                      "title": "Status",
+                                                    },
+                                                    Object {
+                                                      "align": "left",
+                                                      "style": Object {
+                                                        "minWidth": "400px",
+                                                      },
+                                                      "title": "Event",
+                                                    },
+                                                    Object {
+                                                      "align": "right",
+                                                      "style": Object {
+                                                        "minWidth": "93px",
+                                                      },
+                                                      "title": "Probability",
+                                                    },
+                                                    Object {
+                                                      "align": "right",
+                                                      "style": Object {
+                                                        "minWidth": "108px",
+                                                      },
+                                                      "title": "Time horizon",
+                                                    },
+                                                    Object {
+                                                      "align": "left",
+                                                      "style": Object {
+                                                        "minWidth": "195px",
+                                                        "paddingLeft": "30px",
+                                                      },
+                                                      "title": "Related Assets",
+                                                    },
+                                                  ],
+                                                  "isSelectable": false,
+                                                  "maxVisibleActions": 1,
+                                                  "onSelection": [Function],
+                                                }
+                                              }
                                             >
                                               <WithStyles(HvGrid)
                                                 alignItems="flex-start"
@@ -4531,8 +4666,8 @@ exports[`<AssetInventory /> matches the snapshot 1`] = `
                                                   </WithStyles(ForwardRef(Grid))>
                                                 </HvGrid>
                                               </WithStyles(HvGrid)>
-                                            </div>
-                                          </div>
+                                            </CardView>
+                                          </WithStyles(CardView)>
                                         </CardView>
                                       </WithStyles(CardView)>
                                     </div>

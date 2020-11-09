@@ -1,17 +1,16 @@
-import { bindActionCreators, Dispatch } from "redux";
+import { bindActionCreators } from "redux";
 import { connect } from "react-redux";
-import { withStyles } from "@material-ui/core";
-import { AppState } from "typings/state";
 import { redirect } from "store/pages/thunks";
 import { getAssetsData } from "store/data/thunks";
+import { withStyles } from "@material-ui/core";
 import styles from "./styles";
 import AssetInventory from "./AssetInventory";
 
-const mapStateToProps = ({ data }: AppState) => ({
+const mapStateToProps = ({ data }) => ({
   assets: data.assets
 });
 
-const mapDispatchToProps = (dispatch: Dispatch) =>
+const mapDispatchToProps = dispatch =>
   bindActionCreators(
     {
       getAssetsData,
