@@ -19,7 +19,7 @@ export const withStoreProvider = <P extends {}>(
 ): React.FC<P> => props => (
   <Provider store={createMockStore(state)}>
     <HvProvider>
-      <MemoryRouter>
+      <MemoryRouter initialEntries={[{ pathname: "/", key: "testKey" }]}>
         <Component {...props} />
       </MemoryRouter>
     </HvProvider>
@@ -30,7 +30,7 @@ export const withHvProvider = <P extends {}>(
   Component: React.ComponentType<P>
 ): React.FC<P> => props => (
   <HvProvider>
-    <MemoryRouter>
+    <MemoryRouter initialEntries={[{ pathname: "/", key: "testKey" }]}>
       <Component {...props} />
     </MemoryRouter>
   </HvProvider>

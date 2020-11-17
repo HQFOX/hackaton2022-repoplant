@@ -1,0 +1,75 @@
+name: Nightly
+on:
+  schedule:
+    - cron: "0 3 * * *" # daily at 03:00
+
+env:
+  RUN_URL: https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}
+
+jobs:
+  Test:
+    name: Lint, Jest
+    runs-on: [self-hosted, Linux]
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - uses: actions/setup-node@v1
+        with:
+          node-version: "12"
+
+      - name: Install
+        run: |
+          npm config set @hv:registry ${RESOLVE_REGISTRY}
+          npm ci
+
+      - name: Bootstrap
+        run: npm run bootstrap
+
+      - name: Lint
+        run: npm run lint
+
+      - name: Test
+        run: npm run test
+
+  Notify-End:
+    name: Notify End
+    needs: [Static-Checks]
+    if: always()
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: generate conclusion color
+        id: conclusion_color
+        uses: actions/github-script@v3
+        with:
+          github-token: ${{secrets.GITHUB_TOKEN}}
+          script: |
+            if("${{ env.WORKFLOW_CONCLUSION }}" === "success") core.exportVariable("COLOR", "#63A621")
+            else if("${{ env.WORKFLOW_CONCLUSION }}" === "failure") core.exportVariable("COLOR", "#C62828")
+            else if("${{ env.WORKFLOW_CONCLUSION }}" === "neutral") core.exportVariable("COLOR", "#BCBCBC")
+            else if("${{ env.WORKFLOW_CONCLUSION }}" === "cancelled") core.exportVariable("COLOR", "#FFD00A")
+            else if("${{ env.WORKFLOW_CONCLUSION }}" === "timed_out") core.exportVariable("COLOR", "#FFD00A")
+
+      - name: Notify
+        uses: hbfernandes/slack-action@1.0
+        env:
+          SLACK_TOKEN: ${{ secrets.SLACK_TOKEN }}
+          CONCLUSION: ${{ env.WORKFLOW_CONCLUSION }}
+          DOCUMENTATION: ${{ env.DOCUMENTATION_URL }}
+        with:
+          args: |
+            {
+              "channel": "ui-kit-eng-ci",
+              "attachments": [
+                {
+                  "mrkdwn_in": ["text"],
+                  "color": "${{env.COLOR}}",
+                  "title": "${{ github.workflow }} (#${{github.event.number}}) build finished - ${{ env.CONCLUSION }}",
+                  "title_link": "${{ env.RUN_URL }}",
+                  "footer": "by ${{github.actor}}",
+                  "footer_icon": "https://github.com/${{github.actor}}.png?size=20"
+                }
+              ]
+            }

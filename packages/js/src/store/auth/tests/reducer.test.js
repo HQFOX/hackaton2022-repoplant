@@ -3,25 +3,27 @@ import { AuthActions } from "../actions";
 
 describe("auth reducer", () => {
   const initialState = {
-    isAuthed: true
+    activeForm: "login",
+    isAuthed: false,
+    authStatus: "idle",
+    recoverStatus: "idle"
   };
 
   it("set default state", () => {
     const newState = authReducer(undefined, { type: "MOCK_TYPE" });
-
     expect(newState).toEqual(initialState);
   });
 
   it("set auth sate", () => {
     const action = {
-      type: AuthActions.SET_AUTH,
-      isAuthed: true
+      type: AuthActions.SET_AUTH_STATUS,
+      authStatus: true
     };
 
     const newState = authReducer(null, action);
 
     expect(newState).toEqual({
-      isAuthed: true
+      authStatus: true
     });
   });
 });

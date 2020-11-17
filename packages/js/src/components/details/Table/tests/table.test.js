@@ -1,7 +1,7 @@
 import React from "react";
 import { mount } from "enzyme";
 import { HvTable } from "@hv/uikit-react-core";
-import { withHvProvider } from "lib/utils/tests";
+import { withStoreProvider } from "lib/utils/tests";
 import Table from "..";
 import { columns } from "../configuration";
 
@@ -27,10 +27,14 @@ const mockTitle = "Title123";
 describe("<Table />", () => {
   let component;
 
+  const WithProvider = withStoreProvider(
+    () => <Table columns={columns} title={mockTitle} />,
+    {
+      data: { table: data }
+    }
+  );
+
   beforeEach(() => {
-    const WithProvider = withHvProvider(() => (
-      <Table data={data} columns={columns} title={mockTitle} />
-    ));
     component = mount(<WithProvider />);
   });
 

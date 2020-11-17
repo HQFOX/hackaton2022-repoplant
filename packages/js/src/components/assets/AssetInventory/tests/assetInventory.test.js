@@ -9,7 +9,8 @@ describe("<AssetInventory />", () => {
   const WithProvider = withStoreProvider(AssetInventory, {
     router: { location: { pathname: "/" } },
     auth: { isAuthed: false },
-    logout: jest.fn()
+    logout: jest.fn(),
+    data: { assets: [] }
   });
 
   beforeEach(() => {

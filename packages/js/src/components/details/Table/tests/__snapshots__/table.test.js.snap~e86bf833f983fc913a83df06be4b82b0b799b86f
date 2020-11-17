@@ -1567,7 +1567,7 @@ exports[`<Table /> matches the snapshot 1`] = `
                                   TrComponent={[Function]}
                                   TrGroupComponent={[Function]}
                                   aggregatedKey="_aggregated"
-                                  className="-highlight rthfc-a5f8fpf9ekhuls5iz rthfc -sp"
+                                  className="-highlight rthfc-rtbb1tvgkhujvzqf rthfc -sp"
                                   collapseOnDataChange={true}
                                   collapseOnPageChange={true}
                                   collapseOnSortingChange={true}
@@ -1858,7 +1858,7 @@ exports[`<Table /> matches the snapshot 1`] = `
                                   uniqClassName={null}
                                 >
                                   <div
-                                    className="ReactTable -highlight rthfc-a5f8fpf9ekhuls5iz rthfc -sp HvTable-root"
+                                    className="ReactTable -highlight rthfc-rtbb1tvgkhujvzqf rthfc -sp HvTable-root"
                                     style={Object {}}
                                   >
                                     <TableComponent
@@ -3945,51 +3945,51 @@ exports[`<Table /> matches the snapshot 1`] = `
                                                           <Memo(Index)
                                                             classes={
                                                               Object {
-                                                                "alphaNumeric": "OverflowTooltip-alphaNumeric-82",
-                                                                "bulkActions": "OverflowTooltip-bulkActions-93",
-                                                                "centered": "OverflowTooltip-centered-81",
-                                                                "checkBoxBorder": "OverflowTooltip-checkBoxBorder-79",
-                                                                "checkBoxRow": "OverflowTooltip-checkBoxRow-80",
-                                                                "checkBoxText": "OverflowTooltip-checkBoxText-88",
-                                                                "expand": "OverflowTooltip-expand-90",
-                                                                "firstWithNumeric": "OverflowTooltip-firstWithNumeric-87",
-                                                                "iconContainer": "OverflowTooltip-iconContainer-86",
-                                                                "link": "OverflowTooltip-link-84",
-                                                                "loading": "OverflowTooltip-loading-69",
-                                                                "menuItem": "OverflowTooltip-menuItem-89",
-                                                                "noDate": "OverflowTooltip-noDate-70",
-                                                                "numeric": "OverflowTooltip-numeric-83",
-                                                                "pagination": "OverflowTooltip-pagination-68",
-                                                                "pointer": "OverflowTooltip-pointer-75",
-                                                                "resizer": "OverflowTooltip-resizer-71",
-                                                                "root": "OverflowTooltip-root-49",
-                                                                "rtSortIcon": "OverflowTooltip-rtSortIcon-72",
-                                                                "separatorContainer": "OverflowTooltip-separatorContainer-91",
-                                                                "sortedIconHidden": "OverflowTooltip-sortedIconHidden-74",
-                                                                "sortedIconShown": "OverflowTooltip-sortedIconShown-73",
-                                                                "subComponentContainer": "OverflowTooltip-subComponentContainer-85",
-                                                                "subtitle": "OverflowTooltip-subtitle-77",
-                                                                "tBodyEmpty": "OverflowTooltip-tBodyEmpty-60",
-                                                                "table": "OverflowTooltip-table-50",
-                                                                "tableContainer": "OverflowTooltip-tableContainer-76",
-                                                                "tbody": "OverflowTooltip-tbody-59",
-                                                                "td": "OverflowTooltip-td-64",
-                                                                "textContainer": "OverflowTooltip-textContainer-63",
-                                                                "tfoot": "OverflowTooltip-tfoot-65",
-                                                                "tfootTh": "OverflowTooltip-tfootTh-67",
-                                                                "tfootTr": "OverflowTooltip-tfootTr-66",
-                                                                "thead": "OverflowTooltip-thead-54",
-                                                                "theadFilter": "OverflowTooltip-theadFilter-56",
-                                                                "theadFilterTh": "OverflowTooltip-theadFilterTh-58",
-                                                                "theadFilterTr": "OverflowTooltip-theadFilterTr-57",
-                                                                "theadGroup": "OverflowTooltip-theadGroup-51",
-                                                                "theadGroupTh": "OverflowTooltip-theadGroupTh-53",
-                                                                "theadGroupTr": "OverflowTooltip-theadGroupTr-52",
-                                                                "theadTh": "OverflowTooltip-theadTh-55",
-                                                                "title": "OverflowTooltip-title-78",
-                                                                "tooltipAnchor": "OverflowTooltip-tooltipAnchor-92",
-                                                                "tr": "OverflowTooltip-tr-62",
-                                                                "trGroups": "OverflowTooltip-trGroups-61",
+                                                                "alphaNumeric": "OverflowTooltip-alphaNumeric-157",
+                                                                "bulkActions": "OverflowTooltip-bulkActions-168",
+                                                                "centered": "OverflowTooltip-centered-156",
+                                                                "checkBoxBorder": "OverflowTooltip-checkBoxBorder-154",
+                                                                "checkBoxRow": "OverflowTooltip-checkBoxRow-155",
+                                                                "checkBoxText": "OverflowTooltip-checkBoxText-163",
+                                                                "expand": "OverflowTooltip-expand-165",
+                                                                "firstWithNumeric": "OverflowTooltip-firstWithNumeric-162",
+                                                                "iconContainer": "OverflowTooltip-iconContainer-161",
+                                                                "link": "OverflowTooltip-link-159",
+                                                                "loading": "OverflowTooltip-loading-144",
+                                                                "menuItem": "OverflowTooltip-menuItem-164",
+                                                                "noDate": "OverflowTooltip-noDate-145",
+                                                                "numeric": "OverflowTooltip-numeric-158",
+                                                                "pagination": "OverflowTooltip-pagination-143",
+                                                                "pointer": "OverflowTooltip-pointer-150",
+                                                                "resizer": "OverflowTooltip-resizer-146",
+                                                                "root": "OverflowTooltip-root-124",
+                                                                "rtSortIcon": "OverflowTooltip-rtSortIcon-147",
+                                                                "separatorContainer": "OverflowTooltip-separatorContainer-166",
+                                                                "sortedIconHidden": "OverflowTooltip-sortedIconHidden-149",
+                                                                "sortedIconShown": "OverflowTooltip-sortedIconShown-148",
+                                                                "subComponentContainer": "OverflowTooltip-subComponentContainer-160",
+                                                                "subtitle": "OverflowTooltip-subtitle-152",
+                                                                "tBodyEmpty": "OverflowTooltip-tBodyEmpty-135",
+                                                                "table": "OverflowTooltip-table-125",
+                                                                "tableContainer": "OverflowTooltip-tableContainer-151",
+                                                                "tbody": "OverflowTooltip-tbody-134",
+                                                                "td": "OverflowTooltip-td-139",
+                                                                "textContainer": "OverflowTooltip-textContainer-138",
+                                                                "tfoot": "OverflowTooltip-tfoot-140",
+                                                                "tfootTh": "OverflowTooltip-tfootTh-142",
+                                                                "tfootTr": "OverflowTooltip-tfootTr-141",
+                                                                "thead": "OverflowTooltip-thead-129",
+                                                                "theadFilter": "OverflowTooltip-theadFilter-131",
+                                                                "theadFilterTh": "OverflowTooltip-theadFilterTh-133",
+                                                                "theadFilterTr": "OverflowTooltip-theadFilterTr-132",
+                                                                "theadGroup": "OverflowTooltip-theadGroup-126",
+                                                                "theadGroupTh": "OverflowTooltip-theadGroupTh-128",
+                                                                "theadGroupTr": "OverflowTooltip-theadGroupTr-127",
+                                                                "theadTh": "OverflowTooltip-theadTh-130",
+                                                                "title": "OverflowTooltip-title-153",
+                                                                "tooltipAnchor": "OverflowTooltip-tooltipAnchor-167",
+                                                                "tr": "OverflowTooltip-tr-137",
+                                                                "trGroups": "OverflowTooltip-trGroups-136",
                                                               }
                                                             }
                                                             data="Event 1"
@@ -4033,14 +4033,9 @@ exports[`<Table /> matches the snapshot 1`] = `
                                                                       "$$typeof": Symbol(react.forward_ref),
                                                                       "propTypes": Object {
                                                                         "children": [Function],
-                                                                        "disableStrictModeCompat": [Function],
                                                                         "in": [Function],
                                                                         "onEnter": [Function],
-                                                                        "onEntered": [Function],
-                                                                        "onEntering": [Function],
                                                                         "onExit": [Function],
-                                                                        "onExited": [Function],
-                                                                        "onExiting": [Function],
                                                                         "style": [Function],
                                                                         "timeout": [Function],
                                                                       },
@@ -4073,14 +4068,9 @@ exports[`<Table /> matches the snapshot 1`] = `
                                                                         "$$typeof": Symbol(react.forward_ref),
                                                                         "propTypes": Object {
                                                                           "children": [Function],
-                                                                          "disableStrictModeCompat": [Function],
                                                                           "in": [Function],
                                                                           "onEnter": [Function],
-                                                                          "onEntered": [Function],
-                                                                          "onEntering": [Function],
                                                                           "onExit": [Function],
-                                                                          "onExited": [Function],
-                                                                          "onExiting": [Function],
                                                                           "style": [Function],
                                                                           "timeout": [Function],
                                                                         },
@@ -4118,7 +4108,7 @@ exports[`<Table /> matches the snapshot 1`] = `
                                                                   >
                                                                     <div
                                                                       aria-describedby={null}
-                                                                      className="OverflowTooltip-tooltipAnchor-92 OverflowTooltip-textContainer-63"
+                                                                      className="OverflowTooltip-tooltipAnchor-167 OverflowTooltip-textContainer-138"
                                                                       onBlur={[Function]}
                                                                       onFocus={[Function]}
                                                                       onTouchEnd={[Function]}
@@ -4130,7 +4120,7 @@ exports[`<Table /> matches the snapshot 1`] = `
                                                                     <ForwardRef(Popper)
                                                                       anchorEl={
                                                                         <div
-                                                                          class="OverflowTooltip-tooltipAnchor-92 OverflowTooltip-textContainer-63"
+                                                                          class="OverflowTooltip-tooltipAnchor-167 OverflowTooltip-textContainer-138"
                                                                         >
                                                                           Event 1
                                                                         </div>
@@ -4196,51 +4186,51 @@ exports[`<Table /> matches the snapshot 1`] = `
                                                           <Memo(Index)
                                                             classes={
                                                               Object {
-                                                                "alphaNumeric": "OverflowTooltip-alphaNumeric-82",
-                                                                "bulkActions": "OverflowTooltip-bulkActions-93",
-                                                                "centered": "OverflowTooltip-centered-81",
-                                                                "checkBoxBorder": "OverflowTooltip-checkBoxBorder-79",
-                                                                "checkBoxRow": "OverflowTooltip-checkBoxRow-80",
-                                                                "checkBoxText": "OverflowTooltip-checkBoxText-88",
-                                                                "expand": "OverflowTooltip-expand-90",
-                                                                "firstWithNumeric": "OverflowTooltip-firstWithNumeric-87",
-                                                                "iconContainer": "OverflowTooltip-iconContainer-86",
-                                                                "link": "OverflowTooltip-link-84",
-                                                                "loading": "OverflowTooltip-loading-69",
-                                                                "menuItem": "OverflowTooltip-menuItem-89",
-                                                                "noDate": "OverflowTooltip-noDate-70",
-                                                                "numeric": "OverflowTooltip-numeric-83",
-                                                                "pagination": "OverflowTooltip-pagination-68",
-                                                                "pointer": "OverflowTooltip-pointer-75",
-                                                                "resizer": "OverflowTooltip-resizer-71",
-                                                                "root": "OverflowTooltip-root-49",
-                                                                "rtSortIcon": "OverflowTooltip-rtSortIcon-72",
-                                                                "separatorContainer": "OverflowTooltip-separatorContainer-91",
-                                                                "sortedIconHidden": "OverflowTooltip-sortedIconHidden-74",
-                                                                "sortedIconShown": "OverflowTooltip-sortedIconShown-73",
-                                                                "subComponentContainer": "OverflowTooltip-subComponentContainer-85",
-                                                                "subtitle": "OverflowTooltip-subtitle-77",
-                                                                "tBodyEmpty": "OverflowTooltip-tBodyEmpty-60",
-                                                                "table": "OverflowTooltip-table-50",
-                                                                "tableContainer": "OverflowTooltip-tableContainer-76",
-                                                                "tbody": "OverflowTooltip-tbody-59",
-                                                                "td": "OverflowTooltip-td-64",
-                                                                "textContainer": "OverflowTooltip-textContainer-63",
-                                                                "tfoot": "OverflowTooltip-tfoot-65",
-                                                                "tfootTh": "OverflowTooltip-tfootTh-67",
-                                                                "tfootTr": "OverflowTooltip-tfootTr-66",
-                                                                "thead": "OverflowTooltip-thead-54",
-                                                                "theadFilter": "OverflowTooltip-theadFilter-56",
-                                                                "theadFilterTh": "OverflowTooltip-theadFilterTh-58",
-                                                                "theadFilterTr": "OverflowTooltip-theadFilterTr-57",
-                                                                "theadGroup": "OverflowTooltip-theadGroup-51",
-                                                                "theadGroupTh": "OverflowTooltip-theadGroupTh-53",
-                                                                "theadGroupTr": "OverflowTooltip-theadGroupTr-52",
-                                                                "theadTh": "OverflowTooltip-theadTh-55",
-                                                                "title": "OverflowTooltip-title-78",
-                                                                "tooltipAnchor": "OverflowTooltip-tooltipAnchor-92",
-                                                                "tr": "OverflowTooltip-tr-62",
-                                                                "trGroups": "OverflowTooltip-trGroups-61",
+                                                                "alphaNumeric": "OverflowTooltip-alphaNumeric-157",
+                                                                "bulkActions": "OverflowTooltip-bulkActions-168",
+                                                                "centered": "OverflowTooltip-centered-156",
+                                                                "checkBoxBorder": "OverflowTooltip-checkBoxBorder-154",
+                                                                "checkBoxRow": "OverflowTooltip-checkBoxRow-155",
+                                                                "checkBoxText": "OverflowTooltip-checkBoxText-163",
+                                                                "expand": "OverflowTooltip-expand-165",
+                                                                "firstWithNumeric": "OverflowTooltip-firstWithNumeric-162",
+                                                                "iconContainer": "OverflowTooltip-iconContainer-161",
+                                                                "link": "OverflowTooltip-link-159",
+                                                                "loading": "OverflowTooltip-loading-144",
+                                                                "menuItem": "OverflowTooltip-menuItem-164",
+                                                                "noDate": "OverflowTooltip-noDate-145",
+                                                                "numeric": "OverflowTooltip-numeric-158",
+                                                                "pagination": "OverflowTooltip-pagination-143",
+                                                                "pointer": "OverflowTooltip-pointer-150",
+                                                                "resizer": "OverflowTooltip-resizer-146",
+                                                                "root": "OverflowTooltip-root-124",
+                                                                "rtSortIcon": "OverflowTooltip-rtSortIcon-147",
+                                                                "separatorContainer": "OverflowTooltip-separatorContainer-166",
+                                                                "sortedIconHidden": "OverflowTooltip-sortedIconHidden-149",
+                                                                "sortedIconShown": "OverflowTooltip-sortedIconShown-148",
+                                                                "subComponentContainer": "OverflowTooltip-subComponentContainer-160",
+                                                                "subtitle": "OverflowTooltip-subtitle-152",
+                                                                "tBodyEmpty": "OverflowTooltip-tBodyEmpty-135",
+                                                                "table": "OverflowTooltip-table-125",
+                                                                "tableContainer": "OverflowTooltip-tableContainer-151",
+                                                                "tbody": "OverflowTooltip-tbody-134",
+                                                                "td": "OverflowTooltip-td-139",
+                                                                "textContainer": "OverflowTooltip-textContainer-138",
+                                                                "tfoot": "OverflowTooltip-tfoot-140",
+                                                                "tfootTh": "OverflowTooltip-tfootTh-142",
+                                                                "tfootTr": "OverflowTooltip-tfootTr-141",
+                                                                "thead": "OverflowTooltip-thead-129",
+                                                                "theadFilter": "OverflowTooltip-theadFilter-131",
+                                                                "theadFilterTh": "OverflowTooltip-theadFilterTh-133",
+                                                                "theadFilterTr": "OverflowTooltip-theadFilterTr-132",
+                                                                "theadGroup": "OverflowTooltip-theadGroup-126",
+                                                                "theadGroupTh": "OverflowTooltip-theadGroupTh-128",
+                                                                "theadGroupTr": "OverflowTooltip-theadGroupTr-127",
+                                                                "theadTh": "OverflowTooltip-theadTh-130",
+                                                                "title": "OverflowTooltip-title-153",
+                                                                "tooltipAnchor": "OverflowTooltip-tooltipAnchor-167",
+                                                                "tr": "OverflowTooltip-tr-137",
+                                                                "trGroups": "OverflowTooltip-trGroups-136",
                                                               }
                                                             }
                                                             data="10/14/2018"
@@ -4284,14 +4274,9 @@ exports[`<Table /> matches the snapshot 1`] = `
                                                                       "$$typeof": Symbol(react.forward_ref),
                                                                       "propTypes": Object {
                                                                         "children": [Function],
-                                                                        "disableStrictModeCompat": [Function],
                                                                         "in": [Function],
                                                                         "onEnter": [Function],
-                                                                        "onEntered": [Function],
-                                                                        "onEntering": [Function],
                                                                         "onExit": [Function],
-                                                                        "onExited": [Function],
-                                                                        "onExiting": [Function],
                                                                         "style": [Function],
                                                                         "timeout": [Function],
                                                                       },
@@ -4324,14 +4309,9 @@ exports[`<Table /> matches the snapshot 1`] = `
                                                                         "$$typeof": Symbol(react.forward_ref),
                                                                         "propTypes": Object {
                                                                           "children": [Function],
-                                                                          "disableStrictModeCompat": [Function],
                                                                           "in": [Function],
                                                                           "onEnter": [Function],
-                                                                          "onEntered": [Function],
-                                                                          "onEntering": [Function],
                                                                           "onExit": [Function],
-                                                                          "onExited": [Function],
-                                                                          "onExiting": [Function],
                                                                           "style": [Function],
                                                                           "timeout": [Function],
                                                                         },
@@ -4369,7 +4349,7 @@ exports[`<Table /> matches the snapshot 1`] = `
                                                                   >
                                                                     <div
                                                                       aria-describedby={null}
-                                                                      className="OverflowTooltip-tooltipAnchor-92 OverflowTooltip-textContainer-63"
+                                                                      className="OverflowTooltip-tooltipAnchor-167 OverflowTooltip-textContainer-138"
                                                                       onBlur={[Function]}
                                                                       onFocus={[Function]}
                                                                       onTouchEnd={[Function]}
@@ -4381,7 +4361,7 @@ exports[`<Table /> matches the snapshot 1`] = `
                                                                     <ForwardRef(Popper)
                                                                       anchorEl={
                                                                         <div
-                                                                          class="OverflowTooltip-tooltipAnchor-92 OverflowTooltip-textContainer-63"
+                                                                          class="OverflowTooltip-tooltipAnchor-167 OverflowTooltip-textContainer-138"
                                                                         >
                                                                           10/14/2018
                                                                         </div>
@@ -4449,51 +4429,51 @@ exports[`<Table /> matches the snapshot 1`] = `
                                                           <Memo(Index)
                                                             classes={
                                                               Object {
-                                                                "alphaNumeric": "OverflowTooltip-alphaNumeric-82",
-                                                                "bulkActions": "OverflowTooltip-bulkActions-93",
-                                                                "centered": "OverflowTooltip-centered-81",
-                                                                "checkBoxBorder": "OverflowTooltip-checkBoxBorder-79",
-                                                                "checkBoxRow": "OverflowTooltip-checkBoxRow-80",
-                                                                "checkBoxText": "OverflowTooltip-checkBoxText-88",
-                                                                "expand": "OverflowTooltip-expand-90",
-                                                                "firstWithNumeric": "OverflowTooltip-firstWithNumeric-87",
-                                                                "iconContainer": "OverflowTooltip-iconContainer-86",
-                                                                "link": "OverflowTooltip-link-84",
-                                                                "loading": "OverflowTooltip-loading-69",
-                                                                "menuItem": "OverflowTooltip-menuItem-89",
-                                                                "noDate": "OverflowTooltip-noDate-70",
-                                                                "numeric": "OverflowTooltip-numeric-83",
-                                                                "pagination": "OverflowTooltip-pagination-68",
-                                                                "pointer": "OverflowTooltip-pointer-75",
-                                                                "resizer": "OverflowTooltip-resizer-71",
-                                                                "root": "OverflowTooltip-root-49",
-                                                                "rtSortIcon": "OverflowTooltip-rtSortIcon-72",
-                                                                "separatorContainer": "OverflowTooltip-separatorContainer-91",
-                                                                "sortedIconHidden": "OverflowTooltip-sortedIconHidden-74",
-                                                                "sortedIconShown": "OverflowTooltip-sortedIconShown-73",
-                                                                "subComponentContainer": "OverflowTooltip-subComponentContainer-85",
-                                                                "subtitle": "OverflowTooltip-subtitle-77",
-                                                                "tBodyEmpty": "OverflowTooltip-tBodyEmpty-60",
-                                                                "table": "OverflowTooltip-table-50",
-                                                                "tableContainer": "OverflowTooltip-tableContainer-76",
-                                                                "tbody": "OverflowTooltip-tbody-59",
-                                                                "td": "OverflowTooltip-td-64",
-                                                                "textContainer": "OverflowTooltip-textContainer-63",
-                                                                "tfoot": "OverflowTooltip-tfoot-65",
-                                                                "tfootTh": "OverflowTooltip-tfootTh-67",
-                                                                "tfootTr": "OverflowTooltip-tfootTr-66",
-                                                                "thead": "OverflowTooltip-thead-54",
-                                                                "theadFilter": "OverflowTooltip-theadFilter-56",
-                                                                "theadFilterTh": "OverflowTooltip-theadFilterTh-58",
-                                                                "theadFilterTr": "OverflowTooltip-theadFilterTr-57",
-                                                                "theadGroup": "OverflowTooltip-theadGroup-51",
-                                                                "theadGroupTh": "OverflowTooltip-theadGroupTh-53",
-                                                                "theadGroupTr": "OverflowTooltip-theadGroupTr-52",
-                                                                "theadTh": "OverflowTooltip-theadTh-55",
-                                                                "title": "OverflowTooltip-title-78",
-                                                                "tooltipAnchor": "OverflowTooltip-tooltipAnchor-92",
-                                                                "tr": "OverflowTooltip-tr-62",
-                                                                "trGroups": "OverflowTooltip-trGroups-61",
+                                                                "alphaNumeric": "OverflowTooltip-alphaNumeric-157",
+                                                                "bulkActions": "OverflowTooltip-bulkActions-168",
+                                                                "centered": "OverflowTooltip-centered-156",
+                                                                "checkBoxBorder": "OverflowTooltip-checkBoxBorder-154",
+                                                                "checkBoxRow": "OverflowTooltip-checkBoxRow-155",
+                                                                "checkBoxText": "OverflowTooltip-checkBoxText-163",
+                                                                "expand": "OverflowTooltip-expand-165",
+                                                                "firstWithNumeric": "OverflowTooltip-firstWithNumeric-162",
+                                                                "iconContainer": "OverflowTooltip-iconContainer-161",
+                                                                "link": "OverflowTooltip-link-159",
+                                                                "loading": "OverflowTooltip-loading-144",
+                                                                "menuItem": "OverflowTooltip-menuItem-164",
+                                                                "noDate": "OverflowTooltip-noDate-145",
+                                                                "numeric": "OverflowTooltip-numeric-158",
+                                                                "pagination": "OverflowTooltip-pagination-143",
+                                                                "pointer": "OverflowTooltip-pointer-150",
+                                                                "resizer": "OverflowTooltip-resizer-146",
+                                                                "root": "OverflowTooltip-root-124",
+                                                                "rtSortIcon": "OverflowTooltip-rtSortIcon-147",
+                                                                "separatorContainer": "OverflowTooltip-separatorContainer-166",
+                                                                "sortedIconHidden": "OverflowTooltip-sortedIconHidden-149",
+                                                                "sortedIconShown": "OverflowTooltip-sortedIconShown-148",
+                                                                "subComponentContainer": "OverflowTooltip-subComponentContainer-160",
+                                                                "subtitle": "OverflowTooltip-subtitle-152",
+                                                                "tBodyEmpty": "OverflowTooltip-tBodyEmpty-135",
+                                                                "table": "OverflowTooltip-table-125",
+                                                                "tableContainer": "OverflowTooltip-tableContainer-151",
+                                                                "tbody": "OverflowTooltip-tbody-134",
+                                                                "td": "OverflowTooltip-td-139",
+                                                                "textContainer": "OverflowTooltip-textContainer-138",
+                                                                "tfoot": "OverflowTooltip-tfoot-140",
+                                                                "tfootTh": "OverflowTooltip-tfootTh-142",
+                                                                "tfootTr": "OverflowTooltip-tfootTr-141",
+                                                                "thead": "OverflowTooltip-thead-129",
+                                                                "theadFilter": "OverflowTooltip-theadFilter-131",
+                                                                "theadFilterTh": "OverflowTooltip-theadFilterTh-133",
+                                                                "theadFilterTr": "OverflowTooltip-theadFilterTr-132",
+                                                                "theadGroup": "OverflowTooltip-theadGroup-126",
+                                                                "theadGroupTh": "OverflowTooltip-theadGroupTh-128",
+                                                                "theadGroupTr": "OverflowTooltip-theadGroupTr-127",
+                                                                "theadTh": "OverflowTooltip-theadTh-130",
+                                                                "title": "OverflowTooltip-title-153",
+                                                                "tooltipAnchor": "OverflowTooltip-tooltipAnchor-167",
+                                                                "tr": "OverflowTooltip-tr-137",
+                                                                "trGroups": "OverflowTooltip-trGroups-136",
                                                               }
                                                             }
                                                             data="anomaly detection ssssssssssssssssssssssssssssssssssssssssssssssssssss"
@@ -4537,14 +4517,9 @@ exports[`<Table /> matches the snapshot 1`] = `
                                                                       "$$typeof": Symbol(react.forward_ref),
                                                                       "propTypes": Object {
                                                                         "children": [Function],
-                                                                        "disableStrictModeCompat": [Function],
                                                                         "in": [Function],
                                                                         "onEnter": [Function],
-                                                                        "onEntered": [Function],
-                                                                        "onEntering": [Function],
                                                                         "onExit": [Function],
-                                                                        "onExited": [Function],
-                                                                        "onExiting": [Function],
                                                                         "style": [Function],
                                                                         "timeout": [Function],
                                                                       },
@@ -4577,14 +4552,9 @@ exports[`<Table /> matches the snapshot 1`] = `
                                                                         "$$typeof": Symbol(react.forward_ref),
                                                                         "propTypes": Object {
                                                                           "children": [Function],
-                                                                          "disableStrictModeCompat": [Function],
                                                                           "in": [Function],
                                                                           "onEnter": [Function],
-                                                                          "onEntered": [Function],
-                                                                          "onEntering": [Function],
                                                                           "onExit": [Function],
-                                                                          "onExited": [Function],
-                                                                          "onExiting": [Function],
                                                                           "style": [Function],
                                                                           "timeout": [Function],
                                                                         },
@@ -4622,7 +4592,7 @@ exports[`<Table /> matches the snapshot 1`] = `
                                                                   >
                                                                     <div
                                                                       aria-describedby={null}
-                                                                      className="OverflowTooltip-tooltipAnchor-92 OverflowTooltip-textContainer-63"
+                                                                      className="OverflowTooltip-tooltipAnchor-167 OverflowTooltip-textContainer-138"
                                                                       onBlur={[Function]}
                                                                       onFocus={[Function]}
                                                                       onTouchEnd={[Function]}
@@ -4634,7 +4604,7 @@ exports[`<Table /> matches the snapshot 1`] = `
                                                                     <ForwardRef(Popper)
                                                                       anchorEl={
                                                                         <div
-                                                                          class="OverflowTooltip-tooltipAnchor-92 OverflowTooltip-textContainer-63"
+                                                                          class="OverflowTooltip-tooltipAnchor-167 OverflowTooltip-textContainer-138"
                                                                         >
                                                                           anomaly detection ssssssssssssssssssssssssssssssssssssssssssssssssssss
                                                                         </div>
@@ -4702,51 +4672,51 @@ exports[`<Table /> matches the snapshot 1`] = `
                                                           <Memo(Index)
                                                             classes={
                                                               Object {
-                                                                "alphaNumeric": "OverflowTooltip-alphaNumeric-82",
-                                                                "bulkActions": "OverflowTooltip-bulkActions-93",
-                                                                "centered": "OverflowTooltip-centered-81",
-                                                                "checkBoxBorder": "OverflowTooltip-checkBoxBorder-79",
-                                                                "checkBoxRow": "OverflowTooltip-checkBoxRow-80",
-                                                                "checkBoxText": "OverflowTooltip-checkBoxText-88",
-                                                                "expand": "OverflowTooltip-expand-90",
-                                                                "firstWithNumeric": "OverflowTooltip-firstWithNumeric-87",
-                                                                "iconContainer": "OverflowTooltip-iconContainer-86",
-                                                                "link": "OverflowTooltip-link-84",
-                                                                "loading": "OverflowTooltip-loading-69",
-                                                                "menuItem": "OverflowTooltip-menuItem-89",
-                                                                "noDate": "OverflowTooltip-noDate-70",
-                                                                "numeric": "OverflowTooltip-numeric-83",
-                                                                "pagination": "OverflowTooltip-pagination-68",
-                                                                "pointer": "OverflowTooltip-pointer-75",
-                                                                "resizer": "OverflowTooltip-resizer-71",
-                                                                "root": "OverflowTooltip-root-49",
-                                                                "rtSortIcon": "OverflowTooltip-rtSortIcon-72",
-                                                                "separatorContainer": "OverflowTooltip-separatorContainer-91",
-                                                                "sortedIconHidden": "OverflowTooltip-sortedIconHidden-74",
-                                                                "sortedIconShown": "OverflowTooltip-sortedIconShown-73",
-                                                                "subComponentContainer": "OverflowTooltip-subComponentContainer-85",
-                                                                "subtitle": "OverflowTooltip-subtitle-77",
-                                                                "tBodyEmpty": "OverflowTooltip-tBodyEmpty-60",
-                                                                "table": "OverflowTooltip-table-50",
-                                                                "tableContainer": "OverflowTooltip-tableContainer-76",
-                                                                "tbody": "OverflowTooltip-tbody-59",
-                                                                "td": "OverflowTooltip-td-64",
-                                                                "textContainer": "OverflowTooltip-textContainer-63",
-                                                                "tfoot": "OverflowTooltip-tfoot-65",
-                                                                "tfootTh": "OverflowTooltip-tfootTh-67",
-                                                                "tfootTr": "OverflowTooltip-tfootTr-66",
-                                                                "thead": "OverflowTooltip-thead-54",
-                                                                "theadFilter": "OverflowTooltip-theadFilter-56",
-                                                                "theadFilterTh": "OverflowTooltip-theadFilterTh-58",
-                                                                "theadFilterTr": "OverflowTooltip-theadFilterTr-57",
-                                                                "theadGroup": "OverflowTooltip-theadGroup-51",
-                                                                "theadGroupTh": "OverflowTooltip-theadGroupTh-53",
-                                                                "theadGroupTr": "OverflowTooltip-theadGroupTr-52",
-                                                                "theadTh": "OverflowTooltip-theadTh-55",
-                                                                "title": "OverflowTooltip-title-78",
-                                                                "tooltipAnchor": "OverflowTooltip-tooltipAnchor-92",
-                                                                "tr": "OverflowTooltip-tr-62",
-                                                                "trGroups": "OverflowTooltip-trGroups-61",
+                                                                "alphaNumeric": "OverflowTooltip-alphaNumeric-157",
+                                                                "bulkActions": "OverflowTooltip-bulkActions-168",
+                                                                "centered": "OverflowTooltip-centered-156",
+                                                                "checkBoxBorder": "OverflowTooltip-checkBoxBorder-154",
+                                                                "checkBoxRow": "OverflowTooltip-checkBoxRow-155",
+                                                                "checkBoxText": "OverflowTooltip-checkBoxText-163",
+                                                                "expand": "OverflowTooltip-expand-165",
+                                                                "firstWithNumeric": "OverflowTooltip-firstWithNumeric-162",
+                                                                "iconContainer": "OverflowTooltip-iconContainer-161",
+                                                                "link": "OverflowTooltip-link-159",
+                                                                "loading": "OverflowTooltip-loading-144",
+                                                                "menuItem": "OverflowTooltip-menuItem-164",
+                                                                "noDate": "OverflowTooltip-noDate-145",
+                                                                "numeric": "OverflowTooltip-numeric-158",
+                                                                "pagination": "OverflowTooltip-pagination-143",
+                                                                "pointer": "OverflowTooltip-pointer-150",
+                                                                "resizer": "OverflowTooltip-resizer-146",
+                                                                "root": "OverflowTooltip-root-124",
+                                                                "rtSortIcon": "OverflowTooltip-rtSortIcon-147",
+                                                                "separatorContainer": "OverflowTooltip-separatorContainer-166",
+                                                                "sortedIconHidden": "OverflowTooltip-sortedIconHidden-149",
+                                                                "sortedIconShown": "OverflowTooltip-sortedIconShown-148",
+                                                                "subComponentContainer": "OverflowTooltip-subComponentContainer-160",
+                                                                "subtitle": "OverflowTooltip-subtitle-152",
+                                                                "tBodyEmpty": "OverflowTooltip-tBodyEmpty-135",
+                                                                "table": "OverflowTooltip-table-125",
+                                                                "tableContainer": "OverflowTooltip-tableContainer-151",
+                                                                "tbody": "OverflowTooltip-tbody-134",
+                                                                "td": "OverflowTooltip-td-139",
+                                                                "textContainer": "OverflowTooltip-textContainer-138",
+                                                                "tfoot": "OverflowTooltip-tfoot-140",
+                                                                "tfootTh": "OverflowTooltip-tfootTh-142",
+                                                                "tfootTr": "OverflowTooltip-tfootTr-141",
+                                                                "thead": "OverflowTooltip-thead-129",
+                                                                "theadFilter": "OverflowTooltip-theadFilter-131",
+                                                                "theadFilterTh": "OverflowTooltip-theadFilterTh-133",
+                                                                "theadFilterTr": "OverflowTooltip-theadFilterTr-132",
+                                                                "theadGroup": "OverflowTooltip-theadGroup-126",
+                                                                "theadGroupTh": "OverflowTooltip-theadGroupTh-128",
+                                                                "theadGroupTr": "OverflowTooltip-theadGroupTr-127",
+                                                                "theadTh": "OverflowTooltip-theadTh-130",
+                                                                "title": "OverflowTooltip-title-153",
+                                                                "tooltipAnchor": "OverflowTooltip-tooltipAnchor-167",
+                                                                "tr": "OverflowTooltip-tr-137",
+                                                                "trGroups": "OverflowTooltip-trGroups-136",
                                                               }
                                                             }
                                                             data="open"
@@ -4790,14 +4760,9 @@ exports[`<Table /> matches the snapshot 1`] = `
                                                                       "$$typeof": Symbol(react.forward_ref),
                                                                       "propTypes": Object {
                                                                         "children": [Function],
-                                                                        "disableStrictModeCompat": [Function],
                                                                         "in": [Function],
                                                                         "onEnter": [Function],
-                                                                        "onEntered": [Function],
-                                                                        "onEntering": [Function],
                                                                         "onExit": [Function],
-                                                                        "onExited": [Function],
-                                                                        "onExiting": [Function],
                                                                         "style": [Function],
                                                                         "timeout": [Function],
                                                                       },
@@ -4830,14 +4795,9 @@ exports[`<Table /> matches the snapshot 1`] = `
                                                                         "$$typeof": Symbol(react.forward_ref),
                                                                         "propTypes": Object {
                                                                           "children": [Function],
-                                                                          "disableStrictModeCompat": [Function],
                                                                           "in": [Function],
                                                                           "onEnter": [Function],
-                                                                          "onEntered": [Function],
-                                                                          "onEntering": [Function],
                                                                           "onExit": [Function],
-                                                                          "onExited": [Function],
-                                                                          "onExiting": [Function],
                                                                           "style": [Function],
                                                                           "timeout": [Function],
                                                                         },
@@ -4875,7 +4835,7 @@ exports[`<Table /> matches the snapshot 1`] = `
                                                                   >
                                                                     <div
                                                                       aria-describedby={null}
-                                                                      className="OverflowTooltip-tooltipAnchor-92 OverflowTooltip-textContainer-63"
+                                                                      className="OverflowTooltip-tooltipAnchor-167 OverflowTooltip-textContainer-138"
                                                                       onBlur={[Function]}
                                                                       onFocus={[Function]}
                                                                       onTouchEnd={[Function]}
@@ -4887,7 +4847,7 @@ exports[`<Table /> matches the snapshot 1`] = `
                                                                     <ForwardRef(Popper)
                                                                       anchorEl={
                                                                         <div
-                                                                          class="OverflowTooltip-tooltipAnchor-92 OverflowTooltip-textContainer-63"
+                                                                          class="OverflowTooltip-tooltipAnchor-167 OverflowTooltip-textContainer-138"
                                                                         >
                                                                           open
                                                                         </div>
@@ -4953,51 +4913,51 @@ exports[`<Table /> matches the snapshot 1`] = `
                                                           <Memo(Index)
                                                             classes={
                                                               Object {
-                                                                "alphaNumeric": "OverflowTooltip-alphaNumeric-82",
-                                                                "bulkActions": "OverflowTooltip-bulkActions-93",
-                                                                "centered": "OverflowTooltip-centered-81",
-                                                                "checkBoxBorder": "OverflowTooltip-checkBoxBorder-79",
-                                                                "checkBoxRow": "OverflowTooltip-checkBoxRow-80",
-                                                                "checkBoxText": "OverflowTooltip-checkBoxText-88",
-                                                                "expand": "OverflowTooltip-expand-90",
-                                                                "firstWithNumeric": "OverflowTooltip-firstWithNumeric-87",
-                                                                "iconContainer": "OverflowTooltip-iconContainer-86",
-                                                                "link": "OverflowTooltip-link-84",
-                                                                "loading": "OverflowTooltip-loading-69",
-                                                                "menuItem": "OverflowTooltip-menuItem-89",
-                                                                "noDate": "OverflowTooltip-noDate-70",
-                                                                "numeric": "OverflowTooltip-numeric-83",
-                                                                "pagination": "OverflowTooltip-pagination-68",
-                                                                "pointer": "OverflowTooltip-pointer-75",
-                                                                "resizer": "OverflowTooltip-resizer-71",
-                                                                "root": "OverflowTooltip-root-49",
-                                                                "rtSortIcon": "OverflowTooltip-rtSortIcon-72",
-                                                                "separatorContainer": "OverflowTooltip-separatorContainer-91",
-                                                                "sortedIconHidden": "OverflowTooltip-sortedIconHidden-74",
-                                                                "sortedIconShown": "OverflowTooltip-sortedIconShown-73",
-                                                                "subComponentContainer": "OverflowTooltip-subComponentContainer-85",
-                                                                "subtitle": "OverflowTooltip-subtitle-77",
-                                                                "tBodyEmpty": "OverflowTooltip-tBodyEmpty-60",
-                                                                "table": "OverflowTooltip-table-50",
-                                                                "tableContainer": "OverflowTooltip-tableContainer-76",
-                                                                "tbody": "OverflowTooltip-tbody-59",
-                                                                "td": "OverflowTooltip-td-64",
-                                                                "textContainer": "OverflowTooltip-textContainer-63",
-                                                                "tfoot": "OverflowTooltip-tfoot-65",
-                                                                "tfootTh": "OverflowTooltip-tfootTh-67",
-                                                                "tfootTr": "OverflowTooltip-tfootTr-66",
-                                                                "thead": "OverflowTooltip-thead-54",
-                                                                "theadFilter": "OverflowTooltip-theadFilter-56",
-                                                                "theadFilterTh": "OverflowTooltip-theadFilterTh-58",
-                                                                "theadFilterTr": "OverflowTooltip-theadFilterTr-57",
-                                                                "theadGroup": "OverflowTooltip-theadGroup-51",
-                                                                "theadGroupTh": "OverflowTooltip-theadGroupTh-53",
-                                                                "theadGroupTr": "OverflowTooltip-theadGroupTr-52",
-                                                                "theadTh": "OverflowTooltip-theadTh-55",
-                                                                "title": "OverflowTooltip-title-78",
-                                                                "tooltipAnchor": "OverflowTooltip-tooltipAnchor-92",
-                                                                "tr": "OverflowTooltip-tr-62",
-                                                                "trGroups": "OverflowTooltip-trGroups-61",
+                                                                "alphaNumeric": "OverflowTooltip-alphaNumeric-157",
+                                                                "bulkActions": "OverflowTooltip-bulkActions-168",
+                                                                "centered": "OverflowTooltip-centered-156",
+                                                                "checkBoxBorder": "OverflowTooltip-checkBoxBorder-154",
+                                                                "checkBoxRow": "OverflowTooltip-checkBoxRow-155",
+                                                                "checkBoxText": "OverflowTooltip-checkBoxText-163",
+                                                                "expand": "OverflowTooltip-expand-165",
+                                                                "firstWithNumeric": "OverflowTooltip-firstWithNumeric-162",
+                                                                "iconContainer": "OverflowTooltip-iconContainer-161",
+                                                                "link": "OverflowTooltip-link-159",
+                                                                "loading": "OverflowTooltip-loading-144",
+                                                                "menuItem": "OverflowTooltip-menuItem-164",
+                                                                "noDate": "OverflowTooltip-noDate-145",
+                                                                "numeric": "OverflowTooltip-numeric-158",
+                                                                "pagination": "OverflowTooltip-pagination-143",
+                                                                "pointer": "OverflowTooltip-pointer-150",
+                                                                "resizer": "OverflowTooltip-resizer-146",
+                                                                "root": "OverflowTooltip-root-124",
+                                                                "rtSortIcon": "OverflowTooltip-rtSortIcon-147",
+                                                                "separatorContainer": "OverflowTooltip-separatorContainer-166",
+                                                                "sortedIconHidden": "OverflowTooltip-sortedIconHidden-149",
+                                                                "sortedIconShown": "OverflowTooltip-sortedIconShown-148",
+                                                                "subComponentContainer": "OverflowTooltip-subComponentContainer-160",
+                                                                "subtitle": "OverflowTooltip-subtitle-152",
+                                                                "tBodyEmpty": "OverflowTooltip-tBodyEmpty-135",
+                                                                "table": "OverflowTooltip-table-125",
+                                                                "tableContainer": "OverflowTooltip-tableContainer-151",
+                                                                "tbody": "OverflowTooltip-tbody-134",
+                                                                "td": "OverflowTooltip-td-139",
+                                                                "textContainer": "OverflowTooltip-textContainer-138",
+                                                                "tfoot": "OverflowTooltip-tfoot-140",
+                                                                "tfootTh": "OverflowTooltip-tfootTh-142",
+                                                                "tfootTr": "OverflowTooltip-tfootTr-141",
+                                                                "thead": "OverflowTooltip-thead-129",
+                                                                "theadFilter": "OverflowTooltip-theadFilter-131",
+                                                                "theadFilterTh": "OverflowTooltip-theadFilterTh-133",
+                                                                "theadFilterTr": "OverflowTooltip-theadFilterTr-132",
+                                                                "theadGroup": "OverflowTooltip-theadGroup-126",
+                                                                "theadGroupTh": "OverflowTooltip-theadGroupTh-128",
+                                                                "theadGroupTr": "OverflowTooltip-theadGroupTr-127",
+                                                                "theadTh": "OverflowTooltip-theadTh-130",
+                                                                "title": "OverflowTooltip-title-153",
+                                                                "tooltipAnchor": "OverflowTooltip-tooltipAnchor-167",
+                                                                "tr": "OverflowTooltip-tr-137",
+                                                                "trGroups": "OverflowTooltip-trGroups-136",
                                                               }
                                                             }
                                                             data="98%"
@@ -5041,14 +5001,9 @@ exports[`<Table /> matches the snapshot 1`] = `
                                                                       "$$typeof": Symbol(react.forward_ref),
                                                                       "propTypes": Object {
                                                                         "children": [Function],
-                                                                        "disableStrictModeCompat": [Function],
                                                                         "in": [Function],
                                                                         "onEnter": [Function],
-                                                                        "onEntered": [Function],
-                                                                        "onEntering": [Function],
                                                                         "onExit": [Function],
-                                                                        "onExited": [Function],
-                                                                        "onExiting": [Function],
                                                                         "style": [Function],
                                                                         "timeout": [Function],
                                                                       },
@@ -5081,14 +5036,9 @@ exports[`<Table /> matches the snapshot 1`] = `
                                                                         "$$typeof": Symbol(react.forward_ref),
                                                                         "propTypes": Object {
                                                                           "children": [Function],
-                                                                          "disableStrictModeCompat": [Function],
                                                                           "in": [Function],
                                                                           "onEnter": [Function],
-                                                                          "onEntered": [Function],
-                                                                          "onEntering": [Function],
                                                                           "onExit": [Function],
-                                                                          "onExited": [Function],
-                                                                          "onExiting": [Function],
                                                                           "style": [Function],
                                                                           "timeout": [Function],
                                                                         },
@@ -5126,7 +5076,7 @@ exports[`<Table /> matches the snapshot 1`] = `
                                                                   >
                                                                     <div
                                                                       aria-describedby={null}
-                                                                      className="OverflowTooltip-tooltipAnchor-92 OverflowTooltip-textContainer-63"
+                                                                      className="OverflowTooltip-tooltipAnchor-167 OverflowTooltip-textContainer-138"
                                                                       onBlur={[Function]}
                                                                       onFocus={[Function]}
                                                                       onTouchEnd={[Function]}
@@ -5138,7 +5088,7 @@ exports[`<Table /> matches the snapshot 1`] = `
                                                                     <ForwardRef(Popper)
                                                                       anchorEl={
                                                                         <div
-                                                                          class="OverflowTooltip-tooltipAnchor-92 OverflowTooltip-textContainer-63"
+                                                                          class="OverflowTooltip-tooltipAnchor-167 OverflowTooltip-textContainer-138"
                                                                         >
                                                                           98%
                                                                         </div>
@@ -5206,51 +5156,51 @@ exports[`<Table /> matches the snapshot 1`] = `
                                                           <Memo(Index)
                                                             classes={
                                                               Object {
-                                                                "alphaNumeric": "OverflowTooltip-alphaNumeric-82",
-                                                                "bulkActions": "OverflowTooltip-bulkActions-93",
-                                                                "centered": "OverflowTooltip-centered-81",
-                                                                "checkBoxBorder": "OverflowTooltip-checkBoxBorder-79",
-                                                                "checkBoxRow": "OverflowTooltip-checkBoxRow-80",
-                                                                "checkBoxText": "OverflowTooltip-checkBoxText-88",
-                                                                "expand": "OverflowTooltip-expand-90",
-                                                                "firstWithNumeric": "OverflowTooltip-firstWithNumeric-87",
-                                                                "iconContainer": "OverflowTooltip-iconContainer-86",
-                                                                "link": "OverflowTooltip-link-84",
-                                                                "loading": "OverflowTooltip-loading-69",
-                                                                "menuItem": "OverflowTooltip-menuItem-89",
-                                                                "noDate": "OverflowTooltip-noDate-70",
-                                                                "numeric": "OverflowTooltip-numeric-83",
-                                                                "pagination": "OverflowTooltip-pagination-68",
-                                                                "pointer": "OverflowTooltip-pointer-75",
-                                                                "resizer": "OverflowTooltip-resizer-71",
-                                                                "root": "OverflowTooltip-root-49",
-                                                                "rtSortIcon": "OverflowTooltip-rtSortIcon-72",
-                                                                "separatorContainer": "OverflowTooltip-separatorContainer-91",
-                                                                "sortedIconHidden": "OverflowTooltip-sortedIconHidden-74",
-                                                                "sortedIconShown": "OverflowTooltip-sortedIconShown-73",
-                                                                "subComponentContainer": "OverflowTooltip-subComponentContainer-85",
-                                                                "subtitle": "OverflowTooltip-subtitle-77",
-                                                                "tBodyEmpty": "OverflowTooltip-tBodyEmpty-60",
-                                                                "table": "OverflowTooltip-table-50",
-                                                                "tableContainer": "OverflowTooltip-tableContainer-76",
-                                                                "tbody": "OverflowTooltip-tbody-59",
-                                                                "td": "OverflowTooltip-td-64",
-                                                                "textContainer": "OverflowTooltip-textContainer-63",
-                                                                "tfoot": "OverflowTooltip-tfoot-65",
-                                                                "tfootTh": "OverflowTooltip-tfootTh-67",
-                                                                "tfootTr": "OverflowTooltip-tfootTr-66",
-                                                                "thead": "OverflowTooltip-thead-54",
-                                                                "theadFilter": "OverflowTooltip-theadFilter-56",
-                                                                "theadFilterTh": "OverflowTooltip-theadFilterTh-58",
-                                                                "theadFilterTr": "OverflowTooltip-theadFilterTr-57",
-                                                                "theadGroup": "OverflowTooltip-theadGroup-51",
-                                                                "theadGroupTh": "OverflowTooltip-theadGroupTh-53",
-                                                                "theadGroupTr": "OverflowTooltip-theadGroupTr-52",
-                                                                "theadTh": "OverflowTooltip-theadTh-55",
-                                                                "title": "OverflowTooltip-title-78",
-                                                                "tooltipAnchor": "OverflowTooltip-tooltipAnchor-92",
-                                                                "tr": "OverflowTooltip-tr-62",
-                                                                "trGroups": "OverflowTooltip-trGroups-61",
+                                                                "alphaNumeric": "OverflowTooltip-alphaNumeric-157",
+                                                                "bulkActions": "OverflowTooltip-bulkActions-168",
+                                                                "centered": "OverflowTooltip-centered-156",
+                                                                "checkBoxBorder": "OverflowTooltip-checkBoxBorder-154",
+                                                                "checkBoxRow": "OverflowTooltip-checkBoxRow-155",
+                                                                "checkBoxText": "OverflowTooltip-checkBoxText-163",
+                                                                "expand": "OverflowTooltip-expand-165",
+                                                                "firstWithNumeric": "OverflowTooltip-firstWithNumeric-162",
+                                                                "iconContainer": "OverflowTooltip-iconContainer-161",
+                                                                "link": "OverflowTooltip-link-159",
+                                                                "loading": "OverflowTooltip-loading-144",
+                                                                "menuItem": "OverflowTooltip-menuItem-164",
+                                                                "noDate": "OverflowTooltip-noDate-145",
+                                                                "numeric": "OverflowTooltip-numeric-158",
+                                                                "pagination": "OverflowTooltip-pagination-143",
+                                                                "pointer": "OverflowTooltip-pointer-150",
+                                                                "resizer": "OverflowTooltip-resizer-146",
+                                                                "root": "OverflowTooltip-root-124",
+                                                                "rtSortIcon": "OverflowTooltip-rtSortIcon-147",
+                                                                "separatorContainer": "OverflowTooltip-separatorContainer-166",
+                                                                "sortedIconHidden": "OverflowTooltip-sortedIconHidden-149",
+                                                                "sortedIconShown": "OverflowTooltip-sortedIconShown-148",
+                                                                "subComponentContainer": "OverflowTooltip-subComponentContainer-160",
+                                                                "subtitle": "OverflowTooltip-subtitle-152",
+                                                                "tBodyEmpty": "OverflowTooltip-tBodyEmpty-135",
+                                                                "table": "OverflowTooltip-table-125",
+                                                                "tableContainer": "OverflowTooltip-tableContainer-151",
+                                                                "tbody": "OverflowTooltip-tbody-134",
+                                                                "td": "OverflowTooltip-td-139",
+                                                                "textContainer": "OverflowTooltip-textContainer-138",
+                                                                "tfoot": "OverflowTooltip-tfoot-140",
+                                                                "tfootTh": "OverflowTooltip-tfootTh-142",
+                                                                "tfootTr": "OverflowTooltip-tfootTr-141",
+                                                                "thead": "OverflowTooltip-thead-129",
+                                                                "theadFilter": "OverflowTooltip-theadFilter-131",
+                                                                "theadFilterTh": "OverflowTooltip-theadFilterTh-133",
+                                                                "theadFilterTr": "OverflowTooltip-theadFilterTr-132",
+                                                                "theadGroup": "OverflowTooltip-theadGroup-126",
+                                                                "theadGroupTh": "OverflowTooltip-theadGroupTh-128",
+                                                                "theadGroupTr": "OverflowTooltip-theadGroupTr-127",
+                                                                "theadTh": "OverflowTooltip-theadTh-130",
+                                                                "title": "OverflowTooltip-title-153",
+                                                                "tooltipAnchor": "OverflowTooltip-tooltipAnchor-167",
+                                                                "tr": "OverflowTooltip-tr-137",
+                                                                "trGroups": "OverflowTooltip-trGroups-136",
                                                               }
                                                             }
                                                             data="critical"
@@ -5294,14 +5244,9 @@ exports[`<Table /> matches the snapshot 1`] = `
                                                                       "$$typeof": Symbol(react.forward_ref),
                                                                       "propTypes": Object {
                                                                         "children": [Function],
-                                                                        "disableStrictModeCompat": [Function],
                                                                         "in": [Function],
                                                                         "onEnter": [Function],
-                                                                        "onEntered": [Function],
-                                                                        "onEntering": [Function],
                                                                         "onExit": [Function],
-                                                                        "onExited": [Function],
-                                                                        "onExiting": [Function],
                                                                         "style": [Function],
                                                                         "timeout": [Function],
                                                                       },
@@ -5334,14 +5279,9 @@ exports[`<Table /> matches the snapshot 1`] = `
                                                                         "$$typeof": Symbol(react.forward_ref),
                                                                         "propTypes": Object {
                                                                           "children": [Function],
-                                                                          "disableStrictModeCompat": [Function],
                                                                           "in": [Function],
                                                                           "onEnter": [Function],
-                                                                          "onEntered": [Function],
-                                                                          "onEntering": [Function],
                                                                           "onExit": [Function],
-                                                                          "onExited": [Function],
-                                                                          "onExiting": [Function],
                                                                           "style": [Function],
                                                                           "timeout": [Function],
                                                                         },
@@ -5379,7 +5319,7 @@ exports[`<Table /> matches the snapshot 1`] = `
                                                                   >
                                                                     <div
                                                                       aria-describedby={null}
-                                                                      className="OverflowTooltip-tooltipAnchor-92 OverflowTooltip-textContainer-63"
+                                                                      className="OverflowTooltip-tooltipAnchor-167 OverflowTooltip-textContainer-138"
                                                                       onBlur={[Function]}
                                                                       onFocus={[Function]}
                                                                       onTouchEnd={[Function]}
@@ -5391,7 +5331,7 @@ exports[`<Table /> matches the snapshot 1`] = `
                                                                     <ForwardRef(Popper)
                                                                       anchorEl={
                                                                         <div
-                                                                          class="OverflowTooltip-tooltipAnchor-92 OverflowTooltip-textContainer-63"
+                                                                          class="OverflowTooltip-tooltipAnchor-167 OverflowTooltip-textContainer-138"
                                                                         >
                                                                           critical
                                                                         </div>
@@ -5459,51 +5399,51 @@ exports[`<Table /> matches the snapshot 1`] = `
                                                           <Memo(Index)
                                                             classes={
                                                               Object {
-                                                                "alphaNumeric": "OverflowTooltip-alphaNumeric-82",
-                                                                "bulkActions": "OverflowTooltip-bulkActions-93",
-                                                                "centered": "OverflowTooltip-centered-81",
-                                                                "checkBoxBorder": "OverflowTooltip-checkBoxBorder-79",
-                                                                "checkBoxRow": "OverflowTooltip-checkBoxRow-80",
-                                                                "checkBoxText": "OverflowTooltip-checkBoxText-88",
-                                                                "expand": "OverflowTooltip-expand-90",
-                                                                "firstWithNumeric": "OverflowTooltip-firstWithNumeric-87",
-                                                                "iconContainer": "OverflowTooltip-iconContainer-86",
-                                                                "link": "OverflowTooltip-link-84",
-                                                                "loading": "OverflowTooltip-loading-69",
-                                                                "menuItem": "OverflowTooltip-menuItem-89",
-                                                                "noDate": "OverflowTooltip-noDate-70",
-                                                                "numeric": "OverflowTooltip-numeric-83",
-                                                                "pagination": "OverflowTooltip-pagination-68",
-                                                                "pointer": "OverflowTooltip-pointer-75",
-                                                                "resizer": "OverflowTooltip-resizer-71",
-                                                                "root": "OverflowTooltip-root-49",
-                                                                "rtSortIcon": "OverflowTooltip-rtSortIcon-72",
-                                                                "separatorContainer": "OverflowTooltip-separatorContainer-91",
-                                                                "sortedIconHidden": "OverflowTooltip-sortedIconHidden-74",
-                                                                "sortedIconShown": "OverflowTooltip-sortedIconShown-73",
-                                                                "subComponentContainer": "OverflowTooltip-subComponentContainer-85",
-                                                                "subtitle": "OverflowTooltip-subtitle-77",
-                                                                "tBodyEmpty": "OverflowTooltip-tBodyEmpty-60",
-                                                                "table": "OverflowTooltip-table-50",
-                                                                "tableContainer": "OverflowTooltip-tableContainer-76",
-                                                                "tbody": "OverflowTooltip-tbody-59",
-                                                                "td": "OverflowTooltip-td-64",
-                                                                "textContainer": "OverflowTooltip-textContainer-63",
-                                                                "tfoot": "OverflowTooltip-tfoot-65",
-                                                                "tfootTh": "OverflowTooltip-tfootTh-67",
-                                                                "tfootTr": "OverflowTooltip-tfootTr-66",
-                                                                "thead": "OverflowTooltip-thead-54",
-                                                                "theadFilter": "OverflowTooltip-theadFilter-56",
-                                                                "theadFilterTh": "OverflowTooltip-theadFilterTh-58",
-                                                                "theadFilterTr": "OverflowTooltip-theadFilterTr-57",
-                                                                "theadGroup": "OverflowTooltip-theadGroup-51",
-                                                                "theadGroupTh": "OverflowTooltip-theadGroupTh-53",
-                                                                "theadGroupTr": "OverflowTooltip-theadGroupTr-52",
-                                                                "theadTh": "OverflowTooltip-theadTh-55",
-                                                                "title": "OverflowTooltip-title-78",
-                                                                "tooltipAnchor": "OverflowTooltip-tooltipAnchor-92",
-                                                                "tr": "OverflowTooltip-tr-62",
-                                                                "trGroups": "OverflowTooltip-trGroups-61",
+                                                                "alphaNumeric": "OverflowTooltip-alphaNumeric-157",
+                                                                "bulkActions": "OverflowTooltip-bulkActions-168",
+                                                                "centered": "OverflowTooltip-centered-156",
+                                                                "checkBoxBorder": "OverflowTooltip-checkBoxBorder-154",
+                                                                "checkBoxRow": "OverflowTooltip-checkBoxRow-155",
+                                                                "checkBoxText": "OverflowTooltip-checkBoxText-163",
+                                                                "expand": "OverflowTooltip-expand-165",
+                                                                "firstWithNumeric": "OverflowTooltip-firstWithNumeric-162",
+                                                                "iconContainer": "OverflowTooltip-iconContainer-161",
+                                                                "link": "OverflowTooltip-link-159",
+                                                                "loading": "OverflowTooltip-loading-144",
+                                                                "menuItem": "OverflowTooltip-menuItem-164",
+                                                                "noDate": "OverflowTooltip-noDate-145",
+                                                                "numeric": "OverflowTooltip-numeric-158",
+                                                                "pagination": "OverflowTooltip-pagination-143",
+                                                                "pointer": "OverflowTooltip-pointer-150",
+                                                                "resizer": "OverflowTooltip-resizer-146",
+                                                                "root": "OverflowTooltip-root-124",
+                                                                "rtSortIcon": "OverflowTooltip-rtSortIcon-147",
+                                                                "separatorContainer": "OverflowTooltip-separatorContainer-166",
+                                                                "sortedIconHidden": "OverflowTooltip-sortedIconHidden-149",
+                                                                "sortedIconShown": "OverflowTooltip-sortedIconShown-148",
+                                                                "subComponentContainer": "OverflowTooltip-subComponentContainer-160",
+                                                                "subtitle": "OverflowTooltip-subtitle-152",
+                                                                "tBodyEmpty": "OverflowTooltip-tBodyEmpty-135",
+                                                                "table": "OverflowTooltip-table-125",
+                                                                "tableContainer": "OverflowTooltip-tableContainer-151",
+                                                                "tbody": "OverflowTooltip-tbody-134",
+                                                                "td": "OverflowTooltip-td-139",
+                                                                "textContainer": "OverflowTooltip-textContainer-138",
+                                                                "tfoot": "OverflowTooltip-tfoot-140",
+                                                                "tfootTh": "OverflowTooltip-tfootTh-142",
+                                                                "tfootTr": "OverflowTooltip-tfootTr-141",
+                                                                "thead": "OverflowTooltip-thead-129",
+                                                                "theadFilter": "OverflowTooltip-theadFilter-131",
+                                                                "theadFilterTh": "OverflowTooltip-theadFilterTh-133",
+                                                                "theadFilterTr": "OverflowTooltip-theadFilterTr-132",
+                                                                "theadGroup": "OverflowTooltip-theadGroup-126",
+                                                                "theadGroupTh": "OverflowTooltip-theadGroupTh-128",
+                                                                "theadGroupTr": "OverflowTooltip-theadGroupTr-127",
+                                                                "theadTh": "OverflowTooltip-theadTh-130",
+                                                                "title": "OverflowTooltip-title-153",
+                                                                "tooltipAnchor": "OverflowTooltip-tooltipAnchor-167",
+                                                                "tr": "OverflowTooltip-tr-137",
+                                                                "trGroups": "OverflowTooltip-trGroups-136",
                                                               }
                                                             }
                                                             data="critical"
@@ -5547,14 +5487,9 @@ exports[`<Table /> matches the snapshot 1`] = `
                                                                       "$$typeof": Symbol(react.forward_ref),
                                                                       "propTypes": Object {
                                                                         "children": [Function],
-                                                                        "disableStrictModeCompat": [Function],
                                                                         "in": [Function],
                                                                         "onEnter": [Function],
-                                                                        "onEntered": [Function],
-                                                                        "onEntering": [Function],
                                                                         "onExit": [Function],
-                                                                        "onExited": [Function],
-                                                                        "onExiting": [Function],
                                                                         "style": [Function],
                                                                         "timeout": [Function],
                                                                       },
@@ -5587,14 +5522,9 @@ exports[`<Table /> matches the snapshot 1`] = `
                                                                         "$$typeof": Symbol(react.forward_ref),
                                                                         "propTypes": Object {
                                                                           "children": [Function],
-                                                                          "disableStrictModeCompat": [Function],
                                                                           "in": [Function],
                                                                           "onEnter": [Function],
-                                                                          "onEntered": [Function],
-                                                                          "onEntering": [Function],
                                                                           "onExit": [Function],
-                                                                          "onExited": [Function],
-                                                                          "onExiting": [Function],
                                                                           "style": [Function],
                                                                           "timeout": [Function],
                                                                         },
@@ -5632,7 +5562,7 @@ exports[`<Table /> matches the snapshot 1`] = `
                                                                   >
                                                                     <div
                                                                       aria-describedby={null}
-                                                                      className="OverflowTooltip-tooltipAnchor-92 OverflowTooltip-textContainer-63"
+                                                                      className="OverflowTooltip-tooltipAnchor-167 OverflowTooltip-textContainer-138"
                                                                       onBlur={[Function]}
                                                                       onFocus={[Function]}
                                                                       onTouchEnd={[Function]}
@@ -5644,7 +5574,7 @@ exports[`<Table /> matches the snapshot 1`] = `
                                                                     <ForwardRef(Popper)
                                                                       anchorEl={
                                                                         <div
-                                                                          class="OverflowTooltip-tooltipAnchor-92 OverflowTooltip-textContainer-63"
+                                                                          class="OverflowTooltip-tooltipAnchor-167 OverflowTooltip-textContainer-138"
                                                                         >
                                                                           critical
                                                                         </div>
@@ -9951,9 +9881,9 @@ exports[`<Table /> matches the snapshot 1`] = `
                                                     className="HvPagination-pageSizeOptionsSelect"
                                                     classes={
                                                       Object {
-                                                        "header": "HvSelect-header-95",
-                                                        "headerOpen": "HvSelect-headerOpen-96",
-                                                        "root": "HvSelect-root-94",
+                                                        "header": "HvSelect-header-181",
+                                                        "headerOpen": "HvSelect-headerOpen-182",
+                                                        "root": "HvSelect-root-180",
                                                       }
                                                     }
                                                     disabled={false}
@@ -9966,9 +9896,9 @@ exports[`<Table /> matches the snapshot 1`] = `
                                                       className="HvPagination-pageSizeOptionsSelect"
                                                       classes={
                                                         Object {
-                                                          "header": "HvSelect-header-95",
-                                                          "headerOpen": "HvSelect-headerOpen-96",
-                                                          "root": "HvSelect-root-94",
+                                                          "header": "HvSelect-header-181",
+                                                          "headerOpen": "HvSelect-headerOpen-182",
+                                                          "root": "HvSelect-root-180",
                                                         }
                                                       }
                                                       disabled={false}
@@ -9987,9 +9917,9 @@ exports[`<Table /> matches the snapshot 1`] = `
                                                         classes={
                                                           Object {
                                                             "arrow": "HvBaseDropdown-arrow",
-                                                            "header": "HvBaseDropdown-header HvSelect-header-95",
+                                                            "header": "HvBaseDropdown-header HvSelect-header-181",
                                                             "headerDisabled": "HvBaseDropdown-headerDisabled",
-                                                            "headerOpen": "HvBaseDropdown-headerOpen HvSelect-headerOpen-96",
+                                                            "headerOpen": "HvBaseDropdown-headerOpen HvSelect-headerOpen-182",
                                                             "headerOpenDown": "HvBaseDropdown-headerOpenDown",
                                                             "headerOpenUp": "HvBaseDropdown-headerOpenUp",
                                                             "inputExtensionFloatLeft": "HvBaseDropdown-inputExtensionFloatLeft",
@@ -9999,7 +9929,7 @@ exports[`<Table /> matches the snapshot 1`] = `
                                                             "inputExtensionOpenShadow": "HvBaseDropdown-inputExtensionOpenShadow",
                                                             "panel": "HvBaseDropdown-panel",
                                                             "placeholder": "HvBaseDropdown-placeholder",
-                                                            "root": "HvBaseDropdown-root HvSelect-root-94",
+                                                            "root": "HvBaseDropdown-root HvSelect-root-180",
                                                             "rootDisabled": "HvBaseDropdown-rootDisabled",
                                                             "selection": "HvBaseDropdown-selection",
                                                             "selectionDisabled": "HvBaseDropdown-selectionDisabled",
@@ -10018,7 +9948,7 @@ exports[`<Table /> matches the snapshot 1`] = `
                                                         <div
                                                           aria-expanded={false}
                                                           aria-label="Select how many to display"
-                                                          className="HvPagination-pageSizeOptionsSelect HvBaseDropdown-root HvSelect-root-94"
+                                                          className="HvPagination-pageSizeOptionsSelect HvBaseDropdown-root HvSelect-root-180"
                                                           id="hv-table-2-pagination-pageSize"
                                                           onClick={[Function]}
                                                           onKeyDown={[Function]}
@@ -10027,7 +9957,7 @@ exports[`<Table /> matches the snapshot 1`] = `
                                                         >
                                                           <div
                                                             aria-label="Select how many to display"
-                                                            className="HvBaseDropdown-header HvSelect-header-95"
+                                                            className="HvBaseDropdown-header HvSelect-header-181"
                                                             id="hv-table-2-pagination-pageSize-header"
                                                             role="textbox"
                                                             tabIndex={0}
@@ -10214,14 +10144,9 @@ exports[`<Table /> matches the snapshot 1`] = `
                                                             "$$typeof": Symbol(react.forward_ref),
                                                             "propTypes": Object {
                                                               "children": [Function],
-                                                              "disableStrictModeCompat": [Function],
                                                               "in": [Function],
                                                               "onEnter": [Function],
-                                                              "onEntered": [Function],
-                                                              "onEntering": [Function],
                                                               "onExit": [Function],
-                                                              "onExited": [Function],
-                                                              "onExiting": [Function],
                                                               "style": [Function],
                                                               "timeout": [Function],
                                                             },
@@ -10253,14 +10178,9 @@ exports[`<Table /> matches the snapshot 1`] = `
                                                               "$$typeof": Symbol(react.forward_ref),
                                                               "propTypes": Object {
                                                                 "children": [Function],
-                                                                "disableStrictModeCompat": [Function],
                                                                 "in": [Function],
                                                                 "onEnter": [Function],
-                                                                "onEntered": [Function],
-                                                                "onEntering": [Function],
                                                                 "onExit": [Function],
-                                                                "onExited": [Function],
-                                                                "onExiting": [Function],
                                                                 "style": [Function],
                                                                 "timeout": [Function],
                                                               },
@@ -10306,7 +10226,7 @@ exports[`<Table /> matches the snapshot 1`] = `
                                                             onTouchStart={[Function]}
                                                             title={null}
                                                           >
-                                                            <WithStyles(HvButton)
+                                                            <WithStyles(ForwardRef)
                                                               aria-label="First Page"
                                                               className="HvPagination-iconContainer"
                                                               disabled={true}
@@ -10314,7 +10234,7 @@ exports[`<Table /> matches the snapshot 1`] = `
                                                               id="hv-table-2-pagination-firstPage-button"
                                                               onClick={[Function]}
                                                             >
-                                                              <HvButton
+                                                              <ForwardRef
                                                                 aria-label="First Page"
                                                                 className="HvPagination-iconContainer"
                                                                 classes={
@@ -10497,8 +10417,8 @@ exports[`<Table /> matches the snapshot 1`] = `
                                                                     </WithStyles(ForwardRef(ButtonBase))>
                                                                   </ForwardRef(Button)>
                                                                 </WithStyles(ForwardRef(Button))>
-                                                              </HvButton>
-                                                            </WithStyles(HvButton)>
+                                                              </ForwardRef>
+                                                            </WithStyles(ForwardRef)>
                                                           </div>
                                                           <ForwardRef(Popper)
                                                             anchorEl={
@@ -10602,14 +10522,9 @@ exports[`<Table /> matches the snapshot 1`] = `
                                                             "$$typeof": Symbol(react.forward_ref),
                                                             "propTypes": Object {
                                                               "children": [Function],
-                                                              "disableStrictModeCompat": [Function],
                                                               "in": [Function],
                                                               "onEnter": [Function],
-                                                              "onEntered": [Function],
-                                                              "onEntering": [Function],
                                                               "onExit": [Function],
-                                                              "onExited": [Function],
-                                                              "onExiting": [Function],
                                                               "style": [Function],
                                                               "timeout": [Function],
                                                             },
@@ -10641,14 +10556,9 @@ exports[`<Table /> matches the snapshot 1`] = `
                                                               "$$typeof": Symbol(react.forward_ref),
                                                               "propTypes": Object {
                                                                 "children": [Function],
-                                                                "disableStrictModeCompat": [Function],
                                                                 "in": [Function],
                                                                 "onEnter": [Function],
-                                                                "onEntered": [Function],
-                                                                "onEntering": [Function],
                                                                 "onExit": [Function],
-                                                                "onExited": [Function],
-                                                                "onExiting": [Function],
                                                                 "style": [Function],
                                                                 "timeout": [Function],
                                                               },
@@ -10694,7 +10604,7 @@ exports[`<Table /> matches the snapshot 1`] = `
                                                             onTouchStart={[Function]}
                                                             title={null}
                                                           >
-                                                            <WithStyles(HvButton)
+                                                            <WithStyles(ForwardRef)
                                                               aria-label="Previous Page"
                                                               className="HvPagination-iconContainer"
                                                               disabled={true}
@@ -10702,7 +10612,7 @@ exports[`<Table /> matches the snapshot 1`] = `
                                                               id="hv-table-2-pagination-previousPage-button"
                                                               onClick={[Function]}
                                                             >
-                                                              <HvButton
+                                                              <ForwardRef
                                                                 aria-label="Previous Page"
                                                                 className="HvPagination-iconContainer"
                                                                 classes={
@@ -10885,8 +10795,8 @@ exports[`<Table /> matches the snapshot 1`] = `
                                                                     </WithStyles(ForwardRef(ButtonBase))>
                                                                   </ForwardRef(Button)>
                                                                 </WithStyles(ForwardRef(Button))>
-                                                              </HvButton>
-                                                            </WithStyles(HvButton)>
+                                                              </ForwardRef>
+                                                            </WithStyles(ForwardRef)>
                                                           </div>
                                                           <ForwardRef(Popper)
                                                             anchorEl={
@@ -11734,14 +11644,9 @@ exports[`<Table /> matches the snapshot 1`] = `
                                                             "$$typeof": Symbol(react.forward_ref),
                                                             "propTypes": Object {
                                                               "children": [Function],
-                                                              "disableStrictModeCompat": [Function],
                                                               "in": [Function],
                                                               "onEnter": [Function],
-                                                              "onEntered": [Function],
-                                                              "onEntering": [Function],
                                                               "onExit": [Function],
-                                                              "onExited": [Function],
-                                                              "onExiting": [Function],
                                                               "style": [Function],
                                                               "timeout": [Function],
                                                             },
@@ -11773,14 +11678,9 @@ exports[`<Table /> matches the snapshot 1`] = `
                                                               "$$typeof": Symbol(react.forward_ref),
                                                               "propTypes": Object {
                                                                 "children": [Function],
-                                                                "disableStrictModeCompat": [Function],
                                                                 "in": [Function],
                                                                 "onEnter": [Function],
-                                                                "onEntered": [Function],
-                                                                "onEntering": [Function],
                                                                 "onExit": [Function],
-                                                                "onExited": [Function],
-                                                                "onExiting": [Function],
                                                                 "style": [Function],
                                                                 "timeout": [Function],
                                                               },
@@ -11826,7 +11726,7 @@ exports[`<Table /> matches the snapshot 1`] = `
                                                             onTouchStart={[Function]}
                                                             title={null}
                                                           >
-                                                            <WithStyles(HvButton)
+                                                            <WithStyles(ForwardRef)
                                                               aria-label="Next Page"
                                                               className="HvPagination-iconContainer"
                                                               disabled={true}
@@ -11834,7 +11734,7 @@ exports[`<Table /> matches the snapshot 1`] = `
                                                               id="hv-table-2-pagination-nextPage-button"
                                                               onClick={[Function]}
                                                             >
-                                                              <HvButton
+                                                              <ForwardRef
                                                                 aria-label="Next Page"
                                                                 className="HvPagination-iconContainer"
                                                                 classes={
@@ -12017,8 +11917,8 @@ exports[`<Table /> matches the snapshot 1`] = `
                                                                     </WithStyles(ForwardRef(ButtonBase))>
                                                                   </ForwardRef(Button)>
                                                                 </WithStyles(ForwardRef(Button))>
-                                                              </HvButton>
-                                                            </WithStyles(HvButton)>
+                                                              </ForwardRef>
+                                                            </WithStyles(ForwardRef)>
                                                           </div>
                                                           <ForwardRef(Popper)
                                                             anchorEl={
@@ -12122,14 +12022,9 @@ exports[`<Table /> matches the snapshot 1`] = `
                                                             "$$typeof": Symbol(react.forward_ref),
                                                             "propTypes": Object {
                                                               "children": [Function],
-                                                              "disableStrictModeCompat": [Function],
                                                               "in": [Function],
                                                               "onEnter": [Function],
-                                                              "onEntered": [Function],
-                                                              "onEntering": [Function],
                                                               "onExit": [Function],
-                                                              "onExited": [Function],
-                                                              "onExiting": [Function],
                                                               "style": [Function],
                                                               "timeout": [Function],
                                                             },
@@ -12161,14 +12056,9 @@ exports[`<Table /> matches the snapshot 1`] = `
                                                               "$$typeof": Symbol(react.forward_ref),
                                                               "propTypes": Object {
                                                                 "children": [Function],
-                                                                "disableStrictModeCompat": [Function],
                                                                 "in": [Function],
                                                                 "onEnter": [Function],
-                                                                "onEntered": [Function],
-                                                                "onEntering": [Function],
                                                                 "onExit": [Function],
-                                                                "onExited": [Function],
-                                                                "onExiting": [Function],
                                                                 "style": [Function],
                                                                 "timeout": [Function],
                                                               },
@@ -12214,7 +12104,7 @@ exports[`<Table /> matches the snapshot 1`] = `
                                                             onTouchStart={[Function]}
                                                             title={null}
                                                           >
-                                                            <WithStyles(HvButton)
+                                                            <WithStyles(ForwardRef)
                                                               aria-label="Last Page"
                                                               className="HvPagination-iconContainer"
                                                               disabled={true}
@@ -12222,7 +12112,7 @@ exports[`<Table /> matches the snapshot 1`] = `
                                                               id="hv-table-2-pagination-lastPage-button"
                                                               onClick={[Function]}
                                                             >
-                                                              <HvButton
+                                                              <ForwardRef
                                                                 aria-label="Last Page"
                                                                 className="HvPagination-iconContainer"
                                                                 classes={
@@ -12405,8 +12295,8 @@ exports[`<Table /> matches the snapshot 1`] = `
                                                                     </WithStyles(ForwardRef(ButtonBase))>
                                                                   </ForwardRef(Button)>
                                                                 </WithStyles(ForwardRef(Button))>
-                                                              </HvButton>
-                                                            </WithStyles(HvButton)>
+                                                              </ForwardRef>
+                                                            </WithStyles(ForwardRef)>
                                                           </div>
                                                           <ForwardRef(Popper)
                                                             anchorEl={
