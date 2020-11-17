@@ -38,7 +38,7 @@ const Header = ({ router, auth, pages, getPages, redirect, logout }) => {
   return pages.data ? (
     <HvHeader>
       {!isMdUp && (
-        <HvButton category="icon" onClick={toggleOpen}>
+        <HvButton icon onClick={toggleOpen}>
           <Menu />
         </HvButton>
       )}
@@ -57,22 +57,16 @@ const Header = ({ router, auth, pages, getPages, redirect, logout }) => {
       )}
 
       <HvHeaderActions>
-        <HvButton
-          category="icon"
-          aria-label="Change theme"
-          onClick={() => toggleTheme()}>
+        <HvButton icon aria-label="Change theme" onClick={() => toggleTheme()}>
           <ThemeSwitcher />
         </HvButton>
         {isAuthed && (
-          <HvButton category="icon" aria-label="Open User panel">
+          <HvButton icon aria-label="Open User panel">
             <User />
           </HvButton>
         )}
         {isAuthed && isMdUp && (
-          <HvButton
-            category="icon"
-            aria-label="Logout"
-            onClick={() => logout()}>
+          <HvButton icon aria-label="Logout" onClick={() => logout()}>
             <LogOut />
           </HvButton>
         )}

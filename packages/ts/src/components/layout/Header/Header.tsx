@@ -47,7 +47,7 @@ const Header: React.FC<HeaderProps> = ({
   return pages?.data ? (
     <HvHeader>
       {!isMdUp && (
-        <HvButton category="icon" onClick={toggleOpen}>
+        <HvButton icon onClick={toggleOpen}>
           <Menu />
         </HvButton>
       )}
@@ -67,19 +67,19 @@ const Header: React.FC<HeaderProps> = ({
 
       <HvHeaderActions>
         <HvButton
-          category="icon"
+          icon
           aria-label="Change theme"
           onClick={() => toggleTheme()}>
           <ThemeSwitcher />
         </HvButton>
         {isAuthed && (
-          <HvButton category="icon" aria-label="Open User panel">
+          <HvButton icon aria-label="Open User panel">
             <User />
           </HvButton>
         )}
         {isAuthed && isMdUp && (
           <HvButton
-            category="icon"
+            icon
             onClick={() => logout()}
             aria-label="Logout">
             <LogOut />

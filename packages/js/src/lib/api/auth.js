@@ -1,5 +1,5 @@
 import jwt from "jwt-simple";
-import Promise from 'promise-polyfill';
+import Promise from "promise-polyfill";
 
 const authenticate = async credentials =>
   new Promise((resolve, reject) => {

@@ -60,7 +60,7 @@ const LoginForm: React.FC<LoginFormProps> = ({
           value={credentials.username}
           inputProps={{ autoFocus: true }}
           onChange={(
-            evt: React.ChangeEvent<HTMLInputElement>,
+            event: React.ChangeEvent<HTMLInputElement>,
             value: string
           ): string => {
             handleChange(value, "username");
@@ -81,7 +81,7 @@ const LoginForm: React.FC<LoginFormProps> = ({
             type: "password"
           }}
           onChange={(
-            evt: React.ChangeEvent<HTMLInputElement>,
+            event: React.ChangeEvent<HTMLInputElement>,
             value: string
           ): string => {
             handleChange(value, "password");
@@ -92,8 +92,7 @@ const LoginForm: React.FC<LoginFormProps> = ({
 
       <HvCheckBox
         classes={{
-          container: classes.checkBox,
-          labelTypography: classes.checkBoxTypography
+          container: classes.checkBox
         }}
         label={t("pages.login.loginForm.remember")}
       />

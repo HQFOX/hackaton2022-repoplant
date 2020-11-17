@@ -10,14 +10,14 @@ const Table = ({ data, getTableData }) => {
     getTableData();
   }, [getTableData]);
 
-  return (
+  return data.length ? (
     <HvTable
       data={data}
       columns={columns}
       defaultPageSize={10}
       title={t("components.details.table.title")}
     />
-  );
+  ) : null;
 };
 
 Table.propTypes = {};

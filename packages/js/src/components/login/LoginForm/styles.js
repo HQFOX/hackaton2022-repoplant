@@ -24,9 +24,6 @@ const styles = theme => ({
   },
   sentenceCase: {
     textTransform: `full-size-kana`
-  },
-  checkBoxTypography: {
-    ...theme.hv.typography.normalText
   }
 });
 
