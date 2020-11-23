@@ -25,9 +25,6 @@ jobs:
           npm config set @hv:registry ${RESOLVE_REGISTRY}
           npm ci
 
-      - name: Bootstrap
-        run: npm run bootstrap
-
       - name: Lint
         run: npm run lint
 
@@ -36,11 +33,13 @@ jobs:
 
   Notify-End:
     name: Notify End
-    needs: [Static-Checks]
+    needs: [Test]
     if: always()
     runs-on: ubuntu-latest
 
     steps:
+      - uses: technote-space/workflow-conclusion-action@v1
+
       - name: generate conclusion color
         id: conclusion_color
         uses: actions/github-script@v3
