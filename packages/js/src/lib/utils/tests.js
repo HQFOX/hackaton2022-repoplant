@@ -14,7 +14,7 @@ const createMockStore = mockState => mockStore(mockState);
 const withStoreProvider = (Component, store) => props => (
   <Provider store={createMockStore(store)}>
     <HvProvider>
-      <MemoryRouter>
+      <MemoryRouter initialEntries={[{ pathname: "/", key: "testKey" }]}>
         <Component {...props} />
       </MemoryRouter>
     </HvProvider>
@@ -23,7 +23,7 @@ const withStoreProvider = (Component, store) => props => (
 
 const withHvProvider = Component => props => (
   <HvProvider>
-    <MemoryRouter>
+    <MemoryRouter initialEntries={[{ pathname: "/", key: "testKey" }]}>
       <Component {...props} />
     </MemoryRouter>
   </HvProvider>

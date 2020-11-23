@@ -4,16 +4,20 @@ import { AuthActions } from "../actions";
 
 describe("async actions", () => {
   it("should dispatch setAuth when login", async () => {
-    const expectedActions = [{ type: AuthActions.SET_AUTH, isAuthed: true }];
-
+    const expectedActions = {
+      type: AuthActions.SET_AUTH_STATUS,
+      authStatus: "pending"
+    };
     const store = mockStore();
     await store.dispatch(login("some_credentials"));
 
-    expect(store.getActions()).toEqual(expectedActions);
+    expect(store.getActions()[0]).toEqual(expectedActions);
   });
 
   it("should dispatch setAuth when logout", async () => {
-    const expectedActions = [{ type: AuthActions.SET_AUTH, isAuthed: false }];
+    const expectedActions = [
+      { type: AuthActions.SET_IS_AUTHED, isAuthed: false }
+    ];
 
     const store = mockStore();
     await store.dispatch(logout(logout));
@@ -22,7 +26,9 @@ describe("async actions", () => {
   });
 
   it("should dispatch setAuth when checkAuth", async () => {
-    const expectedActions = [{ type: AuthActions.SET_AUTH, isAuthed: false }];
+    const expectedActions = [
+      { type: AuthActions.SET_IS_AUTHED, isAuthed: false }
+    ];
 
     const store = mockStore();
     await store.dispatch(checkAuth());

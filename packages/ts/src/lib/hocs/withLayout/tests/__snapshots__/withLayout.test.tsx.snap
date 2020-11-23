@@ -11,21 +11,11 @@ exports[`withLayout is rendered correctly 1`] = `
 >
   <WithStyles(Connect(Header)) />
   <div
-    style={
-      Object {
-        "display": "flex",
-        "paddingTop": "50px",
-      }
-    }
+    className="makeStyles-section-1"
   >
     <WithStyles(Connect(VerticalNavigation)) />
     <main
-      style={
-        Object {
-          "flexGrow": 1,
-          "padding": "30px 15px 0 15px",
-        }
-      }
+      className="makeStyles-component-3 makeStyles-hasMargins-4"
     >
       <Component />
     </main>
@@ -44,21 +34,11 @@ exports[`withLayout is rendered correctly 2`] = `
 >
   <WithStyles(Connect(Header)) />
   <div
-    style={
-      Object {
-        "display": "flex",
-        "paddingTop": "50px",
-      }
-    }
+    className="makeStyles-section-1 makeStyles-hasFooter-2"
   >
     <WithStyles(Connect(VerticalNavigation)) />
     <main
-      style={
-        Object {
-          "flexGrow": 1,
-          "padding": "30px 15px 0 15px",
-        }
-      }
+      className="makeStyles-component-3 makeStyles-hasMargins-4"
     >
       <Component />
     </main>

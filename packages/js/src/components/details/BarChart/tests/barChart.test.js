@@ -1,5 +1,6 @@
 import React from "react";
 import { mount } from "enzyme";
+import { withStoreProvider } from "lib/utils/tests";
 import BarChart from "..";
 
 const data = [{ x: ["Q1"], y: [100], name: "Sales Target" }];
@@ -7,8 +8,12 @@ const data = [{ x: ["Q1"], y: [100], name: "Sales Target" }];
 describe("<BarChart />", () => {
   let component;
 
+  const WithProvider = withStoreProvider(() => <BarChart />, {
+    data: { bar: data }
+  });
+
   beforeEach(() => {
-    component = mount(<BarChart data={data} />);
+    component = mount(<WithProvider />);
   });
 
   it("should be defined", () => {

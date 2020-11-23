@@ -8,7 +8,9 @@ describe("<Message />", () => {
 
   beforeEach(() => {
     const WithHvProvider = withHvProvider(Message);
-    component = mount(<WithHvProvider login={jest.fn()} />);
+    component = mount(
+      <WithHvProvider login={jest.fn()} message={{ status: "someStatus" }} />
+    );
   });
 
   it("it matches the snapshot", () => {

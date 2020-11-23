@@ -29,7 +29,8 @@
     "publish-minor": "npx lerna publish minor --yes",
     "publish-premajor": "npx lerna publish premajor --yes",
     "publish-major": "npx lerna publish major --yes",
-    "test": "npx lerna run test --parallel"
+    "test": "npx lerna run test --parallel",
+    "test:update": "npx lerna run test:update --parallel"
   },
   "devDependencies": {
     "lerna": "^3.20.2",
