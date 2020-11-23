@@ -8,8 +8,7 @@ import { getStatus } from "../utils";
 import useStyles from "./styles";
 
 const Row = ({ data }) => {
-  const status = getStatus(data.status);
-  const { Icon } = status;
+  const { Icon, sema } = getStatus(data.status);
   const { id } = data;
   const classes = useStyles();
 
@@ -21,8 +20,8 @@ const Row = ({ data }) => {
       checkboxProps={{
         inputProps: { "aria-label": `Select ${id}` }
       }}>
-      <HvListViewCell semantic={status.sema}>
-        <Icon semantic={status.sema} className={classes.icon} />
+      <HvListViewCell semantic={sema}>
+        <Icon semantic={sema} className={classes.icon} />
       </HvListViewCell>
 
       <HvListViewCell>

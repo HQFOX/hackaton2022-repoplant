@@ -111,7 +111,7 @@ const actions = [
 ];
 
 type Status = {
-  Icon: React.ComponentType<any> | null;
+  Icon: any;
   sema: HvSemanticColorKeys;
 };
 
