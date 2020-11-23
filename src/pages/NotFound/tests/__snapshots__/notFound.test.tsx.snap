@@ -934,11 +934,11 @@ exports[`<NotFound /> it matches the snapshot 1`] = `
                                       <div
                                         className="HvHeader-header"
                                       >
-                                        <WithStyles(HvButton)
+                                        <WithStyles(ForwardRef)
                                           icon={true}
                                           onClick={[Function]}
                                         >
-                                          <HvButton
+                                          <ForwardRef
                                             classes={
                                               Object {
                                                 "focusVisible": "HvButton-focusVisible",
@@ -1101,8 +1101,8 @@ exports[`<NotFound /> it matches the snapshot 1`] = `
                                                 </WithStyles(ForwardRef(ButtonBase))>
                                               </ForwardRef(Button)>
                                             </WithStyles(ForwardRef(Button))>
-                                          </HvButton>
-                                        </WithStyles(HvButton)>
+                                          </ForwardRef>
+                                        </WithStyles(ForwardRef)>
                                         <WithStyles(Brand)
                                           logo={<Unknown />}
                                           name="components.layout.header.appName"
@@ -1244,12 +1244,12 @@ exports[`<NotFound /> it matches the snapshot 1`] = `
                                             <div
                                               className="HvHeaderActions-root"
                                             >
-                                              <WithStyles(HvButton)
+                                              <WithStyles(ForwardRef)
                                                 aria-label="Change theme"
                                                 icon={true}
                                                 onClick={[Function]}
                                               >
-                                                <HvButton
+                                                <ForwardRef
                                                   aria-label="Change theme"
                                                   classes={
                                                     Object {
@@ -1418,8 +1418,8 @@ exports[`<NotFound /> it matches the snapshot 1`] = `
                                                       </WithStyles(ForwardRef(ButtonBase))>
                                                     </ForwardRef(Button)>
                                                   </WithStyles(ForwardRef(Button))>
-                                                </HvButton>
-                                              </WithStyles(HvButton)>
+                                                </ForwardRef>
+                                              </WithStyles(ForwardRef)>
                                             </div>
                                           </Actions>
                                         </WithStyles(Actions)>
