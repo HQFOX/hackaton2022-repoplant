@@ -4,7 +4,7 @@ import thunk from "redux-thunk";
 import { routerMiddleware } from "connected-react-router";
 // Redux Devtools. Use the `composeWithDevTools()` directive so we can pass the middleware along with it
 import { composeWithDevTools } from "redux-devtools-extension";
-import { createBrowserHistory } from "history";
+import { createHashHistory } from "history";
 import createRootReducer from "./rootReducer";
 
 // Create the composing function for middlewares
@@ -13,7 +13,11 @@ const composeEnhancers = composeWithDevTools({});
 // Rehydrate state on app start
 const initialState = window.INITIAL_REDUX_STATE;
 
-export const history = createBrowserHistory();
+export const history = createHashHistory(
+  {
+    basename: process.env.PUBLIC_URL,
+  }
+);
 
 // configure middlewares
 const middlewares: Middleware[] = [thunk, routerMiddleware(history)];

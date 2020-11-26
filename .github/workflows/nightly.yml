@@ -4,7 +4,13 @@ on:
     - cron: "0 3 * * *" # daily at 03:00
 
 env:
-  RUN_URL: https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}
+  RESOLVE_REGISTRY: https://repo.orl.eng.hitachivantara.com/artifactory/api/npm/npm/
+  APPLICATION_PUBLISH_REPO: ${{ github.repository_owner }}/${{ github.repository_owner }}.github.io
+  APPLICATION_PUBLISH_BRANCH: master
+  APPLICATION_PUBLISH_FOLDER: app/master
+  APPLICATION_PUBLISH_MESSAGE: "docs: application nightly"
+  APPLICATION_URL: https://${{ github.repository_owner }}.github.io/app/master
+  URL: "Adoption Application published: https://github.com/${{ github.repository }}"
 
 jobs:
   Test:
@@ -22,7 +28,7 @@ jobs:
       - name: Install
         run: |
           npm config set @hv:registry ${RESOLVE_REGISTRY}
-          npm ci
+          npm install
 
       - name: Lint
         run: npm run lint
@@ -30,9 +36,100 @@ jobs:
       - name: Test
         run: npm run test
 
+  Build-Application:
+    name: Build Application
+    runs-on: [self-hosted, Linux]
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - uses: actions/setup-node@v1
+        with:
+          node-version: "12"
+
+      - name: Install
+        run: |
+          npm config set @hv:registry ${RESOLVE_REGISTRY}
+          npm ci
+
+      - name: Generate Application
+        run: |
+          npm run build
+
+      - name: Archive Application
+        uses: actions/upload-artifact@v1
+        with:
+          name: application
+          path: ${{ github.workspace }}/build
+
+      - name: Clean Folders
+        if: always()
+        run: |
+          rm -rf ${{ github.workspace }}/build
+
+  Github-Deployment:
+    name: Github Deployment
+    needs: [Build-Application]
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Start Application Deployment
+        uses: bobheadxi/deployments@master
+        id: deployment
+        with:
+          step: start
+          token: ${{ secrets.GITHUB_TOKEN }}
+          env: ${{env.APPLICATION_PUBLISH_FOLDER}}
+          ref: refs/pull/${{ github.event.number }}/head
+          desc: ${{env.APPLICATION_PUBLISH_MESSAGE}}
+
+      - name: Checkout Application Repository
+        uses: actions/checkout@v2
+        with:
+          repository: ${{ env.APPLICATION_PUBLISH_REPO }}
+          ref: ${{ env.APPLICATION_PUBLISH_BRANCH }}
+          ssh-key: ${{ secrets.ORG_GHPAGES_DEPLOY_KEY }}
+          path: gh-docs
+          fetch-depth: 1
+
+      - name: Remove Previous Application
+        run: |
+          rm -rf ${{ github.workspace }}/gh-docs/${APPLICATION_PUBLISH_FOLDER}/*
+
+      - name: Fetch Application
+        uses: actions/download-artifact@v1
+        with:
+          name: application
+          path: ${{ github.workspace }}/gh-docs/${{env.APPLICATION_PUBLISH_FOLDER}}
+
+      - name: Push Application
+        run: |
+          cd ${{ github.workspace }}/gh-docs
+          git config --global user.name 'github-actions[bot]'
+          git config --global user.email 'github-actions[bot]@users.noreply.github.com'
+          git add -A ${APPLICATION_PUBLISH_FOLDER}
+          git commit -m "${APPLICATION_PUBLISH_MESSAGE}"
+          git push
+
+      - name: Cleanup Folder
+        if: always()
+        run: |
+          rm -rf ${{ github.workspace }}/gh-docs
+
+      - name: Update Deployment Status
+        uses: bobheadxi/deployments@master
+        if: always()
+        with:
+          step: finish
+          token: ${{ secrets.GITHUB_TOKEN }}
+          status: ${{ job.status }}
+          deployment_id: ${{ steps.deployment.outputs.deployment_id }}
+          env_url: ${{env.APPLICATION_URL}}
+
   Notify-End:
     name: Notify End
-    needs: [Test]
+    needs: [Test, Github-Deployment]
     if: always()
     runs-on: ubuntu-latest
 
@@ -65,8 +162,8 @@ jobs:
                 {
                   "mrkdwn_in": ["text"],
                   "color": "${{env.COLOR}}",
-                  "title": "${{ github.workflow }} (#${{github.event.number}}) build finished - ${{ env.CONCLUSION }}",
-                  "title_link": "${{ env.RUN_URL }}",
+                  "title": "Adoption ${{ github.workflow }}: ${{ env.CONCLUSION }}",
+                  "title_link": "${{ env.URL }}",
                   "footer": "by ${{github.actor}}",
                   "footer_icon": "https://github.com/${{github.actor}}.png?size=20"
                 }

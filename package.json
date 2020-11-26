@@ -23,8 +23,10 @@
     "clean": "rimraf build/*"
   },
   "dependencies": {
-    "@hv/uikit-react-core": "3.x",
-    "@hv/uikit-react-icons": "3.x",
+    "@hv/uikit-react-core": "latest",
+    "@hv/uikit-react-icons": "latest",
+    "@hv/uikit-react-lab": "latest",
+    "@hv/uikit-common-themes": "latest",
     "@material-ui/core": "^4.9.11",
     "axios": "^0.19.2",
     "clsx": "^1.1.1",
