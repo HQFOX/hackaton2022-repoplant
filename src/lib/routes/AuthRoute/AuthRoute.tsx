@@ -1,12 +1,10 @@
 import React, { useEffect } from "react";
+import { RouteProps } from "react-router";
 import { Route, Redirect } from "react-router-dom";
 import { AuthRouteProps } from "./index";
 
-interface AuthProps extends AuthRouteProps {
-  path?: string;
-  exact?: boolean;
+interface AuthProps extends AuthRouteProps, RouteProps {
   redirect?: string;
-  component?: React.ComponentType<{}>;
 }
 
 const AuthRoute: React.FC<AuthProps> = ({

@@ -16,7 +16,7 @@ const recoverPassword = async (email: string): Promise<string> =>
   new Promise((resolve, reject) => {
     setTimeout(() => {
       if (!email.length) reject();
-      resolve();
+      resolve("password");
     }, 500);
   });
 

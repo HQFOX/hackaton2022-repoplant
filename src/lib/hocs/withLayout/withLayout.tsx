@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import clsx from "clsx";
 import { Header, Footer, VerticalNavigation } from "components/layout";
-import NavigationContext from "../../NavigationContext";
+import NavigationContext from "lib/NavigationContext";
 import useStyles from "./styles";
 
 const withLayout = <P extends {}>(

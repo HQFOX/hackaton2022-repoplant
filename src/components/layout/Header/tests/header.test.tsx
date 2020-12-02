@@ -1,5 +1,5 @@
 import React from "react";
-import { mount } from "enzyme";
+import { render } from '@testing-library/react';
 import { withStoreProvider } from "lib/utils/tests";
 import { TestAppState } from "typings/state";
 import Header from "..";
@@ -19,10 +19,10 @@ describe("<Header />", () => {
   } as TestAppState);
 
   beforeEach(() => {
-    component = mount(<WithStoreProvider />);
+    component = render(<WithStoreProvider />);
   });
 
   it("it matches the snapshot", () => {
-    expect(component).toMatchSnapshot();
+    expect(component.container).toMatchSnapshot();
   });
 });

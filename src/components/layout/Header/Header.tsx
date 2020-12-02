@@ -1,10 +1,11 @@
-import React, { useContext, useEffect, SyntheticEvent } from "react";
+import React, { useContext, useEffect, MouseEvent } from "react";
 import { useTranslation } from "react-i18next";
 import { useMediaQuery, useTheme } from "@material-ui/core";
 import HvHeader, {
   HvHeaderBrand,
   HvHeaderActions,
-  HvHeaderNavigation
+  HvHeaderNavigation,
+  NavigationItemProp
 } from "@hv/uikit-react-core/dist/Header";
 import { HvButton } from "@hv/uikit-react-core";
 import { LogOut, Menu, ThemeSwitcher, User } from "@hv/uikit-react-icons";
@@ -12,7 +13,6 @@ import HitachiLogo from "assets/HitachiLogo";
 import { getSelection } from "lib/utils/path";
 import ThemeContext from "lib/ThemeContext";
 import NavigationContext from "lib/NavigationContext";
-import { Page } from "typings/pages";
 import { HeaderProps } from "./index";
 
 const Header: React.FC<HeaderProps> = ({
@@ -40,8 +40,8 @@ const Header: React.FC<HeaderProps> = ({
     getPages();
   }, [getPages]);
 
-  const handleChange = (event: SyntheticEvent, selectedPage: Page): void => {
-    if (selectedPage.path) redirect(selectedPage.path);
+  const handleChange = (event: MouseEvent, s: NavigationItemProp): void => {
+    if (s.path) redirect(s.path);
   };
 
   return pages?.data ? (

@@ -7,7 +7,7 @@ import { store, history } from "store";
 import { setCookie, getCookie } from "lib/utils/cookie";
 import ThemeContext from "lib/ThemeContext";
 import Routes from "lib/routes";
-import "../config/i18n";
+import "lib/i18n";
 
 const App: React.FC = () => {
   const initialTheme = getCookie("theme") === "wicked" ? "wicked" : "dawn";
@@ -17,7 +17,7 @@ const App: React.FC = () => {
     const newTheme = theme === "dawn" ? "wicked" : "dawn";
     setTheme(newTheme);
     setCookie({ key: "theme", value: newTheme });
-  };
+  }; 
 
   return (
     <Provider store={store}>

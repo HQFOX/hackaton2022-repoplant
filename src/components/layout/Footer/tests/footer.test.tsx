@@ -1,5 +1,5 @@
 import React from "react";
-import { mount } from "enzyme";
+import { render } from '@testing-library/react';
 import { withHvProvider } from "lib/utils/tests";
 import Footer from "../index";
 
@@ -8,10 +8,11 @@ describe("<Footer />", () => {
 
   beforeEach(() => {
     const WithHvProvider = withHvProvider(Footer);
-    snapshot = mount(<WithHvProvider />);
+    
+    snapshot = render(<WithHvProvider />);
   });
 
   test("it matches the snapshot", () => {
-    expect(snapshot).toMatchSnapshot();
+    expect(snapshot.container).toMatchSnapshot();
   });
 });

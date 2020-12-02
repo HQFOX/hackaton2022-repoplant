@@ -42,8 +42,8 @@ module.exports = {
     "react/prop-types": "off",
     "react/jsx-props-no-spreading": 0,
     "react/require-default-props": 0,
+    "@typescript-eslint/ban-types": 0,
     "@typescript-eslint/explicit-function-return-type": 0,
-    "@typescript-eslint/ban-ts-ignore": 1,
     "@typescript-eslint/no-explicit-any": 0,
     "no-underscore-dangle": 1
   }
