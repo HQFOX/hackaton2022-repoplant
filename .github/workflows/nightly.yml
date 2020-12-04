@@ -81,7 +81,6 @@ jobs:
           step: start
           token: ${{ secrets.GITHUB_TOKEN }}
           env: ${{env.APPLICATION_PUBLISH_FOLDER}}
-          ref: refs/pull/${{ github.event.number }}/head
           desc: ${{env.APPLICATION_PUBLISH_MESSAGE}}
 
       - name: Checkout Application Repository
