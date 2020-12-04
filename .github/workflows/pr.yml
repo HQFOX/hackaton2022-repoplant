@@ -14,15 +14,33 @@ env:
   PR_URL: "Adoption Application published: https://github.com/${{ github.repository }}/pull/${{ github.event.number }}"
 
 jobs:
-  Cypress-run: 
+  Cypress-run unix: 
     name: Cypress cross browser test
     runs-on: [self-hosted, Linux]
-    container: cypress/browsers:node12.13.0-chrome78-ff70
+    container:
+      image: cypress/browsers:node12.16.1-chrome80-ff73
+      options: --user 1001    
+    strategy: 
+      matrix:
+        browser: [firefox, chrome]
     steps:
       - name: Checkout
         uses: actions/checkout@v2 
       - name: Cypress run
-        uses: cypress-io/github-action@v2 
+        uses: cypress-io/github-action@v2
+        with:
+          browser: ${{matrix.browser}}
+  
+  Cypress-run win: 
+    name: Cypress cross browser test
+    runs-on: [self-hosted, Windows]  
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2 
+      - name: Cypress run
+        uses: cypress-io/github-action@v2
+        with:
+          browser: edge
 
   Test:
     name: Lint, Jest
