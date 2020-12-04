@@ -17,6 +17,7 @@ jobs:
   Cypress-run: 
     name: Cypress cross browser test
     runs-on: [self-hosted, Linux]
+    container: cypress/browsers:node12.13.0-chrome78-ff70
     steps:
       - name: Checkout
         uses: actions/checkout@v2 
