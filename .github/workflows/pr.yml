@@ -14,8 +14,8 @@ env:
   PR_URL: "Adoption Application published: https://github.com/${{ github.repository }}/pull/${{ github.event.number }}"
 
 jobs:
-  Cypress-run unix: 
-    name: Cypress cross browser test
+  Cypress-run-unix: 
+    name: Cypress cross browser test unix
     runs-on: [self-hosted, Linux]
     container:
       image: cypress/browsers:node12.16.1-chrome80-ff73
@@ -31,8 +31,8 @@ jobs:
         with:
           browser: ${{matrix.browser}}
   
-  Cypress-run win: 
-    name: Cypress cross browser test
+  Cypress-run-win: 
+    name: Cypress cross browser test win
     runs-on: [self-hosted, Windows]  
     steps:
       - name: Checkout
