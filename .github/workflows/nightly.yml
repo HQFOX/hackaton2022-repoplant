@@ -2,6 +2,7 @@ name: Nightly
 on:
   schedule:
     - cron: "0 3 * * *" # daily at 03:00
+  workflow_dispatch:
 
 env:
   RESOLVE_REGISTRY: https://repo.orl.eng.hitachivantara.com/artifactory/api/npm/npm/
