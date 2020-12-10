@@ -19,7 +19,7 @@ jobs:
     runs-on: ubuntu-18.04
     container:
       image: cypress/browsers:node12.16.1-chrome80-ff73
-      options: -u 2501 
+      options: --user 1001
     strategy:
       fail-fast: false 
       matrix:
