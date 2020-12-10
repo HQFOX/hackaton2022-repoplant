@@ -31,6 +31,8 @@ jobs:
       - name: Cypress run
         uses: cypress-io/github-action@v2
         with:
+          build: npx cypress info
+          working-directory: ./
           record: true
           parallel: true
           browser: ${{matrix.browser}}
