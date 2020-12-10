@@ -17,13 +17,10 @@ jobs:
   Cypress-run-unix: 
     name: Cypress cross browser test unix
     runs-on: [self-hosted, Linux]
-    container:
-      image: cypress/browsers:node12.16.1-chrome80-ff73
-      options: -u 2501 
     strategy:
       fail-fast: false 
       matrix:
-        browser: [firefox, chrome]
+        browser: [chrome]
         containers: [1, 2, 3]
     steps:
       - name: Checkout
