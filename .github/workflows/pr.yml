@@ -34,41 +34,6 @@ jobs:
           record: true
           parallel: true
           browser: ${{matrix.browser}}
-          group: 'Actions example'
-  
-  Cypress-run-win: 
-    name: Cypress cross browser test win
-    runs-on: [self-hosted, Windows]  
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v2 
-      - name: Cypress run
-        uses: cypress-io/github-action@v2
-        with:
-          browser: edge
-
-  Test:
-    name: Lint, Jest
-    runs-on: [self-hosted, Linux]
-
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v2
-
-      - uses: actions/setup-node@v1
-        with:
-          node-version: "12"
-
-      - name: Install
-        run: |
-          npm config set @hv:registry ${RESOLVE_REGISTRY}
-          npm ci
-
-      - name: Lint
-        run: npm run lint
-
-      - name: Test
-        run: npm run test
 
   Build-Application:
     name: Build Application
