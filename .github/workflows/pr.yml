@@ -17,19 +17,24 @@ jobs:
   Cypress-run-unix: 
     name: Cypress cross browser test unix
     runs-on: [self-hosted, Linux]
-    container:
-      image: cypress/browsers:node12.16.1-chrome80-ff73
-      options: --user 1001    
-    strategy: 
+  container:
+    image: cypress/browsers:node12.16.1-chrome80-ff73
+    options: -u 2501 
+    strategy:
+      fail-fast: false 
       matrix:
         browser: [firefox, chrome]
+      containers: [1, 2, 3]
     steps:
       - name: Checkout
         uses: actions/checkout@v2 
       - name: Cypress run
         uses: cypress-io/github-action@v2
         with:
+          record: true
+          parallel: true
           browser: ${{matrix.browser}}
+          group: 'Actions example'
   
   Cypress-run-win: 
     name: Cypress cross browser test win
