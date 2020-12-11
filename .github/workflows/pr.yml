@@ -17,9 +17,6 @@ jobs:
   Cypress-run-unix: 
     name: Cypress cross browser test unix
     runs-on: ubuntu-18.04
-    container:
-      image: cypress/browsers:node12.16.1-chrome80-ff73
-      options: --user 1001
     strategy:
       fail-fast: false 
       matrix:
