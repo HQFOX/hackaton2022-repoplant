@@ -233,6 +233,7 @@ const Details: React.FC<DetailsProps> = ({ classes }: DetailsProps) => {
   const handleAction = (event, id, action, selection = []) => {
     switch (action.id) {
       case "delete":
+        // @ts-ignore
         setData(data.filter((el) => !selection.includes(el.pid)));
         break;
       default:
@@ -249,6 +250,7 @@ const Details: React.FC<DetailsProps> = ({ classes }: DetailsProps) => {
         <HvTable
           id="table"
           data={data}
+          // @ts-ignore
           columns={getColumns()}
           defaultPageSize={10}
           pageSize={pageSize}
