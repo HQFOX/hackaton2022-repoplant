@@ -2,7 +2,7 @@
 
 context('Window', () => {
   beforeEach(() => {
-    cy.visit('https://lumada-design.github.io/app/master/')
+    cy.visit('http://localhost:3000')
   })
 
   it('cy.title() - get the title', () => {

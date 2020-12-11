@@ -13,7 +13,7 @@
     "url": "https://github.com/pentaho/hv-uikit-adoption.git"
   },
   "scripts": {
-    "start": "webpack-dev-server --open --config=config/webpack/dev.js",
+    "start": "webpack-dev-server --open --config=config/webpack/dev.js --port 3000",
     "build": "npm run clean && webpack -p --config=config/webpack/prod.js",
     "test": "jest --coverage --config=config/tests/jest-config.json",
     "test:update": "jest --config=config/tests/jest-config.json --u",

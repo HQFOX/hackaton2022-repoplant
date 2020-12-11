@@ -14,9 +14,69 @@ env:
   PR_URL: "Adoption Application published: https://github.com/${{ github.repository }}/pull/${{ github.event.number }}"
 
 jobs:
+  Test:
+    name: Lint, Jest
+    runs-on: [self-hosted, Linux]
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - uses: actions/setup-node@v1
+        with:
+          node-version: "12"
+
+      - name: Install
+        run: |
+          npm config set @hv:registry ${RESOLVE_REGISTRY}
+          npm ci
+      - name: Lint
+        run: npm run lint
+
+      - name: Test
+        run: npm run test
+
+  Build-Application:
+    name: Build Application
+    runs-on: [self-hosted, Linux]
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - uses: actions/setup-node@v1
+        with:
+          node-version: "12"
+      - name: Generate Application
+        run: |
+          npm run build
+
+      - name: Archive Application
+        uses: actions/upload-artifact@v1
+        with:
+          name: application
+          path: ${{ github.workspace }}/build
+
+      - name: Clean Folders
+        if: always()
+        run: |
+          rm -rf ${{ github.workspace }}/build
+
+
   Cypress-run-unix: 
     name: Cypress cross browser test unix
     runs-on: ubuntu-18.04
+
+    services:
+      application:
+        image: nginx
+        ports:
+          - 3000:80
+        volumes:
+          - ${{ github.workspace }}/dist:/usr/share/nginx/html
+        options: >-
+          --name application
+
     strategy:
       fail-fast: false 
       matrix:
@@ -24,6 +84,18 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v2 
+
+      - name: Fetch Application
+        uses: actions/download-artifact@v1
+        with:
+          name: application
+          path: ${{ github.workspace }}/dist
+
+      - name: Restart nginx
+        uses: docker://docker
+        with:
+          args: docker restart storybook
+          
       - name: Cypress run
         uses: cypress-io/github-action@v2
         with:
