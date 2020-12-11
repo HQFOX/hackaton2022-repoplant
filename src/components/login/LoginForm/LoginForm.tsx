@@ -35,6 +35,8 @@ const LoginForm: React.FC<LoginFormProps> = ({
     setCredentials(newCredentials);
   };
 
+  console.log(status)
+
   return (
     <div className={classes.root}>
       <HvTypography variant="mTitle">
@@ -57,7 +59,7 @@ const LoginForm: React.FC<LoginFormProps> = ({
         <HvBaseInput
           id="username-input"
           placeholder={t("pages.login.loginForm.username.placeholder")}
-          value={credentials.username}
+          defaultValue={credentials.username}
           inputProps={{ autoFocus: true }}
           onChange={(
             event: React.ChangeEvent<HTMLInputElement>,
@@ -76,7 +78,7 @@ const LoginForm: React.FC<LoginFormProps> = ({
         <HvBaseInput
           id="password-input"
           placeholder={t("pages.login.loginForm.password.placeholder")}
-          value={credentials.password}
+          defaultValue={credentials.password}
           inputProps={{
             type: "password"
           }}
