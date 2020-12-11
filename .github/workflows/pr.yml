@@ -101,7 +101,7 @@ jobs:
       - name: Restart nginx
         uses: docker://docker
         with:
-          args: docker restart storybook
+          args: docker restart application
           
       - name: Cypress run
         uses: cypress-io/github-action@v2
@@ -109,4 +109,6 @@ jobs:
           build: npx cypress info
           working-directory: ./
           browser: ${{matrix.browser}}
+        env:
+          CYPRESS_BASE_URL: http://application
 
