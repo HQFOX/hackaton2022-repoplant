@@ -104,9 +104,9 @@ jobs:
       - name: Cypress run
         uses: cypress-io/github-action@v2
         with:
-          build: npx cypress info
           working-directory: ./
           browser: ${{matrix.browser}}
+          wait-on: http://application
         env:
           CYPRESS_BASE_URL: http://application
 
