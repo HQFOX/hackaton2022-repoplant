@@ -77,8 +77,6 @@ jobs:
     services:
       application:
         image: nginx
-        ports:
-          - 3000:80
         volumes:
           - ${{ github.workspace }}/dist:/usr/share/nginx/html
         options: >-
@@ -109,6 +107,7 @@ jobs:
           build: npx cypress info
           working-directory: ./
           browser: ${{matrix.browser}}
+          wait-on: http://application
         env:
           CYPRESS_BASE_URL: http://application
 
