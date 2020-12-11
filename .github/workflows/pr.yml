@@ -47,6 +47,12 @@ jobs:
       - uses: actions/setup-node@v1
         with:
           node-version: "12"
+
+      - name: Install
+        run: |
+          npm config set @hv:registry ${RESOLVE_REGISTRY}
+          npm ci    
+          
       - name: Generate Application
         run: |
           npm run build
@@ -65,6 +71,7 @@ jobs:
 
   Cypress-run-unix: 
     name: Cypress cross browser test unix
+    needs: [Build-Application]
     runs-on: ubuntu-18.04
 
     services:
