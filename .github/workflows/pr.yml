@@ -21,7 +21,6 @@ jobs:
       fail-fast: false 
       matrix:
         browser: [firefox, chrome]
-        containers: [1, 2, 3]
     steps:
       - name: Checkout
         uses: actions/checkout@v2 
@@ -30,7 +29,5 @@ jobs:
         with:
           build: npx cypress info
           working-directory: ./
-          record: true
-          parallel: true
           browser: ${{matrix.browser}}
 
