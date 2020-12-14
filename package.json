@@ -22,7 +22,7 @@
     "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
     "clean": "rimraf build/*",
     "cy:run": "npm-run-all --parallel cy:run:*",
-    "cy:run:chrome": "cypress run --browser chromium --headless",
+    "cy:run:chrome": "cypress run --browser chrome --headless",
     "cy:run:firefox": "cypress run --browser firefox --headless"
   },
   "dependencies": {
