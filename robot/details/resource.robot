@@ -7,6 +7,7 @@ Variables   ../login/_variables.yaml
 *** Keywords ***
 Login and Navigate to Details
     Go To                           ${APPLICATION_URL}
+    Wait Until Element Is Visible   ${input_username}
     Clear Element Text              ${input_username}                        
     Clear Element Text              ${input_password}
     Input Text                      ${input_username}        admin          clear=True
