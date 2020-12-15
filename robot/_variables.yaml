@@ -1,0 +1,5 @@
+BROWSER:           chrome
+APPLICATION_URL:   http://localhost:3000
+loginPage:         /#/login
+overviewPage:      /#/overview
+detailsPage:       /#/templates/details

@@ -13,7 +13,7 @@ export enum AuthActions {
 // https://github.com/piotrwitek/react-redux-typescript-guide#state-with-type-level-immutability
 export interface AuthState {
   readonly activeForm: string;
-  readonly isAuthed: boolean;
+  readonly isAuthed: boolean | undefined;
   readonly authStatus: string;
   readonly recoverStatus: string;
 }

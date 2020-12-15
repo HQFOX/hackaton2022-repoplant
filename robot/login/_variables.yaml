@@ -1,0 +1,3 @@
+input_username:       id:username-input
+input_password:       id:password-input
+button_login:         css:button[type=submit]
