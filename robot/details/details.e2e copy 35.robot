@@ -1,4 +1,5 @@
 *** Setting ***
+Test Timeout     4 minutes
 Resource         resource.robot
 Variables        _variables.yaml
 Variables        ../_variables.yaml
