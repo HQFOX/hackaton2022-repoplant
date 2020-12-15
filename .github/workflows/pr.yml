@@ -60,7 +60,7 @@ jobs:
       options: --shm-size=6g --cpus 4 -u 2501
       env:
         BROWSER: ${{ matrix.browser }}
-        ROBOT_TESTS_DIR: ./automation/robot/storybook/core
+        ROBOT_TESTS_DIR: ./robot
         ROBOT_REPORTS_DIR: ./reports
         ROBOT_THREADS: 4
         ROBOT_OPTIONS: "--variable APPLICATION_URL:http://application --variable BROWSER:${{ matrix.browser }}"
