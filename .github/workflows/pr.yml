@@ -129,7 +129,7 @@ jobs:
       - name: Run SELENIUM Robot
         uses: ./.github/robot
         with:
-          storybook-url: http://localhost:9002
+          application-url: http://localhost:9002
           browser: ${{ matrix.browser }}
           output-dir: ./reports
           processes: 3

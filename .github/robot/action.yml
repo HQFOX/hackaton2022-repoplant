@@ -4,8 +4,8 @@ inputs:
   processes:
     description: 'The number of parallel processes to run'
     required: false
-  storybook-url:
-    description: 'The url where storybook is deployed'
+  application-url:
+    description: 'The url where application is deployed'
     required: true
     default: "http://localhost:9002"
   browser:

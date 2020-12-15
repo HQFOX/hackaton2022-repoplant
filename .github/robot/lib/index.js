@@ -1489,7 +1489,7 @@ const path = __webpack_require__(622)
 const env = process.env;
 
 async function main() {
-  const storybookURL = core.getInput("storybook-url");
+  const applicationURL = core.getInput("application-url");
   const browser = core.getInput("browser");
   const includes = core.getInput("includes").split("\n");
   const excludes = core.getInput("excludes").split("\n");
@@ -1517,7 +1517,7 @@ async function main() {
   });
 
   const firstCommandArgs = [
-    "--variable", `STORYBOOK_URL:${storybookURL}`,
+    "--variable", `APPLICATION_URL:${applicationURL}`,
     "--variable", `BROWSER:${browser}`,
     ...includesArray,
     ...excludesArray,
@@ -1530,7 +1530,7 @@ async function main() {
 
   const secondCommandArgs = [
     "--rerunfailed", path.join(outputDir, "firstRun.xml"),
-    "--variable", `STORYBOOK_URL:${storybookURL}`,
+    "--variable", `APPLICATION_URL:${applicationURL}`,
     "--variable", `BROWSER:${browser}`,
     "--outputdir", outputDir,
     "--output", "secondRun.xml",
