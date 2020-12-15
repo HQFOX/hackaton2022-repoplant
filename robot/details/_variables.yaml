@@ -1,1 +1,13 @@
+table:                          css:[caption][role=table]
+pageSizeDropdown:               css:div[class*='HvPagination-pageSizeOptionsSelect']
+paginationNextPage:             css:button[aria-label='Next Page']
 listBox:                        css:ul[role='listbox']
+bulkAction:                     css:.HvBulkActions-root 
+bulkActionsSelectAllLabel:      id:table-select-all-select-label
+bulkActionCheckbox:             css:.HvBulkActions-root input[type='checkbox']
+checkbox:                       css:input[type='checkbox']
+row:                            xpath:(//div[@role='row'][@aria-rowindex])
+row1CheckBox:                   xpath:(//div[@role='row'][@aria-rowindex])[1]//input
+row2CheckBox:                   xpath:(//div[@role='row'][@aria-rowindex])[2]//input
+row3CheckBox:                   xpath:(//div[@role='row'][@aria-rowindex])[3]//input
+rowsSelected:                   css:div.HvTable-tr[aria-selected=true]
