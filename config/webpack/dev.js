@@ -14,8 +14,7 @@ module.exports = merge(commonConfig, {
   devServer: {
     hot: true, // enable HMR on the server,
     historyApiFallback: true,
-    host: "localhost", // Need to listen to all requests on all addresses: https://stackoverflow.com/questions/56759017/cannot-open-a-react-app-in-the-browser-after-dockerising
-    port: 8080
+    port: 3000
   },
   devtool: "cheap-module-eval-source-map",
   plugins: [
