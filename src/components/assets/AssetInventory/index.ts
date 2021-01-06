@@ -7,14 +7,14 @@ import styles from "./styles";
 import AssetInventory from "./AssetInventory";
 
 const mapStateToProps = ({ data }) => ({
-  assets: data.assets
+  assets: data.assets,
 });
 
-const mapDispatchToProps = dispatch =>
+const mapDispatchToProps = (dispatch) =>
   bindActionCreators(
     {
       getAssetsData,
-      redirect
+      redirect,
     },
     dispatch
   );

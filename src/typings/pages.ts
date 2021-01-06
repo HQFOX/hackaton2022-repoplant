@@ -4,7 +4,7 @@
 // to follow the convention of Redux's `@@INIT` action.
 export enum PagesActions {
   GET_PAGES = "@@layout/GET_PAGES",
-  SET_PAGES = "@@layout/SET_PAGES"
+  SET_PAGES = "@@layout/SET_PAGES",
 }
 
 // Declare state types with `readonly` modifier to get compile time immutability.

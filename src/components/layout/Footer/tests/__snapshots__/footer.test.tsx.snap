@@ -16,7 +16,7 @@ exports[`<Footer /> it matches the snapshot 1`] = `
       <p
         class="HvFooter-copyright HvTypography-root HvTypography-normalText"
       >
-        © Hitachi Vantara Corporation 2020. All Rights Reserved.
+        © Hitachi Vantara Corporation 2021. All Rights Reserved.
       </p>
     </div>
   </footer>

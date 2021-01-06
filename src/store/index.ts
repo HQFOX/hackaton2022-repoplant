@@ -13,11 +13,9 @@ const composeEnhancers = composeWithDevTools({});
 // Rehydrate state on app start
 const initialState = window.INITIAL_REDUX_STATE;
 
-export const history = createHashHistory(
-  {
-    basename: process.env.PUBLIC_URL,
-  }
-);
+export const history = createHashHistory({
+  basename: process.env.PUBLIC_URL,
+});
 
 // configure middlewares
 const middlewares: Middleware[] = [thunk, routerMiddleware(history)];

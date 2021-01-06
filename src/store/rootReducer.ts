@@ -11,7 +11,7 @@ const createRootReducer = (history: History) =>
     auth: authReducer,
     data: dataReducer,
     pages: pagesReducer,
-    router: connectRouter(history)
+    router: connectRouter(history),
   });
 
 export default createRootReducer;

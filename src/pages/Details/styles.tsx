@@ -1,10 +1,10 @@
 import { createStyles } from "@material-ui/core";
 
-const styles = theme =>
+const styles = (theme) =>
   createStyles({
     title: {
-      marginBottom: theme.spacing("sm")
-    }
+      marginBottom: theme.spacing("sm"),
+    },
   });
 
 export default styles;

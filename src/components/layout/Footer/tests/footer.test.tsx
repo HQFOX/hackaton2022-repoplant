@@ -1,5 +1,5 @@
 import React from "react";
-import { render } from '@testing-library/react';
+import { render } from "@testing-library/react";
 import { withHvProvider } from "lib/utils/tests";
 import Footer from "../index";
 
@@ -8,7 +8,7 @@ describe("<Footer />", () => {
 
   beforeEach(() => {
     const WithHvProvider = withHvProvider(Footer);
-    
+
     snapshot = render(<WithHvProvider />);
   });
 

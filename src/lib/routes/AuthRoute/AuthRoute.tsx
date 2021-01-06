@@ -13,13 +13,13 @@ const AuthRoute: React.FC<AuthProps> = ({
   path,
   exact,
   redirect,
-  component
+  component,
 }: AuthProps) => {
   const { isAuthed } = auth;
 
   const isLogin = path === "/login";
   const route = <Route path={path} exact={exact} component={component} />;
-  
+
   useEffect(() => {
     checkAuth();
   }, [checkAuth]);

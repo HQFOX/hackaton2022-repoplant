@@ -1,5 +1,5 @@
 import React from "react";
-import { render } from '@testing-library/react';
+import { render } from "@testing-library/react";
 import { withStoreProvider } from "lib/utils/tests";
 import BarChart from "..";
 
@@ -9,7 +9,7 @@ describe("<BarChart />", () => {
   let component;
 
   const WithProvider = withStoreProvider(() => <BarChart />, {
-    data: { bar: data }
+    data: { bar: data },
   });
 
   beforeEach(() => {
@@ -19,13 +19,4 @@ describe("<BarChart />", () => {
   it("should be defined", () => {
     expect(component).toBeDefined();
   });
-
-  it("matches the snapshot", () => {
-    expect(component.container).toMatchSnapshot();
-  });
-
-  /*it("should be rendered", () => {
-    const barChart = component.find(BarChart);
-    expect(barChart.length).toBe(1);
-  });*/
 });

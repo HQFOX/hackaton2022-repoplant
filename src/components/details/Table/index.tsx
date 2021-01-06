@@ -7,13 +7,13 @@ import styles from "./styles";
 import Table from "./Table";
 
 const mapStateToProps = ({ data }: AppState) => ({
-  data: data.table
+  data: data.table,
 });
 
 const mapDispatchToProps = (dispatch: Dispatch) =>
   bindActionCreators(
     {
-      getTableData
+      getTableData,
     },
     dispatch
   );

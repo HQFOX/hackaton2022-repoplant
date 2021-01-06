@@ -10,7 +10,7 @@ import Header from "./Header";
 const mapStateToProps = ({ router, auth, pages }: AppState) => ({
   router,
   auth,
-  pages
+  pages,
 });
 
 const mapDispatchToProps = (dispatch: Dispatch) =>
@@ -18,7 +18,7 @@ const mapDispatchToProps = (dispatch: Dispatch) =>
     {
       getPages,
       redirect,
-      logout
+      logout,
     },
     dispatch
   );

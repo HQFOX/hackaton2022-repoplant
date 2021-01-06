@@ -3,7 +3,7 @@ import { fetchAssets } from "lib/api/assets";
 import {
   fetchTimeSeriesData,
   fetchSalesData,
-  fetchTableData
+  fetchTableData,
 } from "lib/api/data";
 import { setAssetData, setTableData, setLineData, setBarData } from "./actions";
 

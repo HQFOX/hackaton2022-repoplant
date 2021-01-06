@@ -7,13 +7,13 @@ import styles from "./styles";
 import BarChart from "./BarChart";
 
 const mapStateToProps = ({ data }: AppState) => ({
-  data: data.bar
+  data: data.bar,
 });
 
 const mapDispatchToProps = (dispatch: Dispatch) =>
   bindActionCreators(
     {
-      getBarData
+      getBarData,
     },
     dispatch
   );

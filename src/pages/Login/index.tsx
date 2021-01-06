@@ -8,7 +8,7 @@ import styles from "./styles";
 import Login from "./Login";
 
 const mapStateToProps = ({ auth }: AppState) => ({
-  auth
+  auth,
 });
 
 const mapDispatchToProps = (dispatch: Dispatch) =>
@@ -16,7 +16,7 @@ const mapDispatchToProps = (dispatch: Dispatch) =>
     {
       login,
       recover,
-      setActiveForm
+      setActiveForm,
     },
     dispatch
   );

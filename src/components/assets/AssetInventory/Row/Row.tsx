@@ -2,7 +2,7 @@ import React from "react";
 import {
   HvListViewCell,
   HvListViewRow,
-  HvTypography
+  HvTypography,
 } from "@hv/uikit-react-core";
 import { getStatus } from "../utils";
 import useStyles from "./styles";
@@ -18,8 +18,9 @@ const Row = ({ data }) => {
       key={`row${id}`}
       checked={data.checked}
       checkboxProps={{
-        inputProps: { "aria-label": `Select ${id}` }
-      }}>
+        inputProps: { "aria-label": `Select ${id}` },
+      }}
+    >
       <HvListViewCell semantic={sema}>
         <Icon semantic={sema} className={classes.icon} />
       </HvListViewCell>
@@ -52,4 +53,4 @@ const Row = ({ data }) => {
   );
 };
 
-export default data => <Row data={data} />;
+export default (data) => <Row data={data} />;

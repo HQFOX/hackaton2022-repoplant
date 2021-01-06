@@ -7,13 +7,13 @@ import styles from "./styles";
 import LineChart from "./LineChart";
 
 const mapStateToProps = ({ data }: AppState) => ({
-  data: data.line
+  data: data.line,
 });
 
 const mapDispatchToProps = (dispatch: Dispatch) =>
   bindActionCreators(
     {
-      getLineData
+      getLineData,
     },
     dispatch
   );

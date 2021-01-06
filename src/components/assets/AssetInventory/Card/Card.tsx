@@ -9,7 +9,7 @@ import {
   HvCard,
   HvCardHeader,
   HvCardContent,
-  HvCheckBox
+  HvCheckBox,
 } from "@hv/uikit-react-core";
 import { getStatus } from "../utils";
 import useStyles from "./styles";
@@ -22,7 +22,7 @@ const Card = ({ data, viewConfiguration }) => {
   const labels = {
     probability: t("components.assets.assetInventory.cardView.probability"),
     timeHorizon: t("components.assets.assetInventory.cardView.timeHorizon"),
-    relatedAssets: t("components.assets.assetInventory.cardView.relatedAssets")
+    relatedAssets: t("components.assets.assetInventory.cardView.relatedAssets"),
   };
 
   return (
@@ -31,7 +31,8 @@ const Card = ({ data, viewConfiguration }) => {
       semantic={sema}
       icon={<Icon semantic={sema} />}
       selectable={viewConfiguration.isSelectable}
-      selected={data.checked}>
+      selected={data.checked}
+    >
       <HvCardHeader title={data.headerTitle} />
       <HvCardContent>
         <HvGrid container>
@@ -49,13 +50,13 @@ const Card = ({ data, viewConfiguration }) => {
               <HvKpi
                 labels={{
                   title: labels.probability,
-                  indicator: `${data.probability}%`
+                  indicator: `${data.probability}%`,
                 }}
               />
               <HvKpi
                 labels={{
                   title: labels.timeHorizon,
-                  indicator: `${data.timeHorizon}h`
+                  indicator: `${data.timeHorizon}h`,
                 }}
               />
             </div>
@@ -68,7 +69,8 @@ const Card = ({ data, viewConfiguration }) => {
             md={12}
             lg={12}
             xl={12}
-            className={classes.item}>
+            className={classes.item}
+          >
             <HvTypography variant="highlightText">
               {labels.relatedAssets}
             </HvTypography>

@@ -4,7 +4,7 @@ import {
   AssetsData,
   TableData,
   LineData,
-  BarData
+  BarData,
 } from "typings/data";
 
 // Use the `action` helper function provided by `typesafe-actions`.

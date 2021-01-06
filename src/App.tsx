@@ -17,7 +17,7 @@ const App: React.FC = () => {
     const newTheme = theme === "dawn" ? "wicked" : "dawn";
     setTheme(newTheme);
     setCookie({ key: "theme", value: newTheme });
-  }; 
+  };
 
   return (
     <Provider store={store}>

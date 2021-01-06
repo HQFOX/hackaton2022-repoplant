@@ -9,9 +9,7 @@ const BarChart = ({ data, getBarData }) => {
     getBarData();
   }, [getBarData]);
 
-  if (!data || !data.length) return null;
-
-  return (
+  return data.length ? (
     <HvBarchart
       title={t("components.details.chart.title")}
       subtitle={t("components.details.chart.subtitle")}
@@ -19,7 +17,7 @@ const BarChart = ({ data, getBarData }) => {
       xAxisTitle={t("components.details.chart.xAxisTitle")}
       yAxisTitle={t("components.details.chart.yAxisTitle")}
     />
-  );
+  ) : null;
 };
 
 export default BarChart;

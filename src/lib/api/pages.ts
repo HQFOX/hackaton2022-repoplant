@@ -4,7 +4,7 @@ const data = [
   {
     id: "1",
     label: "Overview",
-    path: "/overview"
+    path: "/overview",
   },
   {
     id: "2",
@@ -14,19 +14,19 @@ const data = [
       {
         id: "2-1",
         label: "Assets",
-        path: "/templates/assets"
+        path: "/templates/assets",
       },
       {
         id: "2-2",
         label: "Details",
-        path: "/templates/details"
-      }
-    ]
-  }
+        path: "/templates/details",
+      },
+    ],
+  },
 ];
 
 const fetchPages = async (): Promise<PagesState> => {
-  return new Promise<PagesState>(resolve => {
+  return new Promise<PagesState>((resolve) => {
     setTimeout(() => resolve({ data }), 500);
   });
 };

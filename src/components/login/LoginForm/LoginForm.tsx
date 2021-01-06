@@ -6,7 +6,7 @@ import {
   HvTypography,
   HvLabel,
   HvBaseInput,
-  HvCheckBox
+  HvCheckBox,
 } from "@hv/uikit-react-core";
 import { AuthCredentials } from "typings/auth";
 import { LoginFormProps } from ".";
@@ -18,7 +18,7 @@ const LoginForm: React.FC<LoginFormProps> = ({
   classes,
   onSubmit,
   onForgot,
-  status
+  status,
 }: LoginFormProps) => {
   const { t } = useTranslation();
   const [credentials, setCredentials] = useState<AuthCredentials>(
@@ -30,7 +30,7 @@ const LoginForm: React.FC<LoginFormProps> = ({
   const handleChange = (value: string, key: string): void => {
     const newCredentials: AuthCredentials = {
       ...credentials,
-      ...{ [key]: value }
+      ...{ [key]: value },
     };
     setCredentials(newCredentials);
   };
@@ -44,7 +44,7 @@ const LoginForm: React.FC<LoginFormProps> = ({
       {isError && (
         <Message
           message={{
-            error: t("pages.login.loginForm.error")
+            error: t("pages.login.loginForm.error"),
           }}
           status={status}
         />
@@ -53,7 +53,8 @@ const LoginForm: React.FC<LoginFormProps> = ({
       <HvLabel
         id="username-label"
         label={t("pages.login.loginForm.username.label")}
-        classes={{ root: classes.input }}>
+        classes={{ root: classes.input }}
+      >
         <HvBaseInput
           id="username-input"
           placeholder={t("pages.login.loginForm.username.placeholder")}
@@ -72,13 +73,14 @@ const LoginForm: React.FC<LoginFormProps> = ({
       <HvLabel
         id="password-label"
         label={t("pages.login.loginForm.password.label")}
-        classes={{ root: classes.input }}>
+        classes={{ root: classes.input }}
+      >
         <HvBaseInput
           id="password-input"
           placeholder={t("pages.login.loginForm.password.placeholder")}
           value={credentials.password}
           inputProps={{
-            type: "password"
+            type: "password",
           }}
           onChange={(
             event: React.ChangeEvent<HTMLInputElement>,
@@ -92,7 +94,7 @@ const LoginForm: React.FC<LoginFormProps> = ({
 
       <HvCheckBox
         classes={{
-          container: classes.checkBox
+          container: classes.checkBox,
         }}
         label={t("pages.login.loginForm.remember")}
       />
@@ -102,7 +104,8 @@ const LoginForm: React.FC<LoginFormProps> = ({
         category="primary"
         className={clsx(classes.login, classes.sentenceCase)}
         onClick={() => onSubmit(credentials)}
-        disabled={isPending}>
+        disabled={isPending}
+      >
         {isPending
           ? t("pages.login.loginForm.submit.logging")
           : t("pages.login.loginForm.submit.login")}
@@ -111,11 +114,12 @@ const LoginForm: React.FC<LoginFormProps> = ({
       <HvButton
         category="ghost"
         classes={{
-          root: classes.forgot
+          root: classes.forgot,
         }}
         className={clsx(classes.sentenceCase)}
         onClick={onForgot}
-        disabled={isPending}>
+        disabled={isPending}
+      >
         {t("pages.login.loginForm.forgot")}
       </HvButton>
     </div>

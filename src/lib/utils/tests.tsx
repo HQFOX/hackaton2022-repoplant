@@ -6,7 +6,7 @@ import configureMockStore from "redux-mock-store";
 import { HvProvider } from "@hv/uikit-react-core";
 import { TestAppState } from "typings/state";
 
-export const createMockStore = (state: TestAppState): any => {
+export const createMockStore = (state: TestAppState) => {
   const middlewares = [thunk];
   const mockStore = configureMockStore(middlewares);
   const store = mockStore(state);
@@ -16,7 +16,7 @@ export const createMockStore = (state: TestAppState): any => {
 export const withStoreProvider = <P extends {}>(
   Component: React.ComponentType<P>,
   state: TestAppState
-): React.FC<P> => props => (
+): React.FC<P> => (props) => (
   <Provider store={createMockStore(state)}>
     <HvProvider>
       <MemoryRouter initialEntries={[{ pathname: "/", key: "testKey" }]}>
@@ -28,7 +28,7 @@ export const withStoreProvider = <P extends {}>(
 
 export const withHvProvider = <P extends {}>(
   Component: React.ComponentType<P>
-): React.FC<P> => props => (
+): React.FC<P> => (props) => (
   <HvProvider>
     <MemoryRouter initialEntries={[{ pathname: "/", key: "testKey" }]}>
       <Component {...props} />

@@ -56,7 +56,7 @@ jobs:
 
       - name: Generate Application
         run: |
-          npm run build
+          CI='' npm run build
 
       - name: Archive Application
         uses: actions/upload-artifact@v1

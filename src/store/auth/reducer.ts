@@ -5,7 +5,7 @@ const initialState: AuthState = {
   activeForm: "login",
   isAuthed: false,
   authStatus: "idle",
-  recoverStatus: "idle"
+  recoverStatus: "idle",
 };
 
 const authReducer = (state = initialState, action): AuthState => {

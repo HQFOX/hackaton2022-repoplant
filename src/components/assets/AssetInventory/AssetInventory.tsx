@@ -5,7 +5,7 @@ import {
   HvAssetInventory,
   HvCardView,
   HvEmptyState,
-  HvListView
+  HvListView,
 } from "@hv/uikit-react-core";
 import { actions, configuration } from "./utils";
 import cardRenderer from "./Card";
@@ -22,7 +22,7 @@ const AssetInventory = ({ assets, getAssetsData }) => {
     search: t("components.assets.assetInventory.searchLabel"),
     cardView: t("components.assets.assetInventory.cardViewLabel"),
     listView: t("components.assets.assetInventory.listViewLabel"),
-    noMessage: t("components.assets.assetInventory.noMessageLabel")
+    noMessage: t("components.assets.assetInventory.noMessageLabel"),
   };
 
   return assets.length ? (
@@ -30,7 +30,7 @@ const AssetInventory = ({ assets, getAssetsData }) => {
       id="hv-assetinventory"
       values={assets}
       configuration={configuration}
-      onSelection={event => console.log(event.target)}
+      onSelection={(event) => console.log(event.target)}
       isSelectable
       actions={actions}
       actionsCallback={(e, id, action) =>
@@ -41,16 +41,17 @@ const AssetInventory = ({ assets, getAssetsData }) => {
         {
           id: "card-button",
           icon: <Cards />,
-          "aria-label": labels.cardView
+          "aria-label": labels.cardView,
         },
-        { id: "list-button", icon: <List />, "aria-label": labels.listView }
+        { id: "list-button", icon: <List />, "aria-label": labels.listView },
       ]}
       emptyComponent={
         <HvEmptyState
           message={labels.noMessage}
           icon={<Fail iconSize="S" color="acce1" />}
         />
-      }>
+      }
+    >
       <HvCardView id="card" renderer={cardRenderer} />
       <HvListView id="list" renderer={rowRenderer} />
     </HvAssetInventory>
