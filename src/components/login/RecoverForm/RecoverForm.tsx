@@ -4,7 +4,7 @@ import {
   HvButton,
   HvTypography,
   HvLabel,
-  HvBaseInput
+  HvBaseInput,
 } from "@hv/uikit-react-core";
 import Message from "../Message";
 import { RecoverFormProps } from ".";
@@ -13,7 +13,7 @@ const RecoverForm: React.FC<RecoverFormProps> = ({
   classes,
   onSubmit,
   onCancel,
-  status
+  status,
 }: RecoverFormProps) => {
   const { t } = useTranslation();
   const [email, setEmail] = useState("");
@@ -31,7 +31,7 @@ const RecoverForm: React.FC<RecoverFormProps> = ({
         <Message
           message={{
             error: t("pages.login.recoverForm.error"),
-            success: t("pages.login.recoverForm.success")
+            success: t("pages.login.recoverForm.success"),
           }}
           status={status}
         />
@@ -43,7 +43,8 @@ const RecoverForm: React.FC<RecoverFormProps> = ({
 
       <HvLabel
         id="email-label"
-        label={t("pages.login.recoverForm.email.label")}>
+        label={t("pages.login.recoverForm.email.label")}
+      >
         <HvBaseInput
           id="email-input"
           placeholder={t("pages.login.recoverForm.email.placeholder")}
@@ -63,7 +64,8 @@ const RecoverForm: React.FC<RecoverFormProps> = ({
         type="submit"
         category="ghost"
         className={classes.cancel}
-        onClick={onCancel}>
+        onClick={onCancel}
+      >
         {t("pages.login.recoverForm.cancel")}
       </HvButton>
 
@@ -72,7 +74,8 @@ const RecoverForm: React.FC<RecoverFormProps> = ({
         category="primary"
         className={classes.recover}
         onClick={() => onSubmit(email)}
-        disabled={isPending}>
+        disabled={isPending}
+      >
         {isPending
           ? t("pages.login.recoverForm.submit.recovering")
           : t("pages.login.recoverForm.submit.recover")}

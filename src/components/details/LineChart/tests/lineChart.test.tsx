@@ -1,5 +1,5 @@
 import React from "react";
-import { mount } from "enzyme";
+import { render } from "@testing-library/react";
 import { withStoreProvider } from "lib/utils/tests";
 import LineChart from "..";
 
@@ -9,23 +9,14 @@ describe("<LineChart />", () => {
   let component;
 
   const WithProvider = withStoreProvider(() => <LineChart />, {
-    data: { line: data }
+    data: { line: data },
   });
 
   beforeEach(() => {
-    component = mount(<WithProvider />);
+    component = render(<WithProvider />);
   });
 
   it("should be defined", () => {
     expect(component).toBeDefined();
-  });
-
-  it("matches the snapshot", () => {
-    expect(component).toMatchSnapshot();
-  });
-
-  it("should be rendered", () => {
-    const lineChart = component.find(LineChart);
-    expect(lineChart.length).toBe(1);
   });
 });

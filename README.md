@@ -1,6 +1,7 @@
 ## Setup for React and TypeScript with Hitachi Vantara UI Kit
 
 - [Goal](#goal)
+  - [**No Lock-In**](#no-lock-in)
 - [What’s Included?](#whats-included)
 - [Getting Started](#getting-started)
 - [Structure](#structure)
@@ -12,34 +13,35 @@
   - [Store](#store)
   - [Reducers](#reducers)
 - [Typescript](#typescript)
-- [Linter & Prettify Hooks With Husky](#linter--prettify-hooks-with-husky)
 - [What’s missing?](#whats-missing)
 - [References](#references)
 
 # Goal
 
-To provide a modern build setup, and make sure that all the underlying pieces work together seamlessly. It lets you concentrate on the development of your application rather than requiring you to first learn and configure all the build tools.
+To provide a modern workflow environment and an example application that implements **[UI Kit](https://github.com/pentaho/hv-uikit-react) patterns** and **code strategies** in order to guide and speed up your development.
 
-In addition to the build setup, we also provide an example application that implements some [UI Kit](https://github.com/pentaho/hv-uikit-react) patterns and code strategies in order to guide and speed up your development.
+We chose [Create React App](https://create-react-app.dev/) as a foundation for our application because the setup process is not the main focus of this project and it makes us free from the burden of having to manage all the intricacies of that process:
 
-- **Why not [Create React App](https://create-react-app.dev/)?**
+- You don't have to spend hours setting up a new project!
+- You get free upgrades as the tool gets better, just by updating one dependency.
+- Under the hood, it uses webpack, Babel, ESLint, and other coll projects. If you ever want an advanced configuration, you can ”eject” from Create React App and edit their config files directly.  
+  
+## **No Lock-In**
+If your project has different requirements you can opt for one of the many existing alternatives.  
 
-Create React App really speeds up the setup process, but it hides all the setup files. To have a finer control over the setup you need to "Eject" the project. That moves all the “hidden” configuration into your project folder and you end up with a bloated file structure.
-
-We think that, by exposing all the setup files it gives us more control, becomes clearer and easier to change when needed.
-
+Today [Next.js](https://nextjs.org/) and [GatsbyJS](https://www.gatsbyjs.com/) are two of the most popular Create React App alternatives, being more focused in improving **SEO performance**, **Server-side rendering (SSR)** and **Static site generatorion (SSG)**.
 # What’s Included?
 
 - [HV UIKit](https://github.com/pentaho/hv-uikit-react) setup and integration.
 - React, JSX, and ES6 syntax support.
 - Language extras beyond ES6 like the object spread operator.
 - TypeScript syntax support.
+- A fast interactive unit test runner with built-in support for coverage reporting.
+- A live development server that warns about common mistakes.
+- A build script to bundle JS, CSS, and images for production, with hashes and sourcemaps.
 - Dynamic Routing with [react-router](https://github.com/ReactTraining/react-router).
 - Internationalization with [react-i18next](https://github.com/i18next/react-i18next).
 - State management with [react-redux](https://github.com/reduxjs/react-redux).
-- [Jest](https://jestjs.io/) & [Enzyme](https://airbnb.io/enzyme/) for unit tests with built-in support for coverage reporting.
-- A live development server that warns about common mistakes.
-- [Webpack](https://webpack.js.org/) and [Babel](https://babeljs.io/), to transpile and bundle JS, CSS, and images for production, with hashes and sourcemaps.
 - [Prettier](https://prettier.io/) and [ESLint](https://eslint.org/) to promote code consistency.
 
 # Getting Started
@@ -51,24 +53,30 @@ Install dependencies.
 `npm start`
 
 Runs the app in dev mode.<br>
-Open [http://localhost:8080](http://localhost:8080) to view it in the browser.
+Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
 The page will automatically reload if you make changes to the code.<br>
 You will see the build errors and lint warnings in the console.
 
 `npm test`
 
-Runs the tests.
+Runs the test watcher in an interactive mode.
+By default, runs tests related to files changed since the last commit.
 
 `npm run build`
 
 Builds the app for production to the build folder.
+It correctly bundles React in production mode and optimizes the build for the best performance.
+
+The build is minified and the filenames include the hashes.
+
+Your app is ready to be deployed.
 
 `npm run lint`
 
 Statically analyzes the code and reports the problems found.
 
-`npm run prettier:fix`
+`npm run format`
 
 Runs prettier on all files and formats the code accordingly.
 
@@ -197,14 +205,6 @@ To know more about typescript:
 - https://www.typescriptlang.org/
 - https://github.com/piotrwitek/react-redux-typescript-guide
 - https://github.com/typescript-cheatsheets/react-typescript-cheatsheet
-
-# Linter & Prettify Hooks With Husky
-
-Keeping code syntax and format consistent between multiple developers is something always hard to accomplish.
-
-Husky allows you to tie into git hooks and perform functionality before or after the hooks are executed. We attached onto the commit git hook and run the linter and prettier libraries before the code is committed.
-
-This way we can enforce proper linting and formatting before anything can be pushed into the repository. It will throw up errors when found that users should fix themselves.
 
 # What’s missing?
 

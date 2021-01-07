@@ -1,5 +1,5 @@
 import React from "react";
-import { mount } from "enzyme";
+import { render } from "@testing-library/react";
 import { withStoreProvider } from "lib/utils/tests";
 import { TestAppState } from "typings/state";
 import VerticalNavigation from "..";
@@ -8,13 +8,13 @@ const pageData = [
   {
     id: "1",
     label: "Overview",
-    path: "/overview"
+    path: "/overview",
   },
   {
     id: "2",
     label: "Templates",
-    path: "/templates"
-  }
+    path: "/templates",
+  },
 ];
 
 describe("<VerticalNavigation />", () => {
@@ -24,23 +24,18 @@ describe("<VerticalNavigation />", () => {
     router: { location: { pathname: "/" } },
     auth: { isAuthed: false },
     pages: { data: pageData },
-    logout: jest.fn()
+    logout: jest.fn(),
   } as TestAppState);
 
   beforeEach(() => {
-    component = mount(<WithProvider />);
+    component = render(<WithProvider />);
   });
 
   it("should be defined", () => {
     expect(component).toBeDefined();
   });
 
-  it("matches the snapshot", () => {
-    expect(component).toMatchSnapshot();
-  });
-
-  it("should be rendered", () => {
-    const navigation = component.find(VerticalNavigation);
-    expect(navigation.length).toBe(1);
+  it("renders the component", () => {
+    expect(component.baseElement).toMatchSnapshot();
   });
 });

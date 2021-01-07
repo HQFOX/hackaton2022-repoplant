@@ -2,13 +2,13 @@ import withStyles, { WithStyles } from "@material-ui/core/styles/withStyles";
 import styles from "./styles";
 import Message from "./Message";
 
-interface Message {
+interface M {
   error?: string;
   success?: string;
 }
 
 interface BaseProps {
-  message: Message;
+  message: M;
   status: string;
 }
 

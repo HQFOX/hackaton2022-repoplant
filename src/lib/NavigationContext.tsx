@@ -2,7 +2,7 @@ import React from "react";
 
 const NavigationContext = React.createContext({
   isOpen: false, // VerticalNavigation
-  toggleOpen: () => {}
+  toggleOpen: () => {},
 });
 
 export default NavigationContext;

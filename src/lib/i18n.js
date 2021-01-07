@@ -17,11 +17,11 @@ i18n
   .init({
     fallbackLng: "en",
     backend: {
-      loadPath: "locales/{{lng}}.json"
+      loadPath: "locales/{{lng}}.json",
     },
     interpolation: {
-      escapeValue: false // not needed for react as it escapes by default
-    }
+      escapeValue: false, // not needed for react as it escapes by default
+    },
   });
 
 export default i18n;

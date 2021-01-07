@@ -5,12 +5,12 @@ const styles = () =>
     item: {
       textAlign: "right",
       "& button:first-child": {
-        marginRight: 10
+        marginRight: 10,
       },
       "@media (max-width: 960px)": {
-        textAlign: "left"
-      }
-    }
+        textAlign: "left",
+      },
+    },
   });
 
 export default styles;

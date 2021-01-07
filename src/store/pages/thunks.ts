@@ -9,7 +9,7 @@ const getPages = () => async (dispatch: Dispatch): Promise<void> => {
   dispatch(setPages(pages));
 };
 
-const redirect = path => (dispatch: Dispatch): void => {
+const redirect = (path) => (dispatch: Dispatch): void => {
   dispatch(push(path));
 };
 

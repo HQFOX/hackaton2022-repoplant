@@ -6,7 +6,7 @@ import {
   setActiveForm,
   setIsAuthed,
   setAuthStatus,
-  setRecoverStatus
+  setRecoverStatus,
 } from "./actions";
 
 const login = (credentials: AuthCredentials) => async (
@@ -30,12 +30,12 @@ const logout = () => async (dispatch: Dispatch): Promise<void> => {
   dispatch(setIsAuthed(false));
 };
 
-const checkAuth = () => dispatch => {
+const checkAuth = () => (dispatch) => {
   const token = getCookie("token");
   dispatch(setIsAuthed(Boolean(token)));
 };
 
-const recover = email => async dispatch => {
+const recover = (email) => async (dispatch) => {
   dispatch(setRecoverStatus("pending"));
   try {
     await recoverPassword(email);

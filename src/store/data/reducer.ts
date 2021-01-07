@@ -5,7 +5,7 @@ const initialState: DataState = {
   assets: [],
   table: [],
   line: [],
-  bar: []
+  bar: [],
 };
 
 const dataReducer = (state = initialState, action): DataState => {

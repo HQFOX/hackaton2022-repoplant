@@ -6,7 +6,7 @@ import { MessageProps } from ".";
 const Message: React.FC<MessageProps> = ({
   classes,
   message,
-  status
+  status,
 }: MessageProps) => (
   <div className={clsx(classes.root, classes[status])}>
     <HvTypography variant="normalText">{message[status]}</HvTypography>

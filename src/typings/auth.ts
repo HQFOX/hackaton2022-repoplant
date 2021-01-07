@@ -6,7 +6,7 @@ export enum AuthActions {
   SET_ACTIVE_FORM = "@@auth/SET_ACTIVE_FORM",
   SET_IS_AUTHED = "@@auth/SET_IS_AUTHED",
   SET_AUTH_STATUS = "@@auth/SET_AUTH_STATUS",
-  SET_RECOVER_STATUS = "@@auth/SET_RECOVER_STATUS"
+  SET_RECOVER_STATUS = "@@auth/SET_RECOVER_STATUS",
 }
 
 // Declare state types with `readonly` modifier to get compile time immutability.

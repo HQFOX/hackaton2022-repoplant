@@ -1,5 +1,5 @@
 import React from "react";
-import { mount } from "enzyme";
+import { render } from "@testing-library/react";
 import { withStoreProvider } from "lib/utils/tests";
 import { TestAppState } from "typings/state";
 import NotFound from "..";
@@ -12,12 +12,12 @@ describe("<NotFound />", () => {
       router: { location: { pathname: "/" } },
       auth: { isAuthed: false },
       pages: { data: [] },
-      logout: jest.fn()
+      logout: jest.fn(),
     } as TestAppState);
-    snapshot = mount(<WithStoreProvider />);
+    snapshot = render(<WithStoreProvider />);
   });
 
   test("it matches the snapshot", () => {
-    expect(snapshot).toMatchSnapshot();
+    expect(snapshot.container).toMatchSnapshot();
   });
 });

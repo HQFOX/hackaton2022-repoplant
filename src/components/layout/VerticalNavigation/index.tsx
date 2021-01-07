@@ -9,15 +9,15 @@ import VerticalNavigation from "./VerticalNavigation";
 const mapStateToProps = ({ router, auth, pages }) => ({
   router,
   auth,
-  pages
+  pages,
 });
 
-const mapDispatchToProps = dispatch =>
+const mapDispatchToProps = (dispatch) =>
   bindActionCreators(
     {
       getPages,
       redirect,
-      logout
+      logout,
     },
     dispatch
   );

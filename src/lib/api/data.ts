@@ -20,13 +20,13 @@ const generateTimeSeries = (): DataResults => {
     "September",
     "October",
     "November",
-    "December"
+    "December",
   ];
 
   const data = [
     { x: months, y: generateData(months.length), name: "Target" },
     { x: months, y: generateData(months.length), name: "Cash" },
-    { x: months, y: generateData(months.length), name: "Monthly Sales" }
+    { x: months, y: generateData(months.length), name: "Monthly Sales" },
   ];
 
   return { data };
@@ -40,7 +40,7 @@ const generateSales = (): DataResults => {
     { x: quarters, y: generateData(quarters.length), name: "Sales per Rep" },
     { x: quarters, y: generateData(quarters.length), name: "Monthly Sales" },
     { x: quarters, y: generateData(quarters.length), name: "Target" },
-    { x: quarters, y: generateData(quarters.length), name: "Cash" }
+    { x: quarters, y: generateData(quarters.length), name: "Cash" },
   ];
 
   return { data };
@@ -60,7 +60,7 @@ const generateTableData = (): DataResults => {
       priority: "Critical",
       link: { displayText: "Asset 1", url: "blablabla" },
       subElementTitle: "cell_1",
-      subElementTitle2: "cell_2"
+      subElementTitle2: "cell_2",
     },
     {
       id: 13,
@@ -71,7 +71,7 @@ const generateTableData = (): DataResults => {
       riskScore: "90",
       severity: "Catastrophic",
       priority: "High",
-      link: { displayText: "Asset 2", url: "blablabla" }
+      link: { displayText: "Asset 2", url: "blablabla" },
     },
     {
       id: 12,
@@ -82,7 +82,7 @@ const generateTableData = (): DataResults => {
       riskScore: "98",
       severity: "Moderate",
       priority: "Medium",
-      link: { displayText: "Asset 1", url: "blablabla" }
+      link: { displayText: "Asset 1", url: "blablabla" },
     },
     {
       id: 11,
@@ -93,7 +93,7 @@ const generateTableData = (): DataResults => {
       riskScore: "98",
       severity: "Low",
       priority: "Low",
-      link: { displayText: "Asset 3", url: "blablabla" }
+      link: { displayText: "Asset 3", url: "blablabla" },
     },
     {
       id: 10,
@@ -104,7 +104,7 @@ const generateTableData = (): DataResults => {
       riskScore: "98",
       severity: "Critical",
       priority: "Critical",
-      link: { displayText: "Asset 2", url: "blablabla" }
+      link: { displayText: "Asset 2", url: "blablabla" },
     },
     {
       id: 8,
@@ -115,7 +115,7 @@ const generateTableData = (): DataResults => {
       riskScore: "98",
       severity: "Major",
       priority: "High",
-      link: { displayText: "Asset 1", url: "blablabla" }
+      link: { displayText: "Asset 1", url: "blablabla" },
     },
     {
       id: 7,
@@ -126,7 +126,7 @@ const generateTableData = (): DataResults => {
       riskScore: "98",
       severity: "Critical",
       priority: "Critical",
-      link: { displayText: "Asset 1", url: "blablabla" }
+      link: { displayText: "Asset 1", url: "blablabla" },
     },
     {
       id: 6,
@@ -137,7 +137,7 @@ const generateTableData = (): DataResults => {
       riskScore: "98",
       severity: "Moderate",
       priority: "Medium",
-      link: { displayText: "Asset 2", url: "blablabla" }
+      link: { displayText: "Asset 2", url: "blablabla" },
     },
     {
       id: 5,
@@ -148,7 +148,7 @@ const generateTableData = (): DataResults => {
       riskScore: "98",
       severity: "Critical",
       priority: "Critical",
-      link: { displayText: "Asset 1", url: "blablabla" }
+      link: { displayText: "Asset 1", url: "blablabla" },
     },
     {
       id: 4,
@@ -159,7 +159,7 @@ const generateTableData = (): DataResults => {
       riskScore: "98",
       severity: "Critical",
       priority: "Critical",
-      link: { displayText: "Asset 1", url: "blablabla" }
+      link: { displayText: "Asset 1", url: "blablabla" },
     },
     {
       id: 3,
@@ -170,7 +170,7 @@ const generateTableData = (): DataResults => {
       riskScore: "98",
       severity: "Major",
       priority: "High",
-      link: { displayText: "Asset 1", url: "blablabla" }
+      link: { displayText: "Asset 1", url: "blablabla" },
     },
     {
       id: 2,
@@ -181,7 +181,7 @@ const generateTableData = (): DataResults => {
       riskScore: "98",
       severity: "Critical",
       priority: "Critical",
-      link: { displayText: "Asset 1", url: "blablabla" }
+      link: { displayText: "Asset 1", url: "blablabla" },
     },
     {
       id: 1,
@@ -192,27 +192,27 @@ const generateTableData = (): DataResults => {
       riskScore: "98",
       severity: "Critical",
       priority: "Critical",
-      link: { displayText: "Asset 1", url: "blablabla" }
-    }
+      link: { displayText: "Asset 1", url: "blablabla" },
+    },
   ];
 
   return { data };
 };
 
 const fetchTimeSeriesData = async (): Promise<DataResults> => {
-  return new Promise<DataResults>(resolve => {
+  return new Promise<DataResults>((resolve) => {
     setTimeout(() => resolve(generateTimeSeries()), 500);
   });
 };
 
 const fetchSalesData = async (): Promise<DataResults> => {
-  return new Promise<DataResults>(resolve => {
+  return new Promise<DataResults>((resolve) => {
     setTimeout(() => resolve(generateSales()), 500);
   });
 };
 
 const fetchTableData = async (): Promise<DataResults> => {
-  return new Promise<DataResults>(resolve => {
+  return new Promise<DataResults>((resolve) => {
     setTimeout(() => resolve(generateTableData()), 500);
   });
 };

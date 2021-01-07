@@ -12,7 +12,7 @@ const Kpis: React.FC = () => {
     comparisonIndicatorInfo: t(
       "components.details.kpis.comparisonIndicatorInfo"
     ),
-    comparisonIndicator: t("components.details.kpis.comparisonIndicator")
+    comparisonIndicator: t("components.details.kpis.comparisonIndicator"),
   };
 
   return (

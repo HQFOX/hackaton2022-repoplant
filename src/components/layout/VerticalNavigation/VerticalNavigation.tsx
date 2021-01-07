@@ -4,7 +4,7 @@ import { LogOut, User } from "@hv/uikit-react-icons";
 import HvVerticalNavigation, {
   Action,
   Actions,
-  Navigation
+  Navigation,
 } from "@hv/uikit-react-core/dist/VerticalNavigation";
 import NavigationContext from "lib/NavigationContext";
 import { getSelection } from "lib/utils/path";
@@ -31,7 +31,8 @@ const VerticalNavigation = ({ router, pages, getPages, redirect, logout }) => {
     <HvVerticalNavigation
       isCollapsable={false}
       isOpen={isOpen}
-      toggleOpenCallback={toggleOpen}>
+      toggleOpenCallback={toggleOpen}
+    >
       <Navigation
         data={pages.data}
         selected={selection?.id}

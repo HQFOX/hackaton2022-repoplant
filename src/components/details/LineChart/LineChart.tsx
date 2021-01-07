@@ -9,9 +9,7 @@ const LineChart = ({ data, getLineData }) => {
     getLineData();
   }, [getLineData]);
 
-  if (!data || !data.length) return null;
-
-  return (
+  return data.length ? (
     <HvLinechart
       title={t("components.details.chart.title")}
       subtitle={t("components.details.chart.subtitle")}
@@ -19,7 +17,7 @@ const LineChart = ({ data, getLineData }) => {
       xAxisTitle={t("components.details.chart.xAxisTitle")}
       yAxisTitle={t("components.details.chart.yAxisTitle")}
     />
-  );
+  ) : null;
 };
 
 export default LineChart;

@@ -8,7 +8,7 @@ const Login: React.FC<LoginProps> = ({
   login,
   recover,
   setActiveForm,
-  auth
+  auth,
 }: LoginProps) => {
   const { activeForm, authStatus, recoverStatus } = auth;
   const showRecover = activeForm === "recover";
@@ -18,13 +18,13 @@ const Login: React.FC<LoginProps> = ({
       {showRecover ? (
         <RecoverForm
           status={recoverStatus}
-          onSubmit={async email => recover(email)}
+          onSubmit={async (email) => recover(email)}
           onCancel={() => setActiveForm("login")}
         />
       ) : (
         <LoginForm
           status={authStatus}
-          onSubmit={async credentials => login(credentials)}
+          onSubmit={async (credentials) => login(credentials)}
           onForgot={() => setActiveForm("recover")}
         />
       )}

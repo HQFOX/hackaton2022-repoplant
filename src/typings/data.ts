@@ -6,7 +6,7 @@ export enum DataActions {
   SET_ASSETS = "@@data/SET_ASSETS",
   SET_TABLE = "@@data/SET_TABLE",
   SET_LINE = "@@data/SET_LINE",
-  SET_BAR = "@@data/SET_BAR"
+  SET_BAR = "@@data/SET_BAR",
 }
 
 // Declare state types with `readonly` modifier to get compile time immutability.

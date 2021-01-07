@@ -2,7 +2,7 @@ import React from "react";
 
 const ThemeContext = React.createContext({
   theme: "wicked",
-  toggleTheme: () => {}
+  toggleTheme: () => {},
 });
 
 export default ThemeContext;

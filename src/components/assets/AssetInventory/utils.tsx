@@ -2,7 +2,7 @@ import React from "react";
 import {
   AssetInventoryMetadata,
   AssetInventoryConfiguration,
-  HvSemanticColorKeys
+  HvSemanticColorKeys,
 } from "@hv/uikit-react-core";
 import {
   Delete,
@@ -12,7 +12,7 @@ import {
   Level2Average,
   Level3Bad,
   Level4,
-  Level5
+  Level5,
 } from "@hv/uikit-react-icons";
 
 const metadata: AssetInventoryMetadata[] = [
@@ -23,12 +23,12 @@ const metadata: AssetInventoryMetadata[] = [
     searchable: true,
     sortable: true,
     sortableLabelAsc: "Title ascending",
-    sortableLabelDesc: "Title descending"
+    sortableLabelDesc: "Title descending",
   },
   {
     id: "id2",
     accessor: "semantic",
-    cellType: "alpha-numeric"
+    cellType: "alpha-numeric",
   },
   {
     id: "id3",
@@ -37,7 +37,7 @@ const metadata: AssetInventoryMetadata[] = [
     searchable: true,
     sortable: true,
     sortableLabelAsc: "Probability ascending",
-    sortableLabelDesc: "Probability descending"
+    sortableLabelDesc: "Probability descending",
   },
   {
     id: "id4",
@@ -45,20 +45,20 @@ const metadata: AssetInventoryMetadata[] = [
     cellType: "numeric",
     sortable: true,
     sortableLabelAsc: "TimeHorizon ascending",
-    sortableLabelDesc: "TimeHorizon descending"
+    sortableLabelDesc: "TimeHorizon descending",
   },
   {
     id: "id5",
     accessor: "event.schedule",
     cellType: "alpha-numeric",
-    searchable: true
+    searchable: true,
   },
   {
     id: "id6",
     accessor: "event.description",
     cellType: "alpha-numeric",
-    searchable: true
-  }
+    searchable: true,
+  },
 ];
 
 const viewConfiguration: AssetInventoryConfiguration = {
@@ -67,30 +67,30 @@ const viewConfiguration: AssetInventoryConfiguration = {
     { style: { width: 1, textAlign: "center" } },
     {
       title: "Event",
-      style: { minWidth: "360px", textAlign: "start" }
+      style: { minWidth: "360px", textAlign: "start" },
     },
     {
       title: "Probability",
-      style: { minWidth: "80px", textAlign: "end" }
+      style: { minWidth: "80px", textAlign: "end" },
     },
     {
       title: "Time horizon",
-      style: { minWidth: "100px", textAlign: "end" }
+      style: { minWidth: "100px", textAlign: "end" },
     },
     {
       title: "Related Assets",
       style: {
         minWidth: "195px",
         paddingLeft: "30px",
-        textAlign: "start"
-      }
-    }
-  ]
+        textAlign: "start",
+      },
+    },
+  ],
 };
 
 const configuration = {
   metadata,
-  viewConfiguration
+  viewConfiguration,
 };
 
 const actions = [
@@ -99,15 +99,15 @@ const actions = [
     id: "get",
     label: "Preview",
     icon: <Preview color="atmo5" />,
-    disabled: true
+    disabled: true,
   },
   {
     id: "put",
     label: "Upload",
     icon: <Upload color="atmo5" />,
-    disabled: true
+    disabled: true,
   },
-  { id: "delete", label: "Delete", icon: <Delete />, disabled: false }
+  { id: "delete", label: "Delete", icon: <Delete />, disabled: false },
 ];
 
 type Status = {
