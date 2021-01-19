@@ -4,6 +4,7 @@
   "description": "Example setup for React and TypeScript with Hitachi Vantara UI Kit",
   "license": "Apache-2.0",
   "private": true,
+  "homepage": ".",
   "author": {
     "name": "Hitachi Vantara UI Kit Team"
   },
