@@ -1,11 +1,12 @@
 import React, { useContext, useEffect } from "react";
 import { useMediaQuery, useTheme } from "@material-ui/core";
 import { LogOut, User } from "@hv/uikit-react-icons";
-import HvVerticalNavigation, {
-  Action,
-  Actions,
-  Navigation,
-} from "@hv/uikit-react-core/dist/VerticalNavigation";
+import {
+  HvVerticalNavigation,
+  HvVerticalNavigationTree,
+  HvVerticalNavigationActions,
+  HvVerticalNavigationAction,
+} from "@hv/uikit-react-core";
 import NavigationContext from "lib/NavigationContext";
 import { getSelection } from "lib/utils/path";
 
@@ -33,16 +34,24 @@ const VerticalNavigation = ({ router, pages, getPages, redirect, logout }) => {
       isOpen={isOpen}
       toggleOpenCallback={toggleOpen}
     >
-      <Navigation
+      <HvVerticalNavigationTree
         data={pages.data}
         selected={selection?.id}
         onClick={handleChange}
       />
       {!isMdUp && (
-        <Actions>
-          <Action label="Profile" icon={<User />} onClick={() => {}} />
-          <Action label="Logout" icon={<LogOut />} onClick={() => logout()} />
-        </Actions>
+        <HvVerticalNavigationActions>
+          <HvVerticalNavigationAction
+            label="Profile"
+            icon={<User />}
+            onClick={() => {}}
+          />
+          <HvVerticalNavigationAction
+            label="Logout"
+            icon={<LogOut />}
+            onClick={() => logout()}
+          />
+        </HvVerticalNavigationActions>
       )}
     </HvVerticalNavigation>
   );

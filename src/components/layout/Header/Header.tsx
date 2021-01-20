@@ -1,13 +1,14 @@
 import React, { useContext, useEffect, MouseEvent } from "react";
 import { useTranslation } from "react-i18next";
 import { useMediaQuery, useTheme } from "@material-ui/core";
-import HvHeader, {
+import {
+  HvHeader,
   HvHeaderBrand,
   HvHeaderActions,
   HvHeaderNavigation,
   NavigationItemProp,
-} from "@hv/uikit-react-core/dist/Header";
-import { HvButton } from "@hv/uikit-react-core";
+  HvButton,
+} from "@hv/uikit-react-core";
 import { LogOut, Menu, ThemeSwitcher, User } from "@hv/uikit-react-icons";
 import HitachiLogo from "assets/HitachiLogo";
 import { getSelection } from "lib/utils/path";
