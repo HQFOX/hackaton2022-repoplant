@@ -32,4 +32,4 @@ const Login: React.FC<LoginProps> = ({
   );
 };
 
-export default withLayout(Login, true, false);
+export default withLayout(Login, true);

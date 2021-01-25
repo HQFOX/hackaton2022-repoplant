@@ -7,6 +7,7 @@ import { store, history } from "store";
 import { setCookie, getCookie } from "lib/utils/cookie";
 import ThemeContext from "lib/ThemeContext";
 import Routes from "lib/routes";
+import DataProvider from "lib/providers/DataProvider";
 import "lib/i18n";
 
 const App: React.FC = () => {
@@ -21,15 +22,17 @@ const App: React.FC = () => {
 
   return (
     <Provider store={store}>
-      <ThemeContext.Provider value={{ theme, toggleTheme }}>
-        <HvProvider uiKitTheme={theme}>
-          <ConnectedRouter history={history}>
-            <Suspense fallback={<div>Loading...</div>}>
-              <Routes />
-            </Suspense>
-          </ConnectedRouter>
-        </HvProvider>
-      </ThemeContext.Provider>
+      <DataProvider>
+        <ThemeContext.Provider value={{ theme, toggleTheme }}>
+          <HvProvider uiKitTheme={theme}>
+            <ConnectedRouter history={history}>
+              <Suspense fallback={<div>Loading...</div>}>
+                <Routes />
+              </Suspense>
+            </ConnectedRouter>
+          </HvProvider>
+        </ThemeContext.Provider>
+      </DataProvider>
     </Provider>
   );
 };

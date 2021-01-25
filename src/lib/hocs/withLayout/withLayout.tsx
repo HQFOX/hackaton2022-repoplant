@@ -1,13 +1,14 @@
 import React, { useState } from "react";
 import clsx from "clsx";
+import { HvContainer, HvGrid } from "@hv/uikit-react-core";
+
 import { Header, Footer, VerticalNavigation } from "components/layout";
 import NavigationContext from "lib/NavigationContext";
 import useStyles from "./styles";
 
 const withLayout = <P extends {}>(
   Component: React.ComponentType<P>,
-  hasFooter = false,
-  hasMargins = true
+  hasFooter = false
 ): React.FC<P> => (props) => {
   const [isOpen, setIsOpen] = useState(false);
   const classes = useStyles();
@@ -21,11 +22,11 @@ const withLayout = <P extends {}>(
       <Header />
       <div className={clsx(classes.section, hasFooter && classes.hasFooter)}>
         <VerticalNavigation />
-        <main
-          className={clsx(classes.component, hasMargins && classes.hasMargins)}
-        >
-          <Component {...props} />
-        </main>
+        <HvContainer maxWidth="xl">
+          <HvGrid container>
+            <Component {...props} />
+          </HvGrid>
+        </HvContainer>
       </div>
       {hasFooter && <Footer />}
     </NavigationContext.Provider>

@@ -1,20 +1,39 @@
 import React from "react";
 import { useTranslation } from "react-i18next";
-import { HvGrid, HvTypography } from "@hv/uikit-react-core";
+import {
+  HvGrid,
+  HvTypography,
+  HvCard,
+  HvCardHeader,
+} from "@hv/uikit-react-core";
+
 import withLayout from "lib/hocs/withLayout";
-import { OverviewProps } from "./index";
+import { OverviewProps, useSpaceships } from "./index";
 
 const Overview: React.FC<OverviewProps> = () => {
   const { t } = useTranslation();
 
+  const { data } = useSpaceships();
+
   return (
-    <HvGrid container alignItems="center">
-      <HvGrid item xs={4} md={8}>
-        <HvTypography variant="xlTitle">
-          {t("pages.overview.title")}
-        </HvTypography>
+    <>
+      <HvGrid container alignItems="center">
+        <HvGrid item xs={4} md={8}>
+          <HvTypography variant="xlTitle">
+            {t("pages.overview.title")}
+          </HvTypography>
+        </HvGrid>
       </HvGrid>
-    </HvGrid>
+      <HvGrid container alignItems="center">
+        {data?.allStarships.edges.map(({ node: { name, model } }) => (
+          <HvGrid item xs={3}>
+            <HvCard bgcolor="atmo1">
+              <HvCardHeader title={name} subheader={model} />
+            </HvCard>
+          </HvGrid>
+        ))}
+      </HvGrid>
+    </>
   );
 };
 
