@@ -1,9 +1,12 @@
 import React, { useState } from "react";
 import clsx from "clsx";
-import { HvContainer, HvGrid } from "@hv/uikit-react-core";
+import { HvContainer } from "@hv/uikit-react-core";
+import { useMediaQuery, useTheme } from "@material-ui/core";
+import { useLocation } from "react-router-dom";
 
 import { Header, Footer, VerticalNavigation } from "components/layout";
 import NavigationContext from "lib/NavigationContext";
+import { isTopLevelPage } from "lib/utils/path";
 import useStyles from "./styles";
 
 const withLayout = <P extends {}>(
@@ -12,6 +15,9 @@ const withLayout = <P extends {}>(
 ): React.FC<P> => (props) => {
   const [isOpen, setIsOpen] = useState(false);
   const classes = useStyles();
+  const theme = useTheme();
+  const isMdUp = useMediaQuery(theme.breakpoints.up("md"));
+  const location = useLocation();
 
   const toggleOpen = () => {
     setIsOpen((prevState) => !prevState);
@@ -20,12 +26,15 @@ const withLayout = <P extends {}>(
   return (
     <NavigationContext.Provider value={{ isOpen, toggleOpen }}>
       <Header />
-      <div className={clsx(classes.section, hasFooter && classes.hasFooter)}>
-        <VerticalNavigation />
+      <VerticalNavigation />
+      <div
+        className={clsx(classes.section, {
+          [classes.bigTopSpacing]: isMdUp && !isTopLevelPage(location.pathname),
+          [classes.hasFooter]: hasFooter,
+        })}
+      >
         <HvContainer maxWidth="xl">
-          <HvGrid container>
-            <Component {...props} />
-          </HvGrid>
+          <Component {...props} />
         </HvContainer>
       </div>
       {hasFooter && <Footer />}

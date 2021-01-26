@@ -1,4 +1,5 @@
 import { Page } from "typings/pages";
+import { data as pageData } from "lib/api/pages";
 
 const getSelection = (data: Page[], pathname: string): Page | undefined => {
   let selection;
@@ -12,4 +13,7 @@ const getSelection = (data: Page[], pathname: string): Page | undefined => {
   return selection;
 };
 
-export { getSelection };
+const isTopLevelPage = (pathname: string): boolean =>
+  pageData.find((item) => item.path === pathname) !== undefined;
+
+export { getSelection, isTopLevelPage };

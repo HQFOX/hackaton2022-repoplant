@@ -48,9 +48,11 @@ const Header: React.FC<HeaderProps> = ({
   return pages?.data ? (
     <HvHeader>
       {!isMdUp && (
-        <HvButton icon onClick={toggleOpen}>
-          <Menu />
-        </HvButton>
+        <div>
+          <HvButton category="ghost" icon onClick={toggleOpen}>
+            <Menu />
+          </HvButton>
+        </div>
       )}
 
       <HvHeaderBrand

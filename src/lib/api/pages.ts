@@ -31,4 +31,4 @@ const fetchPages = async (): Promise<PagesState> => {
   });
 };
 
-export { fetchPages };
+export { fetchPages, data };
