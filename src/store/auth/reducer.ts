@@ -3,7 +3,7 @@ import { AuthState, AuthActions } from "typings/auth";
 // Type-safe initialState!
 const initialState: AuthState = {
   activeForm: "login",
-  isAuthed: false,
+  isAuthed: undefined,
   authStatus: "idle",
   recoverStatus: "idle",
 };

@@ -27,7 +27,7 @@ const AuthRoute: React.FC<AuthProps> = ({
   if (redirect) return <Redirect to={redirect} />;
 
   if (!isAuthed) {
-    if (isAuthed === null) return null;
+    if (isAuthed === null || isAuthed === undefined) return null;
     return isLogin ? route : <Redirect to="/login" />;
   }
 
