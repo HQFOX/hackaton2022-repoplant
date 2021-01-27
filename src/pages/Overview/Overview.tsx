@@ -25,8 +25,8 @@ const Overview: React.FC<OverviewProps> = () => {
         </HvGrid>
       </HvGrid>
       <HvGrid container alignItems="center">
-        {data?.allStarships.edges.map(({ node: { name, model } }) => (
-          <HvGrid item xs={3}>
+        {data?.allStarships.edges.map(({ node: { id, name, model } }) => (
+          <HvGrid key={id} item xs={3}>
             <HvCard bgcolor="atmo1">
               <HvCardHeader title={name} subheader={model} />
             </HvCard>

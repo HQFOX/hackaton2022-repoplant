@@ -9,14 +9,11 @@ import {
   HvCard,
   HvCardHeader,
   HvCardContent,
-  HvCheckBox,
 } from "@hv/uikit-react-core";
-import { getStatus } from "../utils";
 import useStyles from "./styles";
 
 const Card = ({ data, viewConfiguration }) => {
   const { t } = useTranslation();
-  const { Icon, sema } = getStatus(data.status);
   const classes = useStyles();
 
   const labels = {
@@ -26,22 +23,16 @@ const Card = ({ data, viewConfiguration }) => {
   };
 
   return (
-    <HvCard
-      bgcolor="atmo1"
-      semantic={sema}
-      icon={<Icon semantic={sema} />}
-      selectable={viewConfiguration.isSelectable}
-      selected={data.checked}
-    >
-      <HvCardHeader title={data.headerTitle} />
+    <HvCard key={data.id} bgcolor="atmo1">
+      <HvCardHeader title={data.name} />
       <HvCardContent>
         <HvGrid container>
           <HvGrid item xs={4} sm={8} md={12} lg={12} xl={12}>
             <div className={classes.kpis}>
               <HvTypography className={classes.timestamp}>
-                {data.event.timestamp}
+                {data.birthYear}
               </HvTypography>
-              <HvTypography>{data.event.schedule}</HvTypography>
+              <HvTypography>{data.species?.name || ""}</HvTypography>
             </div>
           </HvGrid>
 
@@ -49,14 +40,8 @@ const Card = ({ data, viewConfiguration }) => {
             <div className={classes.kpis}>
               <HvKpi
                 labels={{
-                  title: labels.probability,
-                  indicator: `${data.probability}%`,
-                }}
-              />
-              <HvKpi
-                labels={{
-                  title: labels.timeHorizon,
-                  indicator: `${data.timeHorizon}h`,
+                  title: "Homeworld",
+                  indicator: data.homeworld.name,
                 }}
               />
             </div>
@@ -74,20 +59,13 @@ const Card = ({ data, viewConfiguration }) => {
             <HvTypography variant="highlightText">
               {labels.relatedAssets}
             </HvTypography>
-            <HvTypography noWrap>{data.relatedAssets}</HvTypography>
+            <HvTypography noWrap>
+              {data.filmConnection.edges.map(({ node }) => ` ${node.title}`)}
+            </HvTypography>
           </HvGrid>
         </HvGrid>
       </HvCardContent>
       <HvActionBar aria-label="Leaf">
-        {viewConfiguration.isSelectable && (
-          <HvCheckBox
-            checked={data.checked}
-            onChange={viewConfiguration.onSelection}
-            value={data.id}
-            inputProps={{ "aria-label": `Select ${data.id}` }}
-          />
-        )}
-        <div style={{ flex: 1 }} />
         <HvActionsGeneric
           actions={viewConfiguration.actions}
           maxVisibleActions={viewConfiguration.maxVisibleActions}

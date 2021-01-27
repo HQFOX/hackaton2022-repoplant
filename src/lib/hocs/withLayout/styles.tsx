@@ -3,14 +3,14 @@ import { makeStyles } from "@material-ui/core";
 const useStyles = makeStyles(() => ({
   section: {
     minHeight: "100vh",
-    paddingTop: "60px",
+    paddingTop: "50px",
     display: "flex",
   },
   bigTopSpacing: {
     paddingTop: "100px",
   },
   hasFooter: {
-    minHeight: "calc(100vh - 40px)",
+    minHeight: "calc(100vh - 50px)",
   },
   component: {
     flexGrow: 1,

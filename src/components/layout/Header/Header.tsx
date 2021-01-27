@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, MouseEvent } from "react";
+import React, { useContext, MouseEvent } from "react";
 import { useTranslation } from "react-i18next";
 import { useMediaQuery, useTheme } from "@material-ui/core";
 import {
@@ -14,13 +14,12 @@ import HitachiLogo from "assets/HitachiLogo";
 import { getSelection } from "lib/utils/path";
 import ThemeContext from "lib/ThemeContext";
 import NavigationContext from "lib/NavigationContext";
+import { data as pages } from "lib/api/pages";
 import { HeaderProps } from "./index";
 
 const Header: React.FC<HeaderProps> = ({
   router,
   auth,
-  pages,
-  getPages,
   redirect,
   logout,
 }: HeaderProps) => {
@@ -35,17 +34,13 @@ const Header: React.FC<HeaderProps> = ({
   const isMdUp = useMediaQuery(theme.breakpoints.up("md"));
   const isXs = useMediaQuery(theme.breakpoints.only("xs"));
 
-  const selection = getSelection(pages.data, pathname);
-
-  useEffect(() => {
-    getPages();
-  }, [getPages]);
+  const selection = getSelection(pages, pathname);
 
   const handleChange = (event: MouseEvent, s: NavigationItemProp): void => {
     if (s.path) redirect(s.path);
   };
 
-  return pages?.data ? (
+  return pages ? (
     <HvHeader>
       {!isMdUp && (
         <div>
@@ -62,7 +57,7 @@ const Header: React.FC<HeaderProps> = ({
 
       {isAuthed && isMdUp && (
         <HvHeaderNavigation
-          data={pages.data}
+          data={pages}
           selected={selection?.id}
           onClick={handleChange}
         />

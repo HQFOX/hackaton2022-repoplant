@@ -25,6 +25,9 @@ const data = [
   },
 ];
 
+/**
+ * This
+ */
 const fetchPages = async (): Promise<PagesState> => {
   return new Promise<PagesState>((resolve) => {
     setTimeout(() => resolve({ data }), 500);

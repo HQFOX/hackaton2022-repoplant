@@ -10,6 +10,7 @@ export function useSpaceships(): QueryResult {
       allStarships {
         edges {
           node {
+            id
             name
             model
             passengers

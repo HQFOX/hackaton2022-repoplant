@@ -1,22 +1,21 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { useTranslation } from "react-i18next";
 import { Cards, Fail, List } from "@hv/uikit-react-icons";
 import {
   HvAssetInventory,
   HvCardView,
   HvEmptyState,
-  HvListView,
+  // HvListView,
 } from "@hv/uikit-react-core";
+import { usePeople } from "./data";
 import { actions, configuration } from "./utils";
 import cardRenderer from "./Card";
-import rowRenderer from "./Row";
+// import rowRenderer from "./Row";
 
-const AssetInventory = ({ assets, getAssetsData }) => {
+const AssetInventory = () => {
   const { t } = useTranslation();
 
-  useEffect(() => {
-    getAssetsData();
-  }, [getAssetsData]);
+  const { data } = usePeople();
 
   const labels = {
     search: t("components.assets.assetInventory.searchLabel"),
@@ -25,13 +24,13 @@ const AssetInventory = ({ assets, getAssetsData }) => {
     noMessage: t("components.assets.assetInventory.noMessageLabel"),
   };
 
-  return assets.length ? (
+  const people = data?.allPeople.edges.map(({ node }) => ({ ...node }));
+
+  return data ? (
     <HvAssetInventory
       id="hv-assetinventory"
-      values={assets}
+      values={people}
       configuration={configuration}
-      onSelection={(event) => console.log(event.target)}
-      isSelectable
       actions={actions}
       actionsCallback={(e, id, action) =>
         console.log(`You have pressed action ${action.label}`)
@@ -53,7 +52,6 @@ const AssetInventory = ({ assets, getAssetsData }) => {
       }
     >
       <HvCardView id="card" renderer={cardRenderer} />
-      <HvListView id="list" renderer={rowRenderer} />
     </HvAssetInventory>
   ) : null;
 };

@@ -17,7 +17,7 @@ const withLayout = <P extends {}>(
   const classes = useStyles();
   const theme = useTheme();
   const isMdUp = useMediaQuery(theme.breakpoints.up("md"));
-  const location = useLocation();
+  const { pathname } = useLocation();
 
   const toggleOpen = () => {
     setIsOpen((prevState) => !prevState);
@@ -26,13 +26,13 @@ const withLayout = <P extends {}>(
   return (
     <NavigationContext.Provider value={{ isOpen, toggleOpen }}>
       <Header />
-      <VerticalNavigation />
       <div
         className={clsx(classes.section, {
-          [classes.bigTopSpacing]: isMdUp && !isTopLevelPage(location.pathname),
+          [classes.bigTopSpacing]: isMdUp && !isTopLevelPage(pathname),
           [classes.hasFooter]: hasFooter,
         })}
       >
+        <VerticalNavigation />
         <HvContainer maxWidth="xl">
           <Component {...props} />
         </HvContainer>
