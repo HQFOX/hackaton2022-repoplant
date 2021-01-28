@@ -1,6 +1,6 @@
 import { render } from "@testing-library/react";
 import React from "react";
-import { withStoreProvider } from "lib/utils/tests";
+import { withProvider } from "lib/utils/tests";
 import { TestAppState } from "typings/state";
 import withLayout from "../withLayout";
 
@@ -10,14 +10,14 @@ describe("withLayout", () => {
   let wrapper;
 
   const checkComponent = (Component: React.ComponentType) => {
-    const WithStoreProvider = withStoreProvider(Component, {
+    const WithProvider = withProvider(Component, {
       router: { location: { pathname: "/" } },
       auth: { isAuthed: false },
       pages: { data: [] },
       logout: jest.fn(),
     } as TestAppState);
 
-    wrapper = render(<WithStoreProvider />);
+    wrapper = render(<WithProvider />);
     expect(wrapper.baseElement).toMatchSnapshot();
   };
 

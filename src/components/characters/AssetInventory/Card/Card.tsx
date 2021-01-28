@@ -2,80 +2,67 @@ import React from "react";
 import { useTranslation } from "react-i18next";
 import {
   HvGrid,
-  HvKpi,
   HvTypography,
-  HvActionBar,
-  HvActionsGeneric,
   HvCard,
   HvCardHeader,
   HvCardContent,
 } from "@hv/uikit-react-core";
+import { useHistory } from "react-router-dom";
 import useStyles from "./styles";
 
-const Card = ({ data, viewConfiguration }) => {
+const Card = ({ data }) => {
   const { t } = useTranslation();
   const classes = useStyles();
+  const history = useHistory();
 
   const labels = {
     probability: t("components.characters.assetInventory.cardView.probability"),
     timeHorizon: t("components.characters.assetInventory.cardView.timeHorizon"),
-    relatedAssets: t("components.characters.assetInventory.cardView.relatedAssets"),
+    relatedAssets: t(
+      "components.characters.assetInventory.cardView.relatedAssets"
+    ),
   };
 
+  let movies = "";
+  data.filmConnection.edges.forEach(({ node: { title } }, index) => {
+    movies = `${movies}${index > 0 ? ", " : ""}${title}`;
+  });
+
   return (
-    <HvCard key={data.id} bgcolor="atmo1">
+    <HvCard
+      key={data.id}
+      bgcolor="atmo1"
+      selectable={false}
+      className={classes.charecter}
+      onClick={() => history.push(`/star-wars/characters/${data.id}`)}
+    >
       <HvCardHeader title={data.name} />
       <HvCardContent>
         <HvGrid container>
-          <HvGrid item xs={4} sm={8} md={12} lg={12} xl={12}>
+          <HvGrid item xs={4} sm={8} md={12}>
             <div className={classes.kpis}>
               <HvTypography className={classes.timestamp}>
-                {data.birthYear}
+                {data.birthYear === "unknown" ? "N/A" : data.birthYear}
               </HvTypography>
-              <HvTypography>{data.species?.name || ""}</HvTypography>
+              <HvTypography>{data.species?.name || "N/A"}</HvTypography>
             </div>
           </HvGrid>
 
-          <HvGrid item xs={4} sm={8} md={12} lg={12} xl={12}>
-            <div className={classes.kpis}>
-              <HvKpi
-                labels={{
-                  title: "Homeworld",
-                  indicator: data.homeworld.name,
-                }}
-              />
-            </div>
+          <HvGrid item xs={4} sm={8} md={12}>
+            <HvTypography variant="highlightText">Homeworld</HvTypography>
+            <HvTypography noWrap>{data.homeworld.name}</HvTypography>
           </HvGrid>
 
-          <HvGrid
-            item
-            xs={4}
-            sm={8}
-            md={12}
-            lg={12}
-            xl={12}
-            className={classes.item}
-          >
+          <HvGrid item xs={4} sm={8} md={12} className={classes.item}>
             <HvTypography variant="highlightText">
               {labels.relatedAssets}
             </HvTypography>
-            <HvTypography noWrap>
-              {data.filmConnection.edges.map(({ node }) => ` ${node.title}`)}
-            </HvTypography>
+            <HvTypography noWrap>{movies}</HvTypography>
           </HvGrid>
         </HvGrid>
       </HvCardContent>
-      <HvActionBar aria-label="Leaf">
-        <HvActionsGeneric
-          actions={viewConfiguration.actions}
-          maxVisibleActions={viewConfiguration.maxVisibleActions}
-          actionsCallback={viewConfiguration.actionsCallback}
-        />
-      </HvActionBar>
     </HvCard>
   );
 };
 
-export default (data, viewConfiguration) => (
-  <Card data={data} viewConfiguration={viewConfiguration} />
-);
+export default (data) => <Card data={data} />;

@@ -15,7 +15,7 @@ exports[`<Kpis /> renders the component 1`] = `
           <p
             class="HvTypography-root HvTypography-highlightText"
           >
-            components.details.kpis.title
+            components.planets.kpis.title
           </p>
         </div>
         <div
@@ -24,7 +24,7 @@ exports[`<Kpis /> renders the component 1`] = `
           <h2
             class="HvKpi-spacingToTheRight HvKpi-indicatorText HvTypography-root HvTypography-lTitle"
           >
-            components.details.kpis.indicator
+            components.planets.kpis.indicator
           </h2>
         </div>
         <div
@@ -41,7 +41,7 @@ exports[`<Kpis /> renders the component 1`] = `
                 <p
                   class="HvTypography-root HvTypography-highlightText"
                 >
-                  components.details.kpis.comparisonIndicator
+                  components.planets.kpis.comparisonIndicator
                 </p>
               </div>
             </div>
@@ -51,7 +51,7 @@ exports[`<Kpis /> renders the component 1`] = `
               <p
                 class="HvTypography-root HvTypography-vizText"
               >
-                components.details.kpis.comparisonIndicatorInfo
+                components.planets.kpis.comparisonIndicatorInfo
               </p>
             </div>
           </div>
@@ -68,7 +68,7 @@ exports[`<Kpis /> renders the component 1`] = `
           <p
             class="HvTypography-root HvTypography-highlightText"
           >
-            components.details.kpis.title
+            components.planets.kpis.title
           </p>
         </div>
         <div
@@ -106,7 +106,7 @@ exports[`<Kpis /> renders the component 1`] = `
           <h2
             class="HvKpi-spacingToTheRight HvKpi-indicatorText HvTypography-root HvTypography-lTitle"
           >
-            components.details.kpis.indicator
+            components.planets.kpis.indicator
           </h2>
         </div>
       </div>
@@ -121,7 +121,7 @@ exports[`<Kpis /> renders the component 1`] = `
           <p
             class="HvTypography-root HvTypography-highlightText"
           >
-            components.details.kpis.title
+            components.planets.kpis.title
           </p>
         </div>
         <div
@@ -130,7 +130,7 @@ exports[`<Kpis /> renders the component 1`] = `
           <h2
             class="HvKpi-spacingToTheRight HvKpi-indicatorText HvTypography-root HvTypography-lTitle"
           >
-            components.details.kpis.indicator
+            components.planets.kpis.indicator
           </h2>
         </div>
       </div>

@@ -1,4 +1,5 @@
 import React, { useContext } from "react";
+import { useLocation } from "react-router-dom";
 import { useMediaQuery, useTheme } from "@material-ui/core";
 import { LogOut, User } from "@hv/uikit-react-icons";
 import {
@@ -7,20 +8,23 @@ import {
   HvVerticalNavigationActions,
   HvVerticalNavigationAction,
 } from "@hv/uikit-react-core";
-import NavigationContext from "lib/NavigationContext";
-import { data as pages } from "lib/api/pages";
-import { getSelection } from "lib/utils/path";
+import history from "lib/utils/history";
+import NavigationContext from "lib/context/NavigationContext";
+import { AuthContext } from "lib/context/AuthContext";
+import { pages } from "lib/api/pages";
+import { getSelectedPage } from "lib/utils/path";
 
-const VerticalNavigation = ({ router, redirect, logout }) => {
+const VerticalNavigation = () => {
   const theme = useTheme();
   const isMdUp = useMediaQuery(theme.breakpoints.up("md"));
   const { isOpen, toggleOpen } = useContext(NavigationContext);
+  const { logout } = useContext(AuthContext);
 
-  const { pathname } = router.location;
-  const selection = getSelection(pages, pathname);
+  const { pathname } = useLocation();
+  const selectedPage = getSelectedPage(pages, pathname);
 
-  const handleChange = (event, selectedPage) => {
-    if (selectedPage.path) redirect(selectedPage.path);
+  const handleChange = (event, selection) => {
+    if (selection.path) history.push(selection.path);
   };
 
   if (!isOpen || isMdUp) return null;
@@ -33,7 +37,7 @@ const VerticalNavigation = ({ router, redirect, logout }) => {
     >
       <HvVerticalNavigationTree
         data={pages}
-        selected={selection?.id}
+        selected={selectedPage?.id}
         onClick={handleChange}
       />
       {!isMdUp && (

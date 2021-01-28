@@ -3,6 +3,7 @@ import { Route, Switch } from "react-router-dom";
 import Login from "pages/Login";
 import Overview from "pages/Overview";
 import Characters from "pages/Characters";
+import CharacterDetails from "pages/CharacterDetails";
 import Planets from "pages/Planets";
 import NotFound from "pages/NotFound";
 import AuthRoute from "./AuthRoute";
@@ -14,6 +15,11 @@ const Routes = () => (
     <AuthRoute path="/login" exact component={Login} />
     <AuthRoute path="/star-wars" exact redirect="/star-wars/home" />
     <AuthRoute path="/star-wars/characters" exact component={Characters} />
+    <AuthRoute
+      path="/star-wars/characters/:id"
+      exact
+      component={CharacterDetails}
+    />
     <AuthRoute path="/star-wars/planets" exact component={Planets} />
     <Route component={NotFound} />
   </Switch>

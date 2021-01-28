@@ -1,13 +1,13 @@
 import React from "react";
 import { render } from "@testing-library/react";
-import { withHvProvider } from "lib/utils/tests";
+import { withProvider } from "lib/utils/tests";
 import Kpis from "..";
 
 describe("<Kpis />", () => {
   let component;
 
   beforeEach(() => {
-    const WithProvider = withHvProvider(Kpis);
+    const WithProvider = withProvider(Kpis);
     component = render(<WithProvider />);
   });
 

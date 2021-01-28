@@ -1,15 +1,15 @@
 import React from "react";
 import { render } from "@testing-library/react";
-import { withHvProvider } from "lib/utils/tests";
+import { withProvider } from "lib/utils/tests";
 import Footer from "../index";
 
 describe("<Footer />", () => {
   let snapshot;
 
   beforeEach(() => {
-    const WithHvProvider = withHvProvider(Footer);
+    const WithProvider = withProvider(Footer);
 
-    snapshot = render(<WithHvProvider />);
+    snapshot = render(<WithProvider />);
   });
 
   test("it matches the snapshot", () => {

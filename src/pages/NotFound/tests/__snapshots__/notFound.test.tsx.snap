@@ -8,34 +8,36 @@ exports[`<NotFound /> it matches the snapshot 1`] = `
     <div
       class="HvHeader-header"
     >
-      <button
-        class="MuiButtonBase-root MuiButton-root HvButton-root MuiButton-text HvButton-icon HvButton-ghostSVG MuiButton-textPrimary HvButton-ghost"
-        tabindex="0"
-        type="button"
-      >
-        <span
-          class="MuiButton-label"
+      <div>
+        <button
+          class="MuiButtonBase-root MuiButton-root HvButton-root MuiButton-text HvButton-icon HvButton-ghostSVG MuiButton-textPrimary HvButton-ghost"
+          tabindex="0"
+          type="button"
         >
-          <div
-            class="HvIconBase-root HvIconBase-s"
-            name="Menu"
+          <span
+            class="MuiButton-label"
           >
-            <svg
-              focusable="false"
-              height="16"
-              viewBox="0 0 16 16"
-              width="16"
-              xmlns="http://www.w3.org/2000/svg"
+            <div
+              class="HvIconBase-root HvIconBase-s"
+              name="Menu"
             >
-              <path
-                class="color0"
-                d="M0 7.4h16v1H0zM0 3h16V2H0zm0 11h16v-1H0z"
-                fill="#414141"
-              />
-            </svg>
-          </div>
-        </span>
-      </button>
+              <svg
+                focusable="false"
+                height="16"
+                viewBox="0 0 16 16"
+                width="16"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  class="color0"
+                  d="M0 7.4h16v1H0zM0 3h16V2H0zm0 11h16v-1H0z"
+                  fill="#414141"
+                />
+              </svg>
+            </div>
+          </span>
+        </button>
+      </div>
       <div
         class="HvHeaderBrand-root"
       >
@@ -133,8 +135,8 @@ exports[`<NotFound /> it matches the snapshot 1`] = `
   <div
     class="makeStyles-section-2"
   >
-    <main
-      class="makeStyles-component-4 makeStyles-hasMargins-5"
+    <div
+      class="MuiContainer-root HvContainer-root MuiContainer-maxWidthXl HvContainer-maxWidthXl"
     >
       <div
         class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-1"
@@ -149,7 +151,7 @@ exports[`<NotFound /> it matches the snapshot 1`] = `
           </h1>
         </div>
       </div>
-    </main>
+    </div>
   </div>
 </div>
 `;

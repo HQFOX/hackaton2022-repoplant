@@ -1,6 +1,6 @@
 import React from "react";
 import { render } from "@testing-library/react";
-import { withStoreProvider } from "lib/utils/tests";
+import { withProvider } from "lib/utils/tests";
 import { TestAppState } from "typings/state";
 import Header from "..";
 
@@ -11,7 +11,7 @@ describe("<Header />", () => {
     window.history.replaceState({ query: "google" }, "MOCK");
   });
 
-  const WithStoreProvider = withStoreProvider(Header, {
+  const WithProvider = withProvider(Header, {
     router: { location: { pathname: "/" } },
     auth: { isAuthed: false },
     pages: { data: [] },
@@ -19,7 +19,7 @@ describe("<Header />", () => {
   } as TestAppState);
 
   beforeEach(() => {
-    component = render(<WithStoreProvider />);
+    component = render(<WithProvider />);
   });
 
   it("renders the component", () => {
