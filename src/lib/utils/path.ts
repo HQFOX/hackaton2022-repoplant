@@ -1,19 +1,19 @@
 import { Page } from "typings/pages";
-import { data as pageData } from "lib/api/pages";
+import { pages } from "lib/api/pages";
 
-const getSelection = (data: Page[], pathname: string): Page | undefined => {
-  let selection;
+const getSelectedPage = (data: Page[], pathname: string): Page | undefined => {
+  let selectedPage;
 
   data.forEach((item) => {
-    if (item.path === pathname) selection = { ...item };
+    if (item.path === pathname) selectedPage = { ...item };
     else if (item.data && pathname.indexOf(item.path) > -1)
-      selection = getSelection(item.data, pathname);
+      selectedPage = getSelectedPage(item.data, pathname);
   });
 
-  return selection;
+  return selectedPage;
 };
 
 const isTopLevelPage = (pathname: string): boolean =>
-  pageData.find((item) => item.path === pathname) !== undefined;
+  pages.find((item) => item.path === pathname) !== undefined;
 
-export { getSelection, isTopLevelPage };
+export { getSelectedPage, isTopLevelPage };

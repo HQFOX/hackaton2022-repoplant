@@ -1,6 +1,6 @@
 import { PagesState } from "typings/pages";
 
-const data = [
+const pages = [
   {
     id: "1",
     label: "Overview",
@@ -25,13 +25,10 @@ const data = [
   },
 ];
 
-/**
- * This
- */
 const fetchPages = async (): Promise<PagesState> => {
   return new Promise<PagesState>((resolve) => {
-    setTimeout(() => resolve({ data }), 500);
+    setTimeout(() => resolve({ data: pages }), 500);
   });
 };
 
-export { fetchPages, data };
+export { fetchPages, pages };

@@ -1,10 +1,10 @@
 import React, { useState, Suspense } from "react";
 import { Provider } from "react-redux";
 import { HvProvider, HvUiKitThemeNames } from "@hv/uikit-react-core";
-
-import { ConnectedRouter } from "connected-react-router";
-import { store, history } from "store";
+import { Router } from "react-router-dom";
+import { store } from "store";
 import { setCookie, getCookie } from "lib/utils/cookie";
+import history from "lib/utils/history";
 import ThemeContext from "lib/ThemeContext";
 import Routes from "lib/routes";
 import DataProvider from "lib/providers/DataProvider";
@@ -25,11 +25,11 @@ const App: React.FC = () => {
       <DataProvider>
         <ThemeContext.Provider value={{ theme, toggleTheme }}>
           <HvProvider uiKitTheme={theme}>
-            <ConnectedRouter history={history}>
+            <Router history={history}>
               <Suspense fallback={<div>Loading...</div>}>
                 <Routes />
               </Suspense>
-            </ConnectedRouter>
+            </Router>
           </HvProvider>
         </ThemeContext.Provider>
       </DataProvider>

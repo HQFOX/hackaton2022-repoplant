@@ -19,7 +19,9 @@ const Card = ({ data, viewConfiguration }) => {
   const labels = {
     probability: t("components.characters.assetInventory.cardView.probability"),
     timeHorizon: t("components.characters.assetInventory.cardView.timeHorizon"),
-    relatedAssets: t("components.characters.assetInventory.cardView.relatedAssets"),
+    relatedAssets: t(
+      "components.characters.assetInventory.cardView.relatedAssets"
+    ),
   };
 
   return (
