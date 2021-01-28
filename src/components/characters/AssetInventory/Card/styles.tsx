@@ -1,6 +1,9 @@
 import { makeStyles } from "@material-ui/core";
 
 const useStyles = makeStyles((theme) => ({
+  charecter: {
+    cursor: "pointer",
+  },
   item: {
     paddingBottom: theme.hv.spacing.sm,
   },

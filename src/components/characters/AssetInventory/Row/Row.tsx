@@ -4,11 +4,9 @@ import {
   HvListViewRow,
   HvTypography,
 } from "@hv/uikit-react-core";
-import { getStatus } from "../utils";
 import useStyles from "./styles";
 
 const Row = ({ data }) => {
-  const { Icon, sema } = getStatus(data.status);
   const { id } = data;
   const classes = useStyles();
 
@@ -21,10 +19,6 @@ const Row = ({ data }) => {
         inputProps: { "aria-label": `Select ${id}` },
       }}
     >
-      <HvListViewCell semantic={sema}>
-        <Icon semantic={sema} className={classes.icon} />
-      </HvListViewCell>
-
       <HvListViewCell>
         <div style={{ display: "inline-flex" }}>
           <HvTypography variant="highlightText">
