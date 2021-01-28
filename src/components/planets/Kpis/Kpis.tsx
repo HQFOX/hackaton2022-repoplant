@@ -7,12 +7,12 @@ const Kpis: React.FC = () => {
   const { t } = useTranslation();
 
   const labels = {
-    title: t("components.details.kpis.title"),
-    indicator: t("components.details.kpis.indicator"),
+    title: t("components.planets.kpis.title"),
+    indicator: t("components.planets.kpis.indicator"),
     comparisonIndicatorInfo: t(
-      "components.details.kpis.comparisonIndicatorInfo"
+      "components.planets.kpis.comparisonIndicatorInfo"
     ),
-    comparisonIndicator: t("components.details.kpis.comparisonIndicator"),
+    comparisonIndicator: t("components.planets.kpis.comparisonIndicator"),
   };
 
   return (

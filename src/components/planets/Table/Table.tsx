@@ -15,7 +15,7 @@ const Table = ({ data, getTableData }) => {
       data={data}
       columns={columns}
       defaultPageSize={10}
-      title={t("components.details.table.title")}
+      title={t("components.planets.table.title")}
     />
   ) : null;
 };

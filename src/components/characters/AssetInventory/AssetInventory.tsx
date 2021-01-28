@@ -18,10 +18,10 @@ const AssetInventory = () => {
   const { data } = usePeople();
 
   const labels = {
-    search: t("components.assets.assetInventory.searchLabel"),
-    cardView: t("components.assets.assetInventory.cardViewLabel"),
-    listView: t("components.assets.assetInventory.listViewLabel"),
-    noMessage: t("components.assets.assetInventory.noMessageLabel"),
+    search: t("components.characters.assetInventory.searchLabel"),
+    cardView: t("components.characters.assetInventory.cardViewLabel"),
+    listView: t("components.characters.assetInventory.listViewLabel"),
+    noMessage: t("components.characters.assetInventory.noMessageLabel"),
   };
 
   const people = data?.allPeople.edges.map(({ node }) => ({ ...node }));

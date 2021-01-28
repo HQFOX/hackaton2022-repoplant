@@ -2,8 +2,8 @@ import React from "react";
 import { Route, Switch } from "react-router-dom";
 import Login from "pages/Login";
 import Overview from "pages/Overview";
-import Assets from "pages/Assets";
-import Details from "pages/Details";
+import Characters from "pages/Characters";
+import Planets from "pages/Planets";
 import NotFound from "pages/NotFound";
 import AuthRoute from "./AuthRoute";
 
@@ -12,9 +12,9 @@ const Routes = () => (
     <AuthRoute path="/" exact redirect="/overview" />
     <AuthRoute path="/overview" component={Overview} />
     <AuthRoute path="/login" exact component={Login} />
-    <AuthRoute path="/templates" exact redirect="/templates/home" />
-    <AuthRoute path="/templates/assets" exact component={Assets} />
-    <AuthRoute path="/templates/details" exact component={Details} />
+    <AuthRoute path="/star-wars" exact redirect="/star-wars/home" />
+    <AuthRoute path="/star-wars/characters" exact component={Characters} />
+    <AuthRoute path="/star-wars/planets" exact component={Planets} />
     <Route component={NotFound} />
   </Switch>
 );

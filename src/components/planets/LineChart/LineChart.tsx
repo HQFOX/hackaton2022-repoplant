@@ -11,11 +11,11 @@ const LineChart = ({ data, getLineData }) => {
 
   return data.length ? (
     <HvLinechart
-      title={t("components.details.chart.title")}
-      subtitle={t("components.details.chart.subtitle")}
+      title={t("components.planets.chart.title")}
+      subtitle={t("components.planets.chart.subtitle")}
       data={data}
-      xAxisTitle={t("components.details.chart.xAxisTitle")}
-      yAxisTitle={t("components.details.chart.yAxisTitle")}
+      xAxisTitle={t("components.planets.chart.xAxisTitle")}
+      yAxisTitle={t("components.planets.chart.yAxisTitle")}
     />
   ) : null;
 };

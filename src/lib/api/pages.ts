@@ -8,18 +8,18 @@ const data = [
   },
   {
     id: "2",
-    label: "Templates",
-    path: "/templates",
+    label: "Star Wars",
+    path: "/star-wars",
     data: [
       {
         id: "2-1",
-        label: "Assets",
-        path: "/templates/assets",
+        label: "Characters",
+        path: "/star-wars/characters",
       },
       {
         id: "2-2",
-        label: "Details",
-        path: "/templates/details",
+        label: "Planets",
+        path: "/star-wars/planets",
       },
     ],
   },

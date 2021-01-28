@@ -5,7 +5,7 @@
         "appName": "UIKit React setup"
       }
     },
-    "assets": {
+    "characters": {
       "assetInventory": {
         "searchLabel": "Search assets",
         "sortLabel": "Sort assets...",
@@ -19,7 +19,7 @@
         }
       }
     },
-    "details": {
+    "planets": {
       "chart": {
         "title": "Try to resize me from left to right.",
         "subtitle": "You'll see that I'm learning hot to responsively behave. I can also transform into a another chart type.",
@@ -79,11 +79,11 @@
     "notFound": {
       "title": "Not Found"
     },
-    "assets": {
-      "title": "Assets"
+    "characters": {
+      "title": "Characters"
     },
-    "details": {
-      "title": "Details",
+    "planets": {
+      "title": "Planets",
       "insight": "Insight",
       "story": "Story"
     }
