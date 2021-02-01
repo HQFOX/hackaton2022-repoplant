@@ -1,7 +1,7 @@
 import React, { useContext, MouseEvent } from "react";
 import { useTranslation } from "react-i18next";
 import { useMediaQuery, useTheme } from "@material-ui/core";
-import { useLocation } from "react-router-dom";
+import { useRouteMatch } from "react-router-dom";
 import {
   HvHeader,
   HvHeaderBrand,
@@ -24,13 +24,13 @@ const Header: React.FC<HeaderProps> = ({ auth, logout }: HeaderProps) => {
 
   const { t } = useTranslation();
   const theme = useTheme();
-  const { pathname } = useLocation();
+  const { path } = useRouteMatch();
   const { toggleTheme } = useContext(ThemeContext);
   const { toggleOpen } = useContext(NavigationContext);
   const isMdUp = useMediaQuery(theme.breakpoints.up("md"));
   const isXs = useMediaQuery(theme.breakpoints.only("xs"));
 
-  const selectedPage = getSelectedPage(pages, pathname);
+  const selectedPage = getSelectedPage(pages, path);
 
   const handleChange = (
     event: MouseEvent,

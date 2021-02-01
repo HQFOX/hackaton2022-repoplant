@@ -15,7 +15,7 @@
   "dependencies": {
     "@apollo/client": "^3.3.7",
     "@hv/uikit-common-themes": "latest",
-    "@hv/uikit-react-core": "latest",
+    "@hv/uikit-react-core": "file:.yalc/@hv/uikit-react-core",
     "@hv/uikit-react-icons": "latest",
     "@hv/uikit-react-lab": "latest",
     "@material-ui/core": "^4.9.11",

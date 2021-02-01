@@ -1,0 +1,11 @@
+{
+  "version": "v1",
+  "packages": {
+    "@hv/uikit-react-core": {
+      "version": "3.8.0",
+      "signature": "43416f28cc1b36bede3a27cf1c27b10d",
+      "file": true,
+      "replaced": "latest"
+    }
+  }
+}

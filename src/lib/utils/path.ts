@@ -5,9 +5,12 @@ const getSelectedPage = (data: Page[], pathname: string): Page | undefined => {
   let selectedPage;
 
   data.forEach((item) => {
-    if (item.path === pathname) selectedPage = { ...item };
-    else if (item.data && pathname.indexOf(item.path) > -1)
+    const match = item.paths.find((path) => path === pathname);
+    if (match) {
+      selectedPage = { ...item };
+    } else if (item.data && pathname.indexOf(item.path) > -1) {
       selectedPage = getSelectedPage(item.data, pathname);
+    }
   });
 
   return selectedPage;

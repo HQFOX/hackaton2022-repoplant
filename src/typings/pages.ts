@@ -8,5 +8,6 @@ export interface Page {
   id: string;
   label: string;
   path: string;
+  paths: string[];
   data?: Page[];
 }
