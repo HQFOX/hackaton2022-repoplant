@@ -19,6 +19,23 @@
         }
       }
     },
+    "characterDetails": {
+      "movieCountKPI": {
+        "title": "Movie Participation",
+        "more": "more vs avg.",
+        "less": "less vs avg."
+      },
+      "starshipCountKPI": {
+        "title": "Starship owned",
+        "more": "more vs avg.",
+        "less": "less vs avg."
+      },
+      "vehicleCountKPI": {
+        "title": "Vehicle owned",
+        "more": "more vs avg.",
+        "less": "less vs avg."
+      }
+    },
     "planets": {
       "chart": {
         "title": "Try to resize me from left to right.",

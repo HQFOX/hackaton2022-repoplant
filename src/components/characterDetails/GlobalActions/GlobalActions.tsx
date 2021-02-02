@@ -28,7 +28,7 @@ const Footer: React.FC<GlobalActionsProps> = ({ name, children }) => {
           </HvButton>
         </div>
         <HvTypography
-          variant="xxlTitle"
+          variant="sectionTitle"
           component="h1"
           className={classes.name}
         >

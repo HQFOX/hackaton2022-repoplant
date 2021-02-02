@@ -3,6 +3,9 @@ import { isTopLevelPage } from "lib/utils/path";
 import { useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
 
+const smallMargin = 44;
+const bigMargin = 84;
+
 export const useLayoutMargins = () => {
   const [margin, setMargin] = useState<number>(0);
 
@@ -12,9 +15,9 @@ export const useLayoutMargins = () => {
 
   useEffect(() => {
     if (isMdUp && !isTopLevelPage(pathname)) {
-      setMargin(84);
+      setMargin(bigMargin);
     } else {
-      setMargin(44);
+      setMargin(smallMargin);
     }
   }, [theme, isMdUp, pathname]);
 

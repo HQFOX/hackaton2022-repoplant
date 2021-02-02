@@ -16,6 +16,23 @@ export function useCharacter(id): QueryResult {
           homeworld {
             name
           }
+          filmConnection {
+            totalCount
+            films {
+              title
+              episodeID
+              openingCrawl
+              director
+              producers
+              releaseDate
+            }
+          }
+          starshipConnection {
+            totalCount
+          }
+          vehicleConnection {
+            totalCount
+          }
         }
       }
     `,
