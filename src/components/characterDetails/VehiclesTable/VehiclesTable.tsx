@@ -1,7 +1,7 @@
 import React from "react";
 import { HvTable, TableColumn } from "@hv/uikit-react-core";
 
-export default function FilmsTable({ data }) {
+export default function VehiclesTable({ data }) {
   const defaultSorted = [{ id: "episodeID", desc: false }];
 
   const getColumns = (): TableColumn[] => [
@@ -40,7 +40,6 @@ export default function FilmsTable({ data }) {
       resizable={false}
       defaultSorted={defaultSorted}
       showPageSize={false}
-      sortable={false}
     />
   );
 }

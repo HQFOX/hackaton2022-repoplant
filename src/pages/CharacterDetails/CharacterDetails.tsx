@@ -7,6 +7,7 @@ import MovieCountKPI from "components/characterDetails/MovieCountKPI";
 import StarshipCountKPI from "components/characterDetails/StarshipCountKPI";
 import VehicleCountKPI from "components/characterDetails/VehicleCountKPI";
 import FilmsTable from "components/characterDetails/FilmsTable";
+import StarshipsTable from "components/characterDetails/StarshipsTable";
 
 import { CharacterDetailsProps } from ".";
 import { useCharacter } from "./data";
@@ -76,6 +77,12 @@ const CharacterDetails: React.FC<CharacterDetailsProps> = () => {
               <HvTypography variant="xlTitle">Films</HvTypography>
               <FilmsTable data={person.filmConnection.films} />
             </HvGrid>
+            {person.starshipConnection.starships.length > 0 && (
+              <HvGrid item xs={12}>
+                <HvTypography variant="xlTitle">Starships</HvTypography>
+                <StarshipsTable data={person.starshipConnection.starships} />
+              </HvGrid>
+            )}
           </HvGrid>
         </HvGrid>
       </HvGrid>

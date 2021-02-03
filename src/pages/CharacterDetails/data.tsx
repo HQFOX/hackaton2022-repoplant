@@ -29,6 +29,25 @@ export function useCharacter(id): QueryResult {
           }
           starshipConnection {
             totalCount
+            starships {
+              id
+              name
+              model
+              starshipClass
+              costInCredits
+              length
+              passengers
+              crew
+              MGLT
+              manufacturers
+              consumables
+              cargoCapacity
+              pilotConnection {
+                pilots {
+                  name
+                }
+              }
+            }
           }
           vehicleConnection {
             totalCount
