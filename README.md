@@ -225,3 +225,12 @@ To know more about typescript:
 - https://github.com/piotrwitek/typesafe-actions
 - https://github.com/piotrwitek/react-redux-typescript-guide
 - https://alligator.io/react/typescript-with-react/
+
+- Menu overview / star wars -> personagens / planetas
+- Overview com explicação do use case??
+- No mock data
+  - GraphQl interface para o Swapi para o asset inventory
+    - cada asset é uma personagem
+    - click na personagem vai para detalhes
+  - REST API para os planetas
+- Sem redux

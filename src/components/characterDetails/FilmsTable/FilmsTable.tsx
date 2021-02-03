@@ -6,29 +6,29 @@ export default function FilmsTable({ data }) {
 
   const getColumns = (): TableColumn[] => [
     {
-      headerText: "Episode ID",
-      accessor: "episodeID",
-      cellType: "numeric",
-    },
-    {
       headerText: "Title",
       accessor: "title",
       cellType: "alpha-numeric",
+      minWidth: 200,
     },
     {
       headerText: "Director",
       accessor: "director",
       cellType: "alpha-numeric",
+      minWidth: 200,
     },
     {
       headerText: "Producers",
       accessor: "producers",
       cellType: "alpha-numeric",
+      format: ({ value }) => value.join(", "),
+      minWidth: 350,
     },
     {
       headerText: "Release Date",
       accessor: "releaseDate",
       cellType: "alpha-numeric",
+      minWidth: 150,
     },
   ];
 

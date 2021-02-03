@@ -44,6 +44,7 @@ export function useCharacter(id): QueryResult {
               cargoCapacity
               pilotConnection {
                 pilots {
+                  id
                   name
                 }
               }
