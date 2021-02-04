@@ -1,7 +1,6 @@
 import React, { useContext, MouseEvent } from "react";
 import { useTranslation } from "react-i18next";
 import { useMediaQuery, useTheme } from "@material-ui/core";
-import { useRouteMatch } from "react-router-dom";
 import {
   HvHeader,
   HvHeaderBrand,
@@ -12,25 +11,21 @@ import {
 } from "@hv/uikit-react-core";
 import { LogOut, Menu, ThemeSwitcher, User } from "@hv/uikit-react-icons";
 import HitachiLogo from "assets/HitachiLogo";
-import { getSelectedPage } from "lib/utils/path";
-import history from "lib/utils/history";
-import ThemeContext from "lib/context/ThemeContext";
+import { ThemeContext } from "lib/context/ThemeContext";
 import { AuthContext } from "lib/context/AuthContext";
-import NavigationContext from "lib/context/NavigationContext";
+import { NavigationContext } from "lib/context/NavigationContext";
 import { pages } from "lib/api/pages";
+import history from "lib/utils/history";
 import { HeaderProps } from "./index";
 
 const Header: React.FC<HeaderProps> = () => {
   const { t } = useTranslation();
   const theme = useTheme();
-  const { path } = useRouteMatch();
   const { toggleTheme } = useContext(ThemeContext);
-  const { toggleOpen } = useContext(NavigationContext);
+  const { toggleOpen, activePage } = useContext(NavigationContext);
   const { isAuthed, logout } = useContext(AuthContext);
   const isMdUp = useMediaQuery(theme.breakpoints.up("md"));
   const isXs = useMediaQuery(theme.breakpoints.only("xs"));
-
-  const selectedPage = getSelectedPage(pages, path);
 
   const handleChange = (
     event: MouseEvent,
@@ -57,7 +52,7 @@ const Header: React.FC<HeaderProps> = () => {
       {isAuthed && isMdUp && (
         <HvHeaderNavigation
           data={pages}
-          selected={selectedPage?.id}
+          selected={activePage?.id}
           onClick={handleChange}
         />
       )}
@@ -78,9 +73,7 @@ const Header: React.FC<HeaderProps> = () => {
         )}
       </HvHeaderActions>
     </HvHeader>
-  ) : (
-    <></>
-  );
+  ) : null;
 };
 
 export default Header;

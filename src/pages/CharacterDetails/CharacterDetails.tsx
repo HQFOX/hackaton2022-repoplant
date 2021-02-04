@@ -1,7 +1,8 @@
 import React from "react";
 import { useParams } from "react-router-dom";
 import { HvButton, HvGrid, HvTypography } from "@hv/uikit-react-core";
-import withLayout, { useLayoutMargins } from "lib/hocs/withLayout";
+import withLayout from "lib/hocs/withLayout";
+import useLayoutMargins from "lib/hooks/useLayoutMargins";
 import GlobalActions from "components/characterDetails/GlobalActions";
 import MovieCountKPI from "components/characterDetails/MovieCountKPI";
 import StarshipCountKPI from "components/characterDetails/StarshipCountKPI";
@@ -15,7 +16,7 @@ import { useCharacter } from "./data";
 const CharacterDetails: React.FC<CharacterDetailsProps> = () => {
   const { id } = useParams<{ id: string }>();
   const { data } = useCharacter(id);
-  const margin = useLayoutMargins();
+  const { top } = useLayoutMargins();
 
   if (!data) return <></>;
 
@@ -26,7 +27,7 @@ const CharacterDetails: React.FC<CharacterDetailsProps> = () => {
       <GlobalActions name={person.name}>
         <HvButton>Explore Movies</HvButton>
       </GlobalActions>
-      <HvGrid container style={{ paddingTop: margin - 40 }}>
+      <HvGrid container style={{ paddingTop: top - 40 }}>
         <HvGrid item xs={12}>
           <HvGrid
             container

@@ -15,6 +15,8 @@ import cardRenderer from "./Card";
 const AssetInventory = () => {
   const { t } = useTranslation();
 
+  console.log("People");
+
   const { data } = usePeople();
 
   const labels = {

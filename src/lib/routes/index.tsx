@@ -1,35 +1,30 @@
-import React, { Suspense } from "react";
-import { Router, Route, Switch } from "react-router-dom";
-import { lazy } from "@loadable/component";
+import React from "react";
+import { Route, Switch } from "react-router-dom";
+import loadable from "@loadable/component";
 import NotFound from "pages/NotFound";
-import history from "lib/utils/history";
 import AuthRoute from "./AuthRoute";
 
-const Login = lazy(() => import("pages/Login"));
-const Overview = lazy(() => import("pages/Overview"));
-const Characters = lazy(() => import("pages/Characters"));
-const CharacterDetails = lazy(() => import("pages/CharacterDetails"));
-const Planets = lazy(() => import("pages/Planets"));
+const Login = loadable(() => import("pages/Login"));
+const Overview = loadable(() => import("pages/Overview"));
+const Characters = loadable(() => import("pages/Characters"));
+const CharacterDetails = loadable(() => import("pages/CharacterDetails"));
+const Planets = loadable(() => import("pages/Planets"));
 
 const Routes = () => (
-  <Suspense fallback={<div>Loading...</div>}>
-    <Router history={history}>
-      <Switch>
-        <AuthRoute path="/" exact redirect="/overview" />
-        <AuthRoute path="/overview" component={Overview} />
-        <AuthRoute path="/login" exact component={Login} />
-        <AuthRoute path="/star-wars" exact redirect="/star-wars/home" />
-        <AuthRoute path="/star-wars/characters" exact component={Characters} />
-        <AuthRoute
-          path="/star-wars/characters/:id"
-          exact
-          component={CharacterDetails}
-        />
-        <AuthRoute path="/star-wars/planets" exact component={Planets} />
-        <Route component={NotFound} />
-      </Switch>
-    </Router>
-  </Suspense>
+  <Switch>
+    <AuthRoute path="/" exact redirect="/overview" />
+    <AuthRoute path="/overview" component={Overview} />
+    <AuthRoute path="/login" exact component={Login} />
+    <AuthRoute path="/star-wars" exact redirect="/star-wars/characters" />
+    <AuthRoute path="/star-wars/characters" exact component={Characters} />
+    <AuthRoute
+      path="/star-wars/characters/:id"
+      exact
+      component={CharacterDetails}
+    />
+    <AuthRoute path="/star-wars/planets" exact component={Planets} />
+    <Route component={NotFound} />
+  </Switch>
 );
 
 export default Routes;

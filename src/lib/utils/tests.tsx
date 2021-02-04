@@ -5,9 +5,9 @@ import GlobalProvider from "lib/providers/GlobalProvider";
 export const withProvider = <P extends {}>(
   Component: React.ComponentType<P>
 ): React.FC<P> => (props) => (
-  <GlobalProvider>
-    <MemoryRouter initialEntries={[{ pathname: "/", key: "testKey" }]}>
+  <MemoryRouter initialEntries={[{ pathname: "/", key: "testKey" }]}>
+    <GlobalProvider>
       <Component {...props} />
-    </MemoryRouter>
-  </GlobalProvider>
+    </GlobalProvider>
+  </MemoryRouter>
 );

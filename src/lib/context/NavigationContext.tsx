@@ -1,8 +1,21 @@
 import React from "react";
+import { NavigationContextType } from "typings/navigation";
+import useNavigation from "lib/hooks/useNavigation";
 
-const NavigationContext = React.createContext({
+export const NavigationContext = React.createContext<NavigationContextType>({
   isOpen: false, // VerticalNavigation
   toggleOpen: () => {},
+  activePage: undefined,
 });
 
-export default NavigationContext;
+export const NavigationContextProvider = ({ children }) => {
+  const { isOpen, toggleOpen, activePage } = useNavigation();
+
+  console.log("nnn");
+
+  return (
+    <NavigationContext.Provider value={{ isOpen, toggleOpen, activePage }}>
+      {children}
+    </NavigationContext.Provider>
+  );
+};

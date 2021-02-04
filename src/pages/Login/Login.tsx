@@ -2,23 +2,21 @@ import React, { useContext } from "react";
 import { HvLogin } from "@hv/uikit-react-core";
 import withLayout from "lib/hocs/withLayout";
 import { LoginForm, RecoverForm } from "components/login";
-import { AuthContext, RecoverContext } from "lib/context/AuthContext";
-import { useRecover } from "lib/hooks/useAuth";
+import {
+  AuthContext,
+  RecoverContext,
+  RecoverContextProvider,
+} from "lib/context/AuthContext";
 import { LoginProps } from "./index";
 
 const Login: React.FC<LoginProps> = () => {
   const { login, authStatus } = useContext(AuthContext);
-  const { recoverStatus, activeForm, setActiveForm, recover } = useRecover();
+  const { activeForm, recoverStatus, recover, setActiveForm } = useContext(
+    RecoverContext
+  );
 
   return (
-    <RecoverContext.Provider
-      value={{
-        recoverStatus,
-        activeForm,
-        setActiveForm,
-        recover,
-      }}
-    >
+    <RecoverContextProvider>
       <HvLogin>
         {activeForm === "recover" ? (
           <RecoverForm
@@ -34,7 +32,7 @@ const Login: React.FC<LoginProps> = () => {
           />
         )}
       </HvLogin>
-    </RecoverContext.Provider>
+    </RecoverContextProvider>
   );
 };
 

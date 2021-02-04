@@ -2,7 +2,7 @@ import React from "react";
 import { useHistory } from "react-router-dom";
 import { HvButton, HvTypography } from "@hv/uikit-react-core";
 import { Backwards } from "@hv/uikit-react-icons";
-import { useLayoutMargins } from "lib/hocs/withLayout";
+import useLayoutMargins from "lib/hooks/useLayoutMargins";
 import { GlobalActionsProps } from "./index";
 import useStyles from "./styles";
 
@@ -10,14 +10,14 @@ const Footer: React.FC<GlobalActionsProps> = ({ name, children }) => {
   const classes = useStyles();
   const { goBack } = useHistory();
 
-  const margin = useLayoutMargins();
+  const { top } = useLayoutMargins();
 
   return (
     <div
       className={classes.root}
       style={{
-        top: margin,
-        marginTop: -margin + 30,
+        top,
+        marginTop: -top + 30,
       }}
     >
       <div className={classes.background} />
