@@ -6,18 +6,20 @@ import { useLocation } from "react-router-dom";
 const DEFAULT_MARGIN = 44;
 const EXTRA_MARGIN = 84;
 
+const getMargin = (isMdUp, pathname) => {
+  const hasExtraMargin = isMdUp && !isTopLevelPage(pathname);
+  return hasExtraMargin ? EXTRA_MARGIN : DEFAULT_MARGIN;
+}
+
 const useLayoutMargins = () => {
-  const [top, setTop] = useState<number>(DEFAULT_MARGIN);
+  const { pathname } = useLocation();
   const theme = useTheme();
   const isMdUp = useMediaQuery(theme.breakpoints.up("md"));
-  const { pathname } = useLocation();
+  const [top, setTop] = useState<number>(getMargin(isMdUp, pathname));
 
   useEffect(() => {
-    const hasExtraMargin = isMdUp && !isTopLevelPage(pathname);
-    const margin = hasExtraMargin ? EXTRA_MARGIN : DEFAULT_MARGIN;
-
-    setTop(margin);
-  }, [theme, isMdUp, pathname]);
+    setTop(getMargin(isMdUp, pathname));
+  }, [isMdUp, pathname]);
 
   return { top };
 };
