@@ -8,7 +8,8 @@ const Login = loadable(() => import("pages/Login"));
 const Overview = loadable(() => import("pages/Overview"));
 const Characters = loadable(() => import("pages/Characters"));
 const CharacterDetails = loadable(() => import("pages/CharacterDetails"));
-const Planets = loadable(() => import("pages/Planets"));
+const Starships = loadable(() => import("pages/Starships"));
+const StarshipDetails = loadable(() => import("pages/StarshipDetails"));
 
 const Routes = () => (
   <Switch>
@@ -22,7 +23,12 @@ const Routes = () => (
       exact
       component={CharacterDetails}
     />
-    <AuthRoute path="/star-wars/planets" exact component={Planets} />
+    <AuthRoute path="/star-wars/starships" exact component={Starships} />
+    <AuthRoute
+      path="/star-wars/starships/:id"
+      exact
+      component={StarshipDetails}
+    />
     <Route component={NotFound} />
   </Switch>
 );

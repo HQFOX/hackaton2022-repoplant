@@ -18,8 +18,8 @@ const pages = [
       },
       {
         id: "2-2",
-        label: "Planets",
-        path: "/star-wars/planets",
+        label: "Starships",
+        path: "/star-wars/starships",
       },
     ],
   },

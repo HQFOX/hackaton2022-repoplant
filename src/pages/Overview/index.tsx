@@ -24,6 +24,4 @@ export function useSpaceships(): QueryResult {
   `);
 }
 
-export type OverviewProps = WithStyles<typeof styles>;
-
-export default withStyles(styles, { name: "Overview" })(Overview);
+export default Overview;

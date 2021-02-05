@@ -1,4 +1,5 @@
 import React from "react";
+import { useHistory } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import {
   HvGrid,
@@ -6,32 +7,48 @@ import {
   HvCard,
   HvCardHeader,
 } from "@hv/uikit-react-core";
-
 import withLayout from "lib/hocs/withLayout";
-import { OverviewProps, useSpaceships } from "./index";
+import { useSpaceships } from "./index";
+import useStyles from "./styles";
 
-const Overview: React.FC<OverviewProps> = () => {
+const Overview: React.FC = () => {
   const { t } = useTranslation();
-
+  const history = useHistory();
   const { data } = useSpaceships();
+  const classes = useStyles();
 
   return (
     <>
-      <HvGrid container alignItems="center">
-        <HvGrid item xs={4} md={8}>
-          <HvTypography variant="xlTitle">
-            {t("pages.overview.title")}
-          </HvTypography>
+      <HvGrid
+        container
+        alignItems="center"
+        justify="center"
+        style={{ height: "100%" }}
+      >
+        <HvGrid item xs={8} sm={4}>
+          <HvCard
+            bgcolor="atmo1"
+            className={classes.card}
+            onClick={() => history.push(`/star-wars/characters`)}
+          >
+            <HvCardHeader
+              title="Characters"
+              subheader="All star wars characters"
+            />
+          </HvCard>
         </HvGrid>
-      </HvGrid>
-      <HvGrid container alignItems="center">
-        {data?.allStarships.edges.map(({ node: { id, name, model } }) => (
-          <HvGrid key={id} item xs={3}>
-            <HvCard bgcolor="atmo1">
-              <HvCardHeader title={name} subheader={model} />
-            </HvCard>
-          </HvGrid>
-        ))}
+        <HvGrid item xs={8} sm={4}>
+          <HvCard
+            bgcolor="atmo1"
+            className={classes.card}
+            onClick={() => history.push(`/star-wars/starships`)}
+          >
+            <HvCardHeader
+              title="Starships"
+              subheader="All star wars starships"
+            />
+          </HvCard>
+        </HvGrid>
       </HvGrid>
     </>
   );

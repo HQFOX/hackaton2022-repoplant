@@ -2,7 +2,7 @@
   "components": {
     "layout": {
       "header": {
-        "appName": "UIKit React setup"
+        "appName": "UIKit Star Wars Dashboard"
       }
     },
     "characters": {
@@ -36,27 +36,15 @@
         "less": "less vs avg."
       }
     },
-    "planets": {
-      "chart": {
-        "title": "Try to resize me from left to right.",
-        "subtitle": "You'll see that I'm learning hot to responsively behave. I can also transform into a another chart type.",
-        "xAxisTitle": "2018",
-        "yAxisTitle": "Thousands of Dollars ($)"
-      },
-      "kpis": {
-        "title": "Avg. service time",
-        "indicator": "12 414",
-        "comparisonIndicatorInfo": "vs last 24h.",
-        "comparisonIndicator": "10%"
-      },
+    "starships": {
       "table": {
-        "title": "Insights"
+        "title": "Starships"
       }
     }
   },
   "pages": {
     "overview": {
-      "title": "Overview"
+      "title": "Star Wars Dashboard"
     },
     "login": {
       "loginForm": {
@@ -99,8 +87,8 @@
     "characters": {
       "title": "Characters"
     },
-    "planets": {
-      "title": "Planets",
+    "starships": {
+      "title": "Starships",
       "insight": "Insight",
       "story": "Story"
     }

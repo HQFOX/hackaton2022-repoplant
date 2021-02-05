@@ -1,16 +1,10 @@
-import { createStyles } from "@material-ui/core";
+import { makeStyles } from "@material-ui/core";
 
-const styles = () =>
-  createStyles({
-    item: {
-      textAlign: "right",
-      "& button:first-child": {
-        marginRight: 10,
-      },
-      "@media (max-width: 960px)": {
-        textAlign: "left",
-      },
-    },
-  });
+const useStyles = makeStyles((theme) => ({
+  card: {
+    cursor: "pointer",
+    height: 150,
+  },
+}));
 
-export default styles;
+export default useStyles;
