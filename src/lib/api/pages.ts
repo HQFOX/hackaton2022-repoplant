@@ -1,6 +1,4 @@
-import { PagesState } from "typings/pages";
-
-const data = [
+const pages = [
   {
     id: "1",
     label: "Overview",
@@ -8,27 +6,21 @@ const data = [
   },
   {
     id: "2",
-    label: "Templates",
-    path: "/templates",
+    label: "Star Wars",
+    path: "/star-wars",
     data: [
       {
         id: "2-1",
-        label: "Assets",
-        path: "/templates/assets",
+        label: "Characters",
+        path: "/star-wars/characters",
       },
       {
         id: "2-2",
-        label: "Details",
-        path: "/templates/details",
+        label: "Starships",
+        path: "/star-wars/starships",
       },
     ],
   },
 ];
 
-const fetchPages = async (): Promise<PagesState> => {
-  return new Promise<PagesState>((resolve) => {
-    setTimeout(() => resolve({ data }), 500);
-  });
-};
-
-export { fetchPages };
+export default pages;

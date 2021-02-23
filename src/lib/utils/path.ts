@@ -1,14 +1,25 @@
+import pages from "lib/api/pages";
 import { Page } from "typings/pages";
 
-const getSelection = (data: Page[], pathname: string): Page | undefined => {
-  let selection;
+const getActivePath = (
+  pathname: string,
+  data: Page[] = pages
+): Page | undefined => {
+  let activePath;
 
   data.forEach((item) => {
-    if (item.path === pathname) selection = { ...item };
-    if (item.data) getSelection(item.data, pathname);
+    const hasPath = pathname.includes(item.path);
+
+    if (hasPath) {
+      activePath = item.data ? getActivePath(pathname, item.data) : { ...item };
+    }
   });
 
-  return selection;
+  return activePath;
 };
 
-export { getSelection };
+const isTopLevelPage = (pathname: string): boolean => {
+  return !!pages.find((item) => item.path === pathname);
+};
+
+export { getActivePath, isTopLevelPage };

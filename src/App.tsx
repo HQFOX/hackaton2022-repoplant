@@ -1,37 +1,21 @@
-import React, { useState, Suspense } from "react";
-import { Provider } from "react-redux";
-import { HvProvider, HvUiKitThemeNames } from "@hv/uikit-react-core";
-
-import { ConnectedRouter } from "connected-react-router";
-import { store, history } from "store";
-import { setCookie, getCookie } from "lib/utils/cookie";
-import ThemeContext from "lib/ThemeContext";
+import React from "react";
+import { Router } from "react-router-dom";
+import { Header } from "components/layout";
+import DataProvider from "lib/providers/DataProvider";
+import ContextProvider from "lib/providers/ContextProvider";
+import history from "lib/utils/history";
 import Routes from "lib/routes";
 import "lib/i18n";
 
-const App: React.FC = () => {
-  const initialTheme = getCookie("theme") === "wicked" ? "wicked" : "dawn";
-  const [theme, setTheme] = useState<HvUiKitThemeNames>(initialTheme);
-
-  const toggleTheme = () => {
-    const newTheme = theme === "dawn" ? "wicked" : "dawn";
-    setTheme(newTheme);
-    setCookie({ key: "theme", value: newTheme });
-  };
-
-  return (
-    <Provider store={store}>
-      <ThemeContext.Provider value={{ theme, toggleTheme }}>
-        <HvProvider uiKitTheme={theme}>
-          <ConnectedRouter history={history}>
-            <Suspense fallback={<div>Loading...</div>}>
-              <Routes />
-            </Suspense>
-          </ConnectedRouter>
-        </HvProvider>
-      </ThemeContext.Provider>
-    </Provider>
-  );
-};
+const App: React.FC = () => (
+  <DataProvider>
+    <Router history={history}>
+      <ContextProvider>
+        <Header />
+        <Routes />
+      </ContextProvider>
+    </Router>
+  </DataProvider>
+);
 
 export default App;

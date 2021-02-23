@@ -1,5 +1,12 @@
-import { createStyles } from "@material-ui/core";
+import { makeStyles } from "@material-ui/core";
 
-const styles = () => createStyles({});
+const styles = makeStyles(() => ({
+  root: {
+    "& > div": {
+      top: 39,
+      zIndex: 1099,
+    },
+  },
+}));
 
 export default styles;

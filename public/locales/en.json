@@ -1,45 +1,103 @@
 {
   "components": {
-    "layout": {
-      "header": {
-        "appName": "UIKit React setup"
+    "common": {
+      "countKPI": {
+        "more": "more vs avg.",
+        "less": "less vs avg."
+      },
+      "filmsTable": {
+        "title": "Title",
+        "director": "Director",
+        "producers": "Producers",
+        "releaseDate": "Release Date"
       }
     },
-    "assets": {
+    "layout": {
+      "header": {
+        "appName": "UIKit Star Wars"
+      }
+    },
+    "characters": {
       "assetInventory": {
-        "searchLabel": "Search assets",
-        "sortLabel": "Sort assets...",
-        "cardViewLabel": "Card view",
-        "listViewLabel": "List view",
-        "noMessageLabel": "No data found",
+        "noMessageLabel": "No characters found",
         "cardView": {
-          "probability": "Probability",
-          "timeHorizon": "Time horizon",
-          "relatedAssets": "Related Assets"
+          "homeworld": "Homeworld",
+          "films": "Films"
         }
       }
     },
-    "details": {
-      "chart": {
-        "title": "Try to resize me from left to right.",
-        "subtitle": "You'll see that I'm learning hot to responsively behave. I can also transform into a another chart type.",
-        "xAxisTitle": "2018",
-        "yAxisTitle": "Thousands of Dollars ($)"
+    "characterDetails": {
+      "movieCountKPI": {
+        "title": "Movie Participation"
       },
-      "kpis": {
-        "title": "Avg. service time",
-        "indicator": "12 414",
-        "comparisonIndicatorInfo": "vs last 24h.",
-        "comparisonIndicator": "10%"
+      "starshipCountKPI": {
+        "title": "Starship owned"
       },
+      "vehicleCountKPI": {
+        "title": "Vehicle owned"
+      },
+      "vehiclesTable": {
+        "expand": {
+          "cargoCapacity": "Cargo Capacity",
+          "consumables": "Consumables",
+          "costInCredits": "Cost in Credits",
+          "maxAtmospheringSpeed": "Max Atmosphering Speed",
+          "crew": "Crew",
+          "passengers": "Passengers",
+          "length": "Length",
+          "otherCharacters": "Other Characters"
+        },
+        "columns": {
+          "name": "Name",
+          "model": "Model",
+          "class": "Class",
+          "manufacturers": "Manufacturers"
+        }
+      },
+      "starshipsTable": {
+        "expand": {
+          "maxAtmospheringSpeed": "Max Atmosphering Speed",
+          "hyperdriveRating": "Hyperdrive Rating",
+          "cargoCapacity": "Cargo Capacity",
+          "MGLT": "MGLT",
+          "consumables": "Consumables",
+          "costInCredits": "Cost in Credits",
+          "crew": "Crew",
+          "passengers": "Passengers",
+          "length": "Length",
+          "otherCharacters": "Other Characters"
+        },
+        "columns": {
+          "name": "Name",
+          "model": "Model",
+          "class": "Class",
+          "manufacturers": "Manufacturers"
+        }
+      }
+    },
+    "starships": {
       "table": {
-        "title": "Insights"
+        "title": "Starships"
+      },
+      "filmsTable": {
+        "title": "Title",
+        "director": "Director",
+        "producers": "Producers",
+        "releaseDate": "Release Date"
       }
     }
   },
   "pages": {
     "overview": {
-      "title": "Overview"
+      "title": "Star Wars Dashboard",
+      "charactersCard": {
+        "title": "Characters",
+        "button": "Explore Characters"
+      },
+      "starshipsCard": {
+        "title": "Starships",
+        "button": "Explore Starships"
+      }
     },
     "login": {
       "loginForm": {
@@ -79,13 +137,48 @@
     "notFound": {
       "title": "Not Found"
     },
-    "assets": {
-      "title": "Assets"
+    "characters": {
+      "title": "Characters"
     },
-    "details": {
-      "title": "Details",
-      "insight": "Insight",
-      "story": "Story"
+    "characterDetails": {
+      "globalActions": {
+        "button": "Explore Movies"
+      },
+      "metadata": {
+        "birthYear": "Birth Year",
+        "homeworld": "Homeworld",
+        "eyeColor": "Eye Color",
+        "hairColor": "Hair Color",
+        "skinColor": "Skin Color",
+        "gender": "Gender",
+        "species": "Species",
+        "height": "Height (cm)"
+      },
+      "films": {
+        "title": "Films"
+      },
+      "starships": {
+        "title": "Starships"
+      },
+      "vehicles": {
+        "title": "Vehicles"
+      }
+    },
+    "starshipDetails": {
+      "globalActions": {
+        "button": "Explore Starships"
+      },
+      "metadata": {
+        "model": "Model",
+        "class": "Class",
+        "passengers": "Passengers",
+        "cargoCapacity": "Cargo Capacity",
+        "crew": "Crew",
+        "hyperdriveRating": "Hyperdrive Rating"
+      },
+      "films": {
+        "title": "Films"
+      }
     }
   }
 }

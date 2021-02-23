@@ -12,12 +12,4 @@ const authenticate = async (credentials: AuthCredentials): Promise<string> =>
     }, 500);
   });
 
-const recoverPassword = async (email: string): Promise<string> =>
-  new Promise((resolve, reject) => {
-    setTimeout(() => {
-      if (!email.length) reject();
-      resolve("password");
-    }, 500);
-  });
-
-export { authenticate, recoverPassword };
+export { authenticate };

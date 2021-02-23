@@ -1,7 +1,25 @@
-import withStyles, { WithStyles } from "@material-ui/core/styles/withStyles";
-import styles from "./styles";
+import { gql, useQuery, QueryResult } from "@apollo/client";
+
 import Overview from "./Overview";
 
-export type OverviewProps = WithStyles<typeof styles>;
+export function useSpaceships(): QueryResult {
+  return useQuery(gql`
+    query GetSpaceships {
+      allStarships {
+        edges {
+          node {
+            id
+            name
+            model
+            passengers
+            crew
+            length
+            cargoCapacity
+          }
+        }
+      }
+    }
+  `);
+}
 
-export default withStyles(styles, { name: "Overview" })(Overview);
+export default Overview;

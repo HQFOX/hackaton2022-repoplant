@@ -11,14 +11,6 @@ declare module "@material-ui/core/styles/createMuiTheme" {
   }
 }
 
-declare global {
-  interface Window {
-    INITIAL_REDUX_STATE: any;
-    __REDUX_DEVTOOLS_EXTENSION__: any;
-    __REDUX_DEVTOOLS_EXTENSION_COMPOSE__: any;
-  }
-}
-
 declare module "*.svg";
 declare module "*.png";
 declare module "*.jpg";

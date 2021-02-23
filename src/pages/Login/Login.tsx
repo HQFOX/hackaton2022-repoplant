@@ -1,35 +1,39 @@
-import React from "react";
+import React, { useContext } from "react";
 import { HvLogin } from "@hv/uikit-react-core";
 import withLayout from "lib/hocs/withLayout";
 import { LoginForm, RecoverForm } from "components/login";
+import { AuthContext } from "lib/context/AuthContext";
+import {
+  RecoverContext,
+  RecoverContextProvider,
+} from "lib/context/RecoverContext";
 import { LoginProps } from "./index";
 
-const Login: React.FC<LoginProps> = ({
-  login,
-  recover,
-  setActiveForm,
-  auth,
-}: LoginProps) => {
-  const { activeForm, authStatus, recoverStatus } = auth;
-  const showRecover = activeForm === "recover";
+const Login: React.FC<LoginProps> = () => {
+  const { login, authStatus } = useContext(AuthContext);
+  const { activeForm, recoverStatus, recover, setActiveForm } = useContext(
+    RecoverContext
+  );
 
   return (
-    <HvLogin>
-      {showRecover ? (
-        <RecoverForm
-          status={recoverStatus}
-          onSubmit={async (email) => recover(email)}
-          onCancel={() => setActiveForm("login")}
-        />
-      ) : (
-        <LoginForm
-          status={authStatus}
-          onSubmit={async (credentials) => login(credentials)}
-          onForgot={() => setActiveForm("recover")}
-        />
-      )}
-    </HvLogin>
+    <RecoverContextProvider>
+      <HvLogin>
+        {activeForm === "recover" ? (
+          <RecoverForm
+            status={recoverStatus}
+            onSubmit={async (email) => recover(email)}
+            onCancel={() => setActiveForm("login")}
+          />
+        ) : (
+          <LoginForm
+            status={authStatus}
+            onSubmit={async (credentials) => login(credentials)}
+            onForgot={() => setActiveForm("recover")}
+          />
+        )}
+      </HvLogin>
+    </RecoverContextProvider>
   );
 };
 
-export default withLayout(Login, true, false);
+export default withLayout(Login, true);

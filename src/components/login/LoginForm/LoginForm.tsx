@@ -12,8 +12,6 @@ import { AuthCredentials } from "typings/auth";
 import { LoginFormProps } from ".";
 import Message from "../Message";
 
-const DUMMY_CREDENTIALS = { username: "admin", password: "password" };
-
 const LoginForm: React.FC<LoginFormProps> = ({
   classes,
   onSubmit,
@@ -21,9 +19,10 @@ const LoginForm: React.FC<LoginFormProps> = ({
   status,
 }: LoginFormProps) => {
   const { t } = useTranslation();
-  const [credentials, setCredentials] = useState<AuthCredentials>(
-    DUMMY_CREDENTIALS
-  );
+  const [credentials, setCredentials] = useState<AuthCredentials>({
+    username: "admin",
+    password: "password",
+  });
   const isPending = status === "pending";
   const isError = status === "error";
 

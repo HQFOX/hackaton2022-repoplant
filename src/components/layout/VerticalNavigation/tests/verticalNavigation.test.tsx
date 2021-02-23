@@ -1,6 +1,6 @@
 import React from "react";
 import { render } from "@testing-library/react";
-import { withStoreProvider } from "lib/utils/tests";
+import { withProvider } from "lib/utils/tests";
 import { TestAppState } from "typings/state";
 import VerticalNavigation from "..";
 
@@ -20,7 +20,7 @@ const pageData = [
 describe("<VerticalNavigation />", () => {
   let component;
 
-  const WithProvider = withStoreProvider(VerticalNavigation, {
+  const WithProvider = withProvider(VerticalNavigation, {
     router: { location: { pathname: "/" } },
     auth: { isAuthed: false },
     pages: { data: pageData },

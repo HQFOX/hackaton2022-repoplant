@@ -1,59 +1,71 @@
-import React, { useContext, useEffect } from "react";
+import React, { useContext } from "react";
 import { useMediaQuery, useTheme } from "@material-ui/core";
-import { LogOut, User } from "@hv/uikit-react-icons";
+import { LogOut, User, ThemeSwitcher } from "@hv/uikit-react-icons";
 import {
   HvVerticalNavigation,
   HvVerticalNavigationTree,
   HvVerticalNavigationActions,
   HvVerticalNavigationAction,
 } from "@hv/uikit-react-core";
-import NavigationContext from "lib/NavigationContext";
-import { getSelection } from "lib/utils/path";
+import history from "lib/utils/history";
+import { NavigationContext } from "lib/context/NavigationContext";
+import { ThemeContext } from "lib/context/ThemeContext";
+import { AuthContext } from "lib/context/AuthContext";
+import pages from "lib/api/pages";
+import clsx from "clsx";
+import useStyles from "./styles";
 
-const VerticalNavigation = ({ router, pages, getPages, redirect, logout }) => {
+const VerticalNavigation = () => {
   const theme = useTheme();
+  const classes = useStyles();
   const isMdUp = useMediaQuery(theme.breakpoints.up("md"));
-  const { isOpen, toggleOpen } = useContext(NavigationContext);
+  const { toggleTheme } = useContext(ThemeContext);
+  const { isOpen, toggleOpen, activePage } = useContext(NavigationContext);
+  const { isAuthed, logout } = useContext(AuthContext);
 
-  const { pathname } = router.location;
-  const selection = getSelection(pages.data, pathname);
-
-  const handleChange = (event, selectedPage) => {
-    if (selectedPage.path) redirect(selectedPage.path);
+  const handleChange = (event, selection) => {
+    if (selection.path) {
+      history.push(selection.path);
+      toggleOpen();
+    }
   };
 
-  useEffect(() => {
-    getPages();
-  }, [getPages]);
-
-  if (!isOpen || isMdUp) return null;
+  if (!isOpen || isMdUp || !isAuthed) return null;
 
   return (
-    <HvVerticalNavigation
-      isCollapsable={false}
-      isOpen={isOpen}
-      toggleOpenCallback={toggleOpen}
-    >
-      <HvVerticalNavigationTree
-        data={pages.data}
-        selected={selection?.id}
-        onClick={handleChange}
-      />
-      {!isMdUp && (
-        <HvVerticalNavigationActions>
-          <HvVerticalNavigationAction
-            label="Profile"
-            icon={<User />}
-            onClick={() => {}}
-          />
-          <HvVerticalNavigationAction
-            label="Logout"
-            icon={<LogOut />}
-            onClick={() => logout()}
-          />
-        </HvVerticalNavigationActions>
-      )}
-    </HvVerticalNavigation>
+    <div className={clsx(classes.root)}>
+      <HvVerticalNavigation
+        isCollapsable={false}
+        isOpen={isOpen}
+        toggleOpenCallback={toggleOpen}
+        position="fixed"
+      >
+        <HvVerticalNavigationTree
+          data={pages}
+          selected={activePage?.id}
+          onClick={handleChange}
+        />
+        {!isMdUp && (
+          <HvVerticalNavigationActions>
+            <HvVerticalNavigationAction
+              label="Toggle Theme"
+              icon={<ThemeSwitcher />}
+              onClick={() => toggleTheme()}
+            />
+            <HvVerticalNavigationAction
+              label="Profile"
+              icon={<User />}
+              onClick={() => {}}
+            />
+            <HvVerticalNavigationAction
+              label="Logout"
+              icon={<LogOut />}
+              onClick={() => logout()}
+            />
+          </HvVerticalNavigationActions>
+        )}
+      </HvVerticalNavigation>
+    </div>
   );
 };
 
