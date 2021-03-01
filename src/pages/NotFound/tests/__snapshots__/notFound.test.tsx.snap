@@ -6,7 +6,7 @@ exports[`<NotFound /> it matches the snapshot 1`] = `
     class="makeStyles-section-2"
   >
     <div
-      class="MuiContainer-root-9 HvContainer-root makeStyles-container-3 MuiContainer-maxWidthXl-16 HvContainer-maxWidthXl"
+      class="MuiContainer-root-9 HvContainer-root makeStyles-container-3 makeStyles-notAuthed-4 MuiContainer-maxWidthXl-16 HvContainer-maxWidthXl"
     >
       <div
         class="MuiGrid-root-17 MuiGrid-container-18 MuiGrid-spacing-xs-2-41"

@@ -10,6 +10,9 @@ const styles = (theme) =>
         textAlign: "center",
       },
     },
+    title: {
+      marginBottom: `${theme.hv.spacing.md}px`,
+    },
     input: {
       marginTop: 10,
     },

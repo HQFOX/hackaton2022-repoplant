@@ -7,6 +7,7 @@ import {
   RecoverContext,
   RecoverContextProvider,
 } from "lib/context/RecoverContext";
+import background from "assets/background.png";
 import { LoginProps } from "./index";
 
 const Login: React.FC<LoginProps> = () => {
@@ -17,7 +18,7 @@ const Login: React.FC<LoginProps> = () => {
 
   return (
     <RecoverContextProvider>
-      <HvLogin>
+      <HvLogin background={background}>
         {activeForm === "recover" ? (
           <RecoverForm
             status={recoverStatus}

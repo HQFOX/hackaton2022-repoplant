@@ -9,12 +9,13 @@ const useStyles = makeStyles((theme) => ({
     display: "flex",
   },
   container: {
-    marginTop: DEFAULT_MARGIN,
-  },
-  isAuthed: {
     marginTop: `calc(${DEFAULT_MARGIN}px + ${
       Number(theme.hv.spacing.md) / 2
     }px)`,
+  },
+  notAuthed: {
+    marginTop: DEFAULT_MARGIN,
+    padding: 0,
   },
   hasSecondLevel: {
     [theme.breakpoints.up("md")]: {
