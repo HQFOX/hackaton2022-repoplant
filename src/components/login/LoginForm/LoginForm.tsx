@@ -36,7 +36,7 @@ const LoginForm: React.FC<LoginFormProps> = ({
 
   return (
     <div className={classes.root}>
-      <HvTypography variant="mTitle">
+      <HvTypography variant="mTitle" className={classes.title}>
         {t("pages.login.loginForm.title")}
       </HvTypography>
 

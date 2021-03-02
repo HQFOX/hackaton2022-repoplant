@@ -27,7 +27,7 @@ const withLayout = <P extends {}>(
         <HvContainer
           maxWidth="xl"
           className={clsx(classes.container, {
-            [classes.isAuthed]: isAuthed,
+            [classes.notAuthed]: !isAuthed,
             [classes.hasSecondLevel]: isAuthed && hasSecondLevel,
           })}
         >
