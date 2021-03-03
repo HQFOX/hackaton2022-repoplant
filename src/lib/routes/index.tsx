@@ -1,12 +1,14 @@
 import React from "react";
 import { Route, Switch } from "react-router-dom";
-import NotFound from "pages/NotFound";
-import Login from "pages/Login";
-import Overview from "pages/Overview";
-import Characters from "pages/Characters";
-import CharacterDetails from "pages/CharacterDetails";
-import Starships from "pages/Starships";
+import loadable from "@loadable/component";
 import AuthRoute from "./AuthRoute";
+
+const NotFound = loadable(() => import("pages/NotFound"));
+const Login = loadable(() => import("pages/Login"));
+const Overview = loadable(() => import("pages/Overview"));
+const Characters = loadable(() => import("pages/Characters"));
+const CharacterDetails = loadable(() => import("pages/CharacterDetails"));
+const Starships = loadable(() => import("pages/Starships"));
 
 const Routes = () => (
   <Switch>
