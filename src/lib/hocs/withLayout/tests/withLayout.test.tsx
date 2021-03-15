@@ -12,7 +12,7 @@ describe("withLayout", () => {
     const WithProvider = withProvider(Component);
 
     wrapper = render(<WithProvider />);
-    expect(wrapper.baseElement).toMatchSnapshot();
+    expect(wrapper.container).toMatchSnapshot();
   };
 
   it("is rendered correctly", () => {

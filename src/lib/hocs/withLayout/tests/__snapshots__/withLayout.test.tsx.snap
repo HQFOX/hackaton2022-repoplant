@@ -1,66 +1,47 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`withLayout is rendered correctly 1`] = `
-<body
-  class="js-focus-within"
->
-  <div>
+<div>
+  <div
+    class="makeStyles-section-1"
+  >
     <div
-      class="makeStyles-section-1"
+      class="MuiContainer-root-8 HvContainer-root makeStyles-container-2 makeStyles-notAuthed-3 MuiContainer-maxWidthXl-15 HvContainer-maxWidthXl"
     >
-      <div
-        class="MuiContainer-root-8 HvContainer-root makeStyles-container-2 makeStyles-notAuthed-3 MuiContainer-maxWidthXl-15 HvContainer-maxWidthXl"
-      >
-        <div />
-      </div>
+      <div />
     </div>
   </div>
-</body>
+</div>
 `;
 
 exports[`withLayout is rendered correctly 2`] = `
-<body
-  class="js-focus-within"
->
-  <div>
+<div>
+  <div
+    class="makeStyles-section-16 makeStyles-hasFooter-20"
+  >
     <div
-      class="makeStyles-section-1"
+      class="MuiContainer-root-23 HvContainer-root makeStyles-container-17 makeStyles-notAuthed-18 MuiContainer-maxWidthXl-30 HvContainer-maxWidthXl"
     >
-      <div
-        class="MuiContainer-root-8 HvContainer-root makeStyles-container-2 makeStyles-notAuthed-3 MuiContainer-maxWidthXl-15 HvContainer-maxWidthXl"
-      >
-        <div />
-      </div>
+      <div />
     </div>
   </div>
-  <div>
-    <div
-      class="makeStyles-section-16 makeStyles-hasFooter-20"
+  <footer
+    class="HvFooter-root"
+  >
+    <p
+      class="HvFooter-name HvTypography-root HvTypography-highlightText"
     >
-      <div
-        class="MuiContainer-root-23 HvContainer-root makeStyles-container-17 makeStyles-notAuthed-18 MuiContainer-maxWidthXl-30 HvContainer-maxWidthXl"
-      >
-        <div />
-      </div>
-    </div>
-    <footer
-      class="HvFooter-root"
+      Hitachi Vantara
+    </p>
+    <div
+      class="HvFooter-rightContainer"
     >
       <p
-        class="HvFooter-name HvTypography-root HvTypography-highlightText"
+        class="HvFooter-copyright HvTypography-root HvTypography-normalText"
       >
-        Hitachi Vantara
+        © Hitachi Vantara Corporation 2021. All Rights Reserved.
       </p>
-      <div
-        class="HvFooter-rightContainer"
-      >
-        <p
-          class="HvFooter-copyright HvTypography-root HvTypography-normalText"
-        >
-          © Hitachi Vantara Corporation 2021. All Rights Reserved.
-        </p>
-      </div>
-    </footer>
-  </div>
-</body>
+    </div>
+  </footer>
+</div>
 `;
