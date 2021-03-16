@@ -29,7 +29,7 @@ jobs:
       - name: Install
         run: |
           npm config set @hv:registry ${RESOLVE_REGISTRY}
-          npm ci
+          npm install
 
       - name: Lint
         run: npm run lint
@@ -52,7 +52,7 @@ jobs:
       - name: Install
         run: |
           npm config set @hv:registry ${RESOLVE_REGISTRY}
-          npm ci
+          npm install
 
       - name: Generate Application
         run: |
