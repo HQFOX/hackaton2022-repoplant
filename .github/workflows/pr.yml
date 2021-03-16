@@ -24,12 +24,12 @@ jobs:
 
       - uses: actions/setup-node@v1
         with:
-          node-version: "12"
+          node-version: "14"
 
       - name: Install
         run: |
           npm config set @hv:registry ${RESOLVE_REGISTRY}
-          npm ci
+          npm install
 
       - name: Lint
         run: npm run lint
@@ -47,12 +47,12 @@ jobs:
 
       - uses: actions/setup-node@v1
         with:
-          node-version: "12"
+          node-version: "14"
 
       - name: Install
         run: |
           npm config set @hv:registry ${RESOLVE_REGISTRY}
-          npm ci
+          npm install
 
       - name: Generate Application
         run: |
