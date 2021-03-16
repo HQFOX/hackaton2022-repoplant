@@ -17,10 +17,10 @@ exports[`withLayout is rendered correctly 1`] = `
 exports[`withLayout is rendered correctly 2`] = `
 <div>
   <div
-    class="makeStyles-section-16 makeStyles-hasFooter-20"
+    class="makeStyles-section-1 makeStyles-hasFooter-5"
   >
     <div
-      class="MuiContainer-root-23 HvContainer-root makeStyles-container-17 makeStyles-notAuthed-18 MuiContainer-maxWidthXl-30 HvContainer-maxWidthXl"
+      class="MuiContainer-root-8 HvContainer-root makeStyles-container-2 makeStyles-notAuthed-3 MuiContainer-maxWidthXl-15 HvContainer-maxWidthXl"
     >
       <div />
     </div>
