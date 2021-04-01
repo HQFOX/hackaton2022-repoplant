@@ -3,8 +3,8 @@ import { useParams } from "react-router-dom";
 import {
   HvButton,
   HvGrid,
-  HvTypography,
   HvGlobalActions,
+  HvAccordion,
 } from "@hv/uikit-react-core";
 import { User } from "@hv/uikit-react-icons";
 import { useTranslation } from "react-i18next";
@@ -124,26 +124,35 @@ const CharacterDetails: React.FC = () => {
             <HvGrid item xs={12} />
           </HvGrid>
           <HvGrid container>
-            <HvGrid item xs={12} className={classes.table}>
-              <HvTypography variant="sectionTitle" className={classes.title}>
-                {t("pages.characterDetails.films.title")}
-              </HvTypography>
-              <FilmsTable data={person.filmConnection.films} />
+            <HvGrid item xs={12}>
+              <HvAccordion
+                label={t("pages.characterDetails.films.title")}
+                defaultExpanded
+                headingLevel={2}
+              >
+                <FilmsTable data={person.filmConnection.films} />
+              </HvAccordion>
             </HvGrid>
             {person.starshipConnection.starships.length > 0 && (
-              <HvGrid item xs={12} className={classes.table}>
-                <HvTypography variant="sectionTitle" className={classes.title}>
-                  {t("pages.characterDetails.starships.title")}
-                </HvTypography>
-                <StarshipsTable data={person.starshipConnection.starships} />
+              <HvGrid item xs={12}>
+                <HvAccordion
+                  label={t("pages.characterDetails.starships.title")}
+                  defaultExpanded
+                  headingLevel={2}
+                >
+                  <StarshipsTable data={person.starshipConnection.starships} />
+                </HvAccordion>
               </HvGrid>
             )}
             {person.vehicleConnection.vehicles.length > 0 && (
-              <HvGrid item xs={12} className={classes.table}>
-                <HvTypography variant="sectionTitle" className={classes.title}>
-                  {t("pages.characterDetails.vehicles.title")}
-                </HvTypography>
-                <VehiclesTable data={person.vehicleConnection.vehicles} />
+              <HvGrid item xs={12}>
+                <HvAccordion
+                  label={t("pages.characterDetails.vehicles.title")}
+                  defaultExpanded
+                  headingLevel={2}
+                >
+                  <VehiclesTable data={person.vehicleConnection.vehicles} />
+                </HvAccordion>
               </HvGrid>
             )}
           </HvGrid>

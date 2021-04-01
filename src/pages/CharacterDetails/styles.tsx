@@ -17,9 +17,6 @@ const styles = makeStyles((theme) => ({
     width: 125,
     height: 125,
   },
-  table: {
-    marginBottom: theme.hv.spacing.md,
-  },
   globalActions: {
     [theme.breakpoints.up("md")]: {
       top: "84px",
