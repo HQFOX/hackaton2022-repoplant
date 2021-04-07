@@ -20,6 +20,14 @@ const styles = makeStyles((theme) => ({
   table: {
     marginBottom: theme.hv.spacing.md,
   },
+  globalActions: {
+    [theme.breakpoints.up("md")]: {
+      top: "84px",
+    },
+    [theme.breakpoints.down("sm")]: {
+      top: "44px",
+    },
+  },
 }));
 
 export default styles;

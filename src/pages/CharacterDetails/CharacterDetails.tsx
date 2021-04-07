@@ -1,6 +1,11 @@
 import React from "react";
 import { useParams } from "react-router-dom";
-import { HvButton, HvGrid, HvTypography } from "@hv/uikit-react-core";
+import {
+  HvButton,
+  HvGrid,
+  HvTypography,
+  HvGlobalActions,
+} from "@hv/uikit-react-core";
 import { User } from "@hv/uikit-react-icons";
 import { useTranslation } from "react-i18next";
 import withLayout from "lib/hocs/withLayout";
@@ -11,7 +16,7 @@ import {
   StarshipsTable,
   VehiclesTable,
 } from "components/characterDetails";
-import { GlobalActions, DetailsKPI, FilmsTable } from "components/common";
+import { DetailsKPI, FilmsTable } from "components/common";
 import { useCharacter } from "./data";
 import useStyles from "./styles";
 
@@ -27,9 +32,13 @@ const CharacterDetails: React.FC = () => {
 
   return (
     <>
-      <GlobalActions name={person.name}>
+      <HvGlobalActions
+        className={classes.globalActions}
+        position="fixed"
+        title={person.name}
+      >
         <HvButton>{t("pages.characterDetails.globalActions.button")}</HvButton>
-      </GlobalActions>
+      </HvGlobalActions>
       <HvGrid container className={classes.root}>
         <HvGrid item xs={12}>
           <HvGrid container>
