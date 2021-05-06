@@ -1,12 +1,12 @@
 import React from "react";
-import { useParams } from "react-router-dom";
+import { useParams, useHistory } from "react-router-dom";
 import {
   HvButton,
   HvGrid,
   HvGlobalActions,
   HvAccordion,
 } from "@hv/uikit-react-core";
-import { User } from "@hv/uikit-react-icons";
+import { Backwards, User } from "@hv/uikit-react-icons";
 import { useTranslation } from "react-i18next";
 import withLayout from "lib/hocs/withLayout";
 import {
@@ -25,6 +25,7 @@ const CharacterDetails: React.FC = () => {
   const { id } = useParams<{ id: string }>();
   const { data } = useCharacter(id);
   const { t } = useTranslation();
+  const { goBack } = useHistory();
 
   if (!data) return <></>;
 
@@ -36,6 +37,11 @@ const CharacterDetails: React.FC = () => {
         className={classes.globalActions}
         position="fixed"
         title={person.name}
+        backButton={
+          <HvButton aria-label="Back" icon onClick={goBack}>
+            <Backwards />
+          </HvButton>
+        }
       >
         <HvButton>{t("pages.characterDetails.globalActions.button")}</HvButton>
       </HvGlobalActions>
