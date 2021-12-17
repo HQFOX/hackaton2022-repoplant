@@ -1,9 +1,10 @@
 import { HvTheme } from "@hv/uikit-react-core";
 
 // extend Material-UI's theme to use `theme.hv` object
-declare module "@material-ui/core/styles/createMuiTheme" {
+declare module "@material-ui/core/styles/createTheme" {
   interface Theme {
     hv: HvTheme;
+    hvSpacing?: SpacingOptions;
   }
 
   interface ThemeOptions {
