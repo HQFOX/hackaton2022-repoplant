@@ -1,32 +1,40 @@
-import React, { useState, useEffect } from "react";
-import { NavigationContextType } from "typings/navigation";
-import { useLocation } from "react-router-dom";
-import { Page } from "typings/pages";
-import { getActivePath } from "lib/utils/path";
+import React, { useMemo } from "react";
 
-export const NavigationContext = React.createContext<NavigationContextType>({
-  isOpen: false, // VerticalNavigation
-  toggleOpen: () => {},
-  activePage: undefined,
+import useNavigation from "lib/hooks/useNavigation";
+
+export const NavigationContext = React.createContext<NavigationContextValue>({
+  navigation: [],
+  activePath: undefined,
+  isVerticalOpen: false,
+  setVerticalOpen: () => undefined,
+  toggleVerticalOpen: () => undefined,
 });
 
-export const NavigationContextProvider = ({ children }) => {
-  const { pathname } = useLocation();
-  const initialPath = getActivePath(pathname);
-  const [isOpen, setIsOpen] = useState(false);
-  const [activePage, setActivePage] = useState<Page | undefined>(initialPath);
+export const NavigationProvider: React.FC<{
+  navigation: NavigationData[];
+}> = ({ children, navigation }) => {
+  const { activePath, isVerticalOpen, setVerticalOpen, toggleVerticalOpen } =
+    useNavigation(navigation);
 
-  useEffect(() => {
-    const activePath = getActivePath(pathname);
-    setActivePage(activePath);
-  }, [pathname]);
-
-  const toggleOpen = () => {
-    setIsOpen((prevState) => !prevState);
-  };
+  const value = useMemo(
+    () => ({
+      navigation,
+      activePath,
+      isVerticalOpen,
+      toggleVerticalOpen,
+      setVerticalOpen,
+    }),
+    [
+      navigation,
+      activePath,
+      isVerticalOpen,
+      toggleVerticalOpen,
+      setVerticalOpen,
+    ]
+  );
 
   return (
-    <NavigationContext.Provider value={{ isOpen, toggleOpen, activePage }}>
+    <NavigationContext.Provider value={value}>
       {children}
     </NavigationContext.Provider>
   );

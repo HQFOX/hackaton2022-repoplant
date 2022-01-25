@@ -5,8 +5,6 @@ const styles = makeStyles((theme) => ({
     paddingBottom: 5,
   },
   titleText: {
-    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-    // @ts-ignore
     ...theme.hv.typography.highlightText,
   },
   content: {

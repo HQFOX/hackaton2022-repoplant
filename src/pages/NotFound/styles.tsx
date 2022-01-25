@@ -1,10 +1,13 @@
-import { createStyles } from "@material-ui/core";
+import { makeStyles } from "@material-ui/core";
 
-const styles = () =>
-  createStyles({
-    title: {
-      marginLeft: "15px",
-    },
-  });
+import { HEADER_HEIGHT } from "lib/utils/layout";
+
+const styles = makeStyles(() => ({
+  empty: {
+    display: "flex",
+    alignItems: "center",
+    height: `calc(100vh - ${HEADER_HEIGHT}px - 40px)`,
+  },
+}));
 
 export default styles;

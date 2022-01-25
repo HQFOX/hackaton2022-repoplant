@@ -1,0 +1,10 @@
+{
+  "charactersCard": {
+    "title": "Characters",
+    "button": "Explore Characters"
+  },
+  "starshipsCard": {
+    "title": "Starships",
+    "button": "Explore Starships"
+  }
+}

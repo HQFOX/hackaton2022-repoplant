@@ -1,0 +1,139 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Overview should match the snapshot 1`] = `
+<div>
+  <div
+    class="makeStyles-content-4"
+  >
+    <main
+      class="MuiContainer-root HvContainer-root makeStyles-container-5 makeStyles-hasSecondLevel-6"
+    >
+      <div
+        class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-2 MuiGrid-align-items-xs-center MuiGrid-justify-content-xs-center"
+      >
+        <div
+          class="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-2 MuiGrid-item MuiGrid-justify-content-xs-center MuiGrid-grid-xs-12"
+        >
+          <svg
+            class="makeStyles-logo-1"
+          >
+            star-wars-logo.svg
+          </svg>
+        </div>
+        <div
+          class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-5 MuiGrid-grid-md-5"
+        >
+          <div
+            class="MuiBox-root MuiBox-root-8 HvIsCardGridElement HvCard-root makeStyles-card-2"
+          >
+            <div
+              class="HvCard-semanticContainer"
+            >
+              <div
+                class="HvCard-semanticBar HvCard-sema0"
+              />
+              <div
+                class="HvCard-icon"
+              />
+            </div>
+            <div
+              class="MuiCardHeader-root HvCardHeader-root"
+            >
+              <div
+                class="MuiCardHeader-content HvCardHeader-content"
+              >
+                <span
+                  class="MuiTypography-root MuiCardHeader-title HvCardHeader-title MuiTypography-h5 MuiTypography-displayBlock"
+                >
+                  charactersCard.title
+                </span>
+              </div>
+            </div>
+            <div
+              class="MuiCardMedia-root HvCardMedia-root makeStyles-img-3"
+              role="img"
+              style="background-image: url(characters.jpg);"
+            />
+            <div
+              class="HvActionBar-root"
+            >
+              <div
+                class="HvActionsGeneric-root"
+              >
+                <button
+                  class="MuiButtonBase-root MuiButton-root HvButton-root MuiButton-text HvActionsGeneric-button HvButton-ghostSVG MuiButton-textPrimary HvButton-ghost"
+                  id="exploreCharacters"
+                  tabindex="0"
+                  type="button"
+                >
+                  <span
+                    class="MuiButton-label"
+                  >
+                    charactersCard.button
+                  </span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-5 MuiGrid-grid-md-5"
+        >
+          <div
+            class="MuiBox-root MuiBox-root-9 HvIsCardGridElement HvCard-root makeStyles-card-2"
+          >
+            <div
+              class="HvCard-semanticContainer"
+            >
+              <div
+                class="HvCard-semanticBar HvCard-sema0"
+              />
+              <div
+                class="HvCard-icon"
+              />
+            </div>
+            <div
+              class="MuiCardHeader-root HvCardHeader-root"
+            >
+              <div
+                class="MuiCardHeader-content HvCardHeader-content"
+              >
+                <span
+                  class="MuiTypography-root MuiCardHeader-title HvCardHeader-title MuiTypography-h5 MuiTypography-displayBlock"
+                >
+                  starshipsCard.title
+                </span>
+              </div>
+            </div>
+            <div
+              class="MuiCardMedia-root HvCardMedia-root makeStyles-img-3"
+              role="img"
+              style="background-image: url(starships.jpg);"
+            />
+            <div
+              class="HvActionBar-root"
+            >
+              <div
+                class="HvActionsGeneric-root"
+              >
+                <button
+                  class="MuiButtonBase-root MuiButton-root HvButton-root MuiButton-text HvActionsGeneric-button HvButton-ghostSVG MuiButton-textPrimary HvButton-ghost"
+                  id="exploreStarships"
+                  tabindex="0"
+                  type="button"
+                >
+                  <span
+                    class="MuiButton-label"
+                  >
+                    starshipsCard.button
+                  </span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+</div>
+`;

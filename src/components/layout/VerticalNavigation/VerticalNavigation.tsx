@@ -1,72 +1,66 @@
 import React, { useContext } from "react";
+import { useHistory } from "react-router-dom";
 import { useMediaQuery, useTheme } from "@material-ui/core";
-import { LogOut, User, ThemeSwitcher } from "@hv/uikit-react-icons";
+import { ThemeSwitcher, LogOut } from "@hitachivantara/uikit-react-icons";
 import {
   HvVerticalNavigation,
   HvVerticalNavigationTree,
   HvVerticalNavigationActions,
   HvVerticalNavigationAction,
-} from "@hv/uikit-react-core";
-import history from "lib/utils/history";
-import { NavigationContext } from "lib/context/NavigationContext";
-import { ThemeContext } from "lib/context/ThemeContext";
+} from "@hitachivantara/uikit-react-core";
+
 import { AuthContext } from "lib/context/AuthContext";
-import pages from "lib/api/pages";
-import clsx from "clsx";
+import { ThemeContext } from "lib/context/ThemeContext";
+import { NavigationContext } from "lib/context/NavigationContext";
 import useStyles from "./styles";
 
-const VerticalNavigation = () => {
+const VerticalNavigation: React.FC = () => {
   const theme = useTheme();
-  const classes = useStyles();
-  const isMdUp = useMediaQuery(theme.breakpoints.up("md"));
-  const { toggleTheme } = useContext(ThemeContext);
-  const { isOpen, toggleOpen, activePage } = useContext(NavigationContext);
-  const { isAuthed, logout } = useContext(AuthContext);
+  const history = useHistory();
 
-  const handleChange = (event, selection) => {
+  const isMdUp = useMediaQuery(theme.breakpoints.up("md"));
+
+  const { isAuthed, logout } = useContext(AuthContext);
+  const { toggleTheme } = useContext(ThemeContext);
+  const { navigation, activePath, isVerticalOpen, setVerticalOpen } =
+    useContext(NavigationContext);
+
+  const handleChange = (
+    event: React.SyntheticEvent,
+    selection: NavigationData
+  ) => {
     if (selection.path) {
       history.push(selection.path);
-      toggleOpen();
+      setVerticalOpen(false);
     }
   };
 
-  if (!isOpen || isMdUp || !isAuthed) return null;
+  const classes = useStyles();
 
-  return (
-    <div className={clsx(classes.root)}>
-      <HvVerticalNavigation
-        isCollapsable={false}
-        isOpen={isOpen}
-        toggleOpenCallback={toggleOpen}
-        position="fixed"
-      >
+  return isAuthed && isVerticalOpen && !isMdUp ? (
+    <div className={classes.container}>
+      <HvVerticalNavigation classes={{ root: classes.root }}>
         <HvVerticalNavigationTree
-          data={pages}
-          selected={activePage?.id}
-          onClick={handleChange}
+          data={navigation || []}
+          selected={activePath?.id || ""}
+          onChange={handleChange}
         />
-        {!isMdUp && (
-          <HvVerticalNavigationActions>
-            <HvVerticalNavigationAction
-              label="Toggle Theme"
-              icon={<ThemeSwitcher />}
-              onClick={() => toggleTheme()}
-            />
-            <HvVerticalNavigationAction
-              label="Profile"
-              icon={<User />}
-              onClick={() => {}}
-            />
-            <HvVerticalNavigationAction
-              label="Logout"
-              icon={<LogOut />}
-              onClick={() => logout()}
-            />
-          </HvVerticalNavigationActions>
-        )}
+
+        <HvVerticalNavigationActions>
+          <HvVerticalNavigationAction
+            label="Toggle Theme"
+            icon={<ThemeSwitcher />}
+            onClick={() => toggleTheme()}
+          />
+          <HvVerticalNavigationAction
+            label="Logout"
+            icon={<LogOut />}
+            onClick={logout}
+          />
+        </HvVerticalNavigationActions>
       </HvVerticalNavigation>
     </div>
-  );
+  ) : null;
 };
 
 export default VerticalNavigation;

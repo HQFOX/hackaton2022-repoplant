@@ -1,0 +1,83 @@
+{
+  "globalActions": {
+    "button": "Explore Movies"
+  },
+  "details": {
+    "birthYear": "Birth Year",
+    "homeworld": "Homeworld",
+    "eyeColor": "Eye Color",
+    "hairColor": "Hair Color",
+    "skinColor": "Skin Color",
+    "gender": "Gender",
+    "species": "Species",
+    "height": "Height (cm)"
+  },
+  "accordion": {
+    "films": {
+      "title": "Films",
+      "table": {
+        "columns": {
+          "title": "Title",
+          "director": "Director",
+          "producers": "Producers",
+          "releaseDate": "Release Date"
+        }
+      }
+    },
+    "starships": {
+      "title": "Starships",
+      "table": {
+        "expand": {
+          "maxAtmospheringSpeed": "Max Atmosphering Speed",
+          "hyperdriveRating": "Hyperdrive Rating",
+          "cargoCapacity": "Cargo Capacity",
+          "MGLT": "MGLT",
+          "consumables": "Consumables",
+          "costInCredits": "Cost in Credits",
+          "crew": "Crew",
+          "passengers": "Passengers",
+          "length": "Length",
+          "otherCharacters": "Other Characters"
+        },
+        "columns": {
+          "name": "Name",
+          "model": "Model",
+          "class": "Class",
+          "manufacturers": "Manufacturers"
+        }
+      }
+    },
+    "vehicles": {
+      "title": "Vehicles",
+      "table": {
+        "expand": {
+          "cargoCapacity": "Cargo Capacity",
+          "consumables": "Consumables",
+          "costInCredits": "Cost in Credits",
+          "maxAtmospheringSpeed": "Max Atmosphering Speed",
+          "crew": "Crew",
+          "passengers": "Passengers",
+          "length": "Length",
+          "otherCharacters": "Other Characters"
+        },
+        "columns": {
+          "name": "Name",
+          "model": "Model",
+          "class": "Class",
+          "manufacturers": "Manufacturers"
+        }
+      }
+    }
+  },
+  "kpis": {
+    "movieCountKPI": {
+      "title": "Movie Participation"
+    },
+    "starshipCountKPI": {
+      "title": "Starship owned"
+    },
+    "vehicleCountKPI": {
+      "title": "Vehicle owned"
+    }
+  }
+}

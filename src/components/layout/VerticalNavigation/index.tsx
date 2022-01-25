@@ -1,3 +1,1 @@
-import VerticalNavigation from "./VerticalNavigation";
-
-export default VerticalNavigation;
+export { default } from "./VerticalNavigation";

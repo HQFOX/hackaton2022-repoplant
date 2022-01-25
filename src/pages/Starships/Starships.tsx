@@ -1,17 +1,19 @@
 import React from "react";
-import { HvGrid } from "@hv/uikit-react-core";
-import withLayout from "lib/hocs/withLayout";
-import { StarshipsTable } from "components/starships";
-import { StarshipsProps } from ".";
+import { HvGrid } from "@hitachivantara/uikit-react-core";
 
-const Starships: React.FC<StarshipsProps> = () => {
+import StarshipsTable from "components/starships/StarshipsTable";
+import { Container } from "components/layout";
+
+const Starships: React.FC = () => {
   return (
-    <HvGrid container>
-      <HvGrid item xs={12}>
-        <StarshipsTable />
+    <Container>
+      <HvGrid container>
+        <HvGrid item xs={12}>
+          <StarshipsTable />
+        </HvGrid>
       </HvGrid>
-    </HvGrid>
+    </Container>
   );
 };
 
-export default withLayout(Starships);
+export default Starships;

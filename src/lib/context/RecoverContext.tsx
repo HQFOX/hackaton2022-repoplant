@@ -1,42 +1,28 @@
-import React, { useState } from "react";
-import { RecoverContextType } from "typings/auth";
+import React, { useMemo } from "react";
 
-export const RecoverContext = React.createContext<RecoverContextType>({
+import useRecover from "lib/hooks/useRecover";
+
+export const RecoverContext = React.createContext<RecoverContextValue>({
   recoverStatus: "idle",
   activeForm: "login",
   setActiveForm: () => {},
   recover: () => {},
 });
 
-export const RecoverContextProvider = ({ children }) => {
-  const [recoverStatus, setRecoverStatus] = useState<string>("idle");
-  const [activeForm, setActiveForm] = useState<string>("login");
+export const RecoverContextProvider: React.FC = ({ children }) => {
+  const { recoverStatus, activeForm, setActiveForm, recover } = useRecover();
 
-  const recover = async (email) => {
-    setRecoverStatus("pending");
-    try {
-      await recover(email);
-      setRecoverStatus("success");
-      setTimeout(() => {
-        setRecoverStatus("idle");
-        setActiveForm("login");
-      }, 2000);
-    } catch (error) {
-      setRecoverStatus("error");
-      setTimeout(() => setRecoverStatus("idle"), 2000);
-    }
-  };
+  const value = useMemo(
+    () => ({
+      recoverStatus,
+      activeForm,
+      setActiveForm,
+      recover,
+    }),
+    [recoverStatus, activeForm, setActiveForm, recover]
+  );
 
   return (
-    <RecoverContext.Provider
-      value={{
-        recoverStatus,
-        activeForm,
-        setActiveForm,
-        recover,
-      }}
-    >
-      {children}
-    </RecoverContext.Provider>
+    <RecoverContext.Provider value={value}>{children}</RecoverContext.Provider>
   );
 };

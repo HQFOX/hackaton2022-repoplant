@@ -1,10 +1,14 @@
 import React from "react";
-import withLayout from "lib/hocs/withLayout";
-import { AssetInventory } from "components/characters";
-import { CharactersStyles } from ".";
 
-const Characters: React.FC<CharactersStyles> = () => {
-  return <AssetInventory />;
+import CharactersList from "components/characters/CharactersList";
+import { Container } from "components/layout";
+
+const Characters: React.FC = () => {
+  return (
+    <Container>
+      <CharactersList />
+    </Container>
+  );
 };
 
-export default withLayout(Characters);
+export default Characters;

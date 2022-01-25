@@ -1,4 +1,5 @@
 import React from "react";
+import { useTranslation } from "react-i18next";
 import { useHistory } from "react-router-dom";
 import {
   HvGrid,
@@ -7,35 +8,36 @@ import {
   HvCardMedia,
   HvActionBar,
   HvActionsGeneric,
-} from "@hv/uikit-react-core";
-import { useTranslation } from "react-i18next";
+} from "@hitachivantara/uikit-react-core";
+
+import { Container } from "components/layout";
 import { ReactComponent as SWLogo } from "assets/star-wars-logo.svg";
 import characters from "assets/characters.jpg";
 import starships from "assets/starships.jpg";
-import withLayout from "lib/hocs/withLayout";
+
 import useStyles from "./styles";
 
 const Overview: React.FC = () => {
-  const history = useHistory();
+  const { t } = useTranslation("overview");
   const classes = useStyles();
-  const { t } = useTranslation();
+  const history = useHistory();
 
   return (
-    <>
-      <HvGrid container alignItems="center" justify="center">
-        <HvGrid container item xs={12} justify="center">
+    <Container>
+      <HvGrid container alignItems="center" justifyContent="center">
+        <HvGrid container item xs={12} justifyContent="center">
           <SWLogo className={classes.logo} />
         </HvGrid>
-        <HvGrid item xs={12} sm={5} md={5} lg={3}>
+        <HvGrid item xs={12} sm={5} md={5}>
           <HvCard bgcolor="atmo1" className={classes.card}>
-            <HvCardHeader title={t("pages.overview.charactersCard.title")} />
+            <HvCardHeader title={t("charactersCard.title")} />
             <HvCardMedia image={characters} className={classes.img} />
             <HvActionBar>
               <HvActionsGeneric
                 actions={[
                   {
                     id: "exploreCharacters",
-                    label: t("pages.overview.charactersCard.button"),
+                    label: t("charactersCard.button"),
                   },
                 ]}
                 actionsCallback={() => history.push(`/star-wars/characters`)}
@@ -43,20 +45,20 @@ const Overview: React.FC = () => {
             </HvActionBar>
           </HvCard>
         </HvGrid>
-        <HvGrid item xs={12} sm={5} md={5} lg={3}>
+        <HvGrid item xs={12} sm={5} md={5}>
           <HvCard
             bgcolor="atmo1"
             className={classes.card}
             onClick={() => history.push(`/star-wars/starships`)}
           >
-            <HvCardHeader title={t("pages.overview.starshipsCard.title")} />
+            <HvCardHeader title={t("starshipsCard.title")} />
             <HvCardMedia image={starships} className={classes.img} />
             <HvActionBar>
               <HvActionsGeneric
                 actions={[
                   {
                     id: "exploreStarships",
-                    label: t("pages.overview.starshipsCard.button"),
+                    label: t("starshipsCard.button"),
                   },
                 ]}
                 actionsCallback={() => history.push(`/star-wars/starships`)}
@@ -65,8 +67,8 @@ const Overview: React.FC = () => {
           </HvCard>
         </HvGrid>
       </HvGrid>
-    </>
+    </Container>
   );
 };
 
-export default withLayout(Overview);
+export default Overview;

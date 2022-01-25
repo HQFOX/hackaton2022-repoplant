@@ -1,5 +1,4 @@
-import jwt from "jwt-simple";
-import { AuthCredentials } from "typings/auth";
+import jwt from "jwt-encode";
 
 const authenticate = async (credentials: AuthCredentials): Promise<string> =>
   new Promise<string>((resolve, reject) => {
@@ -7,7 +6,7 @@ const authenticate = async (credentials: AuthCredentials): Promise<string> =>
       const { username, password } = credentials;
       if (username !== "admin" || password !== "password") reject();
 
-      const token = jwt.encode(credentials, "someSecret");
+      const token = jwt(credentials, "someSecret");
       resolve(token);
     }, 500);
   });

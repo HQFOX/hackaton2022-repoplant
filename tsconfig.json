@@ -19,8 +19,7 @@
     "isolatedModules": true,
     "noEmit": true,
     "jsx": "react-jsx",
-    "baseUrl": "src", /* allowing relative imports from stc/* */ 
-    "noImplicitAny": false, /* REMOVE --> Raise error on expressions and declarations with an implied 'any' type. */    
+    "baseUrl": "src",
   },
   "include": [
     "src"

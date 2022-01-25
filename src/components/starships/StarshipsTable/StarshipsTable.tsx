@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
-import { HvTable, TableColumn } from "@hv/uikit-react-core";
+import { HvTable, TableColumn } from "@hitachivantara/uikit-react-core";
+
 import { useStarships } from "lib/api/swapi";
 
 const StarshipsTable = () => {

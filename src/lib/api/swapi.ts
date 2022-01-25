@@ -3,15 +3,10 @@ import axios from "axios";
 
 const BASE_URL = "https://swapi.py4e.com/api/";
 
-const fetcher = (url) => axios.get(url).then((res) => res.data);
+const fetcher = (url: string) => axios.get(url).then((res) => res.data);
 
 export const useStarships = (path = "") =>
-  useSWR(`${BASE_URL}starships/${path}`, fetcher);
+  useSWR(`${BASE_URL}starships/${path}`, fetcher, { suspense: true });
 
 export const useFilms = (path = "") =>
-  useSWR(`${BASE_URL}films/${path}`, fetcher);
-
-export const fetchFilms = (urls: [] = []) => {
-  const promises = urls.map((url) => fetcher(url));
-  return Promise.all(promises).then((values) => values);
-};
+  useSWR(`${BASE_URL}films/${path}`, fetcher, { suspense: true });

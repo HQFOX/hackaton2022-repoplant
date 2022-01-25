@@ -7,22 +7,30 @@ import {
   HvLabel,
   HvBaseInput,
   HvCheckBox,
-} from "@hv/uikit-react-core";
-import { AuthCredentials } from "typings/auth";
-import { LoginFormProps } from ".";
+} from "@hitachivantara/uikit-react-core";
+
 import Message from "../Message";
+import useStyles from "./styles";
+
+interface LoginFormProps {
+  onSubmit: (credentials: AuthCredentials) => void;
+  onForgot: () => void;
+  status: string;
+}
 
 const LoginForm: React.FC<LoginFormProps> = ({
-  classes,
   onSubmit,
   onForgot,
   status,
 }: LoginFormProps) => {
-  const { t } = useTranslation();
+  const { t } = useTranslation("login");
+  const classes = useStyles();
+
   const [credentials, setCredentials] = useState<AuthCredentials>({
     username: "admin",
     password: "password",
   });
+
   const isPending = status === "pending";
   const isError = status === "error";
 
@@ -37,13 +45,13 @@ const LoginForm: React.FC<LoginFormProps> = ({
   return (
     <div className={classes.root}>
       <HvTypography variant="mTitle" className={classes.title}>
-        {t("pages.login.loginForm.title")}
+        {t("loginForm.title")}
       </HvTypography>
 
       {isError && (
         <Message
           message={{
-            error: t("pages.login.loginForm.error"),
+            error: t("loginForm.error"),
           }}
           status={status}
         />
@@ -51,12 +59,12 @@ const LoginForm: React.FC<LoginFormProps> = ({
 
       <HvLabel
         id="username-label"
-        label={t("pages.login.loginForm.username.label")}
+        label={t("loginForm.username.label")}
         classes={{ root: classes.input }}
       >
         <HvBaseInput
           id="username-input"
-          placeholder={t("pages.login.loginForm.username.placeholder")}
+          placeholder={t("loginForm.username.placeholder")}
           value={credentials.username}
           inputProps={{ autoFocus: true }}
           onChange={(
@@ -71,12 +79,12 @@ const LoginForm: React.FC<LoginFormProps> = ({
 
       <HvLabel
         id="password-label"
-        label={t("pages.login.loginForm.password.label")}
+        label={t("loginForm.password.label")}
         classes={{ root: classes.input }}
       >
         <HvBaseInput
           id="password-input"
-          placeholder={t("pages.login.loginForm.password.placeholder")}
+          placeholder={t("loginForm.password.placeholder")}
           value={credentials.password}
           inputProps={{
             type: "password",
@@ -95,7 +103,7 @@ const LoginForm: React.FC<LoginFormProps> = ({
         classes={{
           container: classes.checkBox,
         }}
-        label={t("pages.login.loginForm.remember")}
+        label={t("loginForm.remember")}
       />
 
       <HvButton
@@ -106,8 +114,8 @@ const LoginForm: React.FC<LoginFormProps> = ({
         disabled={isPending}
       >
         {isPending
-          ? t("pages.login.loginForm.submit.logging")
-          : t("pages.login.loginForm.submit.login")}
+          ? t("loginForm.submit.logging")
+          : t("loginForm.submit.login")}
       </HvButton>
 
       <HvButton
@@ -119,7 +127,7 @@ const LoginForm: React.FC<LoginFormProps> = ({
         onClick={onForgot}
         disabled={isPending}
       >
-        {t("pages.login.loginForm.forgot")}
+        {t("loginForm.forgot")}
       </HvButton>
     </div>
   );

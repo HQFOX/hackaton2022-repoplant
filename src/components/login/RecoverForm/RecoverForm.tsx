@@ -5,17 +5,25 @@ import {
   HvTypography,
   HvLabel,
   HvBaseInput,
-} from "@hv/uikit-react-core";
+} from "@hitachivantara/uikit-react-core";
+
 import Message from "../Message";
-import { RecoverFormProps } from ".";
+import useStyles from "./styles";
+
+interface RecoverFormProps {
+  onSubmit: (email: string) => void;
+  onCancel: () => void;
+  status: string;
+}
 
 const RecoverForm: React.FC<RecoverFormProps> = ({
-  classes,
   onSubmit,
   onCancel,
   status,
 }: RecoverFormProps) => {
-  const { t } = useTranslation();
+  const { t } = useTranslation("login");
+  const classes = useStyles();
+
   const [email, setEmail] = useState("");
   const isPending = status === "pending";
   const isSuccess = status === "success";
@@ -23,31 +31,26 @@ const RecoverForm: React.FC<RecoverFormProps> = ({
 
   return (
     <div className={classes.root}>
-      <HvTypography variant="mTitle">
-        {t("pages.login.recoverForm.title")}
-      </HvTypography>
+      <HvTypography variant="mTitle">{t("recoverForm.title")}</HvTypography>
 
       {(isError || isSuccess) && (
         <Message
           message={{
-            error: t("pages.login.recoverForm.error"),
-            success: t("pages.login.recoverForm.success"),
+            error: t("recoverForm.error"),
+            success: t("recoverForm.success"),
           }}
           status={status}
         />
       )}
 
       <HvTypography variant="normalText">
-        {t("pages.login.recoverForm.subtitle")}
+        {t("recoverForm.subtitle")}
       </HvTypography>
 
-      <HvLabel
-        id="email-label"
-        label={t("pages.login.recoverForm.email.label")}
-      >
+      <HvLabel id="email-label" label={t("recoverForm.email.label")}>
         <HvBaseInput
           id="email-input"
-          placeholder={t("pages.login.recoverForm.email.placeholder")}
+          placeholder={t("recoverForm.email.placeholder")}
           value={email}
           inputProps={{ autoFocus: true }}
           onChange={(
@@ -66,7 +69,7 @@ const RecoverForm: React.FC<RecoverFormProps> = ({
         className={classes.cancel}
         onClick={onCancel}
       >
-        {t("pages.login.recoverForm.cancel")}
+        {t("recoverForm.cancel")}
       </HvButton>
 
       <HvButton
@@ -77,8 +80,8 @@ const RecoverForm: React.FC<RecoverFormProps> = ({
         disabled={isPending}
       >
         {isPending
-          ? t("pages.login.recoverForm.submit.recovering")
-          : t("pages.login.recoverForm.submit.recover")}
+          ? t("recoverForm.submit.recovering")
+          : t("recoverForm.submit.recover")}
       </HvButton>
     </div>
   );

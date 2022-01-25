@@ -1,29 +1,35 @@
-import React from "react";
-import { Route, Switch } from "react-router-dom";
-import loadable from "@loadable/component";
+import React, { lazy } from "react";
+import { Switch } from "react-router-dom";
+
 import AuthRoute from "./AuthRoute";
 
-const NotFound = loadable(() => import("pages/NotFound"));
-const Login = loadable(() => import("pages/Login"));
-const Overview = loadable(() => import("pages/Overview"));
-const Characters = loadable(() => import("pages/Characters"));
-const CharacterDetails = loadable(() => import("pages/CharacterDetails"));
-const Starships = loadable(() => import("pages/Starships"));
+const Login = lazy(() => import("pages/Login"));
+const Overview = lazy(() => import("pages/Overview"));
+const Characters = lazy(() => import("pages/Characters"));
+const CharacterDetails = lazy(
+  () => import("pages/Characters/CharacterDetails")
+);
+const Starships = lazy(() => import("pages/Starships"));
+const NotFound = lazy(() => import("pages/NotFound"));
 
 const Routes = () => (
   <Switch>
-    <AuthRoute path="/" exact redirect="/overview" />
-    <AuthRoute path="/overview" component={Overview} />
-    <AuthRoute path="/login" exact component={Login} />
-    <AuthRoute path="/star-wars" exact redirect="/star-wars/characters" />
-    <AuthRoute path="/star-wars/characters" exact component={Characters} />
+    <AuthRoute exact path="/login" component={Login} />
+
+    <AuthRoute exact path="/" redirect="/overview" />
+    <AuthRoute exact path="/overview" component={Overview} />
+
+    <AuthRoute exact path="/star-wars" redirect="/star-wars/characters" />
+    <AuthRoute exact path="/star-wars/characters" component={Characters} />
     <AuthRoute
-      path="/star-wars/characters/:id"
       exact
+      path="/star-wars/characters/:id"
       component={CharacterDetails}
     />
-    <AuthRoute path="/star-wars/starships" exact component={Starships} />
-    <Route component={NotFound} />
+
+    <AuthRoute exact path="/star-wars/starships" component={Starships} />
+
+    <AuthRoute component={NotFound} />
   </Switch>
 );
 

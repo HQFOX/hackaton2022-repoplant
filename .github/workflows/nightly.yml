@@ -5,7 +5,6 @@ on:
   workflow_dispatch:
 
 env:
-  RESOLVE_REGISTRY: https://repo.orl.eng.hitachivantara.com/artifactory/api/npm/npm/
   APPLICATION_PUBLISH_REPO: ${{ github.repository_owner }}/${{ github.repository_owner }}.github.io
   APPLICATION_PUBLISH_BRANCH: master
   APPLICATION_PUBLISH_FOLDER: app/master
@@ -16,19 +15,18 @@ env:
 jobs:
   Test:
     name: Lint, Jest
-    runs-on: [self-hosted, Linux]
+    runs-on: ubuntu-latest
 
     steps:
       - name: Checkout
         uses: actions/checkout@v2
 
-      - uses: actions/setup-node@v1
+      - uses: actions/setup-node@v2
         with:
-          node-version: "14"
+          node-version: "16"
 
       - name: Install
         run: |
-          npm config set @hv:registry ${RESOLVE_REGISTRY}
           npm ci
 
       - name: Lint
@@ -39,19 +37,18 @@ jobs:
 
   Build-Application:
     name: Build Application
-    runs-on: [self-hosted, Linux]
+    runs-on: ubuntu-latest
 
     steps:
       - name: Checkout
         uses: actions/checkout@v2
 
-      - uses: actions/setup-node@v1
+      - uses: actions/setup-node@v2
         with:
-          node-version: "14"
+          node-version: "16"
 
       - name: Install
         run: |
-          npm config set @hv:registry ${RESOLVE_REGISTRY}
           npm ci
 
       - name: Generate Application
@@ -59,7 +56,7 @@ jobs:
           CI='' npm run build
 
       - name: Archive Application
-        uses: actions/upload-artifact@v1
+        uses: actions/upload-artifact@v2
         with:
           name: application
           path: ${{ github.workspace }}/build
@@ -89,7 +86,7 @@ jobs:
         with:
           repository: ${{ env.APPLICATION_PUBLISH_REPO }}
           ref: ${{ env.APPLICATION_PUBLISH_BRANCH }}
-          ssh-key: ${{ secrets.ORG_GHPAGES_DEPLOY_KEY }}
+          token: ${{ secrets.ORG_GHPAGES_DEPLOY_KEY }}
           path: gh-docs
           fetch-depth: 1
 
@@ -98,7 +95,7 @@ jobs:
           rm -rf ${{ github.workspace }}/gh-docs/${APPLICATION_PUBLISH_FOLDER}/*
 
       - name: Fetch Application
-        uses: actions/download-artifact@v1
+        uses: actions/download-artifact@v2
         with:
           name: application
           path: ${{ github.workspace }}/gh-docs/${{env.APPLICATION_PUBLISH_FOLDER}}
@@ -126,6 +123,17 @@ jobs:
           status: ${{ job.status }}
           deployment_id: ${{ steps.deployment.outputs.deployment_id }}
           env_url: ${{env.APPLICATION_URL}}
+
+  Cleanup:
+    name: Cleanup artifacts
+    if: always()
+    needs: [Github-Deployment]
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: geekyeggo/delete-artifact@v1
+        with:
+          name: application
 
   Notify-End:
     name: Notify End

@@ -1,19 +1,25 @@
 import React from "react";
+import { useTranslation } from "react-i18next";
+import { useTheme } from "@material-ui/core";
+import { Top, Bottom } from "@hitachivantara/uikit-react-icons";
 import {
   HvTypography,
   HvCard,
   HvCardHeader,
   HvCardContent,
-} from "@hv/uikit-react-core";
-import { Top, Bottom } from "@hv/uikit-react-icons";
-import { useTheme } from "@material-ui/core";
-import { useTranslation } from "react-i18next";
-import { CountKPIProps } from "./index";
+} from "@hitachivantara/uikit-react-core";
+
 import useStyles from "./styles";
 
+interface CountKPIProps {
+  title: React.ReactNode;
+  count: number;
+  diff: number;
+}
+
 const CountKPI: React.FC<CountKPIProps> = ({ title, count, diff }) => {
+  const { t } = useTranslation("common");
   const { hv } = useTheme();
-  const { t } = useTranslation();
   const classes = useStyles();
 
   return (
@@ -21,6 +27,7 @@ const CountKPI: React.FC<CountKPIProps> = ({ title, count, diff }) => {
       classes={{
         sema0: classes.cardBorder,
       }}
+      bgcolor="transparent"
     >
       <HvCardHeader
         title={title}
@@ -38,7 +45,7 @@ const CountKPI: React.FC<CountKPIProps> = ({ title, count, diff }) => {
               className={classes.indicatorIcon}
             />
             <HvTypography variant="vizText">{`${diff.toFixed(2)} ${t(
-              "components.common.countKPI.more"
+              "countKPI.more"
             )}`}</HvTypography>
           </>
         )}
@@ -49,7 +56,7 @@ const CountKPI: React.FC<CountKPIProps> = ({ title, count, diff }) => {
               className={classes.indicatorIcon}
             />
             <HvTypography variant="vizText">{`${Math.abs(diff).toFixed(2)} ${t(
-              "components.common.countKPI.less"
+              "countKPI.less"
             )}`}</HvTypography>
           </>
         )}

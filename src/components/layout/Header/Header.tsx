@@ -1,6 +1,7 @@
 import React, { useContext, MouseEvent } from "react";
-import { useTranslation } from "react-i18next";
+import { useHistory } from "react-router-dom";
 import { useMediaQuery, useTheme } from "@material-ui/core";
+import { LogOut, Menu, ThemeSwitcher } from "@hitachivantara/uikit-react-icons";
 import {
   HvHeader,
   HvHeaderBrand,
@@ -8,22 +9,24 @@ import {
   HvHeaderNavigation,
   NavigationItemProp,
   HvButton,
-} from "@hv/uikit-react-core";
-import { LogOut, Menu, ThemeSwitcher, User } from "@hv/uikit-react-icons";
-import HitachiLogo from "assets/HitachiLogo";
-import { ThemeContext } from "lib/context/ThemeContext";
-import { AuthContext } from "lib/context/AuthContext";
-import { NavigationContext } from "lib/context/NavigationContext";
-import pages from "lib/api/pages";
-import history from "lib/utils/history";
-import { HeaderProps } from "./index";
+} from "@hitachivantara/uikit-react-core";
 
-const Header: React.FC<HeaderProps> = () => {
-  const { t } = useTranslation();
+import HitachiLogo from "assets/HitachiLogo";
+import { AuthContext } from "lib/context/AuthContext";
+import { ThemeContext } from "lib/context/ThemeContext";
+import { NavigationContext } from "lib/context/NavigationContext";
+import navigation from "lib/navigation";
+
+const { REACT_APP_NAME } = process.env;
+
+const Header: React.FC = () => {
+  const history = useHistory();
   const theme = useTheme();
-  const { toggleTheme } = useContext(ThemeContext);
-  const { toggleOpen, activePage } = useContext(NavigationContext);
+
   const { isAuthed, logout } = useContext(AuthContext);
+  const { toggleTheme } = useContext(ThemeContext);
+  const { toggleVerticalOpen, activePath } = useContext(NavigationContext);
+
   const isMdUp = useMediaQuery(theme.breakpoints.up("md"));
   const isXs = useMediaQuery(theme.breakpoints.only("xs"));
 
@@ -34,28 +37,29 @@ const Header: React.FC<HeaderProps> = () => {
     if (selection.path) history.push(selection.path);
   };
 
-  return pages ? (
+  return (
     <HvHeader>
       {isAuthed && !isMdUp && (
         <div>
-          <HvButton category="ghost" icon onClick={toggleOpen}>
+          <HvButton category="ghost" icon onClick={toggleVerticalOpen}>
             <Menu />
           </HvButton>
         </div>
       )}
 
       <HvHeaderBrand
-        logo={<HitachiLogo />}
-        name={!isXs ? t("components.layout.header.appName") : undefined}
+        logo={<HitachiLogo style={{ width: 72, height: 20 }} />}
+        name={!isXs ? REACT_APP_NAME : undefined}
       />
 
       {isAuthed && isMdUp && (
         <HvHeaderNavigation
-          data={pages}
-          selected={activePage?.id}
+          data={navigation}
+          selected={activePath?.id}
           onClick={handleChange}
         />
       )}
+
       {isAuthed && isMdUp && (
         <HvHeaderActions>
           <HvButton
@@ -65,16 +69,15 @@ const Header: React.FC<HeaderProps> = () => {
           >
             <ThemeSwitcher />
           </HvButton>
-          <HvButton icon aria-label="Open User panel">
-            <User />
-          </HvButton>
-          <HvButton icon onClick={() => logout()} aria-label="Logout">
-            <LogOut />
-          </HvButton>
+          {isAuthed && (
+            <HvButton icon onClick={logout} aria-label="Logout">
+              <LogOut />
+            </HvButton>
+          )}
         </HvHeaderActions>
       )}
     </HvHeader>
-  ) : null;
+  );
 };
 
 export default Header;

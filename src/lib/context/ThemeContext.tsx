@@ -1,38 +1,24 @@
-import React, { useEffect, useState } from "react";
-import { HvProvider, HvUiKitThemeNames } from "@hv/uikit-react-core";
-import { useMediaQuery } from "@material-ui/core";
-import { setCookie, getCookie } from "lib/utils/cookie";
+import React, { useMemo } from "react";
+import { HvProvider } from "@hitachivantara/uikit-react-core";
 
-const wicked: HvUiKitThemeNames = "wicked";
-const dawn: HvUiKitThemeNames = "dawn";
+import useTheme from "lib/hooks/useTheme";
 
-export interface ThemeContextType {
-  theme: HvUiKitThemeNames;
-  toggleTheme: () => void;
-}
-
-export const ThemeContext = React.createContext<ThemeContextType>({
-  theme: wicked,
-  toggleTheme: () => {},
+export const ThemeContext = React.createContext<ThemeContextValue>({
+  theme: "wicked",
+  setTheme: () => undefined,
+  toggleTheme: () => undefined,
 });
 
-export const ThemeContextProvider = ({ children }) => {
-  const initialTheme = getCookie("theme") === wicked ? wicked : dawn;
-  const prefersDarkMode = useMediaQuery("(prefers-color-scheme: dark)");
-  const [theme, setTheme] = useState<HvUiKitThemeNames>(initialTheme);
+export const ThemeProvider: React.FC = ({ children }) => {
+  const { theme, setTheme, toggleTheme } = useTheme();
 
-  useEffect(() => {
-    setTheme(getCookie("theme") || (prefersDarkMode && wicked) || dawn);
-  }, [prefersDarkMode]);
-
-  const toggleTheme = () => {
-    const newTheme = theme === dawn ? wicked : dawn;
-    setTheme(newTheme);
-    setCookie({ key: "theme", value: newTheme });
-  };
+  const value = useMemo(
+    () => ({ theme, setTheme, toggleTheme }),
+    [setTheme, theme, toggleTheme]
+  );
 
   return (
-    <ThemeContext.Provider value={{ theme, toggleTheme }}>
+    <ThemeContext.Provider value={value}>
       <HvProvider uiKitTheme={theme}>{children}</HvProvider>
     </ThemeContext.Provider>
   );

@@ -1,21 +1,40 @@
 import React from "react";
-import { HvGrid, HvTypography } from "@hv/uikit-react-core";
+import { useHistory } from "react-router-dom";
 import { useTranslation } from "react-i18next";
-import withLayout from "lib/hocs/withLayout";
-import { NotFoundProps } from "./index";
+import {
+  HvButton,
+  HvEmptyState,
+  HvGrid,
+} from "@hitachivantara/uikit-react-core";
+import { Info } from "@hitachivantara/uikit-react-icons";
 
-const NotFound: React.FC<NotFoundProps> = ({ classes }: NotFoundProps) => {
-  const { t } = useTranslation();
+import { Container } from "components/layout";
+import useStyles from "./styles";
+
+const NotFound: React.FC = () => {
+  const { t } = useTranslation("common");
+  const classes = useStyles();
+  const history = useHistory();
 
   return (
-    <HvGrid container>
-      <HvGrid item xl={12}>
-        <HvTypography variant="3xlTitle" className={classes.title}>
-          {t("pages.notFound.title")}
-        </HvTypography>
+    <Container fullScreen>
+      <HvGrid container justifyContent="center" alignItems="center">
+        <HvGrid item xl={12}>
+          <HvEmptyState
+            className={classes.empty}
+            title={t("notFound.title")}
+            message={t("notFound.message")}
+            icon={<Info />}
+            action={
+              <HvButton category="ghost" onClick={() => history.goBack()}>
+                {t("notFound.action")}
+              </HvButton>
+            }
+          />
+        </HvGrid>
       </HvGrid>
-    </HvGrid>
+    </Container>
   );
 };
 
-export default withLayout(NotFound);
+export default NotFound;
