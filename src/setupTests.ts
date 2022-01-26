@@ -11,3 +11,17 @@ jest.mock("react-i18next", () => ({
   }),
   initReactI18next: { type: "3rdParty", init: jest.fn() },
 }));
+
+jest.mock("react-router-dom", () => ({
+  ...jest.requireActual("react-router-dom"),
+  useHistory: () => ({
+    push: jest.fn(),
+  }),
+  useLocation: () => ({
+    pathname: "/another-route",
+    search: "",
+    hash: "",
+    state: null,
+    key: "5nvxpbdafa",
+  }),
+}));

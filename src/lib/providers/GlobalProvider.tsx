@@ -1,5 +1,4 @@
 import React from "react";
-import { HashRouter as Router } from "react-router-dom";
 import { ApolloClient, InMemoryCache, ApolloProvider } from "@apollo/client";
 
 import { ThemeProvider } from "lib/context/ThemeContext";
@@ -14,15 +13,13 @@ const client = new ApolloClient({
 });
 
 const GlobalProvider: React.FC = ({ children }) => (
-  <Router basename={process.env.PUBLIC_URL}>
-    <ApolloProvider client={client}>
-      <NavigationProvider navigation={navigation}>
-        <AuthProvider>
-          <ThemeProvider>{children}</ThemeProvider>
-        </AuthProvider>
-      </NavigationProvider>
-    </ApolloProvider>
-  </Router>
+  <ApolloProvider client={client}>
+    <NavigationProvider navigation={navigation}>
+      <AuthProvider>
+        <ThemeProvider>{children}</ThemeProvider>
+      </AuthProvider>
+    </NavigationProvider>
+  </ApolloProvider>
 );
 
 export default GlobalProvider;
