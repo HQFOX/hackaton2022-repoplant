@@ -12,6 +12,10 @@ const CharacterDetails = lazy(
 const Starships = lazy(() => import("pages/Starships"));
 const NotFound = lazy(() => import("pages/NotFound"));
 
+const Projects = lazy(() => import("pages/Projects"));
+const Features = lazy(() => import("pages/Features"));
+const Knowledge = lazy(() => import("pages/Knowledge"));
+
 const Routes = () => (
   <Switch>
     <AuthRoute exact path="/login" component={Login} />
@@ -28,6 +32,10 @@ const Routes = () => (
     />
 
     <AuthRoute exact path="/star-wars/starships" component={Starships} />
+
+    <AuthRoute exact path="/projects" component={Projects} />
+    <AuthRoute exact path="/features" component={Features} />
+    <AuthRoute exact path="/knowledge" component={Knowledge} />
 
     <AuthRoute component={NotFound} />
   </Switch>
