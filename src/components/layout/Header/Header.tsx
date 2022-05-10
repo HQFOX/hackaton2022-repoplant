@@ -1,7 +1,12 @@
 import React, { useContext, MouseEvent } from "react";
 import { useHistory } from "react-router-dom";
 import { useMediaQuery, useTheme } from "@material-ui/core";
-import { LogOut, Menu, ThemeSwitcher } from "@hitachivantara/uikit-react-icons";
+import {
+  LogOut,
+  Menu,
+  ThemeSwitcher,
+  Alert,
+} from "@hitachivantara/uikit-react-icons";
 import {
   HvHeader,
   HvHeaderBrand,
@@ -9,9 +14,10 @@ import {
   HvHeaderNavigation,
   NavigationItemProp,
   HvButton,
+  HvAvatar,
 } from "@hitachivantara/uikit-react-core";
 
-import HitachiLogo from "assets/HitachiLogo";
+import LumadaLogo from "assets/LumadaLogo";
 import { AuthContext } from "lib/context/AuthContext";
 import { ThemeContext } from "lib/context/ThemeContext";
 import { NavigationContext } from "lib/context/NavigationContext";
@@ -48,7 +54,7 @@ const Header: React.FC = () => {
       )}
 
       <HvHeaderBrand
-        logo={<HitachiLogo style={{ width: 72, height: 20 }} />}
+        logo={<LumadaLogo style={{ width: 72, height: 20 }} />}
         name={!isXs ? REACT_APP_NAME : undefined}
       />
 
@@ -62,6 +68,12 @@ const Header: React.FC = () => {
 
       {isAuthed && isMdUp && (
         <HvHeaderActions>
+          <HvButton icon>
+            <Alert />
+          </HvButton>
+          <HvAvatar backgroundColor="acce1" size="S">
+            CM
+          </HvAvatar>
           <HvButton
             icon
             aria-label="Change theme"
