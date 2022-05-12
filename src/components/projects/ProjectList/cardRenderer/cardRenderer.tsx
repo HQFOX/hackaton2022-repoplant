@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/rules-of-hooks */
 import {
   HvCard,
   HvCardHeader,
@@ -9,18 +10,15 @@ import {
 } from "@hitachivantara/uikit-react-core";
 import theme from "@hitachivantara/uikit-react-core/dist/theme";
 import React from "react";
+import { useHistory } from "react-router-dom";
 import useStyles from "./styles";
 
 const cardRenderer = (data: any, viewConfiguration: any) => {
-  // eslint-disable-next-line react-hooks/rules-of-hooks
   const classes = useStyles();
+  const history = useHistory();
 
   return (
-    <HvCard
-      bgcolor="atmo1"
-      selectable={viewConfiguration.isSelectable}
-      selected={data.checked}
-    >
+    <HvCard bgcolor="atmo1" onClick={() => history.push(`/project/1`)}>
       <HvCardHeader title={data.headerTitle} className={classes.title} />
       <HvCardContent>
         <HvTypography>{data.description}</HvTypography>
