@@ -1,12 +1,18 @@
 import {
   HvAssetInventory,
   HvCardView,
+  HvContainer,
   HvEmptyState,
+  HvGrid,
+  HvStack,
 } from "@hitachivantara/uikit-react-core";
 import { Fail } from "@hitachivantara/uikit-react-icons";
+import { HvTag } from "@hitachivantara/uikit-react-lab";
 import { configuration } from "components/characters/CharactersList/utils";
 import React from "react";
+import { Project } from "types/project";
 import cardRenderer from "./cardRenderer";
+import ProjectCard from "./projectcard/ProjectCard";
 import { actions } from "./utils";
 
 // Asset Inventory configuration
@@ -74,47 +80,84 @@ const assetConfiguration = {
 
 // Data
 
-const compressorData = (id: number) => ({
-  headerTitle: `Hitachi Virtual Storage Platform 5000 series ${id + 1}`,
+const compressorData = (id: number): Project => ({
+  id: id.toString(),
+  title: `Hitachi Virtual Storage Platform 5000 series ${id + 1}`,
   description: `The most powerful Data platform in the world that will future proof your business and simplify day-to-dat management.`,
   creator: `John Stedward`,
 });
 
-const machineData = (id: number) => ({
-  headerTitle: `CSAF ${id + 1}`,
+const machineData = (id: number): Project => ({
+  id: id.toString(),
+  title: `CSAF ${id + 1}`,
   description: `The most powerful Data platform in the world that will future proof your business and simplify day-to-dat management.`,
   creator: `John Stedward`,
 });
 
-const values = (num = 10) =>
-  Array.from(Array(num).keys(), (id) => ({
-    id: `id_${id}`,
-    ...(id % 2 === 0 ? compressorData(id) : machineData(id)),
-  }));
+const values2 = (): Project[] => {
+  const projects: Project[] = [];
+
+  for (let i = 0; i < 10; i += 1) {
+    projects.push(compressorData(i));
+  }
+
+  return projects;
+};
 
 const ProjectList = () => {
   return (
-    <HvAssetInventory
-      id="hv-assetinventory"
-      values={values()}
-      configuration={configuration}
-      onSelection={(event) => console.log("selected")}
-      isSelectable
-      actions={actions}
-      actionsCallback={(e, id, action) =>
-        console.log(`You have pressed action ${action.label}`)
-      }
-      searchProps={{ "aria-label": "Filters the data" }}
-      multibuttonProps={[]}
-      emptyComponent={
-        <HvEmptyState
-          message="No data found"
-          icon={<Fail iconSize="S" color="acce1" />}
-        />
-      }
-    >
-      <HvCardView id="card" renderer={cardRenderer} />
-    </HvAssetInventory>
+    <HvContainer>
+      <HvGrid container>
+        <HvGrid item xl={2} lg={3} md={3} sm={3} xs={3}>
+          <ProjectCard
+            data={
+              {
+                id: "0",
+                title: `CSAF`,
+                description: `The most powerful Data platform in the world that will future proof your business and simplify day-to-dat management.`,
+                creator: `John Stedward`,
+              } as Project
+            }
+          />
+        </HvGrid>
+        <HvGrid item xl={2} lg={3} md={3} sm={3} xs={3}>
+          <ProjectCard
+            data={
+              {
+                id: "0",
+                title: `CSAF`,
+                description: `The most powerful Data platform in the world that will future proof your business and simplify day-to-dat management.`,
+                creator: `John Stedward`,
+              } as Project
+            }
+          />
+        </HvGrid>
+        <HvGrid item xl={2} lg={3} md={3} sm={3} xs={3}>
+          <ProjectCard
+            data={
+              {
+                id: "0",
+                title: `CSAF`,
+                description: `The most powerful Data platform in the world that will future proof your business and simplify day-to-dat management.`,
+                creator: `John Stedward`,
+              } as Project
+            }
+          />
+        </HvGrid>
+        <HvGrid item xl={2} lg={3} md={3} sm={3} xs={3}>
+          <ProjectCard
+            data={
+              {
+                id: "0",
+                title: `CSAF`,
+                description: `The most powerful Data platform in the world that will future proof your business and simplify day-to-dat management.`,
+                creator: `John Stedward`,
+              } as Project
+            }
+          />
+        </HvGrid>
+      </HvGrid>
+    </HvContainer>
   );
 };
 
