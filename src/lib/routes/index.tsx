@@ -17,6 +17,7 @@ const Projects = lazy(() => import("pages/Projects"));
 const ProjectDetails = lazy(() => import("pages/Projects/ProjectDetails"));
 const Assets = lazy(() => import("pages/Assets"));
 const Knowledge = lazy(() => import("pages/Knowledge"));
+const KnowledgeDetails = lazy(() => import("pages/Knowledge/KnowledgeDetails"));
 
 const Routes = () => (
   <Switch>
@@ -29,6 +30,7 @@ const Routes = () => (
     <AuthRoute exact path="/assets" component={Assets} />
     <AuthRoute exact path="/asset/:id" component={AssetDetails} />
     <AuthRoute exact path="/knowledge" component={Knowledge} />
+    <AuthRoute exact path="/knowledge/:id" component={KnowledgeDetails} />
 
     <AuthRoute component={NotFound} />
   </Switch>
