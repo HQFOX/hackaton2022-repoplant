@@ -71,21 +71,14 @@ const Header: React.FC = () => {
           <HvButton icon>
             <Alert />
           </HvButton>
-          <HvAvatar backgroundColor="acce1" size="S">
+          <HvAvatar
+            backgroundColor="acce1"
+            size="XS"
+            variant="circular"
+            containerProps={{}}
+          >
             CM
           </HvAvatar>
-          <HvButton
-            icon
-            aria-label="Change theme"
-            onClick={() => toggleTheme()}
-          >
-            <ThemeSwitcher />
-          </HvButton>
-          {isAuthed && (
-            <HvButton icon onClick={logout} aria-label="Logout">
-              <LogOut />
-            </HvButton>
-          )}
         </HvHeaderActions>
       )}
     </HvHeader>
