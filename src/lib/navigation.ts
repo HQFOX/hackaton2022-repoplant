@@ -6,8 +6,8 @@ const pages = [
   },
   {
     id: "2",
-    label: "Features",
-    path: "/features",
+    label: "Assets",
+    path: "/assets",
   },
   {
     id: "3",
