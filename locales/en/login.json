@@ -1,0 +1,35 @@
+{
+  "loginForm": {
+    "title": "Welcome",
+    "username": {
+      "label": "username",
+      "placeholder": "Enter text"
+    },
+    "password": {
+      "label": "password",
+      "placeholder": "Enter text"
+    },
+    "remember": "Remember me",
+    "submit": {
+      "logging": "Logging",
+      "login": "Log in"
+    },
+    "forgot": "Forgot your credentials?",
+    "error": "Login error!"
+  },
+  "recoverForm": {
+    "title": "Recover Credentials",
+    "subtitle": "You will receive an email with instructions to recover your credentials",
+    "email": {
+      "label": "Email",
+      "placeholder": "Enter email"
+    },
+    "cancel": "Cancel",
+    "submit": {
+      "recovering": "Recovering",
+      "recover": "Recover"
+    },
+    "success": "Email sent!",
+    "error": "Please enter a valid Email!"
+  }
+}

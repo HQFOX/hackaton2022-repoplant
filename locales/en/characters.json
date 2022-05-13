@@ -1,0 +1,83 @@
+{
+  "details": {
+    "globalActions": {
+      "button": "Explore Movies"
+    },
+    "metadata": {
+      "birthYear": "Birth Year",
+      "homeworld": "Homeworld",
+      "eyeColor": "Eye Color",
+      "hairColor": "Hair Color",
+      "skinColor": "Skin Color",
+      "gender": "Gender",
+      "species": "Species",
+      "height": "Height (cm)"
+    },
+    "films": {
+      "title": "Films"
+    },
+    "starships": {
+      "title": "Starships"
+    },
+    "vehicles": {
+      "title": "Vehicles"
+    }
+  },
+  "movieCountKPI": {
+    "title": "Movie Participation"
+  },
+  "starshipCountKPI": {
+    "title": "Starship owned"
+  },
+  "vehicleCountKPI": {
+    "title": "Vehicle owned"
+  },
+  "vehiclesTable": {
+    "expand": {
+      "cargoCapacity": "Cargo Capacity",
+      "consumables": "Consumables",
+      "costInCredits": "Cost in Credits",
+      "maxAtmospheringSpeed": "Max Atmosphering Speed",
+      "crew": "Crew",
+      "passengers": "Passengers",
+      "length": "Length",
+      "otherCharacters": "Other Characters"
+    },
+    "columns": {
+      "name": "Name",
+      "model": "Model",
+      "class": "Class",
+      "manufacturers": "Manufacturers"
+    }
+  },
+  "starshipsTable": {
+    "expand": {
+      "maxAtmospheringSpeed": "Max Atmosphering Speed",
+      "hyperdriveRating": "Hyperdrive Rating",
+      "cargoCapacity": "Cargo Capacity",
+      "MGLT": "MGLT",
+      "consumables": "Consumables",
+      "costInCredits": "Cost in Credits",
+      "crew": "Crew",
+      "passengers": "Passengers",
+      "length": "Length",
+      "otherCharacters": "Other Characters"
+    },
+    "columns": {
+      "name": "Name",
+      "model": "Model",
+      "class": "Class",
+      "manufacturers": "Manufacturers"
+    }
+  },
+  "list": {
+    "searchLabel": "Search",
+    "noMessageLabel": "No characters found",
+    "listViewLabel": "List View",
+    "cardView": {
+      "label": "Card View",
+      "homeworld": "Homeworld",
+      "films": "Films"
+    }
+  }
+}
