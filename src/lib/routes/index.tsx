@@ -1,3 +1,4 @@
+import AssetDetails from "components/assets/AssetDetails";
 import React, { lazy } from "react";
 import { Switch } from "react-router-dom";
 
@@ -14,7 +15,7 @@ const NotFound = lazy(() => import("pages/NotFound"));
 
 const Projects = lazy(() => import("pages/Projects"));
 const ProjectDetails = lazy(() => import("pages/Projects/ProjectDetails"));
-const Features = lazy(() => import("pages/Features"));
+const Assets = lazy(() => import("pages/Assets"));
 const Knowledge = lazy(() => import("pages/Knowledge"));
 
 const Routes = () => (
@@ -25,7 +26,8 @@ const Routes = () => (
 
     <AuthRoute exact path="/projects" component={Projects} />
     <AuthRoute exact path="/project/:id" component={ProjectDetails} />
-    <AuthRoute exact path="/features" component={Features} />
+    <AuthRoute exact path="/assets" component={Assets} />
+    <AuthRoute exact path="/asset/:id" component={AssetDetails} />
     <AuthRoute exact path="/knowledge" component={Knowledge} />
 
     <AuthRoute component={NotFound} />
