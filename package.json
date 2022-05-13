@@ -4,7 +4,7 @@
   "description": "Example setup for React and TypeScript with Hitachi Vantara UI Kit",
   "license": "Apache-2.0",
   "private": true,
-  "homepage": ".",
+  "homepage": "https://hqfox.github.io/hackaton2022-repoplant/",
   "author": {
     "name": "Hitachi Vantara UI Kit Team"
   },
@@ -42,7 +42,9 @@
     "eject": "react-scripts eject",
     "lint": "eslint --ext .js,.jsx,.ts,.tsx src --color",
     "format": "prettier --write 'src/**/*.{ts,tsx,scss,css,json}'",
-    "codegen": "graphql-codegen --config codegen.yml"
+    "codegen": "graphql-codegen --config codegen.yml",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -73,6 +75,7 @@
     "@types/react-dom": "^17.0.11",
     "@types/react-router-dom": "^5.3.3",
     "eslint-config-airbnb-typescript-prettier": "^5.0.0",
+    "gh-pages": "^4.0.0",
     "prettier": "^2.5.1",
     "react-scripts": "^5.0.0",
     "typescript": "^4.5.5"
